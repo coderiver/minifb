@@ -1,0 +1,587 @@
+.header
+	&__top
+		position: relative
+		max-width: 1200px
+		margin: 0 auto 
+		padding: 31px 10px 10px
+		+clr
+	&__left
+		float: left
+		width: 50%
+		padding: 6px 0 0 
+	&-sponsors
+		font-size: 0
+		padding: 16px 0 0 
+		float: left
+		width: 25%
+		&__title
+			+light
+			color: #333
+			font-size: 15px
+			line-height: 1
+			margin-bottom: 8px
+		&__logo
+			max-width: 181px
+			display: inline-block
+			opacity: 0.8
+			+wo
+			transition: opacity 0.25s
+			&:hover
+				opacity: 1
+			img
+				width: 100%
+	&__right
+		float: left
+		width: 25%
+		padding: 7px 0 0 
+		.mini-logo
+			float: right
+			margin: 0 6px 0 0 
+	&-btn
+		+bold
+		color: #333
+		font-size: 17px
+		position: relative
+		background: none
+		padding: 15px 33px 18px 11px 
+		display: inline-block
+		vertical-align: top
+		line-height: 1
+		transition: color 0.25s, background 0.25s, border 0.25s
+		border-radius: 8px
+		&.is-active, &:hover
+			color: #f13333
+		&.is-active
+			background: #f1f1f1  
+			border-radius: 8px 8px 0 0
+		i
+			font-size: 7px
+			position: absolute
+			top: 19px
+			right: 15px
+	&__login
+		overflow: hidden
+		padding: 9px 0 
+	&__enter
+		+ul
+		margin-bottom: 23px
+		li, a
+			+thin
+			font-size: 15px
+			line-height: 1
+		a
+			color: #197fba
+			&:hover
+				text-decoration: underline
+		li
+			color: black
+			display: inline-block
+			vertical-align: top
+			&:last-child
+				&:after
+					display: none
+			&:after
+				content: "/" 
+				padding: 0 3px 
+	&__social
+		+ul
+		li
+			display: inline-block
+			vertical-align: middle
+		a
+			color: #d0d1d3
+			transition: color 0.25s
+			margin-right: 15px
+			&:hover, &:visited, &:focus, &:active
+				text-decoration: none
+				color: #d0d1d3				
+			&:hover
+				color: darken(#d0d1d3, 10%) 
+			&.icon-twitter
+				font-size: 19px
+			&.icon-facebook
+				font-size: 18px
+			&.icon-google
+				font-size: 19px
+			&.icon-youtube
+				font-size: 20px
+			&.icon-photos
+				font-size: 19px
+	&-dropdown
+		background-color: #f1f1f1
+		display: none
+		margin-top: -10px
+		&__inner
+			padding: 0 10px 0 100px
+			max-width: 1200px
+			margin: 0 auto
+			+clr  
+		&__col, &__contacts
+			padding: 25px 10px 54px
+		&__col
+			width: 18.5%
+			float: left
+		&__contacts
+			width: 26%
+			float: left
+		h4
+			margin: 0 0 5px
+			text-transform: none
+			line-height: 1.7
+		ul
+			+ul
+			li
+				padding: 0 0 12px 
+				line-height: 1.2
+				font-size: 15px
+				a
+					+bold
+	&-contacts
+		padding: 15px 8px 8px
+		border: 2px solid rgba(#000, 0.07)
+		border-radius: 10px 
+		float: right
+		width: 240px
+		margin: 24px 0 0 
+		small
+			+med
+			display: block
+			color: #333
+			font-size: 13px
+			line-height: 17px
+		&__text
+			line-height: 26px
+			+light
+			color: #333
+			font-size: 15px
+			clear: both
+			a
+				color: #197fba
+				&:hover
+					color: #197fba
+					text-decoration: underline
+				&:visited
+					color: #605ca8
+		.button-blue
+			margin-top: 2px
+		div
+			margin-bottom: 3px
+.btn-match
+	+bold
+	color: white
+	font-size: 14px
+	text-transform: uppercase
+	line-height: 31px
+	background-color: #d9232a
+	padding: 0 7px 
+	position: relative
+	position: absolute
+	top: 0
+	left: 0
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		left: 2px
+		right: 2px
+		bottom: 2px
+		border: 1px dotted white
+		border-top: none
+		
+.logo
+	&-img
+		width: 52px
+		float: left
+		margin: 0 24px 8px 14px 
+		font-size: 0
+		img
+			width: 100%
+	&-text
+		display: inline-block
+		vertical-align: top
+		margin: 3px 10px 5px 
+		span
+			+thin
+			color: #333
+			font-size: 30px
+			line-height: 1
+			
+.mini-logo
+	width: 68px
+	font-size: 0
+	display: inline-block
+	vertical-align: top
+	img
+		width: 100%
+		
+.menu-wrapper
+	background-color: #333
+
+.menu
+	position: relative
+	&__top
+		position: relative
+		max-width: 1200px
+		padding: 0 10px
+		margin: 0 auto
+	&__list
+		+ul
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 20px 0 0 
+		a
+			+bold
+			color: white
+			font-size: 20px
+			line-height: 30px
+			text-transform: uppercase
+			transition: color 0.25s
+			position: relative
+			display: inline-block	
+			&:visited
+				color: #fff 	
+			&:hover, &.is-active
+				text-decoration: none
+				color: #ff3636
+			&:focus, &:active
+				text-decoration: none
+			&.is-drop
+				padding: 11px 20px 9px 0	
+			.icon-arr-bottom
+				position: absolute
+				top: 50%
+				right: 0
+				margin-top: -5px
+				font-size: 9px
+			&.is-school, &.is-academy
+				padding: 11px 0 9px 25px
+				i
+					position: absolute
+					top: 50%
+					left: 0
+					margin-top: -10px
+			&.is-school
+				i
+					+s(mini-school)
+			&.is-academy
+				i
+					+s(mini-academy)
+	.btn-search
+		position: absolute
+		top: 12px
+		right: 24px
+		cursor: pointer
+		font-size: 21px
+		color: #fff
+	&-dropdown
+		background: #333333
+		&__section
+			max-width: 1200px
+			margin: 0 auto
+			padding: 24px 0 20px 
+			+clr
+		&__list
+			+ul 
+			position: relative
+			width: 50%
+			float: left
+			li
+				position: static
+				width: 50%
+				margin-bottom: 5px
+				&:hover
+					.menu-dropdown__submenu
+						display: block
+				a
+					display: block
+					+bold
+					color: white
+					font-size: 15px
+					padding: 9px 14px 7px 
+					position: relative
+					line-height: 1
+				&.is-drop
+					.is-drop
+						padding-right: 28px
+						&:hover
+							background-color: rgba(255, 255, 255, 0.12)
+							box-shadow: inset 0 0 0 2px white
+							border-radius: 10px
+							text-decoration: none
+					.icon-arr-right
+						position: absolute
+						top: 50%
+						right: 11px
+						font-size: 12px
+						margin-top: -6px
+		&__submenu
+			position: absolute
+			top: 0
+			right: 0
+			display: none
+			width: 50%
+			li
+				width: 100%
+		&__block
+			float: right
+			width: 50%
+			+clr
+			max-width: 500px
+		&__schedule
+			width: 260px
+			border: 2px solid #fff
+			border-radius: 10px
+			padding: 14px 18px 
+			min-height: 301px 
+			float: left
+			margin: 0 10px 10px
+			h4, li, p
+				color: #fff
+			h4
+				margin-bottom: 2px
+			p, li
+				+reg
+			p
+				margin-bottom: 28px
+			ul
+				+ul
+				font-size: 15px
+				li
+					margin-bottom: 10px
+				time
+					float: right
+				span
+					display: block
+					overflow: hidden
+					padding: 0 20px 0 0 
+		&__partners
+			background: #fff 
+			width: 200px
+			padding: 16px 20px 
+			border-radius: 10px
+			float: right
+			min-height: 301px
+			margin: 0 10px 10px
+			ul
+				+ul
+				li
+					padding: 0 0 14px
+					a
+						display: block
+						img
+							width: 100%
+
+.mc
+	background: #434343 
+	+r(1219)
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 300 
+		max-width: 330px
+		overflow: auto
+	&__container
+		max-width: 1200px
+		width: 100%
+		margin: 0 auto 
+	&__row
+		width: 100%
+		clear: both
+		padding: 0 10px
+		+r(1219)
+			padding: 0 0 20px
+	&__col
+		width: 25%
+		float: left	 		
+		padding: 20px 10px 10px 
+		+r(1219)
+			width: 100%
+			padding: 0 0 10px 	
+	&__top
+		position: relative
+		+clr
+		padding: 4px 0 0 
+		+r(1219)
+			padding: 20px 10px 0 15px
+	&__title
+		+bold
+		color: white
+		font-size: 25px
+		line-height: 1
+		text-transform: uppercase
+		margin-right: 35px
+		float: left
+		padding: 2px 0 0 
+		+r(1219)
+			float: none
+	&__filter
+		+ul
+		float: left
+		padding: 8px 0 0 
+		+r(1219)
+			float: none
+			font-size: 0.1px
+			text-align: justify
+			padding: 25px 0 0 
+		&:after
+			content: "" 
+			width: 100%
+			display: none
+			+r(1219)
+				display: inline-block
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 14px 
+			+r(1219)
+				padding: 0 
+			a
+				+light
+				color: white
+				font-size: 20px
+				position: relative
+				display: inline-block
+				border-bottom: 1px dotted white 
+				+tdn
+				&.is-active
+					border: none
+					+bold
+	&__right
+		position: absolute
+		top: 4px
+		right: 0
+		+r(1219)
+			top: 20px
+			right: 10px
+	.icon-close
+		font-size: 21px
+		color: #fff
+		margin: 4px 0 0 19px 
+		display: inline-block
+		vertical-align: top
+		cursor: pointer
+	&__partner		
+		border-top: 2px dashed rgba(#fff, 0.3) 
+		font-size: 0
+		padding: 17px 0 
+		+r(1219)
+			padding: 0 10px
+			border: none 
+		a
+			display: inline-block
+			vertical-align: top 
+			+r(1219)
+				display: block
+			img
+				+r(1219)
+					width: 100%
+
+.league
+	&__title
+		color: white
+		font-size: 20px
+		line-height: 34px
+		position: relative
+		+clr
+		padding: 10px 10px 8px 46px 
+		margin-bottom: 10px
+		&:before
+			content: "" 
+			position: absolute
+			top: 50%
+			left: 10px
+			margin-top: -16px
+		&.is-super
+			background-color: #c3241c
+			&:before
+				+s(league-super)
+		&.is-major
+			background-color: #b1894d
+			&:before
+				+s(league-major)
+		&.is-russia
+			background-color: #006f61
+			&:before
+				+s(league-russia)
+		&.is-women
+			background-color: #d96180
+			&:before
+				+s(league-women)
+		span
+			float: right
+
+.league-item
+	background: #fff 
+	padding: 8px 5px 7px
+	border-radius: 10px
+	margin-bottom: 10px
+	+r(1219)
+		margin: 0 10px 10px 
+	&__top
+		margin-bottom: 4px
+		span
+			color: #333
+			font-size: 13px
+			line-height: 1
+	&__body
+		display: table
+		width: 100%
+		table-layout: fixed
+	&__team
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		&.is-left
+			width: 108px
+			text-align: right
+			padding-right: 30px
+			.league-item
+				&__logo
+					right: 0
+		&.is-right
+			width: 102px
+			text-align: left
+			padding-left: 30px
+			.league-item
+				&__logo
+					left: 0
+		&.is-winner
+			.league-item
+				&__score, &__name
+					color: #87d50b
+		&.is-loser
+			.league-item
+				&__score
+					color: #555
+				&__name
+					color: #2188b8
+	&__score
+		width: 60px
+		font-size: 0
+		text-align: center
+		span
+			font-size: 30px
+			+bold
+			line-height: 1
+			color: #555
+			&.is-winner
+				color: #87d50b
+	&__logo
+		height: 26px
+		width: 26px
+		position: absolute
+		top: 50%
+		margin-top: -13px
+		+vertical
+		img
+			max-width: 100%
+			max-height: 100%
+			display: inline-block
+			vertical-align: middle
+	&__name
+		overflow: hidden
+		+bold
+		font-size: 14px
+		line-height: 12px

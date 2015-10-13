@@ -1,38 +1,38 @@
 // # SHORT HOWTO
 // ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
+//	 .whatever
+//		  +sized-sprite($icons, coderiver) //or
 // 			+s(codedby) //gets default value for spritemap as $icons
 // ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
+//	 +include keyframes(rotate)
+//		from
+//		   +rotate(0)
+//		to
+//		   +rotate(360)
 // ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
+//	 body:hover
+// 		+animation(rotate 200s linear infinite)
 // ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
+//	 transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
+//	 +background-image(linear-gradient(#232323, #5c5c5c));
+//	 +g(#232323, #5c5c5c);
 //	   horizontal
-//     +gh(#232323, #5c5c5c);
+//	 +gh(#232323, #5c5c5c);
 // ## making bw-images
-//     img
+//	 img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+//	 +min-screen(320)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
+//	 @for $i from 1 through 3
+//	   .item-#{$i}
 //			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+//	 @each $s in a,b,c
+// 			#{$s}
 //				display: none
 // ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
@@ -47,11 +47,781 @@
 // p
 // 	+jpg(bla)
 
+//fonts
++font("PFDinDisplayPro Thin", pfdindisplaypro-thin)
++font("PFDinDisplayPro Light", pfdindisplaypro-light)
++font("PFDinDisplayPro Regular", pfdindisplaypro-reg)
++font("PFDinDisplayPro Medium", pfdindisplaypro-med)
++font("PFDinDisplayPro Bold", pfdindisplaypro-bold)
+
+=thin
+	font-family: "PFDinDisplayPro Thin", Arial, sans-serif
+=light
+	font-family: "PFDinDisplayPro Light", Arial, sans-serif
+=reg
+	font-family: "PFDinDisplayPro Regular", Arial, sans-serif
+=med
+	font-family: "PFDinDisplayPro Medium", Arial, sans-serif
+=bold
+	font-family: "PFDinDisplayPro Bold", Arial, sans-serif
+
+//change
+=wo
+	will-change: opacity
+
 
 body
-	font-family: Arial, sans-serif
+	+light
 	font-size: 12px
 	line-height: 1.4
+	min-width: 320px
 
 
-// common blocks
+// reset
+h1, h2, h3, h4, h5, h6, th, strong, b, em, i, input, textarea, label
+	font-style: normal
+	font-weight: normal
+	
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+h1, h2, h3, h4
+	+bold
+	color: #333
+	line-height: 1
+	text-transform: uppercase
+	margin-bottom: 15px
+	
+
+h1
+	font-size: 45px
+	
+h2
+	font-size: 41px
+	
+h3
+	font-size: 30px
+	line-height: 34px
+		
+h4
+	font-size: 20px
+	line-height: 27px
+
+p
+	+light
+	color: #333
+	font-size: 15px
+	line-height: 1.2
+	clear: both
+	margin-bottom: 20px
+	img
+		float: left
+		margin: 0 15px 15px 0
+	a
+		color: #197fba
+		&:hover
+			color: #197fba
+			text-decoration: underline
+		&:visited
+			color: #605ca8
+ul, ol
+	+light
+	color: #333
+	font-size: 15px
+	line-height: 25px
+	margin-bottom: 20px
+	ul, ol
+		margin-bottom: 0
+
+ul
+	list-style-type: none
+	li
+		padding: 0 0 0 8px
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 10px
+			left: 0
+			width: 4px
+			height: 4px
+			background: #333
+			border-radius: 50% 
+		li
+			padding: 0 0 0 10px 
+			&:before
+				display: none
+			li
+				padding: 0 0 0 15px 
+
+ol
+	list-style: decimal
+	padding: 0 20px 
+	ol, ul
+		list-style: none 
+		padding: 0 0 0 10px 
+
+dl, dt, dd
+	color: #333
+	font-size: 15px
+	line-height: 20px
+dl
+	margin-bottom: 20px
+dt
+	+bold
+dd
+	+light
+
+.title
+	+reg
+	font-size: 24px
+	line-height: 25px	
+	margin-bottom: 8px
+
+.error, .success
+	font-size: 0
+
+.error__text, .success__text
+	display: inline-block	
+	+reg
+	font-size: 14px
+	line-height: 58px
+	padding: 0 25px 0 0 	
+	
+.error
+	&__text
+		color: #ed1c24
+.success
+	&__text
+		color: #39b54a
+//form
+.form
+	&__title, &__subtitle
+		+reg
+		color: #333
+		line-height: 1
+		padding: 10px 0 
+	&__title
+		font-size: 30px
+	&__subtitle
+		font-size: 24px
+	&__text
+		+reg
+		color: #333
+		font-size: 18px
+		line-height: 25px
+		margin-bottom: 4px
+//fields
+.field
+	padding: 10px 0 
+	&__inner
+		position: relative
+		display: block
+	&__label
+		+reg
+		color: #333
+		font-size: 14px
+		line-height: 25px
+		display: inline-block
+		position: relative
+		margin-bottom: 7px
+	&_mail
+		.input
+			padding-left: 52px
+	&__mail
+		+reg
+		color: #333
+		font-size: 17px
+		background: #dcdcdc
+		line-height: 25px
+		position: absolute
+		bottom: 2px
+		left: 2px
+		width: 35px
+		border-radius: 8px 0 0 8px
+		text-align: center
+	&_required
+		.field__label
+			padding-right: 5px
+			&:before
+				content: "*"
+				color: #ed1c24
+				position: absolute
+				top: 0
+				right: 0 
+	&_btn
+		padding: 23px 0 10px 
+.input
+	border: 2px solid #3b3b3b
+	border-radius: 10px
+	height: 29px
+	+light
+	font-size: 14px
+	color: #333
+	padding: 0 13px 
+	+placeholder-color(#777)
+	transition: border-color 0.25s
+	width: 100%
+	max-width: 818px
+	display: block
+	&:focus
+		border-color: #197fba
+	&:disabled
+		border-color: #b9b9b9
+		background-color: #ececec
+	&.is-error
+		border-color: #ed1c24
+
+.textarea
+	border: 2px solid #3b3b3b
+	border-radius: 10px
+	height: 99px
+	+light
+	font-size: 14px
+	color: #333
+	padding: 3px 13px 
+	+placeholder-color(#777)
+	transition: border-color 0.25s
+	width: 100%
+	max-width: 818px
+	display: block
+	resize: none
+	&:focus
+		border-color: #197fba
+	&:disabled
+		border-color: #b9b9b9
+		background-color: #ececec
+	&.is-error
+		border-color: #ed1c24
+
+.field-warning
+	+light
+	font-size: 14px
+	line-height: 25px
+	color: #333
+	span		
+		color: #ed1c24
+		
+.file
+	position: relative
+	max-width: 160px
+	&__inner
+		display: block
+	&__label
+		+reg
+		color: #333
+		font-size: 14px
+		line-height: 25px
+		display: inline-block
+		position: relative
+		margin-bottom: 7px
+	&__btn
+		position: absolute
+		bottom: 7px
+		right: 18px
+		cursor: pointer
+		overflow: hidden
+		font-size: 0
+		.icon-attachment
+			font-size: 14px
+		input
+			position: absolute
+			top: 0
+			left: 0
+			visibility: hidden
+			opacity: 0
+	.input
+		padding: 0 33px 0 13px 
+		
+//select
+.select
+	position: relative
+	cursor: pointer
+	font-size: 14px
+	max-width: 167px
+	user-select: none
+	&.is-active
+		.select
+			&__text
+				border-radius: 10px 10px 0 0
+				&:after
+					+rotate(-180)
+			&__list
+				border-radius: 0 0 10px 10px
+	select
+		opacity: 0
+		position: absolute
+		top: 0
+		visibility: hidden
+		left: 0
+	&__text
+		position: relative
+		display: block
+		padding: 0 30px 0 13px 
+		line-height: 27px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		height: 29px
+		background-color: rgba(255, 255, 255, 0.25)
+		border: 2px solid #363636
+		border-radius: 10px
+		+bold	
+		color: #181818
+		&:after
+			content: "\EA01" 
+			position: absolute
+			top: 9px
+			right: 8px
+			font-size: 9px
+			color: #272727 
+			z-index: 10 
+			font-family: "svgfont"
+			font-style: normal
+			font-weight: normal
+			text-rendering: auto
+			speak: none
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+	&__list
+		+ul
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		z-index: 100
+		margin-top: -2px
+		border: 2px solid #363636
+		border-top: none 
+		max-height: 200px
+		overflow-x: hidden
+		overflow-y: auto
+		background: #fff	
+		li
+			padding: 0 13px 
+			cursor: pointer
+			line-height: 24px			
+			+bold
+			font-size: 14px	
+			color: #181818
+			&:hover
+				background-color: #e8e8e8
+
+//checkbox and radio
+.form-checkbox
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 0 0 0 25px 
+	cursor: pointer
+	margin: 0 13px 13px 0 
+	input
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		&:checked + span
+			&:after
+				top: 5px
+				visibility: visible
+				opacity: 1
+		&:disabled + span
+			&:before
+				border-color: #c7c7c7
+			&:after
+				color: #c7c7c7 
+	span
+		font-size: 14px
+		line-height: 16px
+		+reg
+		color: #333 
+		&:before, &:after
+			position: absolute
+		&:before
+			content: "" 
+			top: 0
+			left: 0
+			border: 2px solid #333
+			width: 16px
+			height: 16px
+			border-radius: 2px
+		&:after
+			top: 0
+			left: 4px
+			font-size: 6px
+			content: "\EA07"
+			font-family: "svgfont"
+			font-style: normal
+			font-weight: normal
+			text-rendering: auto
+			speak: none
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.2s, visibility 0.2s, top 0.2s 
+.form-radio
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 0 0 0 25px 
+	cursor: pointer
+	margin: 0 13px 13px 0 
+	input
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		&:checked + span
+			&:after
+				+scale(1)
+		&:disabled + span
+			&:before
+				border-color: #c7c7c7
+			&:after
+				background: #c7c7c7 
+	span
+		font-size: 14px
+		line-height: 16px
+		+reg
+		color: #333 
+		&:before, &:after
+			position: absolute
+			border-radius: 50%
+		&:before
+			content: "" 
+			top: 0
+			left: 0
+			border: 2px solid #333
+			width: 16px
+			height: 16px
+		&:after
+			content: "" 
+			top: 5px
+			left: 5px
+			width: 6px
+			height: 6px
+			background: #197fba 
+			+scale(0)
+			transition: transform 0.2s 
+
+//captcha
+.captcha
+	max-width: 180px
+	&__label
+		+reg
+		color: #333
+		font-size: 14px
+		line-height: 25px
+		display: inline-block
+		position: relative
+		margin-bottom: 7px
+	img
+		display: block
+		width: 100%
+		margin-bottom: 9px
+	&__input
+		height: 38px
+		width: 100%
+		max-width: 818px
+		padding: 0 13px 
+		display: block
+		background-color: white
+		border: 1px solid #ccc
+		border-radius: 4px
+		box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.15)
+		+light
+		font-size: 14px
+		color: #333
+		+placeholder-color(#777)
+		transition: border-color 0.25s
+		
+//btns
+.button-blue
+	display: inline-block
+	vertical-align: top
+	+bold
+	color: #197fba
+	font-size: 14px
+	line-height: 1
+	background-color: rgba(233, 233, 233, 0.25)
+	border: 2px solid #197fba
+	border-radius: 10px
+	padding: 6px 13px 5px 
+	&:hover
+		color: #197fba 
+.button-white
+	display: inline-block
+	vertical-align: top
+	+bold
+	color: #fff
+	font-size: 14px
+	line-height: 1
+	background-color: rgba(233, 233, 233, 0.25)
+	border: 2px solid #fff
+	border-radius: 10px
+	padding: 6px 9px 5px 
+	&:hover
+		color: #fff 
+
+//btns-row/col
+.btns-row
+	+clr
+	padding: 10px 0 
+.btns-col
+	float: left
+	text-align: center
+	padding: 20px 45px
+	&_dark
+		background: #333 
+		
+.btn-next
+	display: inline-block
+	vertical-align: top
+	line-height: 1
+	border: 2px solid #333
+	border-radius: 10px
+	padding: 6px 29px 5px 16px 
+	+bold
+	font-size: 14px
+	position: relative
+	text-decoration: none
+	transition: color 0.25s, background 0.25s, border-color 0.25s
+	cursor: pointer
+	&:focus, &:visited, &:hover, &:active
+		text-decoration: none
+	&_blue
+		color: #197fba
+		border-color: #197fba
+		&:visited
+			color: #197fba
+		&:hover, &:active
+			background-color: #197fba
+			color: #fff 
+	&_white		
+		color: #fff
+		border-color: #fff
+		background-color: rgba(255, 255, 255, 0.25)
+		&:visited
+			color: #fff
+		&:hover, &:active
+			background-color: #fff
+			color: #197fba 
+	i
+		font-size: 15px
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		right: 11px
+
+.btn-submit
+	+bold
+	color: white
+	font-size: 14px
+	line-height: 1
+	background-color: #197fba
+	border-radius: 10px
+	padding: 8px 16px 7px 
+	transition: color 0.25s, background 0.25s, border-color 0.25s
+	cursor: pointer
+	&:focus, &:visited, &:hover, &:active
+		text-decoration: none
+	&:hover
+		background-color: #0b5884
+		
+//table
+.table-wrapper
+	overflow: auto
+	width: 100%
+	padding: 0 0 25px 
+	.title
+		margin-bottom: 33px
+.main-table
+	width: 755px
+	th, td, tr, thead, tbody
+		border: none
+	thead
+		th
+			+med
+			color: #333
+			font-size: 14px
+			line-height: 30px
+			&.is-name
+				width: 320px
+				padding: 0 25px
+			&.is-numbers
+				width: 45px
+				padding: 0 10px 
+			&.is-match
+				width: 70px
+				padding: 0 10px
+			&.is-last
+				width: 150px
+				padding: 0 10px 
+	tbody
+		tr			
+			&:nth-child(even)
+				td
+					background-color: #f3f3f3
+					&:first-child
+						border-radius: 10px 0 0 10px
+					&:last-child
+						border-radius: 0 10px 10px 0
+		td
+			+light
+			color: #333
+			font-size: 14px
+			line-height: 27px
+			vertical-align: top
+			&.is-number
+				width: 30px
+				padding: 0 0 0 8px 			
+			&.is-name
+				width: 290px
+				img
+					margin: 0 5px 0 0 
+			&.is-numbers
+				width: 45px
+				padding: 0 10px 
+			&.is-match
+				width: 70px
+				padding: 0 10px
+			&.is-last
+				width: 150px
+				padding: 0 10px 
+				font-size: 0
+				i
+					&.is-match
+						width: 16px
+						height: 16px
+						display: inline-block
+						vertical-align: middle
+						margin: 2px
+						border-radius: 50%
+						cursor: pointer
+						transition: box-shadow 0.2s
+						&:hover
+							box-shadow: 0 0 0 3px #197fba
+					&.is-green
+						background-color: #87d50b
+					&.is-yellow
+						background-color: #f5d000
+					&.is-red
+						background-color: #e43b06
+
+//pages
+.pages
+	&__list
+		+ul
+		padding: 10px 0 
+		li
+			display: inline-block
+			vertical-align: middle
+			padding: 0 12px 
+			a
+				+reg
+				color: #197fba
+				font-size: 14px
+				line-height: 26px
+				display: inline-block
+				
+//tabs
+.tabs
+	&__list
+		+ul
+		padding: 20px 0 
+		li
+			display: inline-block
+			vertical-align: top
+	&-btn
+		display: inline-block
+		+light
+		color: #197fba
+		font-size: 20px
+		text-transform: uppercase
+		line-height: 1
+		text-decoration: none
+		padding: 17px 35px 16px
+		border-radius: 10px
+		&.is-active
+			background-color: #f93526
+			color: #fff
+			+bold
+			&:visited
+				color: #fff 
+			span
+				&:before
+					display: none
+		&:visited
+			color: #197fba
+		&:visited, &:hover, &:focus, &:active
+			text-decoration: none
+		span
+			display: inline-block
+			position: relative
+			&:before
+				content: "" 
+				position: absolute
+				top: 100%
+				left: 0
+				right: 0
+				border-bottom: 2px dotted #197fba
+
+//leagues
+.leagues
+	background-color: #797979
+	&__inner
+		max-width: 1200px
+		margin: 0 auto
+		position: relative
+		padding: 0 50px 0 0
+	&__list
+		+ul
+		max-width: 1024px
+		li
+			display: inline-block
+			vertical-align: top
+			position: relative
+			padding: 7px 0 10px 0
+			a
+				+light
+				color: white
+				font-size: 17px
+				line-height: 31px
+				border-radius: 10px
+				display: inline-block
+				padding: 0 13px 
+				&.is-active					
+					background-color: #f93526
+	&__btn
+		position: absolute
+		top: 14px
+		right: 22px
+		background: none
+		padding: 7px 0
+		width: 20px
+		text-align: center 
+		&:before, &:after, span
+			border-radius: 50%
+			background: #fff
+			width: 4px
+			height: 4px 
+			display: block
+		span
+			margin: 0 auto 
+		&:before, &:after
+			position: absolute
+			left: 50%
+			content: "" 
+			margin-left: -2px
+		&:before
+			top: 0
+		&:after
+			bottom: 0
