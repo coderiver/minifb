@@ -60,4 +60,51 @@ $(document).ready(function() {
 		
 	});
 
+	//menu
+	$('.js-menu-link').on('click', function() {
+
+		var btn = $(this).data('mlink'),
+			btns = $('.js-menu-link'),
+			items = $('.js-menu-block'),
+			currItem = $('.js-menu-block[data-mblock=' + btn + ']'),
+			menu = $('.js-menu').addClass('is-active');
+
+		if ($(this).hasClass('is-active')) {
+			btns.removeClass('is-active');
+			menu.removeClass('is-active');
+			items.removeClass('is-active');
+		}
+		else {
+			btns.removeClass('is-active');
+			$(this).addClass('is-active');
+			menu.addClass('is-active');
+			items.removeClass('is-active');
+			currItem.addClass('is-active');
+		}
+
+
+		return false;
+	});	
+
+	//match centre
+
+	$('.js-mc-btn').on('click', function() {
+		$('.js-mc').toggleClass('is-active');
+		$(this).toggleClass('is-active');
+		return false;
+	});
+	$('.js-mc').each(function() {
+		$('.js-mc-close').on('click', function() {
+			$('.js-mc').removeClass('is-active');
+			$('.js-mc-btn').removeClass('is-active');
+		});
+		$('body').on('click', function() {
+			$('.js-mc').removeClass('is-active');
+			$('.js-mc-btn').removeClass('is-active');
+		});
+		$(this).on('click', function(event) {
+			return false;
+		});
+	});
+
 });

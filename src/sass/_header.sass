@@ -5,15 +5,29 @@
 		margin: 0 auto 
 		padding: 31px 10px 10px
 		+clr
+		+r(991)
+			display: table
+			width: 100%
 	&__left
 		float: left
 		width: 50%
 		padding: 6px 0 0 
+		+r(1219)
+			max-width: 540px
+			width: 100%
+		+r(991)
+			width: auto
+			display: table-cell
+			vertical-align: top
 	&-sponsors
 		font-size: 0
 		padding: 16px 0 0 
 		float: left
 		width: 25%
+		+r(1219)
+			width: 180px
+		+r(991)
+			display: none
 		&__title
 			+light
 			color: #333
@@ -34,9 +48,23 @@
 		float: left
 		width: 25%
 		padding: 7px 0 0 
+		position: relative
+		+r(1219)
+			width: 170px
+			float: right
+			text-align: center
+		+r(991)
+			display: table-cell
+			float: none
+			vertical-align: top
+			width: 68px
+			text-align: right
 		.mini-logo
 			float: right
 			margin: 0 6px 0 0 
+			+r(1219)
+				float: none
+				margin: 0
 	&-btn
 		+bold
 		color: #333
@@ -60,11 +88,22 @@
 			top: 19px
 			right: 15px
 	&__login
-		overflow: hidden
 		padding: 9px 0 
+		float: left
+		+r(1219)
+			float: none
+		+r(991)
+			position: absolute
+			bottom: 100%
+			right: 0
+			width: 170px
+			text-align: right
+			padding: 3px 0 
 	&__enter
 		+ul
 		margin-bottom: 23px
+		+r(1219)
+			margin: 0
 		li, a
 			+thin
 			font-size: 15px
@@ -85,6 +124,8 @@
 				padding: 0 3px 
 	&__social
 		+ul
+		+r(1219)
+			display: none
 		li
 			display: inline-block
 			vertical-align: middle
@@ -178,6 +219,17 @@
 	position: absolute
 	top: 0
 	left: 0
+	-webkit-transform-origin: top left
+	-moz-transform-origin: top left
+	-ms-transform-origin: top left
+	-o-transform-origin: top left
+	transform-origin: top left
+	+r(1219)
+		+rotate(-90)
+		top: 118px	
+	+r(991)
+		+rotate(0)
+		top: 0
 	&:before
 		content: "" 
 		position: absolute
@@ -194,17 +246,26 @@
 		float: left
 		margin: 0 24px 8px 14px 
 		font-size: 0
+		+r(991)
+			margin: 0 14px 8px 0
 		img
 			width: 100%
 	&-text
 		display: inline-block
 		vertical-align: top
 		margin: 3px 10px 5px 
+		+r(991)
+			display: block
+			overflow: hidden
+			margin: 0 
+			padding: 0 10px   
 		span
 			+thin
 			color: #333
 			font-size: 30px
 			line-height: 1
+			+r(991)
+				font-size: 25px
 			
 .mini-logo
 	width: 68px
@@ -222,7 +283,7 @@
 	&__top
 		position: relative
 		max-width: 1200px
-		padding: 0 10px
+		padding: 0 50px 0 10px
 		margin: 0 auto
 	&__list
 		+ul
@@ -269,18 +330,24 @@
 					+s(mini-academy)
 	.btn-search
 		position: absolute
-		top: 12px
+		bottom: 17px
 		right: 24px
 		cursor: pointer
 		font-size: 21px
 		color: #fff
 	&-dropdown
 		background: #333333
+		display: none
+		&.is-active
+			display: block
 		&__section
 			max-width: 1200px
 			margin: 0 auto
 			padding: 24px 0 20px 
 			+clr
+			display: none
+			&.is-active
+				display: block
 		&__list
 			+ul 
 			position: relative
@@ -374,6 +441,7 @@
 
 .mc
 	background: #434343 
+	display: none
 	+r(1219)
 		position: fixed
 		top: 0
@@ -382,6 +450,13 @@
 		z-index: 300 
 		max-width: 330px
 		overflow: auto
+		transform: translateX(-100%)
+		display: block
+		min-width: 320px 
+	&.is-active
+		display: block
+		+r(1219)
+			transform: translateX(0)
 	&__container
 		max-width: 1200px
 		width: 100%
@@ -511,6 +586,8 @@
 				+s(league-women)
 		span
 			float: right
+			+r(1219)
+				float: none
 
 .league-item
 	background: #fff 

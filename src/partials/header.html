@@ -1,7 +1,7 @@
 <!-- begin header  -->
 <header class="header">
 	<div class="header__top">
-		<button class="btn-match">Матч-Центр</button>
+		<button class="btn-match js-mc-btn">Матч-Центр</button>
 		<div class="header__left">
 			<a href="#" class="logo-img">
 				<img src="img/logo.png" alt="">
@@ -18,9 +18,6 @@
 			</a>
 		</div>	
 		<div class="header__right">
-			<a href="#" class="mini-logo">
-				<img src="img/mini-logo.png" alt="">
-			</a>
 			<div class="header__login">
 				<ul class="header__enter">
 					<li><a href="#">Вход</a></li>
@@ -34,6 +31,9 @@
 					<li><a href="#" class="icon-photos"></a></li>
 				</ul>
 			</div>
+			<a href="#" class="mini-logo">
+				<img src="img/mini-logo.png" alt="">
+			</a>
 		</div>
 	</div>
 	<div class="header-dropdown js-dropdown">
@@ -89,7 +89,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mc">
+	<div class="mc js-mc">
 		<div class="mc__container">
 			<div class="mc__row">
 				<div class="mc__top">
@@ -101,7 +101,7 @@
 					</ul>
 					<div class="mc__right">
 						<button class="button-white">SMS</button>
-						<i class="icon-close"></i>
+						<i class="icon-close js-mc-close"></i>
 					</div>
 				</div>
 			</div>
@@ -461,19 +461,268 @@
 		<div class="menu">
 			<div class="menu__top">
 				<ul class="menu__list">
-					<li><a href="#" class="is-drop"><i class="icon-arr-bottom"></i>ПРОФЕССИОНАЛЫ</a></li>
-					<li><a href="#" class="is-drop"><i class="icon-arr-bottom"></i>Любители</a></li>
-					<li><a href="#" class="is-drop"><i class="icon-arr-bottom"></i>Сборные</a></li>
-					<li><a href="#" class="is-drop"><i class="icon-arr-bottom"></i>Наши проекты</a></li>
+					<li><a href="#" class="is-drop js-menu-link" data-mlink="pro"><i class="icon-arr-bottom"></i>ПРОФЕССИОНАЛЫ</a></li>
+					<li><a href="#" class="is-drop js-menu-link" data-mlink="amateur"><i class="icon-arr-bottom"></i>Любители</a></li>
+					<li><a href="#" class="is-drop js-menu-link" data-mlink="team"><i class="icon-arr-bottom"></i>Сборные</a></li>
+					<li><a href="#" class="is-drop js-menu-link" data-mlink="projects"><i class="icon-arr-bottom"></i>Наши проекты</a></li>
 					<li><a href="#" class="is-school"><i></i>Мини-футбол в школу</a></li>
 					<li><a href="#" class="is-academy"><i></i>Академия</a></li>
 				</ul>
 				<i class="btn-search icon-search"></i>
 			</div>
-			<div class="menu-dropdown">
-				<div class="menu-dropdown__section">
+			<div class="menu-dropdown js-menu">
+				<div class="menu-dropdown__section js-menu-block" data-mblock="pro">
 					<ul class="menu-dropdown__list">
 						<li><a href="#">За рубежом</a></li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Суперлига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Высшая лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Женская лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Дубли</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Кубок России</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Кубок УЕФА</a></li>
+						<li><a href="#">Кубок Еременко</a></li>
+					</ul>
+					<div class="menu-dropdown__block">
+						<div class="menu-dropdown__schedule">
+							<h4>Ближайшие матчи</h4>
+							<p>1-й тур   10 сентября 2015</p>
+							<ul>
+								<li>
+									<time>17:00</time>
+									<span>Газпром-ЮГРА - Дина</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Дина - Тюмень</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Сибиряк - Ямал</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Тюмень - Синара</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Динамо - КПРФ</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Норильский никель - Новая генерация</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-dropdown__partners">
+							<h4>партнеры</h4>
+							<ul>
+								<li><a href="#"><img src="img/partner1.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner2.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner3.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner4.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="menu-dropdown__section js-menu-block" data-mblock="amateur">
+					<ul class="menu-dropdown__list">
+						<li><a href="#">2За рубежом</a></li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Суперлига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Высшая лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Женская лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Дубли</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Кубок России</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Кубок УЕФА</a></li>
+						<li><a href="#">Кубок Еременко</a></li>
+					</ul>
+					<div class="menu-dropdown__block">
+						<div class="menu-dropdown__schedule">
+							<h4>Ближайшие матчи</h4>
+							<p>1-й тур   10 сентября 2015</p>
+							<ul>
+								<li>
+									<time>17:00</time>
+									<span>Газпром-ЮГРА - Дина</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Дина - Тюмень</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Сибиряк - Ямал</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Тюмень - Синара</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Динамо - КПРФ</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Норильский никель - Новая генерация</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-dropdown__partners">
+							<h4>партнеры</h4>
+							<ul>
+								<li><a href="#"><img src="img/partner1.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner2.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner3.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner4.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="menu-dropdown__section js-menu-block" data-mblock="team">
+					<ul class="menu-dropdown__list">
+						<li><a href="#">3За рубежом</a></li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Суперлига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Высшая лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Женская лига</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Дубли</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li class="is-drop">
+							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Кубок России</a>
+							<ul class="menu-dropdown__submenu">
+								<li><a href="#">Первенство России</a></li>
+								<li><a href="#">Высшая лига. Дивизион «Б»</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Кубок УЕФА</a></li>
+						<li><a href="#">Кубок Еременко</a></li>
+					</ul>
+					<div class="menu-dropdown__block">
+						<div class="menu-dropdown__schedule">
+							<h4>Ближайшие матчи</h4>
+							<p>1-й тур   10 сентября 2015</p>
+							<ul>
+								<li>
+									<time>17:00</time>
+									<span>Газпром-ЮГРА - Дина</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Дина - Тюмень</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Сибиряк - Ямал</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Тюмень - Синара</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Динамо - КПРФ</span>
+								</li>
+								<li>
+									<time>17:00</time>
+									<span>Норильский никель - Новая генерация</span>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-dropdown__partners">
+							<h4>партнеры</h4>
+							<ul>
+								<li><a href="#"><img src="img/partner1.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner2.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner3.png" alt=""></a></li>
+								<li><a href="#"><img src="img/partner4.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="menu-dropdown__section js-menu-block" data-mblock="projects">
+					<ul class="menu-dropdown__list">
+						<li><a href="#">4За рубежом</a></li>
 						<li class="is-drop">
 							<a href="#" class="is-drop"><i class="icon-arr-right"></i>Суперлига</a>
 							<ul class="menu-dropdown__submenu">
@@ -557,5 +806,23 @@
 			</div>
 		</div>
 	</div>
+	<!-- begin leagues  -->
+	<div class="leagues">
+		<div class="leagues__inner">
+			<ul class="leagues__list">
+				<li><a href="#">Суперлига</a></li>
+				<li><a href="#">Высшая лига</a></li>
+				<li><a href="#">Кубок России</a></li>
+				<li><a href="#">Кубок УЕФА</a></li>
+				<li><a href="#">ЧЕ 2016</a></li>
+				<li><a href="#">Кубок Ерёменко</a></li>
+				<li><a href="#">Женская лига</a></li>
+				<li><a href="#">Дубли</a></li>
+				<li><a href="#">Юношеская лига</a></li>
+			</ul>
+			<button class="leagues__btn"><span></span></button>
+		</div>
+	</div>
+	<!-- end leagues -->
 </header>
 <!-- end header -->
