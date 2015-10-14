@@ -1,2 +1,211 @@
+.main
+	margin: 0 0 -394px
+	min-height: 100%
+	+r(1219)
+		margin: 0
+		min-height: 1px 
+	&:after
+		display: block
+		height: 394px
+		content: ""
+		+r(1219)
+			display: none
+	&__inner
+		overflow: hidden
+		&.index-page
+			+g(#3375cc, #71aad5)
 .content
 	padding: 30px 0  
+	
+.top-banner
+	display: block
+	color: #fff
+	position: relative
+	padding: 14px 0 16px
+	font-size: 0
+	&__img
+		float: right
+		box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
+		border-radius: 50px
+		position: relative
+		&:before
+			content: "" 
+			border-radius: 50px
+			position: absolute
+			left: 0
+			right: 0
+			top: 10%
+			bottom: 10%
+			box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
+		img
+			position: relative
+			max-width: 100%
+	&__info
+		overflow: hidden
+		position: relative
+		padding: 6px 0 5px 
+	&__title
+		+thin
+		font-size: 25px
+		line-height: 1.2
+		b
+			+bold
+			display: block
+	&__text
+		+light
+		font-size: 16px
+		display: inline-block
+		vertical-align: top
+		padding: 3px 20px 4px 0
+		
+.banner
+	position: relative
+	border-radius: 10px
+	overflow: hidden
+	margin-bottom: 20px
+	&__img
+		display: block
+		font-size: 0
+		img
+			width: 100%
+	&__info
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(black, 0.7)
+		padding: 13px 20px 14px
+	&__title, &__text	
+		color: white
+	&__title
+		font-size: 18px
+		line-height: 1.2
+		+bold
+		a
+			+white-link
+			display: block
+	&__text
+		display: block
+		font-size: 15px
+		line-height: 1.2
+		+white-link
+		margin: 5px 0 10px
+	time
+		display: inline-block
+		vertical-align: top
+		color: #fffefe
+		font-size: 12px
+		padding: 6px 10px 7px 0
+		
+.scoreboard
+	border-radius: 10px
+	background: url(../img/scoreboard.png) no-repeat #f93526
+	+cover
+	&__section
+		&.is-active
+			.scoreboard__head
+				background: none
+				padding: 14px 20px 0
+			.scoreboard__title
+				font-size: 20px
+				i
+					display: none
+			.scoreboard__body
+				// display: block
+			.button-white
+				display: block
+		.button-white
+			float: right
+			display: none
+	&__head
+		padding: 6px 20px
+		background-color: rgba(#001616, 0.7)
+		&.is-last
+			border-radius: 0 0 10px 10px
+		&.is-first
+			border-radius: 10px 10px 0 0
+	&__title
+		font-size: 15px
+		+bold
+		text-transform: uppercase
+		color: #fff 
+		cursor: pointer
+		overflow: hidden
+		i
+			font-size: 9px
+			vertical-align: top
+			padding: 6px 0 0 10px 
+		span
+			padding: 1px 0 0 
+			display: inline-block
+			vertical-align: top
+	&__body
+		display: none
+	&__filter
+		padding: 3px 20px 6px
+		+clr
+	&__box
+		float: left
+		position: relative
+		&.is-pro
+			width: 41%
+			padding: 0 10px 10px 0
+		&.is-super
+			width: 33%
+			padding: 0 10px 10px 23px
+			i
+				position: absolute
+				top: 0
+				left: 0
+			
+	&__leagues
+		width: 26%
+		float: right
+		margin: 2px 0 0 
+		img
+			max-width: 100%
+.scoreboard-table
+	width: 100%
+	border-radius: 0 0 10px 10px
+	overflow: hidden
+	td
+		&.is-name
+			width: 46%
+			padding: 2px 0 0 20px 
+		&.is-game
+			width: 13%
+			padding: 2px 0 0 10px
+		&.is-match
+			width: 24%
+			padding: 2px 0 0 10px
+		&.is-point
+			width: 17%
+			padding: 2px 0 0 10px
+	th
+		&.is-name
+			width: 46%
+			padding: 0 0 0 20px 
+		&.is-game
+			width: 13%
+			padding: 0 0 0 10px
+		&.is-match
+			width: 24%
+			padding: 0 0 0 10px
+		&.is-point
+			width: 17%
+			padding: 0 0 0 10px
+	thead
+		th
+			color: #080808
+			+bold
+			font-size: 13px
+			line-height: 1
+	tbody
+		tr
+			&:nth-child(even)
+				background: rgba(white, 0.2) 
+		td
+			color: white
+			font-size: 14px
+			line-height: 21px
+			+bold

@@ -69,6 +69,8 @@
 =wo
 	will-change: opacity
 
+html, body
+	height: 100%
 
 body
 	+light
@@ -555,8 +557,12 @@ dd
 	border: 2px solid #197fba
 	border-radius: 10px
 	padding: 6px 13px 5px 
-	&:hover
-		color: #197fba 
+	transition: color 0.25s, background 0.25s, border-color 0.25s
+	&:visited
+		color: #197fba
+	&:hover, &:active
+		background-color: #197fba
+		color: #fff 
 .button-white
 	display: inline-block
 	vertical-align: top
@@ -568,8 +574,12 @@ dd
 	border: 2px solid #fff
 	border-radius: 10px
 	padding: 6px 9px 5px 
-	&:hover
-		color: #fff 
+	transition: color 0.25s, background 0.25s, border-color 0.25s
+	&:visited
+		color: #fff
+	&:hover, &:active
+		background-color: #fff
+		color: #197fba 
 
 //btns-row/col
 .btns-row
@@ -785,6 +795,8 @@ dd
 	&__list
 		+ul
 		max-width: 1024px
+		display: inline-block
+		vertical-align: top
 		li
 			display: inline-block
 			vertical-align: top
@@ -825,3 +837,76 @@ dd
 			top: 0
 		&:after
 			bottom: 0
+	&__dropdown
+		position: absolute
+		top: 100%
+		right: 0
+		background-color: #797979
+		padding: 20px 
+
+.dropdown
+	font-size: 15px
+	color: #fff
+	+light
+	position: relative
+	display: inline-block
+	vertical-align: top
+	line-height: 1.2
+	max-width: 100%
+	select
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+	&__text
+		padding: 0 10px 0 0
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		display: block
+		cursor: pointer
+		&:before
+			border-bottom: 1px dotted #fff 
+			position: absolute
+			right: 10px
+			left: 0
+			bottom: 0
+			content: "" 
+		&:after
+			content: "\EA01" 
+			position: absolute
+			top: 50%
+			right: 0
+			font-size: 5px
+			margin-top: -1px
+			color: #fff 
+			z-index: 10 
+			font-family: "svgfont"
+			font-style: normal
+			font-weight: normal
+			text-rendering: auto
+			speak: none
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+	&__list
+		display: none
+		+ul
+		color: #fff 
+		background-color: #353535
+		border-radius: 10px
+		position: absolute
+		top: 100%
+		left: 50%
+		margin: 10px 0 0 -95px
+		width: 190px
+		padding: 15px 0 
+		z-index: 200
+		li
+			font-size: 17px
+			line-height: 30px
+			padding: 0 15px 
+			cursor: pointer
+			&.is-active
+				display: none

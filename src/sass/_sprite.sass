@@ -1,19 +1,20 @@
 $icons: (0:0)
-$icons: map-merge($icons,(arr-bottom-active: (X: -123px, Y:-32px, W: 13px, H: 8px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(arr-bottom: (X: -106px, Y:-32px, W: 13px, H: 8px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(codedby: (X: -106px, Y:-9px, W: 47px, H: 5px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(coderiver: (X: -106px, Y:0px, W: 49px, H: 5px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(footer-logo: (X: -70px, Y:-41px, W: 21px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(footer-rfs: (X: 0px, Y:0px, W: 32px, H: 37px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(league-major: (X: -35px, Y:-41px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(league-russia: (X: -36px, Y:0px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(i-arr-bottom-active: (X: -123px, Y:-32px, W: 13px, H: 8px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(i-arr-bottom: (X: -106px, Y:-32px, W: 13px, H: 8px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(i-menu-bottom: (X: -106px, Y:-18px, W: 16px, H: 10px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(i-search-btn: (X: 0px, Y:-76px, W: 21px, H: 21px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(league-major: (X: -36px, Y:0px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(league-russia: (X: -35px, Y:-41px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(league-super: (X: 0px, Y:-41px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 $icons: map-merge($icons,(league-women: (X: -71px, Y:0px, W: 31px, H: 31px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(menu-bottom-active: (X: -106px, Y:-18px, W: 16px, H: 10px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(menu-bottom: (X: -126px, Y:-18px, W: 16px, H: 10px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(mini-academy: (X: -25px, Y:-76px, W: 20px, H: 20px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(mini-school: (X: -49px, Y:-76px, W: 20px, H: 20px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(search-btn: (X: 0px, Y:-76px, W: 21px, H: 21px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(menu-bottom-active: (X: -126px, Y:-18px, W: 16px, H: 10px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mini-academy: (X: -49px, Y:-76px, W: 20px, H: 20px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mini-school: (X: -25px, Y:-76px, W: 20px, H: 20px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(scoreboard-super: (X: -73px, Y:-76px, W: 19px, H: 19px, TW: 155px, TH: 97px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -30,16 +31,6 @@ $icons: map-merge($icons,(search-btn: (X: 0px, Y:-76px, W: 21px, H: 21px, TW: 15
 @mixin s($i)
 	+sprite($i)
 
-.icon-arr-bottom-active
-	width: 13px
-	height: 8px
-	background-image: url('../img/icons.png')
-	background-position: -123px -32px
-.icon-arr-bottom
-	width: 13px
-	height: 8px
-	background-image: url('../img/icons.png')
-	background-position: -106px -32px
 .icon-codedby
 	width: 47px
 	height: 5px
@@ -60,16 +51,36 @@ $icons: map-merge($icons,(search-btn: (X: 0px, Y:-76px, W: 21px, H: 21px, TW: 15
 	height: 37px
 	background-image: url('../img/icons.png')
 	background-position: 0px 0px
+.icon-i-arr-bottom-active
+	width: 13px
+	height: 8px
+	background-image: url('../img/icons.png')
+	background-position: -123px -32px
+.icon-i-arr-bottom
+	width: 13px
+	height: 8px
+	background-image: url('../img/icons.png')
+	background-position: -106px -32px
+.icon-i-menu-bottom
+	width: 16px
+	height: 10px
+	background-image: url('../img/icons.png')
+	background-position: -106px -18px
+.icon-i-search-btn
+	width: 21px
+	height: 21px
+	background-image: url('../img/icons.png')
+	background-position: 0px -76px
 .icon-league-major
 	width: 31px
 	height: 31px
 	background-image: url('../img/icons.png')
-	background-position: -35px -41px
+	background-position: -36px 0px
 .icon-league-russia
 	width: 31px
 	height: 31px
 	background-image: url('../img/icons.png')
-	background-position: -36px 0px
+	background-position: -35px -41px
 .icon-league-super
 	width: 31px
 	height: 31px
@@ -84,24 +95,19 @@ $icons: map-merge($icons,(search-btn: (X: 0px, Y:-76px, W: 21px, H: 21px, TW: 15
 	width: 16px
 	height: 10px
 	background-image: url('../img/icons.png')
-	background-position: -106px -18px
-.icon-menu-bottom
-	width: 16px
-	height: 10px
-	background-image: url('../img/icons.png')
 	background-position: -126px -18px
 .icon-mini-academy
 	width: 20px
 	height: 20px
 	background-image: url('../img/icons.png')
-	background-position: -25px -76px
+	background-position: -49px -76px
 .icon-mini-school
 	width: 20px
 	height: 20px
 	background-image: url('../img/icons.png')
-	background-position: -49px -76px
-.icon-search-btn
-	width: 21px
-	height: 21px
+	background-position: -25px -76px
+.icon-scoreboard-super
+	width: 19px
+	height: 19px
 	background-image: url('../img/icons.png')
-	background-position: 0px -76px
+	background-position: -73px -76px

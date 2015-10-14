@@ -8,6 +8,9 @@
 		+r(991)
 			display: table
 			width: 100%
+			padding-left: 50px
+		+r(767)
+			padding-left: 10px
 	&__left
 		float: left
 		width: 50%
@@ -77,6 +80,8 @@
 		line-height: 1
 		transition: color 0.25s, background 0.25s, border 0.25s
 		border-radius: 8px
+		+r(767)
+			display: none
 		&.is-active, &:hover
 			color: #f13333
 		&.is-active
@@ -227,9 +232,8 @@
 	+r(1219)
 		+rotate(-90)
 		top: 118px	
-	+r(991)
-		+rotate(0)
-		top: 0
+	+r(767)
+		display: none
 	&:before
 		content: "" 
 		position: absolute
@@ -285,6 +289,10 @@
 		max-width: 1200px
 		padding: 0 50px 0 10px
 		margin: 0 auto
+		+r(767)
+			display: none
+		&.is-active
+			display: block
 	&__list
 		+ul
 		li
@@ -313,7 +321,7 @@
 				position: absolute
 				top: 50%
 				right: 0
-				margin-top: -5px
+				margin-top: -4px
 				font-size: 9px
 			&.is-school, &.is-academy
 				padding: 11px 0 9px 25px
@@ -353,6 +361,11 @@
 			position: relative
 			width: 50%
 			float: left
+			+r(1219)
+				width: 40%
+			+r(991)
+				width: 100%
+				float: none
 			li
 				position: static
 				width: 50%
@@ -395,6 +408,14 @@
 			width: 50%
 			+clr
 			max-width: 500px
+			font-size: 0
+			+r(1219)
+				width: 60%
+			+r(991)
+				width: 100%
+				float: none
+				text-align: center
+				padding-top: 10px
 		&__schedule
 			width: 260px
 			border: 2px solid #fff
@@ -403,6 +424,10 @@
 			min-height: 301px 
 			float: left
 			margin: 0 10px 10px
+			+r(991)
+				float: none
+				display: inline-block
+				vertical-align: top
 			h4, li, p
 				color: #fff
 			h4
@@ -430,6 +455,10 @@
 			float: right
 			min-height: 301px
 			margin: 0 10px 10px
+			+r(991)
+				float: none
+				display: inline-block
+				vertical-align: top
 			ul
 				+ul
 				li
@@ -438,6 +467,47 @@
 						display: block
 						img
 							width: 100%
+
+.menu-mobile
+	padding: 16px 10px 14px
+	+clr
+	display: none
+	+r(767)
+		display: block
+	&__btn
+		color: white
+		font-size: 17px
+		+bold
+		line-height: 1
+		padding: 2px 18px 1px 0
+		background: none 
+		position: relative
+		i
+			font-size: 8px
+			position: absolute
+			top: 50%
+			margin-top: -4px
+			right: 0
+.menu-btn
+	width: 27px
+	padding: 8px 0
+	background: none
+	position: relative
+	float: right
+	span, &:before, &:after
+		display: block
+		height: 4px
+		border-radius: 2px
+		background: #fff 
+	&:before, &:after
+		content: "" 
+		position: absolute
+		left: 0
+		right: 0
+	&:before
+		top: 0
+	&:after
+		bottom: 0
 
 .mc
 	background: #434343 
