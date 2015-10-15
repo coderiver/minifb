@@ -768,27 +768,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .scoreboard-table tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.2); }
 .scoreboard-table tbody td { color: white; font-size: 14px; line-height: 21px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 
-<<<<<<< HEAD
-.teams-list { min-height: 62px; background: #fff; }
-.teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }
-.teams-list ul { line-height: 1; margin: 0; font-size: 0; *zoom: 1; text-align: justify; }
-.teams-list ul li { padding: 0; }
-.teams-list ul li:before { display: none; }
-.teams-list ul li li { padding: 0; }
-.teams-list ul li li li { padding: 0; }
-.teams-list ul:after { content: " "; display: table; clear: both; }
-.teams-list ul:after { content: ""; width: 100%; height: 0; display: inline-block; }
-@media only screen and (max-width: 767px) { .teams-list ul { text-align: left; }
-  .teams-list ul:after { display: none; } }
-.teams-list ul li { display: inline-block; vertical-align: middle; font-size: 0; padding: 3px; border-radius: 10px; }
-.teams-list ul li:hover { border: 3px solid #F03723; padding: 0; }
-.teams-list ul li a { display: block; padding: 5px; min-width: 50px; text-align: center; }
-.teams-list ul li img { max-width: 100%; height: auto; }
-@media only screen and (max-width: 767px) { .teams-list ul li { margin-right: 30px; }
-  .teams-list ul li:last-child { margin-right: 0; } }
-
-.main__inner.league-page { background-image: -webkit-linear-gradient(left, #9c2407 0%, #d33021 20%, #d33021 80%, #9c2407 100%); }
-=======
 .block { background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
 .block_dark { background: #333; }
 .block__top { *zoom: 1; margin-bottom: 20px; }
@@ -934,7 +913,26 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .champ-item a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .champ-item a:hover, .champ-item a.is-active { border-color: #197fba; }
 .champ-item a img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%; }
->>>>>>> dbead0fcb190b097aef8d78e9d36ec8d7c06bcea
+
+.teams-list { min-height: 62px; background: #fff; }
+.teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }
+.teams-list ul { line-height: 1; margin: 0; font-size: 0; *zoom: 1; text-align: justify; }
+.teams-list ul li { padding: 0; }
+.teams-list ul li:before { display: none; }
+.teams-list ul li li { padding: 0; }
+.teams-list ul li li li { padding: 0; }
+.teams-list ul:after { content: " "; display: table; clear: both; }
+.teams-list ul:after { content: ""; width: 100%; height: 0; display: inline-block; }
+@media only screen and (max-width: 767px) { .teams-list ul { text-align: left; }
+  .teams-list ul:after { display: none; } }
+.teams-list ul li { display: inline-block; vertical-align: middle; font-size: 0; padding: 3px; border-radius: 10px; }
+.teams-list ul li:hover { border: 3px solid #F03723; padding: 0; }
+.teams-list ul li a { display: block; padding: 5px; min-width: 50px; text-align: center; }
+.teams-list ul li img { max-width: 100%; height: auto; }
+@media only screen and (max-width: 767px) { .teams-list ul li { margin-right: 30px; }
+  .teams-list ul li:last-child { margin-right: 0; } }
+
+.main__inner.league-page { background-image: -webkit-linear-gradient(left, #9c2407 0%, #d33021 20%, #d33021 80%, #9c2407 100%); }
 
 
 
