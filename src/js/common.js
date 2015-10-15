@@ -135,4 +135,8 @@ $(document).ready(function() {
 	});
 
 
+
+$('.js-leagues-list').menuFlex();
+
+
 });
