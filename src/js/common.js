@@ -134,5 +134,213 @@ $(document).ready(function() {
 
 	});
 
+	//tabs
+	$('.js-tabs-link').on('click', function() {
+
+		var btn = $(this).data('btn'),
+			btns = $(this).parents('.js-tabs').find('.js-tabs-link'),
+			items = $(this).parents('.js-tabs').find('.js-tabs-block'),
+			currItem = $(this).parents('.js-tabs').find('.js-tabs-block[data-block=' + btn + ']');
+
+		btns.removeClass('is-active');
+		$(this).addClass('is-active');
+		items.removeClass('is-active');
+		currItem.addClass('is-active');
+
+		return false;
+	});	
+
+	//index (news/photos) / video slider
+
+	$(window).resize(function() {
+
+		if ($(window).width() < 767) {
+			if (!$('.js-block-slider').hasClass('slick-initialized')) {
+				$('.js-block-slider').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-block-slider').hasClass('slick-initialized')) {
+				$('.js-block-slider').slick('unslick');
+			};			
+		};
+
+		if ($(window).width() < 991) {
+			if (!$('.js-video-slider').hasClass('slick-initialized')) {
+				$('.js-video-slider').slick({
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-video-slider').hasClass('slick-initialized')) {
+				$('.js-video-slider').slick('unslick');
+			};			
+		};
+
+		if ($(window).width() < 761) {
+			if (!$('.js-photo-slider').hasClass('slick-initialized')) {
+				$('.js-photo-slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						}
+					]
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-photo-slider').hasClass('slick-initialized')) {
+				$('.js-photo-slider').slick('unslick');
+			};			
+		};
+	});
+
+	$(window).load(function() {
+
+		if ($(window).width() < 767) {
+			if (!$('.js-block-slider').hasClass('slick-initialized')) {
+				$('.js-block-slider').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-block-slider').hasClass('slick-initialized')) {
+				$('.js-block-slider').slick('unslick');
+			};			
+		};
+
+		if ($(window).width() < 991) {
+			if (!$('.js-video-slider').hasClass('slick-initialized')) {
+				$('.js-video-slider').slick({
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-video-slider').hasClass('slick-initialized')) {
+				$('.js-video-slider').slick('unslick');
+			};			
+		};
+
+		if ($(window).width() < 761) {
+			if (!$('.js-photo-slider').hasClass('slick-initialized')) {
+				$('.js-photo-slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					arrows: false,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			};
+			
+		}
+		else {
+			if ($('.js-photo-slider').hasClass('slick-initialized')) {
+				$('.js-photo-slider').slick('unslick');
+			};			
+		};
+	});
+
+	//fancy
+
+	$(".js-fancybox-video").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '100%',
+		height		: '100%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+
+	$(".js-fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		closeBtn		: true,
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+
+	$('.js-champ-item').click(function() {
+		if ($(this).hasClass('is-active')) {
+			$(this).parents('.js-champ').find('.js-champ-item').removeClass('is-active');
+		}
+		else {
+			$(this).parents('.js-champ').find('.js-champ-item').removeClass('is-active');
+			$(this).addClass('is-active')			
+		};
+		if ($(this).parents('.js-champ').find('.js-champ-item').hasClass('is-active')) {
+			$(this).parents('.js-champ').find('.js-champ-btn').removeAttr('disabled');
+		}
+		else {
+			$(this).parents('.js-champ').find('.js-champ-btn').attr('disabled', 'disabled');
+		}
+		return false;
+	});
 
 });
