@@ -71,10 +71,11 @@
 
 html, body
 	height: 100%
-
+html
+	font-size: 10px
 body
 	+light
-	font-size: 12px
+	font-size: 10px
 	line-height: 1.4
 	min-width: 320px
 
@@ -98,23 +99,23 @@ h1, h2, h3, h4
 	
 
 h1
-	font-size: 45px
+	font-size: 4.5rem
 	
 h2
-	font-size: 41px
+	font-size: 4.1rem
 	
 h3
-	font-size: 30px
-	line-height: 34px
+	font-size: 3rem
+	line-height: 1.4
 		
 h4
-	font-size: 20px
-	line-height: 27px
+	font-size: 2rem
+	line-height: 1.35
 
 p
 	+light
 	color: #333
-	font-size: 15px
+	font-size: 1.5rem
 	line-height: 1.2
 	clear: both
 	margin-bottom: 20px
@@ -131,7 +132,7 @@ p
 ul, ol
 	+light
 	color: #333
-	font-size: 15px
+	font-size: 1.5rem
 	line-height: 25px
 	margin-bottom: 20px
 	ul, ol
@@ -165,10 +166,10 @@ ol
 		list-style: none 
 		padding: 0 0 0 10px 
 
-dl, dt, dd
+dt, dd
+	font-size: 1.5rem
 	color: #333
-	font-size: 15px
-	line-height: 20px
+	line-height: 1.35
 dl
 	margin-bottom: 20px
 dt
@@ -178,8 +179,8 @@ dd
 
 .title
 	+reg
-	font-size: 24px
-	line-height: 25px	
+	font-size: 2.4rem
+	line-height: 1.05	
 	margin-bottom: 8px
 
 .error, .success
@@ -188,9 +189,9 @@ dd
 .error__text, .success__text
 	display: inline-block	
 	+reg
-	font-size: 14px
-	line-height: 58px
-	padding: 0 25px 0 0 	
+	font-size: 1.4rem
+	line-height: 1
+	padding: 22px 25px 22px 0	
 	
 .error
 	&__text
@@ -206,14 +207,14 @@ dd
 		line-height: 1
 		padding: 10px 0 
 	&__title
-		font-size: 30px
+		font-size: 3rem
 	&__subtitle
-		font-size: 24px
+		font-size: 2.4rem
 	&__text
 		+reg
 		color: #333
-		font-size: 18px
-		line-height: 25px
+		font-size: 1.8rem
+		line-height: 1.4
 		margin-bottom: 4px
 //fields
 .field
@@ -224,8 +225,8 @@ dd
 	&__label
 		+reg
 		color: #333
-		font-size: 14px
-		line-height: 25px
+		font-size: 1.4rem
+		line-height: 1.8
 		display: inline-block
 		position: relative
 		margin-bottom: 7px
@@ -235,14 +236,15 @@ dd
 	&__mail
 		+reg
 		color: #333
-		font-size: 17px
+		font-size: 1.7rem
 		background: #dcdcdc
-		line-height: 25px
+		line-height: 1
 		position: absolute
 		bottom: 2px
 		left: 2px
 		width: 35px
 		border-radius: 8px 0 0 8px
+		padding: 4px 0 
 		text-align: center
 	&_required
 		.field__label
@@ -260,7 +262,7 @@ dd
 	border-radius: 10px
 	height: 29px
 	+light
-	font-size: 14px
+	font-size: 1.4rem
 	color: #333
 	padding: 0 13px 
 	+placeholder-color(#777)
@@ -281,7 +283,7 @@ dd
 	border-radius: 10px
 	height: 99px
 	+light
-	font-size: 14px
+	font-size: 1.4rem
 	color: #333
 	padding: 3px 13px 
 	+placeholder-color(#777)
@@ -300,8 +302,8 @@ dd
 
 .field-warning
 	+light
-	font-size: 14px
-	line-height: 25px
+	font-size: 1.4rem
+	line-height: 1.8
 	color: #333
 	span		
 		color: #ed1c24
@@ -314,8 +316,8 @@ dd
 	&__label
 		+reg
 		color: #333
-		font-size: 14px
-		line-height: 25px
+		font-size: 1.4rem
+		line-height: 1.8
 		display: inline-block
 		position: relative
 		margin-bottom: 7px
@@ -327,7 +329,7 @@ dd
 		overflow: hidden
 		font-size: 0
 		.icon-attachment
-			font-size: 14px
+			font-size: 1.4rem
 		input
 			position: absolute
 			top: 0
@@ -341,7 +343,7 @@ dd
 .select
 	position: relative
 	cursor: pointer
-	font-size: 14px
+	font-size: 1.4rem
 	max-width: 167px
 	user-select: none
 	&.is-active
@@ -361,8 +363,8 @@ dd
 	&__text
 		position: relative
 		display: block
-		padding: 0 30px 0 13px 
-		line-height: 27px
+		padding: 6px 30px 5px 13px
+		line-height: 1
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
@@ -377,7 +379,7 @@ dd
 			position: absolute
 			top: 9px
 			right: 8px
-			font-size: 9px
+			font-size: 0.9rem
 			color: #272727 
 			z-index: 10 
 			font-family: "svgfont"
@@ -406,9 +408,9 @@ dd
 		li
 			padding: 0 13px 
 			cursor: pointer
-			line-height: 24px			
+			line-height: 1.75			
 			+bold
-			font-size: 14px	
+			font-size: 1.4rem	
 			color: #181818
 			&:hover
 				background-color: #e8e8e8
@@ -438,10 +440,11 @@ dd
 			&:after
 				color: #c7c7c7 
 	span
-		font-size: 14px
-		line-height: 16px
+		font-size: 1.4rem
+		line-height: 1.2
 		+reg
 		color: #333 
+		display: inline-block
 		&:before, &:after
 			position: absolute
 		&:before
@@ -455,8 +458,8 @@ dd
 		&:after
 			top: 0
 			left: 4px
-			font-size: 6px
-			content: "\EA07"
+			font-size: 0.6rem
+			content: "\EA08"
 			font-family: "svgfont"
 			font-style: normal
 			font-weight: normal
@@ -490,8 +493,8 @@ dd
 			&:after
 				background: #c7c7c7 
 	span
-		font-size: 14px
-		line-height: 16px
+		font-size: 1.4rem
+		line-height: 1.2
 		+reg
 		color: #333 
 		&:before, &:after
@@ -520,8 +523,8 @@ dd
 	&__label
 		+reg
 		color: #333
-		font-size: 14px
-		line-height: 25px
+		font-size: 1.4rem
+		line-height: 1.8
 		display: inline-block
 		position: relative
 		margin-bottom: 7px
@@ -540,7 +543,7 @@ dd
 		border-radius: 4px
 		box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.15)
 		+light
-		font-size: 14px
+		font-size: 1.4rem
 		color: #333
 		+placeholder-color(#777)
 		transition: border-color 0.25s
@@ -551,7 +554,7 @@ dd
 	vertical-align: top
 	+bold
 	color: #197fba
-	font-size: 14px
+	font-size: 1.4rem
 	line-height: 1
 	background-color: rgba(233, 233, 233, 0.25)
 	border: 2px solid #197fba
@@ -569,7 +572,7 @@ dd
 	vertical-align: top
 	+bold
 	color: #fff
-	font-size: 14px
+	font-size: 1.4rem
 	line-height: 1
 	background-color: rgba(233, 233, 233, 0.25)
 	border: 2px solid #fff
@@ -593,15 +596,18 @@ dd
 	+vertical
 	color: #fff
 	border-radius: 50% 
+	transition: background 0.25s
+	&:hover
+		background-color: rgba(0, 22, 22, 0.7)
 	i
-		font-size: 48px
+		font-size: 4.8rem
 		vertical-align: middle
 		margin: 0 0 0 10px 
 
 .btn-big
 	+bold
 	color: white
-	font-size: 28px
+	font-size: 2.8rem
 	text-transform: uppercase
 	line-height: 1
 	padding: 17px  33px 14px
@@ -643,7 +649,7 @@ dd
 	border-radius: 10px
 	padding: 6px 29px 5px 16px 
 	+bold
-	font-size: 14px
+	font-size: 1.4rem
 	position: relative
 	text-decoration: none
 	transition: color 0.25s, background 0.25s, border-color 0.25s
@@ -676,7 +682,7 @@ dd
 .btn-submit
 	+bold
 	color: white
-	font-size: 14px
+	font-size: 1.4rem
 	line-height: 1
 	background-color: #197fba
 	border-radius: 10px
@@ -703,8 +709,8 @@ dd
 		th
 			+med
 			color: #333
-			font-size: 14px
-			line-height: 30px
+			font-size: 1.4rem
+			line-height: 2.2
 			&.is-name
 				width: 320px
 				padding: 0 25px
@@ -729,8 +735,8 @@ dd
 		td
 			+light
 			color: #333
-			font-size: 14px
-			line-height: 27px
+			font-size: 1.4rem
+			line-height: 1.95
 			vertical-align: top
 			&.is-number
 				width: 30px
@@ -755,7 +761,7 @@ dd
 						height: 16px
 						display: inline-block
 						vertical-align: middle
-						margin: 2px
+						margin: 6px 2px 0
 						border-radius: 50%
 						cursor: pointer
 						transition: box-shadow 0.2s
@@ -780,8 +786,8 @@ dd
 			a
 				+reg
 				color: #197fba
-				font-size: 14px
-				line-height: 26px
+				font-size: 1.4rem
+				line-height: 1.9
 				display: inline-block
 				
 //tabs
@@ -796,7 +802,7 @@ dd
 		display: inline-block
 		+light
 		color: #197fba
-		font-size: 20px
+		font-size: 2rem
 		text-transform: uppercase
 		line-height: 1
 		text-decoration: none
@@ -847,13 +853,15 @@ dd
 			a
 				+light
 				color: white
-				font-size: 17px
-				line-height: 31px
+				font-size: 1.7rem
+				line-height: 1.85
 				border-radius: 10px
 				display: inline-block
 				padding: 0 13px 
 				&.is-active					
 					background-color: #f93526
+				&:hover
+					text-decoration: underline
 	&__btn
 		position: absolute
 		top: 14px
@@ -887,7 +895,7 @@ dd
 		padding: 20px 
 
 .dropdown
-	font-size: 15px
+	font-size: 1.5rem
 	color: #fff
 	+light
 	position: relative
@@ -920,7 +928,7 @@ dd
 			position: absolute
 			top: 50%
 			right: 0
-			font-size: 5px
+			font-size: 0.5rem
 			margin-top: -1px
 			color: #fff 
 			z-index: 10 
@@ -946,8 +954,8 @@ dd
 		padding: 15px 0 
 		z-index: 200
 		li
-			font-size: 17px
-			line-height: 30px
+			font-size: 1.7rem
+			line-height: 1.8
 			padding: 0 15px 
 			cursor: pointer
 			&.is-active
@@ -956,6 +964,7 @@ dd
 .link-dotted
 	display: inline-block
 	color: #197fba
-	font-size: 17px
+	font-size: 1.7rem
 	line-height: 1
 	border-bottom: 1px dotted #197fba
+	+tdn

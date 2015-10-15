@@ -16,7 +16,7 @@
 			top: 50%
 			right: 0
 			margin-top: -5px
-			font-size: 9px
+			font-size: 0.9rem
 			display: none
 			+r(767)
 				display: block
@@ -30,8 +30,11 @@
 		&.is-active
 			display: block
 		li
-			font-size: 15px
+			font-size: 1.5rem
 			margin-bottom: 11px
+			a
+				&:hover
+					text-decoration: underline
 	&__bottom
 		padding: 25px 0 0
 		+clr
@@ -39,7 +42,7 @@
 		float: left
 	&__copy, &__rfs
 		color: #fff
-		font-size: 15px
+		font-size: 1.5rem
 		line-height: 1
 		+light
 		position: relative
@@ -96,15 +99,15 @@
 				&:hover
 					color: lighten(#cbc7be, 10%) 
 				&.icon-twitter
-					font-size: 19px
+					font-size: 1.9rem
 				&.icon-facebook
-					font-size: 18px
+					font-size: 1.8rem
 				&.icon-google
-					font-size: 19px
+					font-size: 1.9rem
 				&.icon-youtube
-					font-size: 20px
+					font-size: 2rem
 				&.icon-photos
-					font-size: 19px
+					font-size: 1.9rem
 	&-search
 		float: right
 		width: 250px
@@ -112,7 +115,7 @@
 			float: none
 		&__label
 			color: white
-			font-size: 20px
+			font-size: 2rem
 			line-height: 1
 			+bold
 			float: left
@@ -132,7 +135,7 @@
 			border-radius: 10px
 			height: 33px
 			+light
-			font-size: 14px
+			font-size: 1.4rem
 			padding: 0 13px 
 			width: 100%
 			display: block 

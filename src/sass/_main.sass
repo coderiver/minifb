@@ -28,6 +28,8 @@
 		box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
 		border-radius: 50px
 		position: relative
+		+r(991)
+			float: left
 		&:before
 			content: "" 
 			border-radius: 50px
@@ -46,7 +48,7 @@
 		padding: 6px 0 5px 
 	&__title
 		+thin
-		font-size: 25px
+		font-size: 2.5rem
 		line-height: 1.2
 		b
 			+bold
@@ -78,23 +80,27 @@
 	&__title, &__text	
 		color: white
 	&__title
-		font-size: 18px
+		font-size: 1.8rem
 		line-height: 1.2
 		+bold
 		a
 			+white-link
 			display: block
+			&:hover
+				text-decoration: underline
 	&__text
 		display: block
-		font-size: 15px
+		font-size: 1.5rem
 		line-height: 1.2
 		+white-link
 		margin: 5px 0 10px
+		&:hover
+			text-decoration: underline
 	time
 		display: inline-block
 		vertical-align: top
 		color: #fffefe
-		font-size: 12px
+		font-size: 1.2rem
 		padding: 6px 10px 7px 0
 		
 .scoreboard
@@ -108,11 +114,9 @@
 				background: none
 				padding: 14px 20px 0
 			.scoreboard__title
-				font-size: 20px
+				font-size: 2rem
 				i
 					display: none
-			.scoreboard__body
-				// display: block
 			.button-white
 				display: block
 		.button-white
@@ -126,14 +130,14 @@
 		&.is-first
 			border-radius: 10px 10px 0 0
 	&__title
-		font-size: 15px
+		font-size: 1.5rem
 		+bold
 		text-transform: uppercase
 		color: #fff 
 		cursor: pointer
 		overflow: hidden
 		i
-			font-size: 9px
+			font-size: 0.9rem
 			vertical-align: top
 			padding: 6px 0 0 10px 
 		span
@@ -199,7 +203,7 @@
 		th
 			color: #080808
 			+bold
-			font-size: 13px
+			font-size: 1.3rem
 			line-height: 1
 	tbody
 		tr
@@ -207,8 +211,8 @@
 				background: rgba(white, 0.2) 
 		td
 			color: white
-			font-size: 14px
-			line-height: 21px
+			font-size: 1.4rem
+			line-height: 1.5
 			+bold
 
 .block
@@ -284,7 +288,7 @@
 		width: 50%
 		float: left
 		color: #fff
-		font-size: 41px
+		font-size: 4.1rem
 		+bold
 		padding: 1px 15px
 		text-transform: uppercase
@@ -331,12 +335,12 @@
 			display: inline-block
 			vertical-align: top
 			color: #333
-			font-size: 41px
+			font-size: 4.1rem
 			+bold
 			line-height: 1
 			margin: 0 10px 
 			+r(767)
-				font-size: 24px
+				font-size: 2rem
 				margin: 0 5px 
 		a
 			font-size: 25px
@@ -348,8 +352,11 @@
 			padding: 12px 0 0 
 			+tdn
 			+r(767)
-				font-size: 14px
+				font-size: 1.4rem
 				padding: 6px 0 0 
+			&:hover
+				&:before
+					display: none
 			&:before
 				content: "" 
 				position: absolute
@@ -359,12 +366,12 @@
 				border-bottom: 1px dotted #197fba
 			&.is-active
 				color: #333
-				font-size: 41px
+				font-size: 4.1rem
 				+bold
 				padding: 1px 0
 				text-transform: uppercase
 				+r(767)
-					font-size: 20px
+					font-size: 2rem
 					padding: 1px 0  
 				&:before
 					display: none
@@ -391,7 +398,7 @@
 		position: absolute
 		bottom: 0
 		left: 0
-		font-size: 10px
+		font-size: 1rem
 		+bold
 		color: #fff
 		line-height: 15px
@@ -415,13 +422,13 @@
 					border-radius: 50%
 					background-color: #5bcc00 
 		i
-			font-size: 6px
+			font-size: 0.6rem
 			position: absolute
 			left: 6px
 			top: 6px
 	&__info
 		time
-			font-size: 12px
+			font-size: 1.2rem
 			color: #555
 			display: inline-block
 			vertical-align: top
@@ -429,14 +436,16 @@
 	&__text
 		a
 			color: #197fba
-			font-size: 15px
-			line-height: 18px
+			font-size: 1.5rem
+			line-height: 1.2
 			display: inline-block
+			&:hover
+				text-decoration: underline
 
 .tag 
 	display: inline-block
 	vertical-align: top
-	font-size: 11px
+	font-size: 1.1rem
 	color: #010101
 	line-height: 1
 	padding: 2px 5px 1px
@@ -498,8 +507,8 @@
 			display: inline-block
 			vertical-align: top
 			color: #fff
-			font-size: 15px
-			line-height: 18px
+			font-size: 1.5rem
+			line-height: 1.2
 		.tag
 			margin: 2px 0 0 
 		p
@@ -531,8 +540,8 @@
 	&__name
 		color: black
 		+reg
-		font-size: 15px
-		line-height: 30px
+		font-size: 1.5rem
+		line-height: 2
 		padding: 4px 15px 
 		
 .partners
@@ -540,6 +549,8 @@
 	+clr
 	border-radius: 10px
 	margin-bottom: 20px
+	position: relative
+	z-index: 15
 	.heading
 		padding: 20px 5px 25px 
 .partner-item
@@ -570,23 +581,23 @@
 	&__title, &__teams, &__time
 		text-transform: uppercase
 	&__title
-		font-size: 113px
+		font-size: 11.3rem
 		+thin
-		line-height: 88px
+		line-height: 0.78
 	&__season
 		+reg
-		font-size: 30px
-		line-height: 34px
+		font-size: 3rem
+		line-height: 1.15
 		margin-bottom: 30px
 	&__teams
 		+bold
-		font-size: 60px
+		font-size: 6rem
 		line-height: 1
 		margin-bottom: 5px
 	&__time
 		+light
-		font-size: 30px
-		line-height: 51px
+		font-size: 3rem
+		line-height: 1.7
 		margin-bottom: 43px
 		
 .champion
@@ -600,8 +611,8 @@
 		text-align: center
 	&__title
 		color: #333
-		font-size: 37px
-		line-height: 39px
+		font-size: 3.7rem
+		line-height: 1.08
 		+bold
 		max-width: 830px
 		margin: 0 auto 20px

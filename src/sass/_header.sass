@@ -34,7 +34,7 @@
 		&__title
 			+light
 			color: #333
-			font-size: 15px
+			font-size: 1.5rem
 			line-height: 1
 			margin-bottom: 8px
 		&__logo
@@ -55,13 +55,12 @@
 		+r(1219)
 			width: 170px
 			float: right
-			text-align: center
+			text-align: right
 		+r(991)
 			display: table-cell
 			float: none
 			vertical-align: top
 			width: 68px
-			text-align: right
 		.mini-logo
 			float: right
 			margin: 0 6px 0 0 
@@ -71,7 +70,7 @@
 	&-btn
 		+bold
 		color: #333
-		font-size: 17px
+		font-size: 1.7rem
 		position: relative
 		background: none
 		padding: 15px 33px 18px 11px 
@@ -80,6 +79,8 @@
 		line-height: 1
 		transition: color 0.25s, background 0.25s, border 0.25s
 		border-radius: 8px
+		+r(991)
+			margin: 15px 0 0 
 		+r(767)
 			display: none
 		&.is-active, &:hover
@@ -88,7 +89,7 @@
 			background: #f1f1f1  
 			border-radius: 8px 8px 0 0
 		i
-			font-size: 7px
+			font-size: 0.7rem
 			position: absolute
 			top: 19px
 			right: 15px
@@ -96,8 +97,6 @@
 		padding: 9px 0 
 		float: left
 		+r(1219)
-			float: none
-		+r(991)
 			position: absolute
 			bottom: 100%
 			right: 0
@@ -111,7 +110,7 @@
 			margin: 0
 		li, a
 			+thin
-			font-size: 15px
+			font-size: 1.5rem
 			line-height: 1
 		a
 			color: #197fba
@@ -144,62 +143,104 @@
 			&:hover
 				color: darken(#d0d1d3, 10%) 
 			&.icon-twitter
-				font-size: 19px
+				font-size: 1.9rem
 			&.icon-facebook
-				font-size: 18px
+				font-size: 1.8rem
 			&.icon-google
-				font-size: 19px
+				font-size: 1.9rem
 			&.icon-youtube
-				font-size: 20px
+				font-size: 2rem
 			&.icon-photos
-				font-size: 19px
+				font-size: 1.9rem
 	&-dropdown
 		background-color: #f1f1f1
 		display: none
 		margin-top: -10px
+		+r(767)
+			margin: 0
 		&__inner
 			padding: 0 10px 0 100px
 			max-width: 1200px
 			margin: 0 auto
 			+clr  
+			font-size: 0
+			+r(1219)
+				padding: 0  
 		&__col, &__contacts
 			padding: 25px 10px 54px
+			display: inline-block
+			vertical-align: top
 		&__col
 			width: 18.5%
-			float: left
+			+r(1219)
+				width: 25%
+				padding: 25px 10px 
+			+r(991)
+				width: 33.33%
+			+r(767)
+				width: 100%
+				padding: 10px 10px 0 
 		&__contacts
 			width: 26%
-			float: left
+			+r(1219)
+				width: 100%
+				padding: 0 10px 54px
+			+r(991)
+				width: 66.67%
+			+r(767)
+				width: 100%
+				padding: 10px 10px 54px 
 		h4
 			margin: 0 0 5px
 			text-transform: none
 			line-height: 1.7
+			+r(767)
+				cursor: pointer
+			i
+				font-size: 0.9rem
+				display: none
+				vertical-align: top
+				margin: 12px 0 0 10px
+				+r(767)
+					display: inline-block
 		ul
 			+ul
+			+r(767)
+				display: none
+			&.is-active
+				+r(767)
+					display: block
 			li
 				padding: 0 0 12px 
 				line-height: 1.2
-				font-size: 15px
+				font-size: 1.5rem
 				a
 					+bold
+					color: #197fba
+					&:hover
+						text-decoration: underline
 	&-contacts
 		padding: 15px 8px 8px
 		border: 2px solid rgba(#000, 0.07)
 		border-radius: 10px 
 		float: right
-		width: 240px
+		max-width: 240px
+		width: 100%
 		margin: 24px 0 0 
+		+r(1219)
+			float: left
+			margin: 0
 		small
 			+med
 			display: block
 			color: #333
-			font-size: 13px
-			line-height: 17px
+			font-size: 1.3rem
+			line-height: 1.35
 		&__text
-			line-height: 26px
+			line-height: 1.75
 			+light
 			color: #333
-			font-size: 15px
+			font-size: 1.5rem
 			clear: both
 			a
 				color: #197fba
@@ -215,9 +256,9 @@
 .btn-match
 	+bold
 	color: white
-	font-size: 14px
+	font-size: 1.4rem
 	text-transform: uppercase
-	line-height: 31px
+	line-height: 2.25
 	background-color: #d9232a
 	padding: 0 7px 
 	position: relative
@@ -266,10 +307,10 @@
 		span
 			+thin
 			color: #333
-			font-size: 30px
+			font-size: 3rem
 			line-height: 1
 			+r(991)
-				font-size: 25px
+				font-size: 2.5rem
 			
 .mini-logo
 	width: 68px
@@ -299,11 +340,14 @@
 			display: inline-block
 			vertical-align: top
 			margin: 0 20px 0 0 
+			+r(767)
+				margin: 0
+				display: block
 		a
 			+bold
 			color: white
-			font-size: 20px
-			line-height: 30px
+			font-size: 2rem
+			line-height: 1.5
 			text-transform: uppercase
 			transition: color 0.25s
 			position: relative
@@ -322,7 +366,7 @@
 				top: 50%
 				right: 0
 				margin-top: -4px
-				font-size: 9px
+				font-size: 0.9rem
 			&.is-school, &.is-academy
 				padding: 11px 0 9px 25px
 				i
@@ -341,7 +385,7 @@
 		bottom: 17px
 		right: 24px
 		cursor: pointer
-		font-size: 21px
+		font-size: 2.1rem
 		color: #fff
 	&-dropdown
 		background: #333333
@@ -377,11 +421,20 @@
 					display: block
 					+bold
 					color: white
-					font-size: 15px
+					font-size: 1.5rem
 					padding: 9px 14px 7px 
 					position: relative
 					line-height: 1
+					&:hover
+						text-decoration: underline
 				&.is-drop
+					+tdn
+					&:hover
+						.is-drop
+							background-color: rgba(255, 255, 255, 0.12)
+							box-shadow: inset 0 0 0 2px white
+							border-radius: 10px
+							text-decoration: none
 					.is-drop
 						padding-right: 28px
 						&:hover
@@ -393,7 +446,7 @@
 						position: absolute
 						top: 50%
 						right: 11px
-						font-size: 12px
+						font-size: 1.2rem
 						margin-top: -6px
 		&__submenu
 			position: absolute
@@ -438,7 +491,7 @@
 				margin-bottom: 28px
 			ul
 				+ul
-				font-size: 15px
+				font-size: 1.5rem
 				li
 					margin-bottom: 10px
 				time
@@ -472,11 +525,12 @@
 	padding: 16px 10px 14px
 	+clr
 	display: none
+	background: #333 
 	+r(767)
 		display: block
 	&__btn
 		color: white
-		font-size: 17px
+		font-size: 1.7rem
 		+bold
 		line-height: 1
 		padding: 2px 18px 1px 0
@@ -484,7 +538,7 @@
 		position: relative
 		text-transform: uppercase
 		i
-			font-size: 8px
+			font-size: 0.8rem
 			position: absolute
 			top: 50%
 			margin-top: -4px
@@ -554,7 +608,7 @@
 	&__title
 		+bold
 		color: white
-		font-size: 25px
+		font-size: 2.5rem
 		line-height: 1
 		text-transform: uppercase
 		margin-right: 35px
@@ -586,7 +640,7 @@
 			a
 				+light
 				color: white
-				font-size: 20px
+				font-size: 2rem
 				position: relative
 				display: inline-block
 				border-bottom: 1px dotted white 
@@ -602,7 +656,7 @@
 			top: 20px
 			right: 10px
 	.icon-close
-		font-size: 21px
+		font-size: 2.1rem
 		color: #fff
 		margin: 4px 0 0 19px 
 		display: inline-block
@@ -627,8 +681,8 @@
 .league
 	&__title
 		color: white
-		font-size: 20px
-		line-height: 34px
+		font-size: 2rem
+		line-height: 1.7
 		position: relative
 		+clr
 		padding: 10px 10px 8px 46px 
@@ -671,7 +725,7 @@
 		margin-bottom: 4px
 		span
 			color: #333
-			font-size: 13px
+			font-size: 1.3rem
 			line-height: 1
 	&__body
 		display: table
@@ -710,7 +764,7 @@
 		font-size: 0
 		text-align: center
 		span
-			font-size: 30px
+			font-size: 3rem
 			+bold
 			line-height: 1
 			color: #555
@@ -731,5 +785,5 @@
 	&__name
 		overflow: hidden
 		+bold
-		font-size: 14px
-		line-height: 12px
+		font-size: 1.4rem
+		line-height: 0.9
