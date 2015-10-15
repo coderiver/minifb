@@ -558,6 +558,7 @@ dd
 	border-radius: 10px
 	padding: 6px 13px 5px 
 	transition: color 0.25s, background 0.25s, border-color 0.25s
+	+tdn
 	&:visited
 		color: #197fba
 	&:hover, &:active
@@ -575,12 +576,54 @@ dd
 	border-radius: 10px
 	padding: 6px 9px 5px 
 	transition: color 0.25s, background 0.25s, border-color 0.25s
+	+tdn
 	&:visited
 		color: #fff
 	&:hover, &:active
 		background-color: #fff
 		color: #197fba 
 
+.btn-play
+	width: 95px
+	height: 95px
+	background-color: rgba(0, 22, 22, 0.55)
+	border: 2px solid white
+	display: inline-block
+	vertical-align: top
+	+vertical
+	color: #fff
+	border-radius: 50% 
+	i
+		font-size: 48px
+		vertical-align: middle
+		margin: 0 0 0 10px 
+
+.btn-big
+	+bold
+	color: white
+	font-size: 28px
+	text-transform: uppercase
+	line-height: 1
+	padding: 17px  33px 14px
+	background-color: #d9232a
+	border-radius: 9px
+	display: inline-block
+	vertical-align: top
+	+white-link
+	position: relative
+	width: 280px
+	text-align: center
+	&_blue
+		background-color: #197fba
+	&:before
+		content: "" 
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 3px
+		border: 2px dotted #fff
+		border-radius: 9px
 //btns-row/col
 .btns-row
 	+clr
@@ -605,8 +648,7 @@ dd
 	text-decoration: none
 	transition: color 0.25s, background 0.25s, border-color 0.25s
 	cursor: pointer
-	&:focus, &:visited, &:hover, &:active
-		text-decoration: none
+	+tdn
 	&_blue
 		color: #197fba
 		border-color: #197fba
@@ -910,3 +952,10 @@ dd
 			cursor: pointer
 			&.is-active
 				display: none
+				
+.link-dotted
+	display: inline-block
+	color: #197fba
+	font-size: 17px
+	line-height: 1
+	border-bottom: 1px dotted #197fba
