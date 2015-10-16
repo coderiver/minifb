@@ -762,6 +762,8 @@
 		width: 50%
 		float: left
 		padding: 0 21px 0 0 
+		+r(767)
+			width: 100%
 	&__text
 		margin-bottom: 20px
 		
@@ -781,9 +783,11 @@
 		clear: none
 
 .request
+	max-width: 280px
+	margin: 0 auto 20px 
 	&__btn
 		color: white
-		font-size: 18px
+		font-size: 1.8rem
 		line-height: 1
 		+bold
 		background-color: #197fba
@@ -795,3 +799,55 @@
 			font-size: 9px
 			vertical-align: top
 			margin: 5px 0 0 12px 
+
+.academy-side
+	padding: 17px 17px 15px 20px 
+	background-color: white
+	border-radius: 10px
+	margin-bottom: 20px
+	.button-blue
+		float: right
+		margin: 11px 0 10px 10px 
+	h4
+		overflow: hidden
+		line-height: 1
+		margin-bottom: 10px
+	&__bottom
+		border-top: 1px solid rgba(black, 0.5)
+		margin: 10px 0 0
+		padding: 30px 0 15px
+		h4
+			margin-bottom: 20px
+	.mini-form
+		max-width: 300px
+
+.seminar
+	padding: 10px 0 0 
+	font-size: 1.5rem
+	line-height: 1.2
+	+bold
+	a
+		color: #197fba
+		&:hover
+			text-decoration: underline
+	b
+		color: #333 
+
+.academy-news
+	+clr
+	padding: 10px 0 
+	&__img
+		float: left
+		width: 79px
+		margin: 0 10px 0 0 
+		img
+			width: 100%
+	&__text
+		overflow: hidden
+		line-height: 1
+		font-size: 15px
+		+bold
+		a
+			color: #197fba
+			&:hover
+				text-decoration: underline

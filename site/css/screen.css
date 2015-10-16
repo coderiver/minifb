@@ -1013,6 +1013,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .contact-info p { margin-bottom: 0; }
 .contact-info__title { padding-bottom: 15px; }
 .contact-info .user-info { width: 50%; float: left; padding: 0 21px 0 0; }
+@media only screen and (max-width: 767px) { .contact-info .user-info { width: 100%; } }
 .contact-info__text { margin-bottom: 20px; }
 
 .user-info { *zoom: 1; }
@@ -1021,8 +1022,32 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .user-info__img img { width: 100%; height: 100%; border-radius: 10px; }
 .user-info p { overflow: hidden; clear: none; }
 
-.request__btn { color: white; font-size: 18px; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; background-color: #197fba; border-radius: 10px; text-align: center; width: 100%; padding: 9px 10px; }
+.request { max-width: 280px; margin: 0 auto 20px; }
+.request__btn { color: white; font-size: 1.8rem; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; background-color: #197fba; border-radius: 10px; text-align: center; width: 100%; padding: 9px 10px; }
 .request__btn i { font-size: 9px; vertical-align: top; margin: 5px 0 0 12px; }
+
+.academy-side { padding: 17px 17px 15px 20px; background-color: white; border-radius: 10px; margin-bottom: 20px; }
+.academy-side .button-blue { float: right; margin: 11px 0 10px 10px; }
+.academy-side h4 { overflow: hidden; line-height: 1; margin-bottom: 10px; }
+.academy-side__bottom { border-top: 1px solid rgba(0, 0, 0, 0.5); margin: 10px 0 0; padding: 30px 0 15px; }
+.academy-side__bottom h4 { margin-bottom: 20px; }
+.academy-side .mini-form { max-width: 300px; }
+
+.seminar { padding: 10px 0 0; font-size: 1.5rem; line-height: 1.2; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.seminar a { color: #197fba; }
+.seminar a:hover { text-decoration: underline; }
+.seminar b { color: #333; }
+
+.academy-news { *zoom: 1; padding: 10px 0; }
+.academy-news:after { content: " "; display: table; clear: both; }
+.academy-news__img { float: left; width: 79px; margin: 0 10px 0 0; }
+.academy-news__img img { width: 100%; }
+.academy-news__text { overflow: hidden; line-height: 1; font-size: 15px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.academy-news__text a { color: #197fba; }
+.academy-news__text a:hover { text-decoration: underline; }
+
+.row.no-padding.no-padding > div { padding: 0; }
+@media only screen and (max-width: 767px) { .row.no-padding.no-padding > div { padding: 0; } }
 
 .teams-list { min-height: 62px; background: #fff; }
 .teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }
@@ -1067,12 +1092,23 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .block__top .tabs { float: left; }
 .block__top .btn-next { float: right; margin-top: 12px; }
 
-.post { display: block; *zoom: 1; }
+.posts-list.is-left { margin-left: -10px; }
+.posts-list.is-right { margin-right: -10px; }
+
+.post { display: block; padding: 8px 14px; *zoom: 1; transition: background 0.25s; }
 .post:after { content: " "; display: table; clear: both; }
-.post__media { float: left; width: 76px; height: 76px; font-size: 0; line-height: 0; margin-left: 10px; }
+.post:hover { background: #e5e5e5; }
+.post__media { float: left; width: 76px; height: 76px; font-size: 0; line-height: 0; margin-right: 10px; margin-top: 6px; line-height: 0; font-size: 0; }
 .post__media img { max-width: 100%; height: auto; }
 .post__info { overflow: hidden; }
-.post__header strong { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #000; }
+.post__info p { color: #696969; font-size: 1.1rem; margin-bottom: 0; max-height: 52px; overflow: hidden; }
+.post__header { font-size: 1.2rem; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #848484; }
+.post__header strong { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #000; font-size: 1.3rem; }
+
+.rating { position: relative; }
+.rating__img { line-height: 0; }
+.rating__img img { max-width: 100%; height: auto; }
+.rating__info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); padding: 15px; font-size: 3rem; color: #fff; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 
 
 
