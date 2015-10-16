@@ -18,23 +18,23 @@
         menu.find('> li').each(function() {
           sum += $(this).width();
         });
-        console.log(sum+'!!!!')
+        // console.log(sum+'!!!!')
         return sum;
 
       };
 
       function addToPopup() {
-      	console.log('adding');
+      	// console.log('adding');
         menuItems = menu.find('> li:not(.menuFlexBtn)');
         if (menu.find('.menuFlexBtn').length == 0 && counItemsWidth() > menuWidth) {
           createMenuMore();
         };
         for ( i = menuItems.length-1; i >= 0; i-- ) {
-        	console.log(counItemsWidth()+'==='+menuWidth);
+        	// console.log(counItemsWidth()+'==='+menuWidth);
           if ( counItemsWidth() > menuWidth) {
             itemsWidths.unshift($(menuItems[i]).width());
             $(menuItems[i]).prependTo(menuPopup);
-            console.log($(menuItems[i]).html())
+            // console.log($(menuItems[i]).html())
           };
         };
       };

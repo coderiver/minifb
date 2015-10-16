@@ -5,9 +5,11 @@
 		margin: 0 auto 
 		padding: 31px 10px 10px
 		+clr
-		+r(991)
+		+r(1280)
 			display: table
 			width: 100%
+			padding-left: 30px
+		+r(991)
 			padding-left: 50px
 		+r(767)
 			padding-left: 10px
@@ -261,8 +263,7 @@
 	line-height: 2.25
 	background-color: #d9232a
 	padding: 0 7px 
-	position: relative
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	-webkit-transform-origin: top left
@@ -270,7 +271,8 @@
 	-ms-transform-origin: top left
 	-o-transform-origin: top left
 	transform-origin: top left
-	+r(1219)
+	z-index: 1001 
+	+r(1400)
 		+rotate(-90)
 		top: 118px	
 	+r(767)
@@ -325,6 +327,18 @@
 
 .menu
 	position: relative
+	background-color: #333
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1000
+		max-height: 100%
+		overflow: auto 
+		.menu
+			&__top
+				padding-left: 40px
 	&__top
 		position: relative
 		max-width: 1200px

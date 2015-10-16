@@ -420,7 +420,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .header__top { position: relative; max-width: 1200px; margin: 0 auto; padding: 31px 10px 10px; *zoom: 1; }
 .header__top:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 991px) { .header__top { display: table; width: 100%; padding-left: 50px; } }
+@media only screen and (max-width: 1280px) { .header__top { display: table; width: 100%; padding-left: 30px; } }
+@media only screen and (max-width: 991px) { .header__top { padding-left: 50px; } }
 @media only screen and (max-width: 767px) { .header__top { padding-left: 10px; } }
 .header__left { float: left; width: 50%; padding: 6px 0 0; }
 @media only screen and (max-width: 1219px) { .header__left { max-width: 540px; width: 100%; } }
@@ -510,8 +511,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .header-contacts .button-blue { margin-top: 2px; }
 .header-contacts div { margin-bottom: 3px; }
 
-.btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: relative; position: absolute; top: 0; left: 0; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; }
-@media only screen and (max-width: 1219px) { .btn-match { -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); top: 118px; } }
+.btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: fixed; top: 0; left: 0; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; z-index: 1001; }
+@media only screen and (max-width: 1400px) { .btn-match { -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); top: 118px; } }
 @media only screen and (max-width: 767px) { .btn-match { display: none; } }
 .btn-match:before { content: ""; position: absolute; top: 0; left: 2px; right: 2px; bottom: 2px; border: 1px dotted white; border-top: none; }
 
@@ -528,7 +529,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .menu-wrapper { background-color: #333; }
 
-.menu { position: relative; }
+.menu { position: relative; background-color: #333; }
+.menu.is-fixed { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; max-height: 100%; overflow: auto; }
+.menu.is-fixed .menu__top { padding-left: 40px; }
 .menu__top { position: relative; max-width: 1200px; padding: 0 50px 0 10px; margin: 0 auto; }
 @media only screen and (max-width: 767px) { .menu__top { display: none; } }
 .menu__top.is-active { display: block; }
@@ -977,6 +980,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .side-banner__text, .side-banner__title { font-size: 2.8rem; line-height: 0.87; z-index: 2; position: relative; }
 .side-banner__text { font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif; }
 .side-banner__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+
+.index-museum { background: #020d1a; }
+
+.index-academy { background: #ffed39; }
 
 .teams-list { min-height: 62px; background: #fff; }
 .teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }
