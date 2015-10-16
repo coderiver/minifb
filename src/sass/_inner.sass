@@ -1,0 +1,133 @@
+.teams-list
+	min-height: 62px
+	background: #fff 
+	&__inner
+		max-width: 1200px
+		margin: 0 auto
+		padding: 12px 10px 
+	ul
+		+ul
+		+clr
+		text-align: justify
+
+		&:after
+			content: ""
+			width: 100%
+			height: 0
+			display: inline-block 
+		+r(767)
+			text-align: left
+			&:after
+				display: none
+		li
+			display: inline-block
+			vertical-align: middle
+			font-size: 0
+			width: 55px
+			height: 55px  
+			a
+				border-radius: 10px 
+				border: 3px solid transparent 
+				width: 100%
+				height: 100%
+				display: block 
+				+vertical
+				transition: border-color 0.25s
+				&:hover
+					border-color: #F03723
+			img
+				max-width: 100%
+				height: auto 
+				display: inline-block
+				vertical-align: middle
+			+r(767)
+				margin-right: 30px 
+				&:last-child
+					margin-right: 0
+
+
+.main
+	&__inner
+		&.league-page
+			// background-image: -webkit-linear-gradient(left, #9c2407 0%, #d33021 20%, #d33021 80%, #9c2407 100%)
+			background: #b12618 
+.banner-league
+	&__img
+		display: block
+		float: right
+		line-height: 0
+		font-size: 0
+	&__title
+		padding-top: 24px 
+		p
+			color: #fff
+			line-height: 1
+			margin-bottom: 0 
+			font-size: 3.7rem 
+			+bold
+			font-style: italic 
+.page-title
+	&_league
+		position: relative
+		padding: 20px 20px 10px 
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			top: 0
+			width: 130px
+			// height: 121px 
+			max-height: 100%
+			max-width: 100%
+			border-radius: 0 10px 10px 0   
+			background: url("../img/banner-league2.png") 0 0 no-repeat
+			background-size: cover
+.page-nav
+	+ul
+	li
+		display: inline-block
+		a
+			color: #197fba
+			font-size: 1.8rem
+			display: block
+			padding: 8px 15px 7px 
+			border-radius: 10px 
+			&:hover
+				text-decoration: underline
+		&.is-active
+			a
+				background: #f93526
+				color: #fff 
+
+
+.tabs__list_nopad
+	padding: 0
+.block
+	&__top
+		.tabs
+			float: left
+		.btn-next
+			float: right
+			margin-top: 12px 
+
+.post
+	display: block
+	+clr
+	&__media 
+		float: left
+		width: 76px
+		height: 76px
+		font-size: 0
+		line-height: 0
+		margin-left: 10px 
+		img
+			max-width: 100%
+			height: auto 
+	&__info
+		overflow: hidden
+	&__header
+		strong
+			+bold
+			color: #000
+	
