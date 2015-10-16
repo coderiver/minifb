@@ -23,6 +23,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: "PFDinDisplayPro Thin"; src: url("fonts/pfdindisplaypro-thin.eot"); src: url("fonts/pfdindisplaypro-thin.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-thin.woff2") format("woff2"), url("fonts/pfdindisplaypro-thin.woff") format("woff"), url("fonts/pfdindisplaypro-thin.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Light"; src: url("fonts/pfdindisplaypro-light.eot"); src: url("fonts/pfdindisplaypro-light.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-light.woff2") format("woff2"), url("fonts/pfdindisplaypro-light.woff") format("woff"), url("fonts/pfdindisplaypro-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "PFDinDisplayPro Light Italic"; src: url("fonts/pfdindisplaypro-lightital.eot"); src: url("fonts/pfdindisplaypro-lightital.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-lightital.woff2") format("woff2"), url("fonts/pfdindisplaypro-lightital.woff") format("woff"), url("fonts/pfdindisplaypro-lightital.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Regular"; src: url("fonts/pfdindisplaypro-reg.eot"); src: url("fonts/pfdindisplaypro-reg.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-reg.woff2") format("woff2"), url("fonts/pfdindisplaypro-reg.woff") format("woff"), url("fonts/pfdindisplaypro-reg.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Medium"; src: url("fonts/pfdindisplaypro-med.eot"); src: url("fonts/pfdindisplaypro-med.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-med.woff2") format("woff2"), url("fonts/pfdindisplaypro-med.woff") format("woff"), url("fonts/pfdindisplaypro-med.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Bold"; src: url("fonts/pfdindisplaypro-bold.eot"); src: url("fonts/pfdindisplaypro-bold.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-bold.woff2") format("woff2"), url("fonts/pfdindisplaypro-bold.woff") format("woff"), url("fonts/pfdindisplaypro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -256,15 +257,32 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .leagues { background-color: #797979; }
 .leagues__inner { max-width: 1200px; margin: 0 auto; position: relative; padding: 0 50px 0 0; }
-.leagues__list { line-height: 1; margin: 0; font-size: 0; max-width: 1024px; display: inline-block; vertical-align: top; }
+.leagues__list { line-height: 1; margin: 0; font-size: 0; display: inline-block; vertical-align: top; display: block; }
 .leagues__list li { padding: 0; }
 .leagues__list li:before { display: none; }
 .leagues__list li li { padding: 0; }
 .leagues__list li li li { padding: 0; }
-.leagues__list li { display: inline-block; vertical-align: top; position: relative; padding: 7px 0 10px 0; }
+.leagues__list li { display: inline-block; vertical-align: top; padding: 7px 0 10px 0; }
 .leagues__list li a { font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: white; font-size: 1.7rem; line-height: 1.85; border-radius: 10px; display: inline-block; padding: 0 13px; }
 .leagues__list li a.is-active { background-color: #f93526; }
 .leagues__list li a:hover { text-decoration: underline; }
+.leagues__list .menuFlexBtn { position: absolute; top: 0; right: 0; bottom: 0; }
+.leagues__list .menuFlexBtn:hover { text-decoration: underline; }
+.leagues__list .menuFlexBtn.active .menuFlexBtnText:before, .leagues__list .menuFlexBtn.active .menuFlexBtnText:after, .leagues__list .menuFlexBtn.active .menuFlexBtnText span { background: #f93526; }
+.leagues__list .menuFlexBtnText { position: absolute; top: 14px; right: 22px; background: none; padding: 7px 0; width: 20px; text-align: center; }
+.leagues__list .menuFlexBtnText:hover:before, .leagues__list .menuFlexBtnText:hover:after, .leagues__list .menuFlexBtnText:hover span { background: #f93526; }
+.leagues__list .menuFlexBtnText:before, .leagues__list .menuFlexBtnText:after, .leagues__list .menuFlexBtnText span { border-radius: 50%; background: #fff; width: 4px; height: 4px; display: block; transition: background 0.25s; }
+.leagues__list .menuFlexBtnText span { margin: 0 auto; }
+.leagues__list .menuFlexBtnText:before, .leagues__list .menuFlexBtnText:after { position: absolute; left: 50%; content: ""; margin-left: -2px; }
+.leagues__list .menuFlexBtnText:before { top: 0; }
+.leagues__list .menuFlexBtnText:after { bottom: 0; }
+.leagues__list .menuFlexPopup { display: none; position: absolute; z-index: 201; top: 100%; right: 30px; line-height: 1; margin: 0; font-size: 0; color: #fff; background-color: #353535; border-radius: 10px; margin: 10px 0 0; width: 190px; padding: 15px 0; }
+.leagues__list .menuFlexPopup li { padding: 0; }
+.leagues__list .menuFlexPopup li:before { display: none; }
+.leagues__list .menuFlexPopup li li { padding: 0; }
+.leagues__list .menuFlexPopup li li li { padding: 0; }
+.leagues__list .menuFlexPopup li { font-size: 1.7rem; line-height: 1.8; padding: 0 15px; cursor: pointer; }
+.leagues__list .menuFlexPopup li.is-active { display: none; }
 .leagues__btn { position: absolute; top: 14px; right: 22px; background: none; padding: 7px 0; width: 20px; text-align: center; }
 .leagues__btn:before, .leagues__btn:after, .leagues__btn span { border-radius: 50%; background: #fff; width: 4px; height: 4px; display: block; }
 .leagues__btn span { margin: 0 auto; }
@@ -402,7 +420,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .header__top { position: relative; max-width: 1200px; margin: 0 auto; padding: 31px 10px 10px; *zoom: 1; }
 .header__top:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 991px) { .header__top { display: table; width: 100%; padding-left: 50px; } }
+@media only screen and (max-width: 1280px) { .header__top { display: table; width: 100%; padding-left: 30px; } }
+@media only screen and (max-width: 991px) { .header__top { padding-left: 50px; } }
 @media only screen and (max-width: 767px) { .header__top { padding-left: 10px; } }
 .header__left { float: left; width: 50%; padding: 6px 0 0; }
 @media only screen and (max-width: 1219px) { .header__left { max-width: 540px; width: 100%; } }
@@ -492,8 +511,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .header-contacts .button-blue { margin-top: 2px; }
 .header-contacts div { margin-bottom: 3px; }
 
-.btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: relative; position: absolute; top: 0; left: 0; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; }
-@media only screen and (max-width: 1219px) { .btn-match { -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); top: 118px; } }
+.btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: fixed; top: 0; left: 0; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; z-index: 1001; }
+@media only screen and (max-width: 1400px) { .btn-match { -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); top: 118px; } }
 @media only screen and (max-width: 767px) { .btn-match { display: none; } }
 .btn-match:before { content: ""; position: absolute; top: 0; left: 2px; right: 2px; bottom: 2px; border: 1px dotted white; border-top: none; }
 
@@ -510,7 +529,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .menu-wrapper { background-color: #333; }
 
-.menu { position: relative; }
+.menu { position: relative; background-color: #333; }
+.menu.is-fixed { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; max-height: 100%; overflow: auto; }
+.menu.is-fixed .menu__top { padding-left: 40px; }
 .menu__top { position: relative; max-width: 1200px; padding: 0 50px 0 10px; margin: 0 auto; }
 @media only screen and (max-width: 767px) { .menu__top { display: none; } }
 .menu__top.is-active { display: block; }
@@ -944,6 +965,25 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .champ-item a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .champ-item a:hover, .champ-item a.is-active { border-color: #197fba; }
 .champ-item a img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%; }
+
+.row_banners { position: relative; }
+
+.side-banner { position: absolute; top: 0; color: #fff; text-decoration: none; }
+.side-banner:hover, .side-banner:focus, .side-banner:visited, .side-banner:active { color: #fff; text-decoration: none; }
+.side-banner.is-right { left: 100%; text-align: left; }
+.side-banner.is-left { right: 100%; text-align: right; }
+.side-banner_two img { margin-left: -55px; }
+.side-banner_two .side-banner__text { margin: 0 0 -43px; }
+.side-banner_min { width: 220px; }
+.side-banner_min .side-banner__text { margin: 0 0 10px; }
+.side-banner_min .side-banner__img { position: absolute; top: 10px; right: -133px; }
+.side-banner__text, .side-banner__title { font-size: 2.8rem; line-height: 0.87; z-index: 2; position: relative; }
+.side-banner__text { font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif; }
+.side-banner__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+
+.index-museum { background: #020d1a; }
+
+.index-academy { background: #ffed39; }
 
 .teams-list { min-height: 62px; background: #fff; }
 .teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }

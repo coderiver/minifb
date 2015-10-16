@@ -50,6 +50,7 @@
 //fonts
 +font("PFDinDisplayPro Thin", pfdindisplaypro-thin)
 +font("PFDinDisplayPro Light", pfdindisplaypro-light)
++font("PFDinDisplayPro Light Italic", pfdindisplaypro-lightital)
 +font("PFDinDisplayPro Regular", pfdindisplaypro-reg)
 +font("PFDinDisplayPro Medium", pfdindisplaypro-med)
 +font("PFDinDisplayPro Bold", pfdindisplaypro-bold)
@@ -58,6 +59,8 @@
 	font-family: "PFDinDisplayPro Thin", Arial, sans-serif
 =light
 	font-family: "PFDinDisplayPro Light", Arial, sans-serif
+=litalic
+	font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif
 =reg
 	font-family: "PFDinDisplayPro Regular", Arial, sans-serif
 =med
@@ -842,13 +845,13 @@ dd
 		padding: 0 50px 0 0
 	&__list
 		+ul
-		max-width: 1024px
+		// max-width: 1064px
 		display: inline-block
 		vertical-align: top
+		display: block
 		li
 			display: inline-block
 			vertical-align: top
-			position: relative
 			padding: 7px 0 10px 0
 			a
 				+light
@@ -862,6 +865,66 @@ dd
 					background-color: #f93526
 				&:hover
 					text-decoration: underline
+		.menuFlexBtn
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			&:hover
+				text-decoration: underline
+			&.active
+				.menuFlexBtnText
+					&:before, &:after, span
+						background: #f93526
+		.menuFlexBtnText
+			position: absolute
+			top: 14px
+			right: 22px
+			background: none
+			padding: 7px 0
+			width: 20px
+			text-align: center 
+			&:hover
+				&:before, &:after, span
+					background: #f93526
+			&:before, &:after, span
+				border-radius: 50%
+				background: #fff
+				width: 4px
+				height: 4px 
+				display: block
+				transition: background 0.25s
+			span
+				margin: 0 auto 
+			&:before, &:after
+				position: absolute
+				left: 50%
+				content: "" 
+				margin-left: -2px
+			&:before
+				top: 0
+			&:after
+				bottom: 0
+		.menuFlexPopup
+			display: none
+			position: absolute
+			z-index: 201
+			top: 100%
+			right: 30px
+			+ul
+			color: #fff 
+			background-color: #353535
+			border-radius: 10px
+			margin: 10px 0 0
+			width: 190px
+			padding: 15px 0 
+			li
+				font-size: 1.7rem
+				line-height: 1.8
+				padding: 0 15px 
+				cursor: pointer
+				&.is-active
+					display: none
 	&__btn
 		position: absolute
 		top: 14px
