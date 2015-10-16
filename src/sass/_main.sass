@@ -276,6 +276,8 @@
 	&__footer
 		padding: 6px 0 0
 		text-align: right 
+		&_mod
+			padding: 6px 15px 0 
 	&__headers
 		+clr
 		margin: 0 -15px 
@@ -714,4 +716,82 @@
 
 //academy
 .index-academy
-	background: #ffed39 
+	+g(#ffed39, #f2ba2f)
+	padding: 20px 0 
+	.page-nav
+		li
+			&.is-active 
+				a
+					background-color: #f1cb22
+					
+.text
+	h4, p
+		color: black 
+	p
+		+reg
+	h4
+		text-transform: none
+
+.info
+	background-color: white
+	border-radius: 10px
+	padding: 21px 10px 21px 15px 
+	min-height: 805px
+	margin-bottom: 26px
+	h5
+		font-size: 1.8rem
+		+bold
+		line-height: 1
+		color: #333 
+		margin-bottom: 3px
+	p, li
+		font-size: 1.4rem
+		line-height: 1.3
+	p
+		padding: 4px 0 2px
+	li
+		padding: 4px 0 2px 8px 
+
+.contact-info
+	+clr
+	p
+		margin-bottom: 0
+	&__title
+		padding-bottom: 15px
+	.user-info
+		width: 50%
+		float: left
+		padding: 0 21px 0 0 
+	&__text
+		margin-bottom: 20px
+		
+.user-info
+	+clr
+	&__img
+		width: 64px
+		height: 64px
+		float: left
+		margin: 0 10px 10px 0 
+		img
+			width: 100%
+			height: 100%
+			border-radius: 10px
+	p
+		overflow: hidden
+		clear: none
+
+.request
+	&__btn
+		color: white
+		font-size: 18px
+		line-height: 1
+		+bold
+		background-color: #197fba
+		border-radius: 10px
+		text-align: center
+		width: 100%
+		padding: 9px 10px 
+		i
+			font-size: 9px
+			vertical-align: top
+			margin: 5px 0 0 12px 

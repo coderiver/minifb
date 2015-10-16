@@ -494,7 +494,12 @@
 						<li><a href="#" class="is-school"><i></i>Мини-футбол в школу</a></li>
 						<li><a href="#" class="is-academy"><i></i>Академия</a></li>
 					</ul>
-					<i class="btn-search icon-search"></i>
+					<div class="search js-search">
+						<i class="btn-search icon-search js-search-btn"></i>
+						<div class="search__block">
+							<input type="text" class="search__input">
+						</div>
+					</div>				
 				</div>
 				<div class="menu-dropdown js-menu">
 					<div class="menu-dropdown__section js-menu-block" data-mblock="pro">
@@ -1133,9 +1138,9 @@
 					</ul>
 					<div class="footer-search">
 						<div class="footer-search__label">Поиск</div>
-						<div class="footer-search__form">
+						<div class="mini-form mini-form_white">
 							<form action="">
-								<input type="text" class="footer-search__input">
+								<input type="text" class="mini-form__input">
 								<button class="btn-submit">Найти</button>
 							</form>
 						</div>
