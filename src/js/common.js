@@ -343,4 +343,8 @@ $(document).ready(function() {
 		return false;
 	});
 
+
+$('.js-leagues-list').menuFlex();
+
+
 });
