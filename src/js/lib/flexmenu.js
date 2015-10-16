@@ -62,7 +62,7 @@
       };
 
       function createMenuMore() {
-        menu.append('<li class="menuFlexBtn"><span class="menuFlexBtnText">•••</span><ul class="menuFlexPopup"></ul></li>');
+        menu.append('<li class="menuFlexBtn"><button class="menuFlexBtnText"><span>•••</span></button><ul class="menuFlexPopup"></ul></li>');
         menuPopup = menu.find('.menuFlexPopup');
         menuMoreBtn = menu.find('.menuFlexBtn');
         menu.addClass('menuFlex');
