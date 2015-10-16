@@ -1,3 +1,14 @@
+.row.no-padding
+	&.no-padding
+		// margin-left: 0
+		// margin-right: 0
+		+r(767)
+			// margin-left: 0
+			// margin-right: 0
+		> div
+			padding: 0
+			+r(767)
+				padding: 0
 .teams-list
 	min-height: 62px
 	background: #fff 
@@ -100,7 +111,6 @@
 				background: #f93526
 				color: #fff 
 
-
 .tabs__list_nopad
 	padding: 0
 .block
@@ -110,24 +120,62 @@
 		.btn-next
 			float: right
 			margin-top: 12px 
-
+.posts-list
+	&.is-left
+		margin-left: -10px 
+	&.is-right
+		margin-right: -10px 
+	
 .post
 	display: block
+	padding: 8px 14px
 	+clr
+	transition: background .25s
+	&:hover
+		background: #e5e5e5 
 	&__media 
 		float: left
 		width: 76px
 		height: 76px
 		font-size: 0
 		line-height: 0
-		margin-left: 10px 
+		margin-right: 10px 
+		margin-top: 6px 
+		line-height: 0
+		font-size: 0
 		img
 			max-width: 100%
 			height: auto 
 	&__info
 		overflow: hidden
+		p
+			color: #696969
+			font-size: 1.1rem 
+			margin-bottom: 0
+			max-height: 52px
+			overflow: hidden 
 	&__header
+		font-size:  1.2rem
+		+light
+		color: #848484
 		strong
 			+bold
 			color: #000
-	
+			font-size: 1.3rem 
+.rating
+	position: relative
+	&__img
+		line-height: 0
+		img
+			max-width: 100%
+			height: auto 
+	&__info
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(0, 0, 0, .5) 
+		padding: 15px 	
+		font-size: 3rem
+		color: #fff 
+		+bold
