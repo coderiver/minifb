@@ -2482,5 +2482,19 @@ $(document).ready(function() {
 
 
 	$('.js-leagues-list').menuFlex();
+
+	//search
+	$('.js-search').each(function() {
+		$('.js-search-btn').click(function() {
+			$('.js-search').toggleClass('is-active');
+			return false;
+		});
+		$('body').click(function() {
+			$('.js-search').removeClass('is-active');			
+		});
+		$(this).click(function(event) {
+			event.stopPropagation();
+		});
+	});
 	
 });

@@ -252,7 +252,10 @@
 				&:visited
 					color: #605ca8
 		.button-blue
-			margin-top: 2px
+			margin-top: 2px			
+			background-color: rgba(233, 233, 233, 0.25)
+			&:hover
+				background: #197fba 
 		div
 			margin-bottom: 3px
 .btn-match
@@ -394,13 +397,6 @@
 			&.is-academy
 				i
 					+s(mini-academy)
-	.btn-search
-		position: absolute
-		bottom: 17px
-		right: 24px
-		cursor: pointer
-		font-size: 2.1rem
-		color: #fff
 	&-dropdown
 		background: #333333
 		display: none
@@ -534,6 +530,43 @@
 						display: block
 						img
 							width: 100%
+
+.search
+	position: absolute
+	bottom: 15px
+	right: 24px
+	font-size: 0
+	&.is-active
+		.search
+			&__block
+				opacity: 1
+				visibility: visible
+	&__block
+		position: absolute
+		top: 50%
+		right: 100%
+		margin: -17px 10px 0
+		width: 250px
+		opacity: 0
+		visibility: hidden
+		+wo
+		transition: opacity 0.25s, visibility 0.25s
+	&__input
+		// border: 2px solid #fff
+		color: #333			
+		border-radius: 10px
+		height: 33px
+		+light
+		font-size: 1.4rem
+		padding: 0 13px 
+		width: 100%
+		display: block 
+		background: #fff
+.btn-search
+	cursor: pointer
+	font-size: 2.1rem
+	color: #fff
+	user-select: none
 
 .menu-mobile
 	padding: 16px 10px 14px

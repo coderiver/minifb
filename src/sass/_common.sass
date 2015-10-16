@@ -132,6 +132,8 @@ p
 			text-decoration: underline
 		&:visited
 			color: #605ca8
+	b
+		+bold
 ul, ol
 	+light
 	color: #333
@@ -559,7 +561,7 @@ dd
 	color: #197fba
 	font-size: 1.4rem
 	line-height: 1
-	background-color: rgba(233, 233, 233, 0.25)
+	background: none
 	border: 2px solid #197fba
 	border-radius: 10px
 	padding: 6px 13px 5px 
@@ -622,6 +624,7 @@ dd
 	position: relative
 	width: 280px
 	text-align: center
+	transition: background 0.25s
 	&_blue
 		background-color: #197fba
 	&:before
@@ -633,6 +636,8 @@ dd
 		left: 3px
 		border: 2px dotted #fff
 		border-radius: 9px
+	&:disabled
+		background: gray 
 //btns-row/col
 .btns-row
 	+clr

@@ -53,6 +53,7 @@ p img { float: left; margin: 0 15px 15px 0; }
 p a { color: #197fba; }
 p a:hover { color: #197fba; text-decoration: underline; }
 p a:visited { color: #605ca8; }
+p b { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 
 ul, ol { font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #333; font-size: 1.5rem; line-height: 25px; margin-bottom: 20px; }
 ul ul, ul ol, ol ul, ol ol { margin-bottom: 0; }
@@ -166,7 +167,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .captcha__input:-moz-placeholder, .captcha__input::-moz-placeholder { color: #777; opacity: 1; }
 .captcha__input::-webkit-input-placeholder { color: #777; }
 
-.button-blue { display: inline-block; vertical-align: top; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1; background-color: rgba(233, 233, 233, 0.25); border: 2px solid #197fba; border-radius: 10px; padding: 6px 13px 5px; transition: color 0.25s, background 0.25s, border-color 0.25s; text-decoration: none; }
+.button-blue { display: inline-block; vertical-align: top; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1; background: none; border: 2px solid #197fba; border-radius: 10px; padding: 6px 13px 5px; transition: color 0.25s, background 0.25s, border-color 0.25s; text-decoration: none; }
 .button-blue:hover, .button-blue:focus, .button-blue:visited, .button-blue:active { text-decoration: none; }
 .button-blue:visited { color: #197fba; }
 .button-blue:hover, .button-blue:active { background-color: #197fba; color: #fff; }
@@ -181,10 +182,11 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .btn-play:hover { background-color: rgba(0, 22, 22, 0.7); }
 .btn-play i { font-size: 4.8rem; vertical-align: middle; margin: 0 0 0 10px; }
 
-.btn-big { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.8rem; text-transform: uppercase; line-height: 1; padding: 17px 33px 14px; background-color: #d9232a; border-radius: 9px; display: inline-block; vertical-align: top; color: #fff; text-decoration: none; position: relative; width: 280px; text-align: center; }
+.btn-big { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.8rem; text-transform: uppercase; line-height: 1; padding: 17px 33px 14px; background-color: #d9232a; border-radius: 9px; display: inline-block; vertical-align: top; color: #fff; text-decoration: none; position: relative; width: 280px; text-align: center; transition: background 0.25s; }
 .btn-big:hover, .btn-big:focus, .btn-big:visited, .btn-big:active { color: #fff; text-decoration: none; }
 .btn-big_blue { background-color: #197fba; }
 .btn-big:before { content: ""; position: absolute; top: 3px; right: 3px; bottom: 3px; left: 3px; border: 2px dotted #fff; border-radius: 9px; }
+.btn-big:disabled { background: gray; }
 
 .btns-row { *zoom: 1; padding: 10px 0; }
 .btns-row:after { content: " "; display: table; clear: both; }
@@ -508,7 +510,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .header-contacts__text a { color: #197fba; }
 .header-contacts__text a:hover { color: #197fba; text-decoration: underline; }
 .header-contacts__text a:visited { color: #605ca8; }
-.header-contacts .button-blue { margin-top: 2px; }
+.header-contacts .button-blue { margin-top: 2px; background-color: rgba(233, 233, 233, 0.25); }
+.header-contacts .button-blue:hover { background: #197fba; }
 .header-contacts div { margin-bottom: 3px; }
 
 .btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: fixed; top: 0; left: 0; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; z-index: 1001; }
@@ -552,7 +555,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .menu__list a.is-school i, .menu__list a.is-academy i { position: absolute; top: 50%; left: 0; margin-top: -10px; }
 .menu__list a.is-school i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -25px -76px; }
 .menu__list a.is-academy i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -49px -76px; }
-.menu .btn-search { position: absolute; bottom: 17px; right: 24px; cursor: pointer; font-size: 2.1rem; color: #fff; }
 .menu-dropdown { background: #333333; display: none; }
 .menu-dropdown.is-active { display: block; }
 .menu-dropdown__section { max-width: 1200px; margin: 0 auto; padding: 24px 0 20px; *zoom: 1; display: none; }
@@ -605,6 +607,13 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .menu-dropdown__partners ul li { padding: 0 0 14px; }
 .menu-dropdown__partners ul li a { display: block; }
 .menu-dropdown__partners ul li a img { width: 100%; }
+
+.search { position: absolute; bottom: 15px; right: 24px; font-size: 0; }
+.search.is-active .search__block { opacity: 1; visibility: visible; }
+.search__block { position: absolute; top: 50%; right: 100%; margin: -17px 10px 0; width: 250px; opacity: 0; visibility: hidden; will-change: opacity; transition: opacity 0.25s, visibility 0.25s; }
+.search__input { color: #333; border-radius: 10px; height: 33px; font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 1.4rem; padding: 0 13px; width: 100%; display: block; background: #fff; }
+
+.btn-search { cursor: pointer; font-size: 2.1rem; color: #fff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .menu-mobile { padding: 16px 10px 14px; *zoom: 1; display: none; background: #333; }
 .menu-mobile:after { content: " "; display: table; clear: both; }
@@ -737,9 +746,11 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .footer-search { float: right; width: 250px; }
 @media only screen and (max-width: 767px) { .footer-search { float: none; } }
 .footer-search__label { color: white; font-size: 2rem; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; float: left; padding: 5px 20px 0 0; }
-.footer-search__form { overflow: hidden; position: relative; }
-.footer-search__form .btn-submit { position: absolute; top: 3px; right: 3px; padding: 7px 12px 6px; border-radius: 7px; }
-.footer-search__input { border: 2px solid #fff; color: #fff; border-radius: 10px; height: 33px; font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 1.4rem; padding: 0 13px; width: 100%; display: block; background: none; }
+
+.mini-form { overflow: hidden; position: relative; }
+.mini-form .btn-submit { position: absolute; top: 3px; right: 3px; padding: 7px 12px 6px; border-radius: 7px; }
+.mini-form__input { border: 2px solid #343434; color: #fff; border-radius: 10px; height: 33px; font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 1.4rem; padding: 0 13px; width: 100%; display: block; background: none; }
+.mini-form_white .mini-form__input { border-color: #fff; background: none; }
 
 .modal-backdrop.in { opacity: 0.6; filter: alpha(opacity=60); }
 
@@ -838,6 +849,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .block__box { width: 25%; float: left; padding: 0 15px 15px; }
 @media only screen and (max-width: 767px) { .block__box { width: 100%; } }
 .block__footer { padding: 6px 0 0; text-align: right; }
+.block__footer_mod { padding: 6px 15px 0; }
 .block__headers { *zoom: 1; margin: 0 -15px; display: none; }
 .block__headers:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1219px) { .block__headers { display: block; } }
@@ -983,7 +995,34 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .index-museum { background: #020d1a; }
 
-.index-academy { background: #ffed39; }
+.index-academy { background: #ffed39; background-image: linear-gradient(#ffed39, #f2ba2f); padding: 20px 0; }
+.index-academy .page-nav li.is-active a { background-color: #f1cb22; }
+
+.text h4, .text p { color: black; }
+.text p { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
+.text h4 { text-transform: none; }
+
+.info { background-color: white; border-radius: 10px; padding: 21px 10px 21px 15px; min-height: 805px; margin-bottom: 26px; }
+.info h5 { font-size: 1.8rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; line-height: 1; color: #333; margin-bottom: 3px; }
+.info p, .info li { font-size: 1.4rem; line-height: 1.3; }
+.info p { padding: 4px 0 2px; }
+.info li { padding: 4px 0 2px 8px; }
+
+.contact-info { *zoom: 1; }
+.contact-info:after { content: " "; display: table; clear: both; }
+.contact-info p { margin-bottom: 0; }
+.contact-info__title { padding-bottom: 15px; }
+.contact-info .user-info { width: 50%; float: left; padding: 0 21px 0 0; }
+.contact-info__text { margin-bottom: 20px; }
+
+.user-info { *zoom: 1; }
+.user-info:after { content: " "; display: table; clear: both; }
+.user-info__img { width: 64px; height: 64px; float: left; margin: 0 10px 10px 0; }
+.user-info__img img { width: 100%; height: 100%; border-radius: 10px; }
+.user-info p { overflow: hidden; clear: none; }
+
+.request__btn { color: white; font-size: 18px; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; background-color: #197fba; border-radius: 10px; text-align: center; width: 100%; padding: 9px 10px; }
+.request__btn i { font-size: 9px; vertical-align: top; margin: 5px 0 0 12px; }
 
 .teams-list { min-height: 62px; background: #fff; }
 .teams-list__inner { max-width: 1200px; margin: 0 auto; padding: 12px 10px; }
@@ -996,14 +1035,44 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .teams-list ul:after { content: ""; width: 100%; height: 0; display: inline-block; }
 @media only screen and (max-width: 767px) { .teams-list ul { text-align: left; }
   .teams-list ul:after { display: none; } }
-.teams-list ul li { display: inline-block; vertical-align: middle; font-size: 0; padding: 3px; border-radius: 10px; }
-.teams-list ul li:hover { border: 3px solid #F03723; padding: 0; }
-.teams-list ul li a { display: block; padding: 5px; min-width: 50px; text-align: center; }
-.teams-list ul li img { max-width: 100%; height: auto; }
+.teams-list ul li { display: inline-block; vertical-align: middle; font-size: 0; width: 55px; height: 55px; }
+.teams-list ul li a { border-radius: 10px; border: 3px solid transparent; width: 100%; height: 100%; display: block; text-align: center; font-size: 0; transition: border-color 0.25s; }
+.teams-list ul li a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.teams-list ul li a:hover { border-color: #F03723; }
+.teams-list ul li img { max-width: 100%; height: auto; display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .teams-list ul li { margin-right: 30px; }
   .teams-list ul li:last-child { margin-right: 0; } }
 
-.main__inner.league-page { background-image: -webkit-linear-gradient(left, #9c2407 0%, #d33021 20%, #d33021 80%, #9c2407 100%); }
+.main__inner.league-page { background: #b12618; }
+
+.banner-league__img { display: block; float: right; line-height: 0; font-size: 0; }
+.banner-league__title { padding-top: 24px; }
+.banner-league__title p { color: #fff; line-height: 1; margin-bottom: 0; font-size: 3.7rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-style: italic; }
+
+.page-title_league { position: relative; padding: 20px 20px 10px; }
+.page-title_league:before { content: ""; position: absolute; right: 0; bottom: 0; top: 0; width: 130px; max-height: 100%; max-width: 100%; border-radius: 0 10px 10px 0; background: url("../img/banner-league2.png") 0 0 no-repeat; background-size: cover; }
+
+.page-nav { line-height: 1; margin: 0; font-size: 0; }
+.page-nav li { padding: 0; }
+.page-nav li:before { display: none; }
+.page-nav li li { padding: 0; }
+.page-nav li li li { padding: 0; }
+.page-nav li { display: inline-block; }
+.page-nav li a { color: #197fba; font-size: 1.8rem; display: block; padding: 8px 15px 7px; border-radius: 10px; }
+.page-nav li a:hover { text-decoration: underline; }
+.page-nav li.is-active a { background: #f93526; color: #fff; }
+
+.tabs__list_nopad { padding: 0; }
+
+.block__top .tabs { float: left; }
+.block__top .btn-next { float: right; margin-top: 12px; }
+
+.post { display: block; *zoom: 1; }
+.post:after { content: " "; display: table; clear: both; }
+.post__media { float: left; width: 76px; height: 76px; font-size: 0; line-height: 0; margin-left: 10px; }
+.post__media img { max-width: 100%; height: auto; }
+.post__info { overflow: hidden; }
+.post__header strong { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #000; }
 
 
 

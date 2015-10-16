@@ -494,7 +494,12 @@
 						<li><a href="#" class="is-school"><i></i>Мини-футбол в школу</a></li>
 						<li><a href="#" class="is-academy"><i></i>Академия</a></li>
 					</ul>
-					<i class="btn-search icon-search"></i>
+					<div class="search js-search">
+						<i class="btn-search icon-search js-search-btn"></i>
+						<div class="search__block">
+							<input type="text" class="search__input">
+						</div>
+					</div>				
 				</div>
 				<div class="menu-dropdown js-menu">
 					<div class="menu-dropdown__section js-menu-block" data-mblock="pro">
@@ -1509,7 +1514,10 @@
 											</div>
 										</div>
 									</div>	
-								</div>						
+								</div>	
+								<div class="block__footer block__footer_mod">
+									<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Все новости</a>
+								</div>							
 							</div>
 							<div class="block__body js-tabs-block" data-block="photos">
 								<div class="main-slider js-block-slider">
@@ -1629,11 +1637,11 @@
 											</div>
 										</div>
 									</div>	
+								</div>		
+								<div class="block__footer block__footer_mod">
+									<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Все фоторепортажи</a>
 								</div>					
 							</div>
-						</div>		
-						<div class="block__footer">
-							<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Все новости</a>
 						</div>					
 					</div>
 				</div>
@@ -1659,8 +1667,14 @@
 										<p>02:15 13 июля 2015</p>
 										<p>VI Российско-Китайские игры открыты! Вечером 12 июля в Иркутске на площади перед дворцом спорта «Труд» состоялось торжественное открытие шестых Российско-Китайских молодежных игр, которые будут проходить в столице Прибайкалья с 13 по 15 июля.</p>
 									</div>	
+								</div>		
+								<div class="block__footer">
+									<a href="#" class="btn-next btn-next_white">
+										<span>Все события</span>
+										<i class="icon-arr-right"></i>
+									</a>
 								</div>
-							</div>
+							</div>		
 							<div class="block__events is-table js-tabs-block" data-block="projects">								
 								<div class="event-item">
 									<a href="#" class="event-item__img">
@@ -1670,15 +1684,15 @@
 										<p>02:15 13 июля 2015</p>
 										<p>VI Российско-Китайские игры открыты! Вечером 12 июля в Иркутске на площади перед дворцом спорта «Труд» состоялось торжественное открытие шестых Российско-Китайских молодежных игр, которые будут проходить в столице Прибайкалья с 13 по 15 июля.</p>
 									</div>	
+								</div>			
+								<div class="block__footer">
+									<a href="#" class="btn-next btn-next_white">
+										<span>Все проекты</span>
+										<i class="icon-arr-right"></i>
+									</a>
 								</div>
-							</div>
-						</div>						
-						<div class="block__footer">
-							<a href="#" class="btn-next btn-next_white">
-								<span>Все события</span>
-								<i class="icon-arr-right"></i>
-							</a>
-						</div>
+							</div>	
+						</div>		
 					</div>
 				</div>
 			</div>
@@ -2176,9 +2190,9 @@
 					</ul>
 					<div class="footer-search">
 						<div class="footer-search__label">Поиск</div>
-						<div class="footer-search__form">
+						<div class="mini-form mini-form_white">
 							<form action="">
-								<input type="text" class="footer-search__input">
+								<input type="text" class="mini-form__input">
 								<button class="btn-submit">Найти</button>
 							</form>
 						</div>
