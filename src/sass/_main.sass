@@ -738,6 +738,8 @@
 	padding: 21px 10px 21px 15px 
 	min-height: 805px
 	margin-bottom: 26px
+	&_small
+		min-height: 685px 
 	h5
 		font-size: 1.8rem
 		+bold
@@ -807,7 +809,9 @@
 	margin-bottom: 20px
 	.button-blue
 		float: right
-		margin: 11px 0 10px 10px 
+		margin: 11px 0 10px 10px
+		+r(1219)
+			margin: 0 0 10px 10px  
 	h4
 		overflow: hidden
 		line-height: 1
@@ -826,6 +830,7 @@
 	font-size: 1.5rem
 	line-height: 1.2
 	+bold
+	clear: both
 	a
 		color: #197fba
 		&:hover
@@ -836,6 +841,7 @@
 .academy-news
 	+clr
 	padding: 10px 0 
+	clear: both
 	&__img
 		float: left
 		width: 79px
@@ -845,9 +851,21 @@
 	&__text
 		overflow: hidden
 		line-height: 1
-		font-size: 15px
+		font-size: 1.5rem
 		+bold
 		a
 			color: #197fba
 			&:hover
 				text-decoration: underline
+
+.page-title_academy
+	overflow: hidden
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		right: -90px
+		top: 0
+		+s(academy-title)
+	h1, .page-nav
+		position: relative
