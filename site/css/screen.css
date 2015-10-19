@@ -27,6 +27,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "PFDinDisplayPro Regular"; src: url("fonts/pfdindisplaypro-reg.eot"); src: url("fonts/pfdindisplaypro-reg.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-reg.woff2") format("woff2"), url("fonts/pfdindisplaypro-reg.woff") format("woff"), url("fonts/pfdindisplaypro-reg.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Medium"; src: url("fonts/pfdindisplaypro-med.eot"); src: url("fonts/pfdindisplaypro-med.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-med.woff2") format("woff2"), url("fonts/pfdindisplaypro-med.woff") format("woff"), url("fonts/pfdindisplaypro-med.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Bold"; src: url("fonts/pfdindisplaypro-bold.eot"); src: url("fonts/pfdindisplaypro-bold.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-bold.woff2") format("woff2"), url("fonts/pfdindisplaypro-bold.woff") format("woff"), url("fonts/pfdindisplaypro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "PFDinDisplayPro Bold Italic"; src: url("fonts/pfdindisplaypro-boldital.eot"); src: url("fonts/pfdindisplaypro-boldital.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-boldital.woff2") format("woff2"), url("fonts/pfdindisplaypro-boldital.woff") format("woff"), url("fonts/pfdindisplaypro-boldital.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 html, body { height: 100%; }
 
 html { font-size: 10px; }
@@ -41,8 +42,10 @@ a:hover { text-decoration: none; }
 h1, h2, h3, h4 { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #333; line-height: 1; text-transform: uppercase; margin-bottom: 15px; }
 
 h1 { font-size: 4.5rem; }
+h1 small { font-size: 2rem; color: #333; }
 
 h2 { font-size: 4.1rem; }
+h2 small { font-size: 2rem; color: #333; }
 
 h3 { font-size: 3rem; line-height: 1.4; }
 
@@ -139,6 +142,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .select__list li li li { padding: 0; }
 .select__list li { padding: 0 13px; cursor: pointer; line-height: 1.75; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.4rem; color: #181818; }
 .select__list li:hover { background-color: #e8e8e8; }
+.select_white .select__text { color: #fff; border-color: #fff; background: none; }
+.select_white .select__text:after { color: #fff; }
+.select_white .select__list { border-color: #fff; color: #fff; }
 
 .form-checkbox { position: relative; display: inline-block; vertical-align: top; padding: 0 0 0 25px; cursor: pointer; margin: 0 13px 13px 0; }
 .form-checkbox input { visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; }
@@ -181,6 +187,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .btn-play:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .btn-play:hover { background-color: rgba(0, 22, 22, 0.7); }
 .btn-play i { font-size: 4.8rem; vertical-align: middle; margin: 0 0 0 10px; }
+.btn-play i.icon-gallery { margin: 0; }
 
 .btn-big { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.8rem; text-transform: uppercase; line-height: 1; padding: 17px 33px 14px; background-color: #d9232a; border-radius: 9px; display: inline-block; vertical-align: top; color: #fff; text-decoration: none; position: relative; width: 280px; text-align: center; transition: background 0.25s; }
 .btn-big:hover, .btn-big:focus, .btn-big:visited, .btn-big:active { color: #fff; text-decoration: none; }
@@ -207,6 +214,17 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .btn-submit { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; line-height: 1; background-color: #197fba; border-radius: 10px; padding: 8px 16px 7px; transition: color 0.25s, background 0.25s, border-color 0.25s; cursor: pointer; }
 .btn-submit:focus, .btn-submit:visited, .btn-submit:hover, .btn-submit:active { text-decoration: none; }
 .btn-submit:hover { background-color: #0b5884; }
+
+.btn-mail, .btn-attr { display: inline-block; vertical-align: top; line-height: 1; border: 2px solid #333; border-radius: 10px; padding: 6px 29px 5px 7px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.4rem; position: relative; text-decoration: none; transition: color 0.25s, background 0.25s, border-color 0.25s; cursor: pointer; text-decoration: none; min-width: 160px; color: #197fba; border-color: #197fba; }
+.btn-mail:hover, .btn-mail:focus, .btn-mail:visited, .btn-mail:active, .btn-attr:hover, .btn-attr:focus, .btn-attr:visited, .btn-attr:active { text-decoration: none; }
+.btn-mail:visited, .btn-attr:visited { color: #197fba; }
+.btn-mail:hover, .btn-mail:active, .btn-attr:hover, .btn-attr:active { background-color: #197fba; color: #fff; }
+.btn-mail:before, .btn-attr:before { content: ""; position: absolute; top: 50%; right: 8px; }
+.btn-mail i, .btn-attr i { position: absolute; top: 7px; right: 8px; }
+
+.btn-mail i { font-size: 11px; }
+
+.btn-attr i { font-size: 12px; }
 
 .table-wrapper { overflow: auto; width: 100%; padding: 0 0 25px; }
 .table-wrapper .title { margin-bottom: 33px; }
@@ -242,6 +260,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .pages__list li { display: inline-block; vertical-align: middle; padding: 0 12px; }
 .pages__list li a { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1.9; display: inline-block; }
 
+.tabs_md .tabs-btn { padding: 17px 16px 16px; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
 .tabs__list { line-height: 1; margin: 0; font-size: 0; padding: 20px 0; }
 .tabs__list li { padding: 0; }
 .tabs__list li:before { display: none; }
@@ -368,19 +387,27 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon-date:before { content: ""; }
 
-.icon-facebook:before { content: ""; }
+.icon-external:before { content: ""; }
 
-.icon-google:before { content: ""; }
+.icon-facebook:before { content: ""; }
 
-.icon-photos:before { content: ""; }
+.icon-gallery:before { content: ""; }
 
-.icon-play:before { content: ""; }
+.icon-google:before { content: ""; }
 
-.icon-search:before { content: ""; }
+.icon-mail:before { content: ""; }
 
-.icon-twitter:before { content: ""; }
+.icon-pdf:before { content: ""; }
 
-.icon-youtube:before { content: ""; }
+.icon-photos:before { content: ""; }
+
+.icon-play:before { content: ""; }
+
+.icon-search:before { content: ""; }
+
+.icon-twitter:before { content: ""; }
+
+.icon-youtube:before { content: ""; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -772,10 +799,19 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .content { padding: 30px 0; }
 
-.top-banner { display: block; color: #fff; position: relative; padding: 14px 0 16px; font-size: 0; }
-.top-banner__img { float: right; box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75); border-radius: 50px; position: relative; }
+.top-banner { display: block; color: #fff; position: relative; font-size: 0; }
+.top-banner_main { padding: 14px 0 16px; }
+.top-banner_main .top-banner__img { box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75); border-radius: 50px; }
+.top-banner_main .top-banner__img:before { content: ""; border-radius: 50px; position: absolute; left: 0; right: 0; top: 10%; bottom: 10%; box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75); }
+.top-banner_team { padding: 9px 0 30px; }
+.top-banner_team .top-banner__img { margin: 0 17px 0 0; }
+.top-banner_team .top-banner__img img { max-width: 168px; }
+.top-banner_team .top-banner__box { padding: 20px 0 0; }
+.top-banner_team h3 { font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif; color: #FFF; display: inline; line-height: 1.1; }
+.top-banner_team h3 b { font-family: "PFDinDisplayPro Bold Italic", Arial, sans-serif; }
+.top-banner_team .btn-next { margin: 0 0 0 20px; }
+.top-banner__img { float: right; position: relative; }
 @media only screen and (max-width: 991px) { .top-banner__img { float: left; } }
-.top-banner__img:before { content: ""; border-radius: 50px; position: absolute; left: 0; right: 0; top: 10%; bottom: 10%; box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75); }
 .top-banner__img img { position: relative; max-width: 100%; }
 .top-banner__info { overflow: hidden; position: relative; padding: 6px 0 5px; }
 .top-banner__title { font-family: "PFDinDisplayPro Thin", Arial, sans-serif; font-size: 2.5rem; line-height: 1.2; }
@@ -995,10 +1031,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .side-banner__text { font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif; }
 .side-banner__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 
-.index-museum { background: #020d1a; }
+.museum-page { background: #020d1a; }
 
-.index-academy { background: #ffed39; background-image: linear-gradient(#ffed39, #f2ba2f); padding: 20px 0; }
-.index-academy .page-nav li.is-active a { background-color: #f1cb22; }
+.academy-page { background: #ffed39; background-image: linear-gradient(#ffed39, #f2ba2f); padding: 20px 0; }
+.academy-page .page-nav li.is-active a { background-color: #f1cb22; }
 
 .text h4, .text p { color: black; }
 .text p { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
@@ -1053,6 +1089,127 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .page-title_academy { overflow: hidden; position: relative; }
 .page-title_academy:before { content: ""; position: absolute; right: -90px; top: 0; background-image: url("../img/icons.png"); width: 233px; height: 237px; background-position: 0px 0px; }
 .page-title_academy h1, .page-title_academy .page-nav { position: relative; }
+
+.team-page { background: #5d9cc4; position: relative; background: radial-gradient(ellipse at center, white 0%, #5d9cc4 90%, #5d9cc4 100%); }
+
+.page-box { padding: 20px 20px 10px 5px; border-radius: 10px; background: #fff; *zoom: 1; margin-bottom: 20px; }
+.page-box:after { content: " "; display: table; clear: both; }
+.page-box__logo { text-align: center; width: 180px; float: left; margin: 0 20px 20px 0; font-size: 0; }
+@media only screen and (max-width: 767px) { .page-box__logo { float: none; display: block; } }
+.page-box__logo img { width: 115px; margin: 0 0 10px; }
+.page-box__logo span { color: #197fba; font-size: 15px; line-height: 1; text-decoration: none; }
+.page-box__logo span:hover, .page-box__logo span:focus, .page-box__logo span:visited, .page-box__logo span:active { text-decoration: none; }
+.page-box__info { overflow: hidden; font-size: 0; }
+@media only screen and (max-width: 767px) { .page-box__info { padding: 0 10px; } }
+.page-box__info ul { line-height: 1; margin: 0; font-size: 0; font-size: 1.5rem; line-height: 1.6; margin: 0 10px 0 0; }
+.page-box__info ul li { padding: 0; }
+.page-box__info ul li:before { display: none; }
+.page-box__info ul li li { padding: 0; }
+.page-box__info ul li li li { padding: 0; }
+@media only screen and (max-width: 1219px) { .page-box__info ul { width: 100%; margin-bottom: 10px; } }
+.page-box__info ul span { width: 150px; float: left; font-family: "PFDinDisplayPro Medium", Arial, sans-serif; }
+@media only screen and (max-width: 767px) { .page-box__info ul span { width: 100%; } }
+.page-box__info ul a { color: #197fba; }
+.page-box__info ul a:hover { color: #197fba; text-decoration: underline; }
+.page-box__info ul a:visited { color: #605ca8; }
+.page-box h1 { margin-bottom: 5px; }
+.page-box__info ul, .page-box__shirt, .page-box__photo { display: inline-block; vertical-align: middle; }
+.page-box__shirt { width: 190px; margin: 0 18px 0 0; }
+@media only screen and (max-width: 767px) { .page-box__shirt { max-width: 48%; margin: 0 2% 0 0; } }
+.page-box__photo { width: 147px; }
+@media only screen and (max-width: 767px) { .page-box__photo { max-width: 48%; } }
+.page-box__btns { float: right; width: 160px; padding: 25px 0 0; }
+@media only screen and (max-width: 991px) { .page-box__btns { width: 100%; padding: 20px 0; } }
+.page-box__btns .btn-mail, .page-box__btns .btn-attr { margin: 0 0 5px; }
+@media only screen and (max-width: 991px) { .page-box__btns .btn-mail, .page-box__btns .btn-attr { margin: 0 10px 0 0; } }
+.page-box .page-nav { clear: both; }
+
+.box { border-radius: 10px; background: #fff; padding: 20px; margin-bottom: 20px; }
+.box__video { *zoom: 1; margin: 0 -10px; }
+.box__video:after { content: " "; display: table; clear: both; }
+.box__container { *zoom: 1; margin: 0 -10px; display: none; }
+.box__container:after { content: " "; display: table; clear: both; }
+.box__container.is-active { display: block; }
+.box__container-players .box__col { padding: 20px 10px; }
+.box__col { float: left; width: 33.33%; padding: 10px; }
+@media only screen and (max-width: 991px) { .box__col { width: 50%; } }
+@media only screen and (max-width: 767px) { .box__col { width: 100%; } }
+.box__top { *zoom: 1; }
+.box__top:after { content: " "; display: table; clear: both; }
+.box__top h2 { float: left; margin: 0 0 5px; }
+.box__top .select { float: right; margin: 12px 0 0 10px; }
+.box__top .btn-next { float: right; margin: 5px 0 0 10px; }
+
+.user-box { *zoom: 1; }
+.user-box:after { content: " "; display: table; clear: both; }
+.user-box__img { float: left; width: 115px; margin: 0 8px 0 0; font-size: 0; }
+.user-box__img img { width: 100%; }
+.user-box__info { overflow: hidden; }
+.user-box__info p { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; line-height: 1.1; margin-bottom: 14px; }
+.user-box__info p a { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.user-box__info ul { line-height: 1; margin: 0; font-size: 0; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; line-height: 1.2; font-size: 15px; }
+.user-box__info ul li { padding: 0; }
+.user-box__info ul li:before { display: none; }
+.user-box__info ul li li { padding: 0; }
+.user-box__info ul li li li { padding: 0; }
+.user-box__number { font-size: 0; margin-bottom: 9px; *zoom: 1; }
+.user-box__number:after { content: " "; display: table; clear: both; }
+.user-box__number img { margin: 0 10px 0 0; width: 24px; height: 24px; border-radius: 50%; float: left; }
+.user-box__number span { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #333; font-size: 2rem; line-height: 1; overflow: hidden; padding: 3px 0 0; display: block; }
+
+.media-item__img { display: block; position: relative; font-size: 0; }
+.media-item__img img { width: 100%; }
+.media-item__img .btn-play { position: absolute; top: 50%; left: 50%; margin: -48px 0 0 -48px; }
+.media-item__info { padding: 8px 0 0; }
+.media-item__info .tag { margin: 2px 0 0; }
+.media-item__info p { color: #000; margin: 0; }
+
+.side-contacts { padding: 20px; background: #fff; border-radius: 10px; margin-bottom: 20px; }
+.side-contacts div { padding: 0 0 10px; }
+.side-contacts p { line-height: 1.2; margin: 0; }
+
+.side-statistic { background-color: #333; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.side-statistic h2, .side-statistic__list { color: #fff; }
+.side-statistic .select { margin-bottom: 20px; }
+.side-statistic__list { line-height: 1; margin: 0; font-size: 0; color: white; font-size: 1.4rem; line-height: 1.3; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; margin-bottom: 20px; }
+.side-statistic__list li { padding: 0; }
+.side-statistic__list li:before { display: none; }
+.side-statistic__list li li { padding: 0; }
+.side-statistic__list li li li { padding: 0; }
+.side-statistic__list li { *zoom: 1; margin-bottom: 7px; }
+.side-statistic__list li:after { content: " "; display: table; clear: both; }
+.side-statistic__list span { width: 170px; padding: 8px 10px 6px 0; float: left; }
+.side-statistic__list b { font-size: 2.5rem; overflow: hiddens; }
+.side-statistic__btn { text-align: right; }
+.side-statistic__btn .btn-next { background: none; }
+.side-statistic__btn .btn-next:hover { background: #fff; }
+
+.side-progress { padding: 20px; margin: 0 0 20px; background-color: white; border-radius: 10px; }
+.side-progress h4 { margin-bottom: 3px; }
+.side-progress__item { *zoom: 1; padding: 16px 0 13px; }
+.side-progress__item:after { content: " "; display: table; clear: both; }
+.side-progress__img { float: left; width: 79px; margin: 0 10px 0 0; font-size: 0; }
+.side-progress__img img { width: 100%; }
+.side-progress__text { overflow: hidden; }
+.side-progress__text p { margin: 0; line-height: 1.1; }
+.side-progress__btns { text-align: center; }
+
+.side-academy { text-align: center; background: url(../img/side-academy.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; max-width: 280px; height: 240px; padding: 185px 0 0; border-radius: 10px; margin-bottom: 20px; }
+.side-academy ul { line-height: 1; margin: 0; font-size: 0; }
+.side-academy ul li { padding: 0; }
+.side-academy ul li:before { display: none; }
+.side-academy ul li li { padding: 0; }
+.side-academy ul li li li { padding: 0; }
+.side-academy ul li { display: inline-block; vertical-align: top; font-size: 15px; line-height: 1.3; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #555; }
+.side-academy ul li:last-child:after { display: none; }
+.side-academy ul li:after { content: "/"; margin: 0 4px; }
+.side-academy ul li a { color: #555; }
+.side-academy ul li a:hover { text-decoration: underline; }
+
+.link-pdf { position: relative; display: inline-block; vertical-align: top; width: 190px; padding: 5px 0 0 34px; margin: 0 0 27px 20px; }
+.link-pdf:hover span { text-decoration: underline; }
+.link-pdf i { font-size: 32px; position: absolute; top: 50%; left: 0; margin-top: -16px; color: #1f88d2; }
+.link-pdf span { color: #197fba; font-size: 14px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; line-height: 1; }
 
 .row.no-padding.no-padding > div { padding: 0; }
 @media only screen and (max-width: 767px) { .row.no-padding.no-padding > div { padding: 0; } }

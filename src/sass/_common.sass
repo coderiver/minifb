@@ -54,6 +54,7 @@
 +font("PFDinDisplayPro Regular", pfdindisplaypro-reg)
 +font("PFDinDisplayPro Medium", pfdindisplaypro-med)
 +font("PFDinDisplayPro Bold", pfdindisplaypro-bold)
++font("PFDinDisplayPro Bold Italic", pfdindisplaypro-boldital)
 
 =thin
 	font-family: "PFDinDisplayPro Thin", Arial, sans-serif
@@ -67,6 +68,8 @@
 	font-family: "PFDinDisplayPro Medium", Arial, sans-serif
 =bold
 	font-family: "PFDinDisplayPro Bold", Arial, sans-serif
+=bitalic
+	font-family: "PFDinDisplayPro Bold Italic", Arial, sans-serif
 
 //change
 =wo
@@ -103,9 +106,15 @@ h1, h2, h3, h4
 
 h1
 	font-size: 4.5rem
+	small
+		font-size: 2rem
+		color: #333  
 	
 h2
 	font-size: 4.1rem
+	small
+		font-size: 2rem
+		color: #333  
 	
 h3
 	font-size: 3rem
@@ -419,6 +428,17 @@ dd
 			color: #181818
 			&:hover
 				background-color: #e8e8e8
+	&_white
+		.select
+			&__text
+				color: #fff
+				border-color: #fff 
+				background: none
+				&:after
+					color: #fff  
+			&__list
+				border-color: #fff
+				color: #fff  
 
 //checkbox and radio
 .form-checkbox
@@ -608,6 +628,8 @@ dd
 		font-size: 4.8rem
 		vertical-align: middle
 		margin: 0 0 0 10px 
+		&.icon-gallery
+			margin: 0 
 
 .btn-big
 	+bold
@@ -701,7 +723,45 @@ dd
 		text-decoration: none
 	&:hover
 		background-color: #0b5884
-		
+	
+.btn-mail, .btn-attr
+	display: inline-block
+	vertical-align: top
+	line-height: 1
+	border: 2px solid #333
+	border-radius: 10px
+	padding: 6px 29px 5px 7px 
+	+bold
+	font-size: 1.4rem
+	position: relative
+	text-decoration: none
+	transition: color 0.25s, background 0.25s, border-color 0.25s
+	cursor: pointer
+	+tdn
+	min-width: 160px
+	color: #197fba
+	border-color: #197fba
+	&:visited
+		color: #197fba
+	&:hover, &:active
+		background-color: #197fba
+		color: #fff 
+	&:before
+		content: "" 
+		position: absolute
+		top: 50%
+		right: 8px
+	i
+		position: absolute
+		top: 7px
+		right: 8px
+.btn-mail
+	i
+		font-size: 11px
+.btn-attr
+	i
+		font-size: 12px
+
 //table
 .table-wrapper
 	overflow: auto
@@ -800,6 +860,10 @@ dd
 				
 //tabs
 .tabs
+	&_md
+		.tabs-btn
+			padding: 17px 16px 16px 
+			+reg
 	&__list
 		+ul
 		padding: 20px 0 

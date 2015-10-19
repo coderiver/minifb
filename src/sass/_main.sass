@@ -21,24 +21,45 @@
 	display: block
 	color: #fff
 	position: relative
-	padding: 14px 0 16px
 	font-size: 0
+	&_main
+		padding: 14px 0 16px
+		.top-banner
+			&__img
+				box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
+				border-radius: 50px
+				&:before
+					content: "" 
+					border-radius: 50px
+					position: absolute
+					left: 0
+					right: 0
+					top: 10%
+					bottom: 10%
+					box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
+	&_team
+		padding: 9px 0 30px 
+		.top-banner
+			&__img
+				margin: 0 17px 0 0 
+				img
+					max-width: 168px
+			&__box
+				padding: 20px 0 0 
+		h3
+			+litalic
+			color: #FFF 
+			display: inline
+			line-height: 1.1
+			b
+				+bitalic
+		.btn-next
+			margin: 0 0 0 20px 
 	&__img
 		float: right
-		box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
-		border-radius: 50px
 		position: relative
 		+r(991)
-			float: left
-		&:before
-			content: "" 
-			border-radius: 50px
-			position: absolute
-			left: 0
-			right: 0
-			top: 10%
-			bottom: 10%
-			box-shadow: inset 0 0 90px rgba(58, 225, 255, 0.75), 0 0 90px rgba(58, 225, 255, 0.75)
+			float: left		
 		img
 			position: relative
 			max-width: 100%
@@ -710,12 +731,12 @@
 
 
 //museum
-.index-museum
+.museum-page
 	background: #020d1a 
 
 
 //academy
-.index-academy
+.academy-page
 	+g(#ffed39, #f2ba2f)
 	padding: 20px 0 
 	.page-nav
@@ -869,3 +890,311 @@
 		+s(academy-title)
 	h1, .page-nav
 		position: relative
+
+//team-page
+.team-page
+	background: #5d9cc4 
+	position: relative
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(90%, rgb(93,156,196)), color-stop(100%, rgb(93,156,196)))
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	
+.page-box
+	padding: 20px 20px 10px 5px
+	border-radius: 10px
+	background: #fff 
+	+clr
+	margin-bottom: 20px
+	&__logo
+		text-align: center
+		width: 180px
+		float: left
+		margin: 0 20px 20px 0
+		font-size: 0
+		+r(767)
+			float: none
+			display: block
+		img
+			width: 115px
+			margin: 0 0 10px 
+		span
+			color: #197fba
+			font-size: 15px
+			line-height: 1
+			+tdn
+	&__info
+		overflow: hidden
+		font-size: 0
+		+r(767)
+			padding: 0 10px 
+		ul
+			+ul
+			font-size: 1.5rem
+			line-height: 1.6
+			margin: 0 10px 0 0 
+			+r(1219)
+				width: 100%
+				margin-bottom: 10px
+			span
+				width: 150px
+				float: left
+				+med
+				+r(767)
+					width: 100%
+			a
+				color: #197fba
+				&:hover
+					color: #197fba
+					text-decoration: underline
+				&:visited
+					color: #605ca8
+	h1
+		margin-bottom: 5px
+	&__info ul, &__shirt, &__photo
+		display: inline-block
+		vertical-align: middle
+	&__shirt
+		width: 190px
+		margin: 0 18px 0 0 
+		+r(767)
+			max-width: 48%
+			margin: 0 2% 0 0
+	&__photo
+		width: 147px
+		+r(767)
+			max-width: 48%
+	&__btns
+		float: right
+		width: 160px
+		padding: 25px 0 0 
+		+r(991)
+			width: 100%
+			padding: 20px 0  
+		.btn-mail, .btn-attr
+			margin: 0 0 5px 
+			+r(991)
+				margin: 0 10px 0 0
+	.page-nav
+		clear: both
+		
+.box
+	border-radius: 10px
+	background: #fff
+	padding: 20px 
+	margin-bottom: 20px
+	&__video
+		+clr
+		margin: 0 -10px 
+	&__container
+		+clr
+		margin: 0 -10px 
+		display: none
+		&.is-active
+			display: block
+		&-players
+			.box__col
+				padding: 20px 10px 
+	&__col
+		float: left
+		width: 33.33%
+		padding: 10px 
+		+r(991)
+			width: 50%
+		+r(767)
+			width: 100%
+	&__top
+		+clr
+		h2
+			float: left
+			margin: 0 0 5px 
+		.select
+			float: right
+			margin: 12px 0 0 10px 
+		.btn-next
+			float: right
+			margin: 5px 0 0 10px 
+
+.user-box
+	+clr
+	&__img
+		float: left
+		width: 115px
+		margin: 0 8px 0 0
+		font-size: 0
+		img
+			width: 100%
+	&__info
+		overflow: hidden
+		p
+			+reg
+			line-height: 1.1
+			margin-bottom: 14px
+			a
+				+bold
+		ul
+			+ul
+			+reg
+			line-height: 1.2
+			font-size: 15px
+	&__number
+		font-size: 0
+		margin-bottom: 9px
+		+clr
+		img
+			margin: 0 10px 0 0 
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			float: left
+		span
+			+bold
+			color: #333
+			font-size: 2rem
+			line-height: 1
+			overflow: hidden
+			padding: 3px 0 0
+			display: block
+
+.media-item
+	&__img
+		display: block
+		position: relative
+		font-size: 0
+		img
+			width: 100%
+		.btn-play
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -48px 0 0 -48px 
+	&__info
+		padding: 8px 0 0 
+		.tag
+			margin: 2px 0 0 
+		p
+			color: #000
+			margin: 0 
+
+.side-contacts
+	padding: 20px
+	background: #fff
+	border-radius: 10px 
+	margin-bottom: 20px
+	div
+		padding: 0 0 10px 
+	p
+		line-height: 1.2
+		margin: 0
+
+.side-statistic
+	background-color: #333
+	border-radius: 10px
+	padding: 20px
+	margin-bottom: 20px 
+	h2, &__list
+		color: #fff
+	.select
+		margin-bottom: 20px
+	&__list
+		+ul
+		color: white
+		font-size: 1.4rem
+		line-height: 1.3
+		+bold
+		margin-bottom: 20px
+		li
+			+clr
+			margin-bottom: 7px
+		span
+			width: 170px
+			padding: 8px 10px 6px 0
+			float: left 
+		b
+			font-size: 2.5rem
+			overflow: hiddens
+	&__btn
+		text-align: right
+		.btn-next
+			background: none
+			&:hover
+				background: #fff 
+
+.side-progress
+	padding: 20px
+	margin: 0 0 20px
+	background-color: white
+	border-radius: 10px
+	h4
+		margin-bottom: 3px
+	&__item
+		+clr
+		padding: 16px 0 13px 
+	&__img
+		float: left
+		width: 79px
+		margin: 0 10px 0 0
+		font-size: 0 
+		img
+			width: 100%
+	&__text
+		overflow: hidden
+		p
+			margin: 0
+			line-height: 1.1
+	&__btns
+		text-align: center
+
+.side-academy
+	text-align: center
+	background: url(../img/side-academy.png) no-repeat
+	+cover
+	max-width: 280px
+	height: 240px
+	padding: 185px 0 0 
+	border-radius: 10px
+	margin-bottom: 20px
+	ul
+		+ul
+		li
+			display: inline-block
+			vertical-align: top
+			font-size: 15px
+			line-height: 1.3 
+			+bold
+			color: #555
+			&:last-child
+				&:after
+					display: none
+			&:after
+				content: "/"
+				margin: 0 4px
+			a
+				color: #555
+				&:hover
+					text-decoration: underline
+					
+.link-pdf
+	position: relative
+	display: inline-block
+	vertical-align: top
+	width: 190px
+	padding: 5px 0 0 34px 
+	margin: 0 0 27px 20px
+	&:hover
+		span
+			text-decoration: underline
+	i
+		font-size: 32px
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -16px
+		color: #1f88d2
+	span
+		color: #197fba
+		font-size: 14px
+		+bold
+		line-height: 1
