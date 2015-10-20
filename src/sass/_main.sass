@@ -730,11 +730,6 @@
 		+bold
 
 
-//museum
-.museum-page
-	background: #020d1a 
-
-
 //academy
 .academy-page
 	+g(#ffed39, #f2ba2f)
@@ -968,7 +963,7 @@
 			max-width: 48%
 	&__btns
 		float: right
-		width: 160px
+		width: 170px
 		padding: 25px 0 0 
 		+r(991)
 			width: 100%
@@ -1161,7 +1156,7 @@
 		li
 			display: inline-block
 			vertical-align: top
-			font-size: 15px
+			font-size: 1.5rem
 			line-height: 1.3 
 			+bold
 			color: #555
@@ -1187,7 +1182,7 @@
 		span
 			text-decoration: underline
 	i
-		font-size: 32px
+		font-size: 3.2rem
 		position: absolute
 		top: 50%
 		left: 0
@@ -1195,6 +1190,369 @@
 		color: #1f88d2
 	span
 		color: #197fba
-		font-size: 14px
+		font-size: 1.4rem
 		+bold
-		line-height: 1
+		line-height: 1		
+
+//museum
+.museum-page
+	background: #020d1a 
+	padding: 20px 0 0 
+
+.museum
+	&-filter
+		+clr
+		padding: 25px 0 30px 
+		&__title, &__label
+			+bold
+		&__title
+			color: white
+			font-size: 3.9rem
+			line-height: 1
+			text-transform: uppercase
+			margin-bottom: 30px
+		&__label
+			color: #fefefe
+			font-size: 2rem
+			line-height: 1.5
+			text-transform: uppercase
+			float: left
+			padding: 0 30px 0 0 
+		&__list
+			+ul
+			float: left
+			li
+				display: inline-block
+				vertical-align: top
+				padding: 6px 15px 0
+	&-link
+		font-size: 1.7rem
+		line-height: 1.1
+		+tdn
+		display: inline-block
+		vertical-align: top
+		&:hover, &:focus, &.is-active
+			span
+				border-color: transparent
+				color: #fff 
+		span
+			border-bottom: 1px dotted #54c39e
+			display: block
+			color: #54c39e
+			transition: color 0.25s, border-color 0.25s
+		&_show
+			margin: 6px 0 0
+			float: right
+	&-seasons
+		position: relative
+		padding: 0 0 23px 
+		+clr
+		&:before
+			content: "" 
+			position: absolute
+			bottom: 20px
+			left: 0
+			right: 0
+			height: 3px
+			background-color: #d9d9d9
+			background-image: linear-gradient(to right, #0062a6 0%, #71f9be 50%, #0062a6 100%)
+			box-shadow: inset 0.1px 1px 1px rgba(0, 0, 0, 0.5)
+	&-season
+		float: left
+		text-align: center
+		position: relative
+		padding: 30px 0 20px
+		cursor: pointer
+		&.slick-center
+			small
+				opacity: 1
+				visibility: visible
+			span
+				font-size: 33px
+				+bold
+				color: #fff 
+				border: none
+		small
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			color: white
+			font-size: 20px
+			+bold
+			visibility: hidden
+			opacity: 0
+			+wo
+			transition: opacity 0.2s, visibility 0.2s
+		span
+			display: inline-block
+			color: #378876
+			font-size: 2rem
+			line-height: 2rem
+			transition: color 0.2s	
+			border-bottom: 1px dotted #378876
+	&-container
+		max-width: 1620px
+		padding: 0 10px 
+		margin: 0 auto
+	&-row
+		+clr
+	&-slide
+		padding: 0 0 70px 
+	&-photo
+		padding: 28px 0 0
+		font-size: 0
+		width: 37.5%
+		position: relative
+		float: left
+		img
+			width: 100%
+		&__text
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(black, 0.8)
+			padding: 15px 30px 20px
+		time, span, p
+			color: #fff
+		p
+			margin: 0
+			max-width: 500px
+			padding: 3px 0 0 
+		span
+			+bold
+			font-size: 1.8rem
+		time
+			font-size: 1.5rem
+			padding: 0 4px 0 0 
+	&-cups
+		float: left
+		width: 62.5%
+		&__small
+			float: left
+			width: 34%
+		&__big
+			float: left
+			width: 66%
+	&-cup
+		text-align: center
+		position: relative
+		font-size: 0
+		float: left
+		transition: opacity 0.25s
+		&:hover
+			&:after
+				visibility: visible
+				opacity: 1
+			&:before
+				visibility: hidden
+				opacity: 0
+		&.is-disabled
+			opacity: 0.3
+			&:hover
+				&:before
+					visibility: visible
+					opacity: 1
+			&:after
+				display: none
+		&:before, &:after
+			content: ""
+			position: absolute
+			background-repeat: no-repeat
+			background-position: bottom center 
+			left: 50%
+			transition: opacity 0.25s, visibility 0.25s
+		&:before
+			z-index: 1
+		&:after
+			visibility: hidden
+			opacity: 0
+			z-index: 2
+		&_small
+			width: 50%
+			height: 160px
+			&:before, &:after
+				bottom: -32px
+				height: 257px
+				width: 170px
+				margin-left: -85px
+			&:before
+				background-image: url(../img/cup-smallbg1.png)
+			&:after
+				background-image: url(../img/cup-smallbg2.png)
+			.museum-cup__img
+				bottom: 18px
+		&__inner
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			z-index: 3
+		&__img
+			position: absolute
+			left: 0
+			right: 0
+			padding: 0 0 0 7px 
+			top: 0
+			+vertical			
+			img
+				max-width: 100%
+				max-height: 100% 
+				display: inline-block
+				vertical-align: bottom
+		&_big
+			width: 50%
+			height: 320px
+			&:before, &:after
+				bottom: -70px
+			&:before
+				background-image: url(../img/cup-bigbg1.png)
+				height: 435px
+				width: 295px
+				margin-left: -146px
+			&:after
+				background-image: url(../img/cup-bigbg2.png)
+				height: 438px
+				width: 363px
+				margin-left: -171px
+				bottom: -73px
+			.museum-cup__img
+				bottom: 20px
+	&-bottom
+		margin-top: -45px
+	&-text
+		+clr
+		max-width: 1200px
+		margin: 0 auto 
+		padding: 60px 0 
+		&__col
+			width: 50%
+			padding: 10px
+			float: left
+			+r(767)
+				width: 100%
+			p
+				color: #fff
+				 
+	&-popup
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		+vertical
+		overflow: auto
+		background: rgba(#020d1a, 0.9)
+		z-index: 3000 
+		padding: 20px 
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.25s, visibility 0.25s
+		&.is-active
+			opacity: 1
+			visibility: visible
+		&__inner
+			display: inline-block
+			vertical-align: middle
+			max-width: 780px
+			width: 100%
+			background-color: black
+			border-radius: 10px
+			box-shadow: 0 0 73px rgba(82, 229, 255, 0.28)
+			position: relative
+		.icon-close, .icon-arr-left, .icon-arr-right
+			cursor: pointer
+			z-index: 20
+		.icon-arr-left, .icon-arr-right
+			font-size: 21px
+			color: #fff
+			top: 264px
+			position: absolute
+		.icon-arr-left 
+			left: 42px
+		.icon-arr-right
+			right: 26px
+	&-gallery
+		padding: 0 80px 
+		text-align: left
+		&__cup
+			position: relative
+			width: 33.33%			
+			height: 325px
+			padding: 0 10px 
+			float: left
+			&:before
+				content: ""
+				position: absolute
+				background-repeat: no-repeat
+				background-position: bottom center 
+				bottom: -65px
+				left: 50%
+				margin-left: -132px
+				width: 264px
+				height: 341px
+				background-image: url(../img/cup-medbg1.png)
+			&-inner
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				z-index: 3
+			&-img
+				position: absolute
+				left: 0
+				right: 0
+				padding: 0 0 0 7px 
+				top: 0
+				bottom: 0
+				+vertical			
+				img
+					max-width: 100%
+					max-height: 100% 
+					display: inline-block
+					vertical-align: bottom
+		&__slide
+			padding: 0 10px 48px
+			+clr
+		&__info
+			width: 66.67%
+			float: left
+			padding: 65px 10px 0 
+		&__title
+			color: white
+			+med
+			font-size: 2.7rem
+			line-height: 1
+			margin-bottom: 25px
+		&__logo
+			float: left
+			margin: 0 20px 0 0 
+			width: 87px
+			font-size: 0
+			img
+				width: 100%
+		&__team
+			overflow: hidden
+			padding-bottom: 15px
+			&-in
+				span, a
+					font-size: 1.3rem
+					line-height: 1
+				span
+					display: block
+					color: #fff
+					padding: 5px 0 
+				a
+					color: #197fba
+		p
+			color: #fff
+			line-height: 1.5
+			font-size: 1.6rem
+			margin-bottom: 30px
+		&__img
+			background: black
+			border-radius: 10px
+			max-width: 100% 
