@@ -389,7 +389,12 @@ $(document).ready(function() {
 	});
 
 	$('.museum-cup').click(function() {
+
 		$('.js-museum-popup').addClass('is-active');
+
+		var index = $(this).data('index');
+		$('.js-museum-gallery').slick('goTo', index - 1);
+
 		return false;
 	});
 	$('.js-museum-close').click(function() {

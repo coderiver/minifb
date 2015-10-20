@@ -2424,7 +2424,28 @@ $(document).ready(function() {
 			};			
 		};
 	}
+	$('.js-players-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		nextArrow: $('.js-players-slider-next'),
+		prevArrow: $('.js-players-slider-prev'),
+		responsive: [
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToScroll: 2,
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 600,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 1
+				}
+			}
+		]
 
+	});
 	$(window).resize(function() {
 		adaptiveSliders();		
 	});
@@ -2538,7 +2559,12 @@ $(document).ready(function() {
 	});
 
 	$('.museum-cup').click(function() {
+
 		$('.js-museum-popup').addClass('is-active');
+
+		var index = $(this).data('index');
+		$('.js-museum-gallery').slick('goTo', index - 1);
+
 		return false;
 	});
 	$('.js-museum-close').click(function() {

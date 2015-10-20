@@ -1231,9 +1231,12 @@
 		+tdn
 		display: inline-block
 		vertical-align: top
+		position: relative
 		&:hover, &:focus, &.is-active
 			span
 				border-color: transparent
+				color: #fff 
+			i
 				color: #fff 
 		span
 			border-bottom: 1px dotted #54c39e
@@ -1243,6 +1246,14 @@
 		&_show
 			margin: 6px 0 0
 			float: right
+			padding: 0 0 0 16px 
+			.icon-show
+				position: absolute
+				top: 3px
+				left: 0
+				font-size: 11px
+				color: #54c39e 
+				transition: color 0.25s
 	&-seasons
 		position: relative
 		padding: 0 0 23px 
@@ -1341,6 +1352,7 @@
 		font-size: 0
 		float: left
 		transition: opacity 0.25s
+		cursor: pointer
 		&:hover
 			&:after
 				visibility: visible
