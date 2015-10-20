@@ -123,8 +123,12 @@
 .posts-list
 	&.is-left
 		margin-left: -10px 
+		+r(991)
+			margin-left: 0
 	&.is-right
 		margin-right: -10px 
+		+r(991)
+			margin-right: 0
 	
 .post
 	display: block
@@ -139,10 +143,7 @@
 		height: 76px
 		font-size: 0
 		line-height: 0
-		margin-right: 10px 
-		margin-top: 6px 
-		line-height: 0
-		font-size: 0
+		margin: 6px 10px 6px 0 
 		img
 			max-width: 100%
 			height: auto 
@@ -153,7 +154,8 @@
 			font-size: 1.1rem 
 			margin-bottom: 0
 			max-height: 52px
-			overflow: hidden 
+			overflow: hidden
+			
 	&__header
 		font-size:  1.2rem
 		+light
@@ -167,6 +169,7 @@
 	&__img
 		line-height: 0
 		img
+			width: 100% 
 			max-width: 100%
 			height: auto 
 	&__info
@@ -179,3 +182,143 @@
 		font-size: 3rem
 		color: #fff 
 		+bold
+.players-slider
+	position: relative
+	padding: 0 10px
+	& > .icon
+		font-size: 2.3rem 
+		background: transparent 
+		position: absolute
+		top: 50%
+		margin-top: -1.35rem  
+		&.arr-prev
+			left: -12px
+		&.arr-next
+			right: -12px 
+.table-sort
+	+clr
+	.select
+		margin-bottom: 20px 
+	.page-nav
+		font-size: 1.5rem
+		float: right 
+		+r(767)
+			float: none
+.tabs-main
+	display: none
+	&.is-active
+		display: block
+.tabs_white
+	.tabs-btn
+		span
+			color: #fff
+			text-transform: none
+			&:before
+				border-color: #fff
+		&.is-active
+			+bold
+			background: none
+.tabs_sm
+	.tabs-btn
+		padding: 0
+		margin-right: 27px
+		margin-bottom: 20px 
+.main-table
+	&.w740
+		width: 100%
+		min-width: 740px 
+.block.statistics
+	.player-box
+		margin-left: -20px
+	.tabs
+		margin-bottom: 25px 
+.player
+	color: #fff
+	+clr
+	&__photo
+		width: 135px
+		height: 135px
+		margin-right: 20px 
+		margin-top: -15px 
+		float: left
+		img
+			max-width: 135px
+			height: auto 
+	&__text
+		overflow: hidden
+		margin-top: 15px
+		color: #fff
+		h4
+			color: #fff
+			margin-bottom: 4px 
+	&__logo
+		float: left
+		margin-right: 10px 
+	&__info
+		overflow: hidden
+	&__team
+		font-size: 13px 
+	&__stats
+		color: #fff
+		font-size: 0
+		margin-top: 11px 
+		p
+			display: inline-block
+			margin-right: 25px
+			position: relative
+			font-size: 6rem 
+			line-height: 1 
+			color: #fff
+			margin-bottom: 0
+			+bold
+			&:last-child
+				margin-left: 0
+			span, sup 
+				display: inline-block
+				vertical-align: top
+			sup
+				font-size: 0.2em
+				top: 1em 
+				color: #717171 
+				padding-right: 5px 
+				display: inline-block
+.block_dark
+	h2
+		color: #fff	
+.select
+	&.w100
+		max-width: 100%
+	&_gray
+		.select
+			&__text
+				color: #fff
+				border-color: #fff 
+				&:after
+					color: #fff  
+			&__list
+				border-color: #fff
+				color: #fff  
+.block
+	&_dark
+		table
+			color: #fff
+.table-rates
+	margin: 20px 0 
+	td
+		font-size: 1.4em 
+		&.is-image
+			width: 25px 
+			padding-right: 5px 
+			img
+				width: auto
+				max-width: 100%
+				height: auto
+	 
+
+
+
+	
+		
+			
+			
+
