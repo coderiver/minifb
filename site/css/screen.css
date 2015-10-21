@@ -236,9 +236,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .main-table thead th.is-numbers { width: 45px; padding: 0 10px; }
 .main-table thead th.is-match { width: 70px; padding: 0 10px; }
 .main-table thead th.is-last { width: 150px; padding: 0 10px; }
-.main-table tbody tr:nth-child(even) td { background-color: #f3f3f3; }
-.main-table tbody tr:nth-child(even) td:first-child { border-radius: 10px 0 0 10px; }
-.main-table tbody tr:nth-child(even) td:last-child { border-radius: 0 10px 10px 0; }
+.main-table tbody tr:nth-child(odd) td { background-color: #f3f3f3; }
+.main-table tbody tr:nth-child(odd) td:first-child { border-radius: 10px 0 0 10px; }
+.main-table tbody tr:nth-child(odd) td:last-child { border-radius: 0 10px 10px 0; }
 .main-table tbody td { font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #333; font-size: 1.4rem; line-height: 1.95; vertical-align: top; }
 .main-table tbody td.is-number { width: 30px; padding: 0 0 0 8px; }
 .main-table tbody td.is-name { width: 290px; }
@@ -1413,8 +1413,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .player__stats { color: #fff; font-size: 0; margin-top: 11px; }
 .player__stats p { display: inline-block; margin-right: 25px; position: relative; font-size: 6rem; line-height: 1; color: #fff; margin-bottom: 0; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 .player__stats p:last-child { margin-left: 0; }
-.player__stats p span, .player__stats p sup { display: inline-block; vertical-align: top; }
-.player__stats p sup { font-size: 0.2em; top: 1em; color: #717171; padding-right: 5px; display: inline-block; }
+.player__stats p sup { font-size: 0.2em; top: 1em; color: #717171; vertical-align: top; padding-right: 5px; display: inline-block; }
 
 .block_dark h2 { color: #fff; }
 
@@ -1424,11 +1423,44 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .select_gray .select__list { border-color: #fff; color: #fff; }
 
 .block_dark table { color: #fff; }
+.block_dark .select { margin-bottom: 10px; }
 
-.table-rates { margin: 20px 0; }
-.table-rates td { font-size: 1.4em; }
+.table-rates { margin: 27px 0; }
+.table-rates td { font-size: 1.4em; padding: 1px 0; }
 .table-rates td.is-image { width: 25px; padding-right: 5px; }
 .table-rates td.is-image img { width: auto; max-width: 100%; height: auto; }
+
+.side-academy.w100 { max-width: 100%; background-size: contain; background: url(../img/side-academy.png) no-repeat 50% 50%, linear-gradient(#ffee39, #fdd233); }
+
+.block__box_50 { width: 50%; }
+
+.table-forecasts { min-width: 380px; max-width: 100%; width: 100%; margin-left: -10px; }
+.table-forecasts th { font-size: 1.5rem; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; padding: 0 0 11px; }
+.table-forecasts th.is-place { padding: 0 10px; }
+.table-forecasts tr { vertical-align: top; }
+.table-forecasts td { font-size: 1.3rem; color: #197fba; vertical-align: top; padding: 10px 0 8px; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
+.table-forecasts td.is-number { width: 55px; padding-left: 10px; }
+.table-forecasts tbody tr:nth-child(odd) td { background-color: #f3f3f3; }
+.table-forecasts tbody tr:nth-child(odd) td:first-child { border-radius: 10px 0 0 10px; }
+.table-forecasts tbody tr:nth-child(odd) td:last-child { border-radius: 0 10px 10px 0; }
+.table-forecasts .is-info { position: relative; }
+.table-forecasts .is-info span { color: #707070; font-size: 1.4rem; display: block; }
+.table-forecasts .is-info img { width: 25px; height: 25px; border-radius: 50%; position: absolute; left: -35px; }
+
+.banner-project { border-radius: 10px; overflow: hidden; position: relative; line-height: 0; }
+.banner-project img { max-width: 100%; width: 100%; height: auto; }
+.banner-project__text { position: absolute; bottom: 30px; width: 59%; padding: 0 0 0 15px; color: #fff; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 2.5rem; }
+.banner-project__text-top { font-family: "PFDinDisplayPro Thin", Arial, sans-serif; margin-bottom: 10px; }
+
+.album { background: #fff; }
+.album__wrap-top { height: 113px; display: table; width: 100%; }
+.album__top { display: table-cell; vertical-align: middle; }
+.album__top h2 { margin-bottom: 0; }
+.album__top h2, .album__top .select { display: inline-block; }
+.album__top h2 + .select { margin-left: 20px; }
+.album__top .select { width: 370px; max-width: initial; }
+
+.partners-wrap { background: #fff; }
 
 
 
