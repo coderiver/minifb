@@ -27,7 +27,7 @@
 			height: 0
 			display: inline-block 
 		+r(767)
-			text-align: left
+			text-align: center
 			&:after
 				display: none
 		li
@@ -52,7 +52,7 @@
 				display: inline-block
 				vertical-align: middle
 			+r(767)
-				margin-right: 30px 
+				margin: 0 15px 
 				&:last-child
 					margin-right: 0
 
@@ -69,7 +69,7 @@
 		line-height: 0
 		font-size: 0
 	&__title
-		padding-top: 24px 
+		padding: 24px 0 
 		p
 			color: #fff
 			line-height: 1
@@ -273,13 +273,11 @@
 			+bold
 			&:last-child
 				margin-left: 0
-			span, sup 
-				display: inline-block
-				vertical-align: top
 			sup
 				font-size: 0.2em
 				top: 1em 
 				color: #717171 
+				vertical-align: top
 				padding-right: 5px 
 				display: inline-block
 .block_dark
@@ -302,10 +300,13 @@
 	&_dark
 		table
 			color: #fff
+		.select
+			margin-bottom: 10px 
 .table-rates
-	margin: 20px 0 
+	margin: 27px 0 
 	td
 		font-size: 1.4em 
+		padding: 1px 0 
 		&.is-image
 			width: 25px 
 			padding-right: 5px 
@@ -319,6 +320,107 @@
 		background-size: contain
 		background:  url(../img/side-academy.png) no-repeat 50% 50%, linear-gradient(#ffee39, #fdd233)
 
+.block__box
+	&_50
+		width: 50%
+.table-forecasts
+	min-width: 380px
+	max-width: 100% 
+	width: 100% 
+	margin-left: -10px 
+	th
+		font-size: 1.5rem 
+		+reg
+		padding: 0 0 11px
+		&.is-place
+			padding: 0 10px 
+	tr
+		vertical-align: top
+	td
+		font-size: 1.3rem 
+		color: #197fba
+		vertical-align: top
+		padding: 10px 0	8px		
+		+reg
+		&.is-number
+			width: 55px
+			padding-left: 10px 
+	tbody
+		tr
+			&:nth-child(odd)
+				td
+					background-color: #f3f3f3
+					&:first-child
+						border-radius: 10px 0 0 10px
+					&:last-child
+						border-radius: 0 10px 10px 0
+	.is-info
+		position: relative
+		span
+			color: #707070
+			font-size: 1.4rem 
+			display: block
+		img
+			width: 25px
+			height: 25px
+			border-radius: 50%  
+			position: absolute
+			left: -35px 
+	  
+
+.banner-project
+	border-radius: 10px
+	overflow: hidden
+	position: relative
+	line-height: 0 
+	height: 240px 
+	background: url(../img/banner-project.jpg) no-repeat
+	background-size: cover
+	img
+		max-width: 100% 
+		width: 100%
+		height: auto
+	&__text
+		position: absolute
+		bottom: 30px
+		width: 60%
+		padding: 0 0 0 15px  
+		color: #fff
+		line-height: 1
+		+bold
+		font-size: 2.5rem 
+		&-top
+			+thin
+			margin-bottom: 10px 
+
+.album
+	background: #fff 
+	&__wrap-top
+		height: 113px 
+		display: table
+		width: 100% 
+	&__top
+		display: table-cell
+		vertical-align: middle
+		h2
+			margin-bottom: 0
+		h2, .select
+			display: inline-block
+		h2 +.select
+			margin-left: 20px 
+		.select
+			width: 370px 
+			max-width: initial
+	.fotorama
+		&__nav
+			margin-top: 20px 
+		// &__thumb-border
+			// display: none
+		&__nav__frame
+			// margin: 0px 10px 0 
+			border-radius: 10px
+.partners-wrap
+	background: #fff 
 
 
 	
