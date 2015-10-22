@@ -90,7 +90,8 @@
 .slick-prev
 	left: 0
 	&:before
-		content: "←"
+		@extend %icon
+		content: "\EA02"
 		display: inline-block
 		vertical-align: middle
 		font-size: 61px
@@ -98,7 +99,8 @@
 .slick-next
 	right: 0
 	&:before
-		content: "→"
+		@extend %icon
+		content: "\EA03"
 		display: inline-block
 		vertical-align: middle
 		font-size: 61px

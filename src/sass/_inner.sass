@@ -60,16 +60,31 @@
 .main
 	&__inner
 		&.league-page
-			// background-image: -webkit-linear-gradient(left, #9c2407 0%, #d33021 20%, #d33021 80%, #9c2407 100%)
 			background: #b12618 
+			background: linear-gradient(to left, #9c2407 0%, #d33021 50%, #9c2407 100%)
+			&.is-purple
+				background: #d13d76 
+				background: linear-gradient(to left, #a81542 0%, #d13d76 50%, #a81542 100%)
+				
 .banner-league
 	&__img
 		display: block
 		float: right
 		line-height: 0
 		font-size: 0
+		&.is-purple
+			box-shadow: 57px 0 100px rgba(#e76093, 0.75)
+			border-radius: 50%
+			 
 	&__title
-		padding: 24px 0 
+		padding: 23px 0 
+		+thin
+		font-size: 3.7rem
+		color: #fff
+		font-style: italic
+		b
+			+bold
+			display: block
 		p
 			color: #fff
 			line-height: 1
@@ -78,22 +93,43 @@
 			+bold
 			font-style: italic 
 .page-title
+	+r(991)
+		&:before
+			display: none
 	&_league
 		position: relative
 		padding: 20px 20px 10px 
+		overflow: hidden
+		z-index: 1 
 		&:before
 			content: ''
 			position: absolute
-			right: 0
-			bottom: 0
-			top: 0
-			width: 130px
-			// height: 121px 
-			max-height: 100%
-			max-width: 100%
-			border-radius: 0 10px 10px 0   
-			background: url("../img/banner-league2.png") 0 0 no-repeat
-			background-size: cover
+			right: -169px
+			top: -17px
+			width: 305px
+			height: 320px 
+			background: url("../img/banner2.png") 0 0 no-repeat 
+			background-size: cover 
+			z-index: -1
+		&-women
+			&:before
+				right: -83px
+				top: -49px
+				width: 315px 
+				height: 315px 
+				background: url("../img/banner2_women.png") 0 0 no-repeat
+	.text-tabs
+		display: block
+		float: none
+		margin-bottom: 20px 
+	&.h185
+		min-height: 185px 
+	.page-nav
+		li
+			+r(767)
+				display: block
+				a
+					display: inline-block
 .page-nav
 	+ul
 	li
@@ -122,11 +158,11 @@
 			margin-top: 12px 
 .posts-list
 	&.is-left
-		margin-left: -10px 
+		// margin-left: -10px 
 		+r(991)
 			margin-left: 0
 	&.is-right
-		margin-right: -10px 
+		// margin-right: -10px 
 		+r(991)
 			margin-right: 0
 	
@@ -197,6 +233,7 @@
 			right: -12px 
 .table-sort
 	+clr
+	margin-top: 20px 
 	.select
 		margin-bottom: 20px 
 	.page-nav
@@ -217,7 +254,7 @@
 				border-color: #fff
 		&.is-active
 			+bold
-			background: none
+			background: none !important
 .tabs_sm
 	.tabs-btn
 		padding: 0
@@ -303,10 +340,9 @@
 		.select
 			margin-bottom: 10px 
 .table-rates
-	margin: 27px 0 
+	margin: 21px 0 
 	td
 		font-size: 1.4em 
-		padding: 1px 0 
 		&.is-image
 			width: 25px 
 			padding-right: 5px 
@@ -316,18 +352,18 @@
 				height: auto
 .side-academy
 	&.w100
-		max-width: 100%
-		background-size: contain
-		background:  url(../img/side-academy.png) no-repeat 50% 50%, linear-gradient(#ffee39, #fdd233)
-
+		max-width: 380px
+		background-size: cover
+		background:  url(../img/banner-academy.png) no-repeat 50% 50%
 .block__box
 	&_50
 		width: 50%
 .table-forecasts
 	min-width: 380px
-	max-width: 100% 
 	width: 100% 
 	margin-left: -10px 
+	+r(991)
+		min-width: initial 
 	th
 		font-size: 1.5rem 
 		+reg
@@ -373,9 +409,13 @@
 	overflow: hidden
 	position: relative
 	line-height: 0 
+	max-width: 380px 
 	height: 240px 
 	background: url(../img/banner-project.jpg) no-repeat
 	background-size: cover
+	
+	+r(767)
+		margin-bottom: 20px 
 	img
 		max-width: 100% 
 		width: 100%
@@ -420,11 +460,75 @@
 			// margin: 0px 10px 0 
 			border-radius: 10px
 .partners-wrap
-	background: #fff 
+	background: #fff
 
+.row_players
+	.side-banner
+		top: -74px 
+		height: 495px 	
+		+vertical
+		img
+			display: inline-block
+			vertical-align: bottom
+			max-height: 100% 
+.side-banner_stuck
+	&.is-left
+		margin-right: -10px 
+	&.is-right
+		margin-left: -10px
 
+.tabs
+	&__list
+		&_justify
+			text-align: justify
+			&:after
+				content: ""
+				width: 100%
+				height: 0
+				display: inline-block
+.block_sm
+	padding: 10px 
+
+$purple: #b71a4f
+
+.league-page_women
+	.page-nav
+		li
+			&.is-active
+				a
+					background: $purple 
+	.tabs-btn
+		&.is-active
+			background: $purple 
 	
-		
+.text-tabs_sm
+	div
+		a
+			padding-top: 5px 
+			&.is-active
+				font-size: 3rem 
+		&:before
+			font-size: 3rem 
+	
+.album-thumbs
+	margin-top: 20px 
+	&__item	
+		margin: 0 10px 	
+		border-radius: 10px
+		cursor: pointer
+		img
+			padding: 3px 
+			border-radius: 15px
+	.slick-active
+		.album-thumbs__item
+			img
+				box-shadow: inset 0 0 0 3px #0072b6
+
 			
-			
+.swipper-container
+	width: 100%
+	
+.swiper-slide
+	display: inline-block
+	width: auto
 

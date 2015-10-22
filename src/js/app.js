@@ -3,5 +3,5 @@
 //= lib/bootstrap.min.js
 //= lib/jquery.fancybox.js
 //= lib/flexmenu.js
-//= lib/fotorama.js
+//= lib/swiper.js
 //= common.js
