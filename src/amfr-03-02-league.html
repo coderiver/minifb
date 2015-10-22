@@ -28,9 +28,10 @@
 
 	<section class="main__inner league-page">
 		<div class="container">
-			<div class="row banner-league">
-				<div class="col-md-4 col-xs-12">
-					<a href="#" class="banner-league__img">
+			<div class="row  banner-league">
+				
+				<div class="col-md-4 col-xs-12 visible-md visible-lg">
+					<a href="#" class="banner-league__img is-red">
 						<img src="img/banner-league.png"alt="">
 					</a>
 				</div>
@@ -41,7 +42,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row row_banners row_players">
+				<a href="#" class="side-banner side-banner_stuck is-right">
+						<img src="img/man2.png" alt="">
+				</a>
+				<a href="#" class="side-banner side-banner_stuck is-left">
+						<img src="img/man1.png" alt="">
+				</a>
 				<div class="col-xs-12">
 					<div class="block page-title page-title_league">
 						<h1>СУПЕРЛИГА (ЧЕМПИОНАТ РОССИИ)</h1>
@@ -55,14 +62,14 @@
 							<li><a href="#">История</a></li>
 						</ul>
 					</div>
-					<div class="block">
-						<div class="block__top">
+					<div class="block block_sm js-tabs">
+						<div class="block__top ">
 							<!-- begin tabs  -->
-							<div class="tabs">
+							<div class="tabs ">
 								<ul class="tabs__list tabs__list_nopad">
-									<li><a href="#" class="tabs-btn is-active"><span>Новости лиги</span></a></li>
-									<li><a href="#" class="tabs-btn"><span>Новости клубов</span></a></li>
-									<li><a href="#" class="tabs-btn"><span>НОВОСТИ АМФР</span></a></li>
+									<li><a href="#" class="tabs-btn js-tabs-link is-active" data-btn="league-news"><span>Новости лиги</span></a></li>
+									<li><a href="#" class="tabs-btn js-tabs-link" data-btn="club-news"><span>Новости клубов</span></a></li>
+									<li><a href="#" class="tabs-btn js-tabs-link" data-btn="amfr-news"><span>НОВОСТИ АМФР</span></a></li>
 								</ul>
 							</div>
 							<!-- end tabs -->
@@ -72,7 +79,7 @@
 							</a>
 						</div>
 						
-						<div class="row no-padding">
+						<div class="tabs-main js-tabs-block row no-padding is-active" data-block="league-news">
 							<div class="col-md-3">
 								<div class="posts-list is-left">
 									<a href="#" class="post">
@@ -196,6 +203,255 @@
 								</div>
 							</div>
 						</div>
+						<div class="tabs-main js-tabs-block row no-padding" data-block="club-news">
+							<div class="col-md-3">
+								<div class="posts-list is-left">
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"1Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="rating">
+									<div class="rating__img">
+										<img src="img/rates.jpg"alt="">
+									</div>
+									<div class="rating__info">
+										«Рейтинг клуба»: итоги сезона 2014/15
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="posts-list is-right">
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tabs-main js-tabs-block row no-padding" data-block="amfr-news">
+							<div class="col-md-3">
+								<div class="posts-list is-left">
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"2Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="rating">
+									<div class="rating__img">
+										<img src="img/rates.jpg"alt="">
+									</div>
+									<div class="rating__info">
+										«Рейтинг клуба»: итоги сезона 2014/15
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="posts-list is-right">
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для 
+											</p>
+										</div>
+									</a>
+									<a href="#" class="post">
+										<div class="post__media">
+											<img src="https://placehold.it/76x76" alt="">
+										</div>
+										<div class="post__info">
+											<div class="post__header">
+												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
+											</div>
+											<p>
+												Ассоциация мини-футбола России представляет график заявочной кампаний для клубов-участников Чемпионата России по 
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
 					</div>
 					<div class="block">
 						<h2>ПОСЛЕДНИЕ ЗАЯВКИ НА СЕЗОН 2015/2016</h2>
@@ -327,9 +583,9 @@
 				<div class="col-lg-8">
 					<div class="row">
 						<div class="col-xs-12">
-							<div class="block js-tabs">
+							<div class="block  block_sm js-tabs">
 								<div class="tabs tabs_md">
-									<ul class="tabs__list">
+									<ul class="tabs__list tabs__list_justify tabs__list_nopad">
 										<li><a href="#" class="tabs-btn js-tabs-link is-active" data-btn="table"><span>ТУРНИРНАЯ ТАБЛИЦА</span></a></li>
 										<li><a href="#" class="tabs-btn js-tabs-link" data-btn="matches"><span>БЛИЖАЙШИЕ ИГРЫ</span></a></li>
 										<li><a href="#" class="tabs-btn js-tabs-link" data-btn="last-matches"><span>ПОСЛЕДНИЕ ИГРЫ</span></a></li>
@@ -1334,7 +1590,7 @@
 						<div class="col-xs-12">
 							<div class="block">
 								<div class="row">
-									<div class="col-xs-6">
+									<div class="col-sm-6 col-xs-12">
 										<h2>Статьи</h2>
 										<div class="block__section">
 											<div class="block__box block__box_50">
@@ -1398,7 +1654,7 @@
 											<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Все статьи</a>
 										</div>
 									</div>
-									<div class="col-xs-6">
+									<div class="col-sm-6 col-xs-12">
 										<h2>Прогнозисты</h2>
 										<div class="table-wrap">
 											<table class="table-forecasts">
@@ -1490,7 +1746,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-6 col-xs-6">
+						<div class="col-sm-6 col-xs-12">
 							<div class="banner-project">
 								<!-- <img src="img/banner-project.jpg" alt=""> -->
 								<div class="banner-project__text">
@@ -1502,7 +1758,7 @@
 
 							</div>
 						</div>
-						<div class="col-sm-6 col-xs-6">
+						<div class="col-sm-6 col-xs-12">
 							<div class="side-academy w100">
 								<ul>
 									<li><a href="#">Тренерское мастерство</a></li>
@@ -1757,8 +2013,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
 						<div class="col-lg-12 col-sm-6 col-xs-12">
 							<div class="block block_dark">
 								<h2>РЕЙТИНГ КЛУБОВ</h2>
@@ -2052,25 +2306,207 @@
 					</div>
 				</div>
 			</div>
-			<div class="fotorama" data-nav="thumbs" data-thumbwidth="80" data-thumbheight="55">
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
-				<a href="img/fotorama-1.jpg"><img src="img/fotorama-1_thumb.png"></a>
+			<div class="album-slider js-main-slider">
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
+				<div>
+					<img src="img/fotorama-1.jpg">
+				</div>
 			</div>
+			<div class="js-main-slider-thumbs album-thumbs">
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+				<div>
+					<div class="album-thumbs__item">
+						<img src="img/fotorama-1_thumb.png">
+					</div>
+				</div>
+			</div>		
+<!-- 			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
+			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
+			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
+			    </div>
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			</div>	 -->
 		</div>
+
 		<!-- end album -->
 		<div class="partners-wrap">
 			<div class="container">

@@ -426,5 +426,29 @@ $(document).ready(function() {
 	});
 
 	console.log($('.museum-slide').length, $('.museum-season').length, $('.museum-gallery__slide').length)
-	
+
+
+	$('.js-main-slider').slick({
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
+		asNavFor: '.js-main-slider-thumbs'
+	})
+	$('.js-main-slider-thumbs').slick({
+		asNavFor: '.js-main-slider',
+		variableWidth: true,
+		focusOnSelect: true,
+		arrows: false
+	});
+	// var mySwiper = new Swiper ('.swiper-container', {
+	// 	loop: true,
+	// 	slidesPerView: 'auto',
+	// 	centeredSlides: true,
+	// 	spaceBetween: 0,
+	// 	nextButton: '.swiper-button-next',
+	// 	prevButton: '.swiper-button-prev',
+
+	// });
+
+	console.log($('.js-main-slider-thumbs').find('.slick-slide').length, $('.js-main-slider').find('.slick-slide').length)
 });
