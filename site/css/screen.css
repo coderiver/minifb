@@ -1527,6 +1527,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-content__tabs li.is-active { border-color: #b7b7b7; }
 .match-content__tabs li.is-active i { font-size: 15px; }
 .match-content__tabs li.is-active span, .match-content__tabs li.is-active i { color: #fff; }
+.match-content__tabs li.is-active span { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 .match-content__tabs li i { font-size: 13px; color: #b1b1b1; margin-right: 5px; }
 .match-content__tabs li span { font-size: 1.8rem; line-height: 1; padding: 4px 0 0; }
 .match-content__tabs li i, .match-content__tabs li span { display: inline-block; vertical-align: middle; }
