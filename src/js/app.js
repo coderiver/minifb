@@ -6,3 +6,4 @@
 //= lib/jquery.tooltipster.min.js
 //= lib/hoverIntent.js
 //= common.js
+

@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">					
-					<div class="block page-title page-title_league">
+					<div class="block page-title page-title_museum">
 						<h1>АССОЦИАЦИЯ МИНИ-ФУТБОЛА РОССИИ</h1>
 						<ul class="page-nav">
 							<li><a href="#">Пресс-центр</a></li>
@@ -23,6 +23,7 @@
 							<li class="is-active"><a href="#">Музей</a></li>
 							<li><a href="#">Наградной лист</a></li>
 						</ul>
+						<img src="img/logo.png" alt="">
 					</div>
 				</div>
 				<div class="col-xs-12">
@@ -30,217 +31,198 @@
 						<div class="museum-filter__title">Музей АМФР</div>
 						<div class="museum-filter__label">Награды и кубки:</div>
 						<ul class="museum-filter__list">
-							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active"><span>Все</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn" data-filter="international"><span>Международные</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn" data-filter="russian"><span>Внутрироссийские</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active js-museum-tab-slider is-all"><span>Все</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international"><span>Международные</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian"><span>Внутрироссийские</span></a></li>
 						</ul>
-						<a href="#" class="museum-link museum-link_show"><i class="icon-show"></i><span>Показать все сразу</span></a>
-					</div>
-					<div class="museum-seasons js-museum-nav">
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>99-00</span>
+						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all"><i class="icon-show"></i><span>Показать все сразу</span></a>
+						<div class="museum__select is-filter">
+							<div class="museum-select js-museum-select is-filter">
+								<div class="museum-select__text js-museum-select-text">Все</div>
+								<ul class="museum-select__list js-museum-select-list">
+									<li><a href="#" class="js-mob-filter js-museum-all is-all">Все</a></li>
+									<li><a href="#" class="js-mob-filter" data-filter="international">Международные</a></li>
+									<li><a href="#" class="js-mob-filter" data-filter="russian">Внутрироссийские</a></li>
+									<li><a href="#" class="js-mob-filter js-museum-all">Показать все сразу</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>00-01</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>01-02</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>02-03</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>03-04</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>04-05</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>05-06</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>06-07</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>07-08</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>08-09</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>09-10</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>99-00</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>00-01</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>01-02</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>02-03</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>03-04</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>04-05</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>05-06</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>06-07</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>07-08</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>08-09</span>
-						</div>
-						<div class="museum-season">
-							<small>Сезон</small>
-							<span>09-10</span>
+						<div class="museum__select is-season">							
+							<div class="museum-select js-museum-select is-season">
+								<div class="museum-select__text js-museum-select-text">Сезон 2005-2006</div>
+								<ul class="museum-select__list js-museum-select-list">
+									<li>
+										<a href="#" class="js-mob-season" data-index="1">Сезон 2005-2006</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="2">Сезон 2006-2007</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="3">Сезон 2007-2008</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="4">Сезон 2008-2009</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="5">Сезон 2009-2010</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="6">Сезон 2010-2011</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="7">Сезон 2011-2012</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="8">Сезон 2012-2013</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="9">Сезон 2013-2014</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="10">Сезон 2014-2015</a>
+									</li>
+									<li>
+										<a href="#" class="js-mob-season" data-index="11">Сезон 2015-2016</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="museum-container">
-			<div class="museum-row js-museum-for">
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
+			<div class="museum-row js-museum-tab is-slider is-active">
+				<div class="museum-seasons js-museum-nav">
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>99-00</span>
 					</div>
-					<div class="museum-cups">
-						<div class="museum-cups__small">
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small1.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="2">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small2.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="3">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small3.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="4">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small4.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="5">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small5.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="6">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small6.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="7">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small7.png" alt="">
-									</div>	
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="8">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-small8.png" alt="">
-									</div>	
-								</div>
-							</div>
-						</div>
-						<div class="museum-cups__big">
-							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-big1.png" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="10">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-big2.png" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_big js-museum-block" data-block="russian" data-index="11">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-big3.png" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="12">
-								<div class="museum-cup__inner">
-									<div class="museum-cup__img">
-										<img src="img/cup-big4.png" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>00-01</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>01-02</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>02-03</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>03-04</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>04-05</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>05-06</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>06-07</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>07-08</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>08-09</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>09-10</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>99-00</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>00-01</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>01-02</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>02-03</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>03-04</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>04-05</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>05-06</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>06-07</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>07-08</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>08-09</span>
+					</div>
+					<div class="museum-season">
+						<small>Сезон</small>
+						<span>09-10</span>
 					</div>
 				</div>
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+				<div class="js-museum-for">					
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
 						</div>
-					</div>
-					<div class="museum-cups">
+						<div class="museum-cups__big">
+							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-big1.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="10">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-big2.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_big js-museum-block" data-block="russian" data-index="11">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-big3.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="12">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-big4.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -299,6 +281,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -329,18 +321,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -399,6 +379,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -429,18 +419,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -499,6 +477,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -529,18 +517,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -599,6 +575,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -629,18 +615,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -699,6 +673,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -729,18 +713,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -799,6 +771,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -829,18 +811,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -899,6 +869,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -929,18 +909,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -999,6 +967,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1029,18 +1007,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1099,6 +1065,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1129,18 +1105,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1199,6 +1163,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1229,18 +1203,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1299,6 +1261,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1329,18 +1301,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1399,6 +1359,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1429,18 +1399,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1499,6 +1457,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1529,18 +1497,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1599,6 +1555,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1629,18 +1595,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1699,6 +1653,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1729,18 +1693,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1799,6 +1751,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1829,18 +1791,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1899,6 +1849,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1929,18 +1889,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -1999,6 +1947,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2029,18 +1987,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -2099,6 +2045,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2129,18 +2085,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -2199,6 +2143,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2229,18 +2183,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-				<div class="museum-slide">
-					<div class="museum-photo">
-						<img src="img/museum-photo.jpg" alt="">
-						<div class="museum-photo__text">
-							<time>22.03.2015</time>
-							<span>«Было приятно посетить офис АМФР»</span>
-							<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
-						</div>
-					</div>
-					<div class="museum-cups">
 						<div class="museum-cups__small">
 							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
 								<div class="museum-cup__inner">
@@ -2299,6 +2241,16 @@
 								</div>
 							</div>
 						</div>
+					</div>				
+					<div class="museum-slide">
+						<div class="museum-photo">
+							<img src="img/museum-photo.jpg" alt="">
+							<div class="museum-photo__text">
+								<time>22.03.2015</time>
+								<span>«Было приятно посетить офис АМФР»</span>
+								<p>Офис Ассоциации мини-футбола России 31 июля посетил лучший бомбардир в истории российского футбола, лучший бомбардир петербургского «Зенита» и национальной сборной России Александр Кержаков.</p>
+							</div>
+						</div>
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2329,8 +2281,314 @@
 								</div>
 							</div>
 						</div>
+						<div class="museum-cups__small">
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="1">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small1.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="2">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small2.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="3">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small3.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="4">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small4.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="5">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small5.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="6">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small6.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="international" data-index="7">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small7.png" alt="">
+									</div>	
+								</div>
+							</div>
+							<div class="museum-cup museum-cup_small js-museum-block" data-block="russian" data-index="8">
+								<div class="museum-cup__inner">
+									<div class="museum-cup__img">
+										<img src="img/cup-small8.png" alt="">
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>							
+			</div>
+			<div class="museum-all js-museum-tab is-all">
+				<div class="museum-all__row is-first">
+					<div class="museum-all__title">Сезон 2014-2015</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="1">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small1.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
 					</div>
-				</div>								
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="2">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small2.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="3">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small3.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="4">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small4.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="5">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small5.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="6">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small6.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="7">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small7.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="8">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small8.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="9">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small5.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="10">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small6.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="11">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small7.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="12">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small8.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+				</div>
+				<div class="museum-all__row">
+					<div class="museum-all__title">Сезон 2013-2014</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="1">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small1.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="2">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small2.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="3">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small3.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="4">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small4.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="5">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small5.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="6">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small6.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="7">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small7.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="8">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small8.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="9">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small5.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="10">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small6.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="11">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small7.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+					<div class="museum-all__item">
+						<div class="museum-cup museum-cup_small" data-index="12">
+							<div class="museum-cup__inner">
+								<div class="museum-cup__img">
+									<img src="img/cup-small8.png" alt="">
+								</div>	
+							</div>
+						</div>
+						<div class="museum-all__text">Кубок победителя <br>Чемпионата мира</div>
+					</div>
+				</div>
 			</div>
 			<div class="museum-bottom">
 				<div class="museum-bottom__btn">

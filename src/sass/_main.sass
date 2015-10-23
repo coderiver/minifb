@@ -12,6 +12,7 @@
 			display: none
 	&__inner
 		overflow: hidden
+		position: relative
 		&.index-page
 			+g(#3375cc, #71aad5)
 .content
@@ -883,6 +884,8 @@
 		right: -90px
 		top: 0
 		+s(academy-title)
+		+r(992)
+			display: none
 	h1, .page-nav
 		position: relative
 
@@ -1202,7 +1205,11 @@
 .museum
 	&-filter
 		+clr
-		padding: 25px 0 30px 
+		padding: 25px 0 0 
+		position: relative
+		z-index: 300
+		+r(991)
+			padding: 25px 0 30px 
 		&__title, &__label
 			+bold
 		&__title
@@ -1211,6 +1218,8 @@
 			line-height: 1
 			text-transform: uppercase
 			margin-bottom: 30px
+			+r(767)
+				text-align: center
 		&__label
 			color: #fefefe
 			font-size: 2rem
@@ -1218,13 +1227,22 @@
 			text-transform: uppercase
 			float: left
 			padding: 0 30px 0 0 
+			+r(991)
+				display: block
+				float: none
+			+r(767)
+				text-align: center
 		&__list
 			+ul
 			float: left
+			+r(767)
+				display: none
 			li
 				display: inline-block
 				vertical-align: top
 				padding: 6px 15px 0
+				+r(992)
+					padding: 6px 30px 0 0 
 	&-link
 		font-size: 1.7rem
 		line-height: 1.1
@@ -1232,6 +1250,8 @@
 		display: inline-block
 		vertical-align: top
 		position: relative
+		+r(767)
+			display: none
 		&:hover, &:focus, &.is-active
 			span
 				border-color: transparent
@@ -1256,18 +1276,23 @@
 				transition: color 0.25s
 	&-seasons
 		position: relative
-		padding: 0 0 23px 
+		padding: 30px 0 23px 
 		+clr
+		z-index: 5
+		+r(1100)
+			visibility: hidden
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
 		&:before
 			content: "" 
 			position: absolute
 			bottom: 20px
 			left: 0
 			right: 0
-			height: 3px
-			background-color: #d9d9d9
-			background-image: linear-gradient(to right, #0062a6 0%, #71f9be 50%, #0062a6 100%)
-			box-shadow: inset 0.1px 1px 1px rgba(0, 0, 0, 0.5)
+			height: 4px
+			background: url(../img/season-line.png) no-repeat center center
 	&-season
 		float: left
 		text-align: center
@@ -1306,23 +1331,47 @@
 		max-width: 1620px
 		padding: 0 10px 
 		margin: 0 auto
+		position: relative
+		+r(1400)
+			max-width: 1200px
+		+r(991)
+			max-width: 700px
+		+r(767)
+			max-width: 400px
 	&-row
 		+clr
+		margin-bottom: -45px
+		position: absolute
+		top: 0
+		left: 10px
+		right: 10%
+		visibility: hidden
+		opacity: 0
+		+r(1400)
+			margin: 0
+		&.is-active
+			position: static
+			opacity: 1
+			visibility: visible
 	&-slide
 		padding: 0 0 70px 
 	&-photo
-		padding: 28px 0 0
+		padding: 28px 20px 0 0
 		font-size: 0
 		width: 37.5%
 		position: relative
 		float: left
+		+r(1400)
+			width: 50%
+		+r(1100)
+			display: none
 		img
 			width: 100%
 		&__text
 			position: absolute
 			bottom: 0
 			left: 0
-			right: 0
+			right: 20px
 			background: rgba(black, 0.8)
 			padding: 15px 30px 20px
 		time, span, p
@@ -1338,14 +1387,38 @@
 			font-size: 1.5rem
 			padding: 0 4px 0 0 
 	&-cups
-		float: left
-		width: 62.5%
 		&__small
 			float: left
-			width: 34%
+			width: 21%
+			+r(1400)
+				width: 100%
+				clear: both
+			+r(1100)
+				clear: none
+				width: 36%
+			+r(991)
+				width: 100%
+			.museum-cup
+				&_small
+					+r(1400)
+						width: 25%
+					+r(1100)
+						width: 50%
+					+r(991)
+						width: 25%
+					+r(767)
+						width: 50%
 		&__big
-			float: left
-			width: 66%
+			float: right
+			width: 41.5%
+			+r(1400)
+				width: 50%
+			+r(1100)
+				width: 64%
+			+r(991)
+				width: 100%
+			+r(767)
+				display: none
 	&-cup
 		text-align: center
 		position: relative
@@ -1362,6 +1435,7 @@
 				opacity: 0
 		&.is-disabled
 			opacity: 0.3
+			cursor: default
 			&:hover
 				&:before
 					visibility: visible
@@ -1433,7 +1507,7 @@
 			.museum-cup__img
 				bottom: 20px
 	&-bottom
-		margin-top: -45px
+		clear: both
 	&-text
 		+clr
 		max-width: 1200px
@@ -1447,7 +1521,81 @@
 				width: 100%
 			p
 				color: #fff
-				 
+	&-all
+		text-align: center
+		font-size: 0
+		clear: both
+		max-width: 1200px
+		padding: 0 10px
+		margin: 0 auto  
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden 
+		+r(991)
+			max-width: 600px
+		+r(767)
+			max-width: 400px
+		&.is-active
+			position: static
+			opacity: 1
+			visibility: visible
+		&__title
+			color: white
+			font-size: 2rem
+			+bold
+			position: relative
+			z-index: 5 
+			padding: 38px 0 0 
+		&__row
+			padding: 0 0 50px 
+			position: relative
+			&.is-first
+				&:before
+					display: none
+			&:before
+				content: "" 
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				height: 4px
+				background: url(../img/season-line.png) no-repeat center center
+		&__item
+			width: 16.66%
+			display: inline-block
+			vertical-align: top
+			+clr
+			position: relative
+			+r(1100)
+				width: 25%
+			+r(991)
+				width: 33.33%
+			+r(767)
+				width: 50%
+			&:hover
+				.museum-cup_small
+					&:after
+						visibility: visible
+						opacity: 1
+					&:before
+						visibility: hidden
+						opacity: 0
+			.museum-cup_small
+				width: 100%		
+		&__text
+			clear: both
+			font-size: 1.1rem
+			line-height: 1
+			+reg
+			color: #fff 
+			width: 135px
+			text-align: left
+			margin: 0 auto 
+			padding: 10px 0 0 5px 
+			position: relative
+			z-index: 4
 	&-popup
 		position: fixed
 		top: 0
@@ -1568,3 +1716,523 @@
 			background: black
 			border-radius: 10px
 			max-width: 100% 
+	&__select
+		display: none
+		clear: both
+		&.is-filter
+			padding: 19px 0 0 
+			+r(767)
+				display: block
+		&.is-season
+			padding: 19px 0 30px
+			+r(1100)
+				display: block
+		&.is-hidden
+			display: none
+			+r(1100)
+				display: none
+			+r(767)
+				display: none
+	&-select
+		position: relative
+		cursor: pointer
+		font-size: 1.4rem
+		max-width: 300px
+		user-select: none
+		clear: both
+		+r(767)
+			margin: 0 auto 
+		&.is-active
+			.museum-select
+				&__text
+					border-radius: 10px 10px 0 0
+					&:after
+						+rotate(-180)
+				&__list
+					border-radius: 0 0 10px 10px
+		&__text
+			position: relative
+			display: block
+			padding: 6px 30px 5px 13px
+			line-height: 1
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			height: 29px
+			border: 2px solid #fff
+			border-radius: 10px
+			+bold	
+			color: #fff
+			&:after
+				content: "\EA01" 
+				position: absolute
+				top: 9px
+				right: 8px
+				font-size: 0.9rem
+				color: #fff 
+				z-index: 10 
+				font-family: "svgfont"
+				font-style: normal
+				font-weight: normal
+				text-rendering: auto
+				speak: none
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+		&__list
+			+ul
+			position: absolute
+			display: none
+			left: 0
+			right: 0
+			top: 100%
+			z-index: 100
+			margin-top: -2px
+			border: 2px solid #fff
+			border-top: none 
+			max-height: 200px
+			overflow-x: hidden
+			overflow-y: auto
+			background: #020d1a	
+			border-radius: 0 0 10px 10px
+			a
+				padding: 0 13px 
+				cursor: pointer
+				line-height: 1.75			
+				+bold
+				font-size: 1.4rem	
+				color: #fff
+				display: block
+				&:hover
+					background-color: #fff
+					color: #020d1a 
+
+.page-title_museum
+	position: relative
+	padding: 20px 100px 20px 20px
+	+r(991)
+		padding: 20px
+	img
+		position: absolute
+		top: 9px
+		right: 21px
+		width: 72px
+		+r(991)
+			display: none
+
+.match
+	background-color: #434343
+	margin-bottom: 20px
+	&__top
+		padding: 20px 10px 25px 17px 
+	&__title
+		color: white
+		font-size: 2.5rem
+		+bold
+		line-height: 1
+		text-transform: uppercase
+		margin-bottom: 20px
+	&__filter
+		+ul
+		text-align: justify
+		&:after
+			display: inline-block
+			content: "" 
+			width: 100%
+		li
+			display: inline-block
+		a
+			font-size: 20px
+			line-height: 1
+			+white-link
+			border-bottom: 1px dotted #fff 
+			+light
+			&:hover
+				border: none
+			&.is-active
+				+bold
+				border: none
+	&-league
+		padding-bottom: 10px
+		.league-item
+			margin: 0 10px 10px 
+			&__top
+				padding-right: 45px
+				position: relative
+			&__control
+				position: absolute
+				top: -2px
+				right: 0
+				font-size: 0		
+				.is-t, .is-play
+					width: 16px
+					height: 16px
+					border-radius: 50%	
+					display: inline-block
+					vertical-align: top	
+					margin-right: 4px
+					color: #fff 
+					line-height: 15px
+					text-align: center
+				.is-t
+					background-color: #2188b8
+				.icon-t
+					font-size: 8px
+					margin: 4px 0 0 1px 
+				.icon-lil-play
+					font-size: 16px
+					color: #2188b8 
+						
+	&-league
+		&__title
+			color: white
+			font-size: 2rem
+			line-height: 1.7
+			position: relative
+			+clr
+			padding: 10px 45px 8px 46px 
+			margin-bottom: 10px
+			&:before
+				content: "" 
+				position: absolute
+				top: 50%
+				left: 10px
+				margin-top: -16px
+			&.is-super
+				background-color: #c3241c
+				&:before
+					+s(league-super)
+			&.is-major
+				background-color: #b1894d
+				&:before
+					+s(league-major)
+			&.is-russia
+				background-color: #006f61
+				&:before
+					+s(league-russia)
+			&.is-women
+				background-color: #d96180
+				&:before
+					+s(league-women)
+			.icon-date
+				position: absolute
+				top: 17px
+				right: 10px
+				font-size: 21px
+	&-partner
+		padding: 0 10px
+		text-align: center
+		font-size: 0
+		a
+			display: block
+			background: #fff 
+			img
+				max-width: 100%
+
+.page-title
+	&__text
+		div
+			+reg
+			color: #333
+			font-size: 2rem
+			line-height: 1
+			padding: 3px 0 
+			b
+				+bold
+			a
+				color: #197fba
+
+.match-topper
+	padding: 20px 0 0 
+
+.match-slider
+	overflow: hidden
+	.slick-prev, .slick-next
+		z-index: 20
+	.slick-prev
+		left: 8px
+	.slick-next
+		right: 8px
+
+.match-slide
+	background: url(../img/match-gols.png) no-repeat
+	+cover
+	position: relative
+	padding: 0 0 43px 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0, 0, 0, 0.65)
+	&__video
+		width: 100%
+		height: 403px
+		z-index: 5
+		position: relative 
+		iframe
+			width: 100%
+			height: 100%
+.match-gols
+	position: relative
+	z-index: 5 
+	&__top
+		+clr
+		max-width: 700px
+		padding: 4px 10px 15px
+		margin: 0 auto 
+	&__name
+		width: 40%
+		&.is-left
+			float: left
+			text-align: left
+			.match-gols__logo
+				float: left
+		&.is-right
+			float: right
+			text-align: right
+			.match-gols__logo
+				float: right
+		span
+			display: block
+			overflow: hidden
+			color: white
+			font-size: 25px
+			text-transform: uppercase
+			+bold
+			line-height: 1
+			padding: 17px 10px 0 
+	&__logo
+		height: 55px
+		width: 35px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100% 
+	&__score
+		text-align: center
+		width: 20%
+		overflow: hidden
+		padding: 8px 0 0 
+		span
+			font-size: 41px
+			+bold
+		span, small
+			display: block
+			color: white 
+			line-height: 1
+		small
+			font-size: 15px
+	&__container
+		padding: 0 10px 33px
+		max-width: 700px
+		margin: 0 auto 
+	&__row
+		margin: 0 -4px
+		+clr
+	&__col
+		width: 50%
+		padding: 0 4px 
+		float: left
+		&.is-left
+			text-align: left
+		&.is-right
+			text-align: right
+		&-in
+			background: rgba(black, 0.7) 
+			min-height: 228px 
+			padding: 5px 0 6px 
+	&__bottom
+		padding: 0 15px
+		+clr 
+	&__user
+		float: left
+		width: 20%
+		+clr
+		padding: 5px 
+		&-img
+			float: left
+			width: 38px
+			height: 49px
+			margin: 0 7px 0 0 
+			img
+				width: 100%
+				height: 100%
+		&-text
+			overflow: hidden
+			span, small
+				font-size: 1.5rem
+				color: #fff
+				line-height: 1.1
+				display: block
+			span
+				+bold
+.match-item
+	padding: 2px 15px 1px 
+	+clr
+	&.is-left
+		.match-item
+			&__score
+				padding: 0 25px 0 0
+				text-align: left
+				float: left
+				&:before
+					right: 0
+			&__img
+				float: right
+				margin-left: 5px
+	&.is-right
+		.match-item
+			&__score
+				padding: 0 0 0 25px
+				text-align: right
+				float: right
+				&:before
+					left: 0
+			&__img
+				float: left
+				margin-right: 5px
+	&__score
+		color: #87d50b
+		font-size: 1.8rem
+		+reg
+		line-height: 1
+		position: relative
+		width: 46px
+		&:before
+			@extend %icon
+			content: $icon-ball
+			position: absolute
+			top: 50%
+			color: #fff
+			font-size: 16px
+			margin-top: -8px 
+	&__img
+		width: 28px
+		height: 28px
+		font-size: 0
+		img
+			width: 100%
+			height: 100%
+			border-radius: 50%
+	&__text
+		overflow: hidden
+		color: white
+		font-size: 1.5rem
+		line-height: 1
+		padding: 7px 10px 6px 
+
+.match-info
+	position: relative
+	z-index: 5
+	padding: 18px 0 33px 
+	max-width: 800px
+	margin: 0 auto 
+	+clr
+	&__title
+		text-align: center
+		span
+			font-size: 4.1rem
+			+reg
+			margin-bottom: 12px
+		small
+			font-size: 1.5rem
+		span, small
+			display: block
+			color: white
+			line-height: 1
+	&__team
+		width: 25%
+		text-align: center
+		&.is-left
+			float: left
+		&.is-right
+			float: right
+	&__name
+		color: white
+		font-size: 2.5rem
+		line-height: 1
+		text-transform: uppercase
+		+bold
+	&__img
+		height: 175px
+		+vertical
+		img
+			max-width: 100%
+			max-height: 100%
+			display: inline-block
+			vertical-align: middle 
+	&__text
+		max-width: 160px
+		margin: 0 auto 
+		span
+			font-size: 2rem
+			+bold
+			margin-bottom: 6px
+		small
+			font-size: 1.5rem
+		span, small
+			display: block
+			color: white
+			line-height: 1.2
+	&__score
+		overflow: hidden
+		width: 50%
+		text-align: center
+		padding: 40px 0 20px 
+	&__numbers
+		font-size: 15rem
+		line-height: 1
+		color: white 
+		b
+			+bold
+	&__time
+		span, small
+			color: white
+			font-size: 3rem
+			line-height: 1.2
+			display: block
+		small
+			+bold
+
+.match-content
+	position: relative
+	&__tabs
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		+ul
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			width: 33.33%
+			color: #b1b1b1
+			border-bottom: 6px solid black 
+			padding: 7px 10px 8px
+			background-color: rgba(0, 0, 0, 0.26)
+			cursor: pointer
+			&:hover
+				background-color: rgba(0, 0, 0, 0.4)
+			&.is-active
+				border-color: #b7b7b7 
+				i
+					font-size: 15px
+				span, i
+					color: #fff 
+			i
+				font-size: 13px
+				color: #b1b1b1 
+				margin-right: 5px
+			span				
+				font-size: 1.8rem
+				line-height: 1
+				padding: 4px 0 0 
+			i, span
+				display: inline-block
+				vertical-align: middle
