@@ -432,23 +432,22 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		centerMode: true,
 		variableWidth: true,
-		asNavFor: '.js-main-slider-thumbs'
+		asNavFor: '.js-main-slider-thumbs',
+		// infinite: false
 	})
 	$('.js-main-slider-thumbs').slick({
 		asNavFor: '.js-main-slider',
 		variableWidth: true,
 		focusOnSelect: true,
-		arrows: false
+		arrows: false,
+		slidesToShow: 18,
+		centerMode: true
 	});
-	// var mySwiper = new Swiper ('.swiper-container', {
-	// 	loop: true,
-	// 	slidesPerView: 'auto',
-	// 	centeredSlides: true,
-	// 	spaceBetween: 0,
-	// 	nextButton: '.swiper-button-next',
-	// 	prevButton: '.swiper-button-prev',
+	 $('.tooltip').tooltipster({
+	 	arrow: false,
+	 	contentAsHTML: true,
+	 	interactive: true,
 
-	// });
-
+	 });
 	console.log($('.js-main-slider-thumbs').find('.slick-slide').length, $('.js-main-slider').find('.slick-slide').length)
 });
