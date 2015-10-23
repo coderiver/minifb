@@ -2777,17 +2777,16 @@ $(document).ready(function() {
 	 	contentAsHTML: true,
 	 	interactive: true
 	 });
-	 
-	 // $('.js-posts-list .post').hoverIntent(updateNews);
-	 // function updateNews () {
-	 // 	var $el = $(this),
-	 // 		img = $el.data('img'),
-	 // 		$news = $el.closest('.js-news-upd'),
-	 // 		$newsImg = $news.find('.js-news-upd img').attr('src');
-	 // 		console.log(img)
-	 // 		console.log($news)
-	 // 		console.log($newsImg)
 
-	 // }
+	 $('.js-posts-list .post').hoverIntent(updateNews);
+	 function updateNews () {
+	 	var $el = $(this),
+	 		img = $el.data('img'),
+	 		header = $el.find('.js-post-header').text(),
+	 		updImg = $el.parents('.js-news-block').find('.js-news-upd-img img'),
+	 		updHeader = $el.parents('.js-news-block').find('.js-news-upd-header');
+	 		updImg.attr('src', img);
+	 		updHeader.text(header);
+	 }
 	console.log($('.js-main-slider-thumbs').find('.slick-slide').length, $('.js-main-slider').find('.slick-slide').length)
 });

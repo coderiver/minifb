@@ -208,11 +208,14 @@ $red: #e43b06
 	position: relative
 	&__img
 		line-height: 0
+		max-height: 404px
+		text-align: center
+		overflow: hidden 
 		img
-			width: 100% 
 			max-width: 100%
 			height: auto 
 	&__info
+		display: block
 		position: absolute
 		bottom: 0
 		left: 0
@@ -222,6 +225,11 @@ $red: #e43b06
 		font-size: 3rem
 		color: #fff 
 		+bold
+		// +tr(opacity .2s)
+		&:hover
+			// opacity: .8
+			color: #fff
+			background: rgba(0, 0, 0, .8) 
 .players-slider
 	position: relative
 	padding: 0 10px
