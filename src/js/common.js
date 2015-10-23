@@ -597,6 +597,7 @@ $(document).ready(function() {
 	 	contentAsHTML: true,
 	 	interactive: true
 	 });
+	 
 	 // $('.js-posts-list .post').hoverIntent(updateNews);
 	 // function updateNews () {
 	 // 	var $el = $(this),

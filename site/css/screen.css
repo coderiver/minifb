@@ -367,13 +367,15 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
+.icon-arr-bottom:before { content: ""; }
+
 .icon-arr-left:before { content: ""; }
 
-.icon-arr-bottom:before { content: ""; }
+.icon-arr-right:before { content: ""; }
 
 .icon-arrow_left:before { content: ""; }
 
-.icon-arr-right:before { content: ""; }
+.icon-arrow_right:before { content: ""; }
 
 .icon-attachment:before { content: ""; }
 
@@ -382,6 +384,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .icon-camera:before { content: ""; }
 
 .icon-check-empty:before { content: ""; }
+
+.icon-check:before { content: ""; }
 
 .icon-checkbox:before { content: ""; }
 
@@ -405,21 +409,17 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon-pdf:before { content: ""; }
 
-.icon-arrow_right:before { content: ""; }
-
 .icon-photos:before { content: ""; }
 
 .icon-play:before { content: ""; }
+
+.icon-search:before { content: ""; }
 
 .icon-show:before { content: ""; }
 
 .icon-t:before { content: ""; }
 
-.icon-search:before { content: ""; }
-
 .icon-twitter:before { content: ""; }
-
-.icon-check:before { content: ""; }
 
 .icon-youtube:before { content: ""; }
 
