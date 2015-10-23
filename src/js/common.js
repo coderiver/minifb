@@ -546,7 +546,36 @@ $(document).ready(function() {
 
 	});
 
-	console.log($('.museum-slide').length, $('.museum-season').length, $('.museum-gallery__slide').length)
+	//match-center
+
+	$('.js-match-slider').slick({
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false
+	});
+
+	$('.js-match-tab').click(function() {
+		$('.js-match-tab').removeClass('is-active');
+		$(this).addClass('is-active');
+
+		var index = $(this).data('index');
+
+		$('.js-match-slider').slick('goTo', index);
+
+		return false;
+	});
+
+	$('.js-match-slider').each(function() {
+		$(this).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+			$('.js-match-tab')
+				.removeClass('is-active')
+				.filter('[data-index="' + nextSlide + '"]')
+				.addClass('is-active');
+		});
+	});
+
+	//
 
 
 	$('.js-main-slider').slick({
@@ -559,7 +588,10 @@ $(document).ready(function() {
 		asNavFor: '.js-main-slider',
 		variableWidth: true,
 		focusOnSelect: true,
-		arrows: false
+		arrows: false,
+		infinite: true,
+		// centerMode: true,
+		// slidesToShow: 18
 	});
 	// var mySwiper = new Swiper ('.swiper-container', {
 	// 	loop: true,
