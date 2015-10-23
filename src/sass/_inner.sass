@@ -600,24 +600,25 @@ $red: #e43b06
 			.team-name
 				line-height: 1 
 				color: #fff
+				overflow: hidden
 				+bold
 				&.is-green
 					color: $green
 			.team-logo
 				width: 20px
 				position: absolute
-				top: 0
+				top: 50% 
+				transform: translateY(-50%)
+				text-align: center
 				img
 					max-width: 100% 
 			&.is-left
 				.team-logo
 					right: 0
 				.team-name
-					overflow: hidden
 					padding-right: 25px 
 			&.is-right
 				.team-logo
-					position: absolute
 					left: 0 
 				.team-name
 					padding-left: 25px 
