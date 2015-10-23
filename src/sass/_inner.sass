@@ -1,3 +1,7 @@
+$green: #87d50b	
+$purple: #b71a4f
+$yellow: #f5d000
+$red: #e43b06
 .row.no-padding
 	&.no-padding
 		// margin-left: 0
@@ -269,6 +273,7 @@
 		margin-left: -20px
 	.tabs
 		margin-bottom: 25px 
+		
 .player
 	color: #fff
 	+clr
@@ -276,14 +281,13 @@
 		width: 135px
 		height: 135px
 		margin-right: 20px 
-		margin-top: -15px 
 		float: left
 		img
-			max-width: 135px
+			max-width: 100%
 			height: auto 
 	&__text
 		overflow: hidden
-		margin-top: 15px
+		padding-top: 15px
 		color: #fff
 		h4
 			color: #fff
@@ -446,11 +450,18 @@
 			margin-bottom: 0
 		h2, .select
 			display: inline-block
+			+r(767)
+				display: block
 		h2 +.select
 			margin-left: 20px 
+			+r(767)
+				margin-left: 0
+				margin-top: 10px 
 		.select
 			width: 370px 
 			max-width: initial
+			+r(767)
+				width: 100% 
 	.fotorama
 		&__nav
 			margin-top: 20px 
@@ -481,6 +492,12 @@
 	&__list
 		&_justify
 			text-align: justify
+			+r(767)
+				text-align: left
+				li
+					display: block
+					a
+						display: inline-block
 			&:after
 				content: ""
 				width: 100%
@@ -489,7 +506,7 @@
 .block_sm
 	padding: 10px 
 
-$purple: #b71a4f
+
 
 .league-page_women
 	.page-nav
@@ -519,12 +536,21 @@ $purple: #b71a4f
 		img
 			padding: 3px 
 			border-radius: 15px
-	.slick-active
+	.slick-center
 		.album-thumbs__item
 			img
 				box-shadow: inset 0 0 0 3px #0072b6
 
-			
+.album-slider
+	.slick-arrow
+		opacity: 0
+		visibility: hidden 
+		z-index: 2  
+		transition: opacity .25s, visibility .25s
+	&:hover
+		.slick-arrow
+			opacity: 1
+			visibility: visible 	
 .swipper-container
 	width: 100%
 	
@@ -532,3 +558,80 @@ $purple: #b71a4f
 	display: inline-block
 	width: auto
 
+.main-table
+	td
+		.is-match
+			position: relative
+			span
+				width: 100%
+				height: 100%  
+.tooltipster-default
+	background: none
+	padding: 0
+	border: 0 
+	.tooltipster-content
+		padding: 0				
+.tooltip-match
+	font-size: 13px 
+	padding: 10px
+	background: #197fba
+	border-radius: 10px
+	color: #fff
+	width: 308px  
+	z-index: 2
+	&__date
+		line-height: 1
+		margin-bottom: 7px 
+		.status
+			position: relative
+			padding-left: 1.8em
+			display: inline-block 
+			&:before
+				content: '|'
+				position: absolute
+				display: inline-block
+				left: .8em 
+.tooltip-table
+	td
+		vertical-align: middle
+		color: #fff
+		&.is-team
+			position: relative
+			.team-name
+				line-height: 1 
+				color: #fff
+				overflow: hidden
+				+bold
+				&.is-green
+					color: $green
+			.team-logo
+				width: 20px
+				position: absolute
+				top: 50% 
+				transform: translateY(-50%)
+				text-align: center
+				img
+					max-width: 100% 
+			&.is-left
+				.team-logo
+					right: 0
+				.team-name
+					padding-right: 25px 
+			&.is-right
+				.team-logo
+					left: 0 
+				.team-name
+					padding-left: 25px 
+			
+		&.is-result
+			width: 70px 
+			text-align: center
+			font-size: 3rem
+			+bold
+			color: #fff
+			line-height: 1
+			&.is-yellow
+				color: $yellow
+			span
+				&.is-green
+					color: $green

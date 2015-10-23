@@ -791,7 +791,7 @@ dd
 			&.is-last
 				width: 150px
 				padding: 0 10px 
-	tbody
+	&>tbody
 		tr			
 			&:nth-child(odd)
 				td
@@ -811,6 +811,7 @@ dd
 				padding: 0 0 0 8px 			
 			&.is-name
 				width: 290px
+				+bold
 				img
 					margin: 0 5px 0 0 
 			&.is-numbers
@@ -841,7 +842,6 @@ dd
 						background-color: #f5d000
 					&.is-red
 						background-color: #e43b06
-
 //pages
 .pages
 	&__list

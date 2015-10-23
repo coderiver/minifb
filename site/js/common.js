@@ -576,32 +576,38 @@ $(document).ready(function() {
 	});
 
 	//
-
-
 	$('.js-main-slider').slick({
 		slidesToShow: 1,
 		centerMode: true,
 		variableWidth: true,
-		asNavFor: '.js-main-slider-thumbs'
+		asNavFor: '.js-main-slider-thumbs',
+		// infinite: false
 	})
 	$('.js-main-slider-thumbs').slick({
 		asNavFor: '.js-main-slider',
 		variableWidth: true,
 		focusOnSelect: true,
 		arrows: false,
+		slidesToShow: 18,
+		centerMode: true,
 		infinite: true,
-		// centerMode: true,
-		// slidesToShow: 18
 	});
-	// var mySwiper = new Swiper ('.swiper-container', {
-	// 	loop: true,
-	// 	slidesPerView: 'auto',
-	// 	centeredSlides: true,
-	// 	spaceBetween: 0,
-	// 	nextButton: '.swiper-button-next',
-	// 	prevButton: '.swiper-button-prev',
+	 $('.tooltip').tooltipster({
+	 	arrow: false,
+	 	contentAsHTML: true,
+	 	interactive: true
+	 });
+	 
+	 // $('.js-posts-list .post').hoverIntent(updateNews);
+	 // function updateNews () {
+	 // 	var $el = $(this),
+	 // 		img = $el.data('img'),
+	 // 		$news = $el.closest('.js-news-upd'),
+	 // 		$newsImg = $news.find('.js-news-upd img').attr('src');
+	 // 		console.log(img)
+	 // 		console.log($news)
+	 // 		console.log($newsImg)
 
-	// });
-
+	 // }
 	console.log($('.js-main-slider-thumbs').find('.slick-slide').length, $('.js-main-slider').find('.slick-slide').length)
 });

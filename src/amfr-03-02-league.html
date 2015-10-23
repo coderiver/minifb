@@ -62,6 +62,7 @@
 							<li><a href="#">История</a></li>
 						</ul>
 					</div>
+					
 					<div class="block block_sm js-tabs">
 						<div class="block__top ">
 							<!-- begin tabs  -->
@@ -81,13 +82,13 @@
 						
 						<div class="tabs-main js-tabs-block row no-padding is-active" data-block="league-news">
 							<div class="col-md-3">
-								<div class="posts-list is-left">
-									<a href="#" class="post">
+								<div class="posts-list js-posts-list is-left">
+									<a href="#" class="post" data-img="img/banner-project.jpg">
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
 										</div>
 										<div class="post__info">
-											<div class="post__header">
+											<div class="post__header js-post-header">
 												13 июня 2015 <strong>"Рейтинг клуба": итоги сезона 2014/15</strong>
 											</div>
 											<p>
@@ -137,8 +138,8 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="rating">
-									<div class="rating__img">
+								<div class="rating js-news-upd">
+									<div class="rating__img js-news-upd-img">
 										<img src="img/rates.jpg"alt="">
 									</div>
 									<div class="rating__info">
@@ -147,7 +148,7 @@
 								</div>
 							</div>
 							<div class="col-md-3">
-								<div class="posts-list is-right">
+								<div class="posts-list js-posts-list is-right">
 									<a href="#" class="post">
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
@@ -205,8 +206,8 @@
 						</div>
 						<div class="tabs-main js-tabs-block row no-padding" data-block="club-news">
 							<div class="col-md-3">
-								<div class="posts-list is-left">
-									<a href="#" class="post">
+								<div class="posts-list js-posts-list is-left">
+									<a href="#" class="post" >
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
 										</div>
@@ -271,7 +272,7 @@
 								</div>
 							</div>
 							<div class="col-md-3">
-								<div class="posts-list is-right">
+								<div class="posts-list js-posts-list is-right">
 									<a href="#" class="post">
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
@@ -329,7 +330,7 @@
 						</div>
 						<div class="tabs-main js-tabs-block row no-padding" data-block="amfr-news">
 							<div class="col-md-3">
-								<div class="posts-list is-left">
+								<div class="posts-list js-posts-list is-left">
 									<a href="#" class="post">
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
@@ -395,7 +396,7 @@
 								</div>
 							</div>
 							<div class="col-md-3">
-								<div class="posts-list is-right">
+								<div class="posts-list js-posts-list is-right">
 									<a href="#" class="post">
 										<div class="post__media">
 											<img src="https://placehold.it/76x76" alt="">
@@ -640,7 +641,7 @@
 								</div>
 								<div class="tabs-main js-tabs-block is-active" data-block="table">
 									<div class="table-wrapper">
-										<table class="main-table  w740">
+										<table class="main-table w740">
 											<thead>
 												<tr>
 													<th class="is-name" colspan="2">1Команда</th>
@@ -667,12 +668,175 @@
 													<td class="is-match">93/42</td>
 													<td class="is-numbers">91</td>
 													<td class="is-last">
-														<i class="is-match is-green"></i>
-														<i class="is-match is-yellow"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-green"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-yellow"></i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+													
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name ">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
 													</td>
 												</tr>
 												<tr>
@@ -954,7 +1118,7 @@
 								</div>
 								<div class="tabs-main js-tabs-block" data-block="matches">
 									<div class="table-wrapper">
-										<table class="main-table  w740">
+										<table class="main-table w740">
 											<thead>
 												<tr>
 													<th class="is-name" colspan="2">2Команда</th>
@@ -981,12 +1145,175 @@
 													<td class="is-match">93/42</td>
 													<td class="is-numbers">91</td>
 													<td class="is-last">
-														<i class="is-match is-green"></i>
-														<i class="is-match is-yellow"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-green"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-yellow"></i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+													
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name ">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
 													</td>
 												</tr>
 												<tr>
@@ -1268,7 +1595,7 @@
 								</div>
 								<div class="tabs-main js-tabs-block" data-block="last-matches">
 									<div class="table-wrapper">
-										<table class="main-table  w740">
+										<table class="main-table w740">
 											<thead>
 												<tr>
 													<th class="is-name" colspan="2">3Команда</th>
@@ -1295,12 +1622,175 @@
 													<td class="is-match">93/42</td>
 													<td class="is-numbers">91</td>
 													<td class="is-last">
-														<i class="is-match is-green"></i>
-														<i class="is-match is-yellow"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-green"></i>
-														<i class="is-match is-red"></i>
-														<i class="is-match is-yellow"></i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+													
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-green">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span>0</span>-<span class="is-green">2</span></td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name is-green">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-red">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name is-green">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result"><span class="is-green">2</span>-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
+														<i class="is-match is-yellow">
+															<span class="tooltip" title='
+																<div class="tooltip-match">
+																	<div class="tooltip-match__date">
+																		17 марта 2015, 17:00 <span class="status">Окончен</span>
+																	</div>
+																	<div class="tooltip-match__info">
+																		<table class="tooltip-table">
+																			<tr>
+																				<td class="is-team text-right is-left">
+																					<div class="team-name">Норильский никель</div>
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																				</td>
+																				<td class="is-result">0-0</td>
+																				<td class="is-team text-left is-right">
+																					<div class="team-logo">
+																						<img src="img/team-1.png"alt="">
+																					</div>
+																					<div class="team-name ">Норильский никель</div>
+																				</td>
+																			</tr>
+																		</table>
+																	</div>
+																</div>'>
+															</span>
+														</i>
 													</td>
 												</tr>
 												<tr>
@@ -2495,16 +2985,7 @@
 						<img src="img/fotorama-1_thumb.png">
 					</div>
 				</div>
-			</div>		
-<!-- 			<div class="swiper-container">
-			    <div class="swiper-wrapper">
-			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
-			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
-			        <div class="swiper-slide"><img src="img/fotorama-1.jpg"></div>
-			    </div>
-			    <div class="swiper-button-prev"></div>
-			    <div class="swiper-button-next"></div>
-			</div>	 -->
+			</div>
 		</div>
 
 		<!-- end album -->
@@ -2623,6 +3104,7 @@
 	<!-- end main__inner -->
 </main>
 <!-- end main -->
+
 
 //= partials/footer.html
 
