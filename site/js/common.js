@@ -267,7 +267,7 @@ $(document).ready(function() {
 					slidesToShow: 2
 				}
 			},{
-				breakpoint: 600,
+				breakpoint: 767,
 				settings: {
 					slidesToScroll: 1,
 					slidesToShow: 1
@@ -581,6 +581,14 @@ $(document).ready(function() {
 		centerMode: true,
 		variableWidth: true,
 		asNavFor: '.js-main-slider-thumbs',
+		responsive:[ 
+			{
+				breakpoint: 1100,
+				settings: {
+					variableWidth: false
+				}
+			}
+		]
 		// infinite: false
 	})
 	$('.js-main-slider-thumbs').slick({

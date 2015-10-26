@@ -108,6 +108,10 @@ h1
 	font-size: 4.5rem
 	+r(1219)
 		font-size: 4rem
+	+r(991)
+		font-size: 3.5em
+	+r(767)
+		font-size: 2.5em 
 	small
 		font-size: 2rem
 		color: #333  
@@ -116,6 +120,10 @@ h2
 	font-size: 4.1rem
 	+r(1219)
 		font-size: 3.6rem
+	+r(991)
+		font-size: 3rem
+	+r(767)
+		font-size: 2rem 
 	small
 		font-size: 2rem
 		color: #333  
@@ -125,12 +133,18 @@ h3
 	line-height: 1.4
 	+r(1219)
 		font-size: 2.4rem
-		
+	+r(991)
+		font-size: 2rem 
+	+r(767)
+		font-size: 1.7rem 
+	
 h4
 	font-size: 2rem
 	line-height: 1.35
 	+r(1219)
 		font-size: 1.8rem
+	+r(767)
+		font-size: 1.5rem 
 
 p
 	+light
@@ -198,12 +212,17 @@ dt
 	+bold
 dd
 	+light
-
+	
+.container
+	+r(767)
+		max-width: 400px 
 .title
 	+reg
 	font-size: 2.4rem
 	line-height: 1.05	
 	margin-bottom: 8px
+	+r(767)
+		font-size: 2rem 
 
 .error, .success
 	font-size: 0
@@ -230,8 +249,17 @@ dd
 		padding: 10px 0 
 	&__title
 		font-size: 3rem
+		+r(1219)
+			font-size: 2.4rem
+		+r(991)
+			font-size: 2rem  
+
 	&__subtitle
 		font-size: 2.4rem
+		// +r(1219)
+			// font-size: 2.4rem
+		+r(991)
+			font-size: 1.6rem  
 	&__text
 		+reg
 		color: #333
@@ -382,6 +410,10 @@ dd
 		top: 0
 		visibility: hidden
 		left: 0
+		+r(767)
+			visibility: visible
+			width: 100%
+			height: 100%  
 	&__text
 		position: relative
 		display: block
@@ -492,7 +524,7 @@ dd
 			top: 0
 			left: 4px
 			font-size: 0.6rem
-			content: "\EA08"
+			content: "\EA0B"
 			font-family: "svgfont"
 			font-style: normal
 			font-weight: normal
@@ -878,6 +910,8 @@ dd
 		li
 			display: inline-block
 			vertical-align: top
+			+r(767)
+				display: block
 	&-btn
 		display: inline-block
 		+light
@@ -886,8 +920,10 @@ dd
 		text-transform: uppercase
 		line-height: 1
 		text-decoration: none
-		padding: 17px 35px 16px
-		border-radius: 10px
+		padding: 0.850em 1.75em .6em 
+		border-radius: .5em
+		+r(1219)
+			font-size: 1.5rem
 		&.is-active
 			background-color: #f93526
 			color: #fff
@@ -1049,6 +1085,7 @@ dd
 		position: absolute
 		top: 0
 		left: 0
+		
 	&__text
 		padding: 0 10px 0 0
 		white-space: nowrap

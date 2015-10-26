@@ -3,10 +3,6 @@ $purple: #b71a4f
 $yellow: #f5d000
 $red: #e43b06
 
-.container
-	+r(767)
-		max-width: 400px 
-
 .row.no-padding
 	&.no-padding
 		// margin-left: 0
@@ -65,7 +61,6 @@ $red: #e43b06
 				&:last-child
 					margin-right: 0
 
-
 .main
 	&__inner
 		&.league-page
@@ -101,6 +96,9 @@ $red: #e43b06
 			font-size: 3.7rem 
 			+bold
 			font-style: italic 
+			
+			+r(991)
+				font-size: 2.8rem 
 .page-title
 	+r(991)
 		&:before
@@ -165,6 +163,8 @@ $red: #e43b06
 		.btn-next
 			float: right
 			margin-top: 12px 
+			+r(767)
+				margin-top: 4px
 .posts-list
 	&.is-left
 		// margin-left: -10px 
@@ -211,13 +211,15 @@ $red: #e43b06
 			font-size: 1.3rem 
 .rating
 	position: relative
+	+r(767)
+		display: none
 	&__img
 		line-height: 0
 		max-height: 404px
 		text-align: center
 		overflow: hidden 
 		img
-			max-width: 100%
+			width: 100%
 			height: auto 
 	&__info
 		display: block
@@ -289,10 +291,11 @@ $red: #e43b06
 		&_sm
 			.tabs__list
 				li
+					+r(767)
+						display: inline-block
 					&:last-child
 						a
 							margin-right: 0
-		
 .player
 	color: #fff
 	+clr
@@ -304,6 +307,10 @@ $red: #e43b06
 		img
 			max-width: 100%
 			height: auto 
+		+r(767)
+			width: 115px
+			height: 115px 
+			 
 	&__text
 		overflow: hidden
 		padding-top: 15px
@@ -340,6 +347,8 @@ $red: #e43b06
 				vertical-align: top
 				padding-right: 5px 
 				display: inline-block
+			+r(767)
+				font-size: 4rem 
 .block_dark
 	h2
 		color: #fff	
@@ -381,12 +390,16 @@ $red: #e43b06
 .block__box
 	&_50
 		width: 50%
+		+r(767)
+			width: 100% 
 .table-forecasts
 	min-width: 380px
 	width: 100% 
 	margin-left: -10px 
 	+r(991)
 		min-width: 360px 
+	+r(767)
+		margin-left: 0 
 	th
 		font-size: 1.5rem 
 		+reg
@@ -425,8 +438,6 @@ $red: #e43b06
 			border-radius: 50%  
 			position: absolute
 			left: -35px 
-	  
-
 .banner-project
 	border-radius: 10px
 	overflow: hidden
@@ -436,7 +447,6 @@ $red: #e43b06
 	height: 240px 
 	background: url(../img/banner-project.jpg) no-repeat
 	background-size: cover
-	
 	+r(767)
 		margin-bottom: 20px 
 	img
@@ -455,7 +465,6 @@ $red: #e43b06
 		&-top
 			+thin
 			margin-bottom: 10px 
-
 .album
 	background: #fff 
 	&__wrap-top
@@ -524,9 +533,6 @@ $red: #e43b06
 				display: inline-block
 .block_sm
 	padding: 10px 
-
-
-
 .league-page_women
 	.page-nav
 		li
@@ -571,10 +577,15 @@ $red: #e43b06
 		top: 14px
 		height: 100% 
 		width: 150px 
+		+r(767)
+			width: 15% 
 		&:before
 			transition: opacity .25s, visibility .25s
 			visibility: hidden
 			opacity: 0
+			+r(767)
+				visibility: visible
+				opacity: 1
 		&:hover
 			&:before
 				opacity: 1
@@ -660,7 +671,6 @@ $red: #e43b06
 					left: 0 
 				.team-name
 					padding-left: 25px 
-			
 		&.is-result
 			width: 70px 
 			text-align: center
@@ -673,3 +683,6 @@ $red: #e43b06
 			span
 				&.is-green
 					color: $green
+.side-banner
+	+r(1219)
+		display: none
