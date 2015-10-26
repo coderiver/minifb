@@ -1820,7 +1820,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .album-thumbs__item img { padding: 3px; border-radius: 15px; }
 .album-thumbs .slick-center .album-thumbs__item img { box-shadow: inset 0 0 0 3px #0072b6; }
 
-.album-slider .slick-arrow { opacity: 0; visibility: hidden; z-index: 2; transition: opacity 0.25s, visibility 0.25s; }
+.album-slider { position: relative; }
+.album-slider .slick-arrow { opacity: 0; visibility: hidden; z-index: 2; transition: opacity 0.25s, visibility 0.25s; position: absolute; top: 14px; height: 100%; width: 150px; }
+.album-slider .slick-arrow:before { transition: opacity 0.25s, visibility 0.25s; visibility: hidden; opacity: 0; }
+.album-slider .slick-arrow:hover:before { opacity: 1; visibility: visible; }
+.album-slider .slick-next { right: 0; background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 100%); }
+.album-slider .slick-prev { left: 0; background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 100%); }
 .album-slider:hover .slick-arrow { opacity: 1; visibility: visible; }
 
 .swipper-container { width: 100%; }
