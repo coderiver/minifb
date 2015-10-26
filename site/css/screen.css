@@ -46,12 +46,14 @@ h1 { font-size: 4.5rem; }
 @media only screen and (max-width: 991px) { h1 { font-size: 3.5em; } }
 @media only screen and (max-width: 767px) { h1 { font-size: 2.5em; } }
 h1 small { font-size: 2rem; color: #333; }
+@media only screen and (max-width: 767px) { h1 small { font-size: 1.4rem; } }
 
 h2 { font-size: 4.1rem; }
 @media only screen and (max-width: 1219px) { h2 { font-size: 3.6rem; } }
 @media only screen and (max-width: 991px) { h2 { font-size: 3rem; } }
 @media only screen and (max-width: 767px) { h2 { font-size: 2rem; } }
 h2 small { font-size: 2rem; color: #333; }
+@media only screen and (max-width: 767px) { h2 small { font-size: 1.4rem; } }
 
 h3 { font-size: 3rem; line-height: 1.4; }
 @media only screen and (max-width: 1219px) { h3 { font-size: 2.4rem; } }
@@ -209,6 +211,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .btn-big { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.8rem; text-transform: uppercase; line-height: 1; padding: 17px 33px 14px; background-color: #d9232a; border-radius: 9px; display: inline-block; vertical-align: top; color: #fff; text-decoration: none; position: relative; width: 280px; text-align: center; transition: background 0.25s; }
 .btn-big:hover, .btn-big:focus, .btn-big:visited, .btn-big:active { color: #fff; text-decoration: none; }
+@media only screen and (max-width: 767px) { .btn-big { font-size: 2rem; } }
 .btn-big_blue { background-color: #197fba; }
 .btn-big:before { content: ""; position: absolute; top: 3px; right: 3px; bottom: 3px; left: 3px; border: 2px dotted #fff; border-radius: 9px; }
 .btn-big:disabled { background: gray; }
@@ -278,7 +281,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .pages__list li { display: inline-block; vertical-align: middle; padding: 0 12px; }
 .pages__list li a { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1.9; display: inline-block; }
 
-.tabs_md .tabs-btn { padding: 17px 16px 16px; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
+.tabs_md .tabs-btn { padding: 0.85em 0.8em 0.6em; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
 .tabs__list { line-height: 1; margin: 0; font-size: 0; padding: 20px 0; }
 .tabs__list li { padding: 0; }
 .tabs__list li:before { display: none; }
@@ -649,6 +652,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .menu-dropdown__block:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1219px) { .menu-dropdown__block { width: 60%; } }
 @media only screen and (max-width: 991px) { .menu-dropdown__block { width: 100%; float: none; text-align: center; padding-top: 10px; } }
+@media only screen and (max-width: 767px) { .menu-dropdown__block { display: none; } }
 .menu-dropdown__schedule { width: 260px; border: 2px solid #fff; border-radius: 10px; padding: 14px 18px; min-height: 301px; float: left; margin: 0 10px 10px; }
 @media only screen and (max-width: 991px) { .menu-dropdown__schedule { float: none; display: inline-block; vertical-align: top; } }
 .menu-dropdown__schedule h4, .menu-dropdown__schedule li, .menu-dropdown__schedule p { color: #fff; }
@@ -845,15 +849,19 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .top-banner_team .top-banner__img img { max-width: 168px; }
 .top-banner_team .top-banner__box { padding: 20px 0 0; }
 .top-banner_team h3 { font-family: "PFDinDisplayPro Light Italic", Arial, sans-serif; color: #FFF; display: inline; line-height: 1.1; }
+@media only screen and (max-width: 991px) { .top-banner_team h3 { display: block; } }
 .top-banner_team h3 b { font-family: "PFDinDisplayPro Bold Italic", Arial, sans-serif; }
 .top-banner_team .btn-next { margin: 0 0 0 20px; }
+@media only screen and (max-width: 991px) { .top-banner_team .btn-next { margin: 0; } }
 .top-banner__img { float: right; position: relative; }
-@media only screen and (max-width: 991px) { .top-banner__img { float: left; } }
+@media only screen and (max-width: 991px) { .top-banner__img { float: left; display: none; } }
 .top-banner__img img { position: relative; max-width: 100%; }
 .top-banner__info { overflow: hidden; position: relative; padding: 6px 0 5px; }
 .top-banner__title { font-family: "PFDinDisplayPro Thin", Arial, sans-serif; font-size: 2.5rem; line-height: 1.2; }
+@media only screen and (max-width: 991px) { .top-banner__title { font-size: 2rem; } }
 .top-banner__title b { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; display: block; }
-.top-banner__text { font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 16px; display: inline-block; vertical-align: top; padding: 3px 20px 4px 0; }
+.top-banner__text { font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 1.6rem; display: inline-block; vertical-align: top; padding: 3px 20px 4px 0; }
+@media only screen and (max-width: 991px) { .top-banner__text { font-size: 1.4rem; display: block; margin-bottom: 10px; } }
 
 .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
 .banner__img { display: block; font-size: 0; }
@@ -932,6 +940,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 1219px) { .block__headers { display: block; } }
 @media only screen and (max-width: 767px) { .block__headers { display: none; } }
 .block__title { width: 50%; float: left; color: #fff; font-size: 4.1rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; padding: 1px 15px; text-transform: uppercase; }
+@media only screen and (max-width: 991px) { .block__title { font-size: 3rem; } }
+@media only screen and (max-width: 767px) { .block__title { font-size: 2rem; } }
 
 @media only screen and (max-width: 1007px) { .main-slider_video { margin-bottom: 20px; } }
 @media only screen and (max-width: 991px) { .main-slider_photo { margin-bottom: 20px; } }
@@ -992,8 +1002,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .heading h2, .heading p { color: #fff; }
 .heading h2, .heading p, .heading .btn-next { display: inline-block; vertical-align: top; }
 .heading h2, .heading p { margin: 0 30px 0 0; }
+@media only screen and (max-width: 767px) { .heading h2, .heading p { display: block; margin-bottom: 10px; } }
 .heading p { max-width: 300px; padding: 2px 0 0; }
 .heading .btn-next { margin: 4px 0 0 35px; }
+@media only screen and (max-width: 767px) { .heading .btn-next { margin: 0 0 0; } }
 .heading_dark h2, .heading_dark p { color: #333; }
 
 .v-item { padding: 0 0 30px; }
@@ -1029,13 +1041,20 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .big-banner h3 { margin-bottom: 14px; }
 .big-banner__title, .big-banner__teams, .big-banner__time { text-transform: uppercase; }
 .big-banner__title { font-size: 11.3rem; font-family: "PFDinDisplayPro Thin", Arial, sans-serif; line-height: 0.78; }
+@media only screen and (max-width: 991px) { .big-banner__title { font-size: 7rem; } }
+@media only screen and (max-width: 767px) { .big-banner__title { font-size: 4rem; } }
 .big-banner__season { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; font-size: 3rem; line-height: 1.15; margin-bottom: 30px; }
 .big-banner__teams { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 6rem; line-height: 1; margin-bottom: 5px; }
+@media only screen and (max-width: 991px) { .big-banner__teams { font-size: 4rem; } }
+@media only screen and (max-width: 767px) { .big-banner__teams { font-size: 2rem; } }
 .big-banner__time { font-family: "PFDinDisplayPro Light", Arial, sans-serif; font-size: 3rem; line-height: 1.7; margin-bottom: 43px; }
+@media only screen and (max-width: 767px) { .big-banner__time { font-size: 2rem; } }
 
 .champion { background: #fff; }
 .champion__inner { max-width: 1200px; margin: 0 auto; padding: 40px 10px 25px; position: relative; z-index: 15; text-align: center; }
 .champion__title { color: #333; font-size: 3.7rem; line-height: 1.08; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; max-width: 830px; margin: 0 auto 20px; }
+@media only screen and (max-width: 991px) { .champion__title { font-size: 3rem; } }
+@media only screen and (max-width: 767px) { .champion__title { font-size: 2rem; } }
 .champion__list { line-height: 1; margin: 0; font-size: 0; text-align: center; margin-bottom: 30px; }
 .champion__list li { padding: 0; }
 .champion__list li:before { display: none; }
@@ -1074,6 +1093,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .side-banner__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 
 .academy-page { background: #ffed39; background-image: linear-gradient(#ffed39, #f2ba2f); padding: 20px 0; }
+@media only screen and (max-width: 767px) { .academy-page .page-nav li { display: block; }
+  .academy-page .page-nav li a { display: inline-block; } }
 .academy-page .page-nav li.is-active a { background-color: #f1cb22; }
 
 .text h4, .text p { color: black; }
@@ -1161,9 +1182,13 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 767px) { .page-box__photo { max-width: 48%; } }
 .page-box__btns { float: right; width: 170px; padding: 25px 0 0; }
 @media only screen and (max-width: 991px) { .page-box__btns { width: 100%; padding: 20px 0; } }
+@media only screen and (max-width: 767px) { .page-box__btns { padding: 20px 0 10px; } }
 .page-box__btns .btn-mail, .page-box__btns .btn-attr { margin: 0 0 5px; }
 @media only screen and (max-width: 991px) { .page-box__btns .btn-mail, .page-box__btns .btn-attr { margin: 0 10px 0 0; } }
+@media only screen and (max-width: 767px) { .page-box__btns .btn-mail, .page-box__btns .btn-attr { margin: 0 0 10px; } }
 .page-box .page-nav { clear: both; }
+@media only screen and (max-width: 767px) { .page-box .page-nav li { display: block; }
+  .page-box .page-nav li a { display: inline-block; } }
 
 .box { border-radius: 10px; background: #fff; padding: 20px; margin-bottom: 20px; }
 .box__video { *zoom: 1; margin: 0 -10px; }
@@ -1178,8 +1203,11 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .box__top { *zoom: 1; }
 .box__top:after { content: " "; display: table; clear: both; }
 .box__top h2 { float: left; margin: 0 0 5px; }
+@media only screen and (max-width: 767px) { .box__top h2 { float: none; } }
 .box__top .select { float: right; margin: 12px 0 0 10px; }
+@media only screen and (max-width: 767px) { .box__top .select { float: none; margin: 10px 0; } }
 .box__top .btn-next { float: right; margin: 5px 0 0 10px; }
+@media only screen and (max-width: 767px) { .box__top .btn-next { float: none; margin: 10px 0; } }
 
 .user-box { *zoom: 1; }
 .user-box:after { content: " "; display: table; clear: both; }

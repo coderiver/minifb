@@ -52,15 +52,20 @@
 			color: #FFF 
 			display: inline
 			line-height: 1.1
+			+r(991)
+				display: block
 			b
 				+bitalic
 		.btn-next
 			margin: 0 0 0 20px 
+			+r(991)
+				margin: 0
 	&__img
 		float: right
 		position: relative
 		+r(991)
 			float: left		
+			display: none
 		img
 			position: relative
 			max-width: 100%
@@ -72,16 +77,21 @@
 		+thin
 		font-size: 2.5rem
 		line-height: 1.2
+		+r(991)
+			font-size: 2rem
 		b
 			+bold
 			display: block
 	&__text
 		+light
-		font-size: 16px
+		font-size: 1.6rem
 		display: inline-block
 		vertical-align: top
 		padding: 3px 20px 4px 0
-		
+		+r(991)
+			font-size: 1.4rem
+			display: block
+			margin-bottom: 10px
 .banner
 	position: relative
 	border-radius: 10px
@@ -324,6 +334,10 @@
 		+bold
 		padding: 1px 15px
 		text-transform: uppercase
+		+r(991)
+			font-size: 3rem
+		+r(767)
+			font-size: 2rem 
 		
 .main-slider
 	&_video
@@ -516,11 +530,16 @@
 		vertical-align: top
 	h2, p
 		margin: 0 30px 0 0 
+		+r(767)
+			display: block
+			margin-bottom: 10px
 	p
 		max-width: 300px
 		padding: 2px 0 0 
 	.btn-next
 		margin: 4px 0 0 35px
+		+r(767)
+			margin: 0 0 0 
 	&_dark
 		h2, p
 			color: #333 
@@ -622,6 +641,10 @@
 		font-size: 11.3rem
 		+thin
 		line-height: 0.78
+		+r(991)
+			font-size: 7rem
+		+r(767)
+			font-size: 4rem
 	&__season
 		+reg
 		font-size: 3rem
@@ -632,11 +655,17 @@
 		font-size: 6rem
 		line-height: 1
 		margin-bottom: 5px
+		+r(991)
+			font-size: 4rem
+		+r(767)
+			font-size: 2rem
 	&__time
 		+light
 		font-size: 3rem
 		line-height: 1.7
 		margin-bottom: 43px
+		+r(767)
+			font-size: 2rem
 		
 .champion
 	background: #fff
@@ -654,6 +683,10 @@
 		+bold
 		max-width: 830px
 		margin: 0 auto 20px
+		+r(991)
+			font-size: 3rem
+		+r(767)
+			font-size: 2rem 
 	&__list
 		+ul
 		text-align: center
@@ -751,6 +784,10 @@
 	padding: 20px 0 
 	.page-nav
 		li
+			+r(767)
+				display: block
+				a
+					display: inline-block
 			&.is-active 
 				a
 					background-color: #f1cb22
@@ -985,13 +1022,21 @@
 		+r(991)
 			width: 100%
 			padding: 20px 0  
+		+r(767)
+			padding: 20px 0 10px 
 		.btn-mail, .btn-attr
 			margin: 0 0 5px 
 			+r(991)
 				margin: 0 10px 0 0
+			+r(767)
+				margin: 0 0 10px 
 	.page-nav
 		clear: both
-		
+		li
+			+r(767)
+				display: block
+				a
+					display: inline-block
 .box
 	border-radius: 10px
 	background: #fff
@@ -1022,12 +1067,20 @@
 		h2
 			float: left
 			margin: 0 0 5px 
+			+r(767)
+				float: none
 		.select
 			float: right
 			margin: 12px 0 0 10px 
+			+r(767)
+				float: none
+				margin: 10px 0
 		.btn-next
 			float: right
 			margin: 5px 0 0 10px 
+			+r(767)
+				float: none
+				margin: 10px 0
 
 .user-box
 	+clr

@@ -2337,9 +2337,9 @@ $(document).ready(function() {
 			}
 			else {
 				$('.js-accordion').removeClass('is-active');
-				$('.js-accordion-body').slideUp('fast');
+				$('.js-accordion-body').hide();
 				$(this).parents('.js-accordion').addClass('is-active');
-				$(this).parents('.js-accordion').find('.js-accordion-body').slideDown('fast');				
+				$(this).parents('.js-accordion').find('.js-accordion-body').show();				
 			};
 			return false;
 		});
