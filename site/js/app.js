@@ -2732,7 +2732,15 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		infinite: false,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		responsive: [ 
+			{
+				breakpoint: 768,
+				settings: {
+					fade: true
+				}
+			}
+		]
 	});
 
 	$('.js-match-tab').click(function() {
@@ -2761,7 +2769,7 @@ $(document).ready(function() {
 		centerMode: true,
 		variableWidth: true,
 		asNavFor: '.js-main-slider-thumbs',
-		responsive:[ 
+		responsive: [ 
 			{
 				breakpoint: 1100,
 				settings: {
@@ -2784,7 +2792,15 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		centerMode: true,
 		asNavFor: '.js-mc-slider-thumbs',
-		centerPadding: '20%'
+		centerPadding: '20%',
+		responsive: [ 
+			{
+				breakpoint: 768,
+				settings: {
+					centerPadding: '10%'
+				}
+			}
+		]
 	})
 	$('.js-mc-slider-thumbs').slick({
 		asNavFor: '.js-mc-slider',
