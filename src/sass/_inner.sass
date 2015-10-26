@@ -2,6 +2,11 @@ $green: #87d50b
 $purple: #b71a4f
 $yellow: #f5d000
 $red: #e43b06
+
+.container
+	+r(767)
+		max-width: 400px 
+
 .row.no-padding
 	&.no-padding
 		// margin-left: 0
@@ -281,6 +286,12 @@ $red: #e43b06
 		margin-left: -20px
 	.tabs
 		margin-bottom: 25px 
+		&_sm
+			.tabs__list
+				li
+					&:last-child
+						a
+							margin-right: 0
 		
 .player
 	color: #fff
@@ -375,7 +386,7 @@ $red: #e43b06
 	width: 100% 
 	margin-left: -10px 
 	+r(991)
-		min-width: initial 
+		min-width: 360px 
 	th
 		font-size: 1.5rem 
 		+reg
