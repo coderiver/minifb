@@ -2130,7 +2130,7 @@
 	position: relative
 	z-index: 5
 	padding: 18px 0 33px 
-	max-width: 800px
+	max-width: 750px
 	margin: 0 auto 
 	+clr
 	&__title
@@ -2201,6 +2201,9 @@
 
 .match-content
 	position: relative
+	border-radius: 10px
+	overflow: hidden
+	margin-bottom: 20px
 	&__tabs
 		position: absolute
 		bottom: 0
@@ -2221,14 +2224,12 @@
 				background-color: rgba(0, 0, 0, 0.4)
 			&.is-active
 				border-color: #b7b7b7 
-				i
-					font-size: 15px
 				span, i
 					color: #fff
 				span
 					+bold
 			i
-				font-size: 13px
+				font-size: 1.3rem
 				color: #b1b1b1 
 				margin-right: 5px
 			span				
@@ -2238,4 +2239,311 @@
 			i, span
 				display: inline-block
 				vertical-align: middle
-				
+	.slick-next, .slick-prev
+		margin-top: -25px
+		&:before
+			font-size: 35px
+			
+.match-scale
+	position: relative
+	background-color: white
+	border-radius: 10px
+	padding: 28px 17px 27px 67px 
+	margin-bottom: 20px
+	+clr
+	&__team
+		width: 50%
+		float: left
+		padding: 0 6px 
+		&.is-first
+			.match-scale
+				&__logo
+					top: 5px
+		&.is-second
+			.match-scale
+				&__logo
+					bottom: 5px
+	&__logo
+		position: absolute
+		left: 13px
+		height: 70px
+		width: 50px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100% 
+			
+.match-range
+	padding: 52px 0 55px
+	position: relative
+	&__line
+		height: 10px
+		background-color: #197fba
+		box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.58)
+		border-radius: 10px
+	&__goal
+		width: 33px
+		height: 33px
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.48)
+		border-radius: 50% 
+		position: absolute
+		margin-left: -16px
+		&:before, &:after
+			content: "" 
+			position: absolute
+			left: 50%
+		&:before
+			margin-left: -7px
+		&:after
+			margin-left: -6px
+		&.is-top
+			top: 0
+			&:before, &:after
+				top: 100%
+			&:before
+				+arr(14, 14, rgba(black, 0.2), b)
+				margin-top: -5px
+			&:after			
+				+arr(12, 12, #ededed, b)
+				margin-top: -4px
+		&.is-bottom
+			bottom: 0
+			&:before, &:after
+				bottom: 100%
+			&:before
+				+arr(14, 14, rgba(black, 0.2), t)
+				margin-bottom: -5px
+			&:after				
+				+arr(12, 12, #ededed, t)
+				margin-bottom: -4px
+		.icon-football
+			font-size: 23px
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			line-height: 33px
+			text-align: center
+			color: #197db7
+			background: #ededed
+			border-radius: 50% 
+	&__card
+		width: 21px
+		height: 28px
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.48), inset 0.5px 0.9px 0 #ffd967
+		position: absolute
+		margin-left: -10px
+		&:before
+			content: "" 
+			position: absolute
+			left: 50%
+			margin-left: -5px
+		&.is-top
+			top: 7px
+			&:before
+				top: 100%
+		&.is-bottom
+			bottom: 5px
+			&:before
+				bottom: 100%
+		&.is-yellow			
+			background-image: linear-gradient(-36deg, #f0b923 0%, #ffd200 100%)
+			&.is-top
+				&:before
+					+arr(10, 10, #f3be1b, b)
+			&.is-bottom
+				&:before
+					+arr(10, 10, #fccc08, t)
+		&.is-red			
+			background-image: linear-gradient(-36deg, #9a190f 0%, #da3f28 100%)
+			&.is-top
+				&:before
+					+arr(10, 10, #9a190f, b)
+			&.is-bottom
+				&:before
+					+arr(10, 10, #cc3722, t)
+
+.match-tooltip
+	background-color: #197fba
+	border-radius: 7px
+	padding: 0 45px 0 0
+	position: relative
+	+clr		
+	img
+		position: absolute
+		top: 5px
+		right: 11px
+		height: 28px
+		border-radius: 50%
+	time, span
+		font-size: 1.8rem	
+		padding: 10px 0 9px	
+		color: white
+		+reg
+		line-height: 1
+	time
+		float: left
+		text-transform: uppercase
+		text-align: center
+		width: 38px
+		border-right: 1px solid rgba(black, 0.36) 
+		margin-right: 10px
+	span
+		display: block
+		overflow: hidden
+		b
+			+bold
+
+.match-tabs
+	background-color: white
+	border-radius: 10px
+	padding: 0 20px 20px
+	margin-bottom: 20px
+	.tabs__list
+		margin: 0 -10px 
+		text-align: center
+		li
+			a
+				padding: 17px 12px 16px
+				font-size: 1.8rem 
+	&__top
+		text-align: center
+		padding: 0 0 20px 
+		h3
+			margin: 0
+	&__sub-title
+		font-size: 1.8rem
+		line-height: 1.3
+		padding: 4px 0 0 
+
+.match-statistic
+	&__row
+		+clr
+	&__team
+		float: left
+		width: 50% 
+		position: relative
+		padding: 25px 0 33px
+		&.is-left
+			padding-left: 55px
+			text-align: left
+			.match-statistic
+				&__logo
+					left: 0
+		&.is-right
+			padding-right: 55px
+			text-align: right
+			.match-statistic
+				&__logo
+					right: 0
+	&__logo
+		position: absolute
+		top: 0
+		height: 70px
+		width: 50px
+		+vertical
+		img
+			max-width: 100% 
+			max-height: 100% 
+			display: inline-block
+			vertical-align: middle
+	&__name, &__label
+		color: #333
+		line-height: 1 
+	&__name
+		font-size: 3rem
+		margin-bottom: 14px
+	&__label
+		font-size: 1.5rem
+		margin-bottom: 10px
+	&__results
+		font-size: 0
+		margin: 0 -2px 
+		.is-circle
+			display: inline-block
+			vertical-align: top
+			width: 16px
+			height: 16px
+			margin: 0 2px 
+			border-radius: 50%
+			&.is-green
+				background-color: #87d50b
+			&.is-yellow
+				background-color: #f5d000
+			&.is-red
+				background-color: #e43b06
+
+.match-container
+	padding: 0 0 20px 
+
+.match-row
+	margin: 0 -7px 50px
+	+clr
+	position: relative
+	&.is-blue
+		.match-col
+			&__range
+				i
+					background-color: #197fba
+	&.is-red
+		.match-col
+			&__range
+				i
+					background-color: #e43b06
+	&.is-yellow
+		.match-col
+			&__range
+				i
+					background-color: #f5d000
+	&.is-green
+		.match-col
+			&__range
+				i
+					background-color: #87d50b
+	&__label
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -100px
+		width: 200px
+		text-align: center
+	&__label, .match-col span
+		color: #333
+		font-size: 2rem
+		line-height: 1
+		text-transform: uppercase
+		+bold
+
+.match-col
+	float: left
+	width: 50%
+	padding: 0 7px 
+	&.is-left
+		.match-col
+			&__range
+				i
+					float: right
+		span
+			text-align: left
+	&.is-right
+		.match-col
+			&__range
+				i
+					float: left
+		span
+			text-align: right
+	&__range
+		height: 11px
+		background-color: #d6d6d6
+		border-radius: 10px
+		overflow: hidden
+		i
+			display: block
+			height: 11px
+			border-radius: 10px
+	span
+		display: block
+		padding: 0 0 14px 

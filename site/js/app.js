@@ -2669,7 +2669,6 @@ $(document).ready(function() {
 
 				$('.js-museum-for').slick('goTo', index - 1);
 				$('.js-museum-nav').slick('goTo', index - 1);
-				console.log('bla')
 			};
 
 			if ($(this).hasClass('js-mob-filter')) {
@@ -2771,22 +2770,29 @@ $(document).ready(function() {
 		slidesToShow: 18,
 		centerMode: true,
 		infinite: true,
-	});
-	 $('.tooltip').tooltipster({
-	 	arrow: false,
-	 	contentAsHTML: true,
-	 	interactive: true
-	 });
+	});	
 
-	 $('.js-posts-list .post').hoverIntent(updateNews);
-	 function updateNews () {
-	 	var $el = $(this),
-	 		img = $el.data('img'),
-	 		header = $el.find('.js-post-header').text(),
-	 		updImg = $el.parents('.js-news-block').find('.js-news-upd-img img'),
-	 		updHeader = $el.parents('.js-news-block').find('.js-news-upd-header');
-	 		updImg.attr('src', img);
-	 		updHeader.text(header);
-	 }
-	console.log($('.js-main-slider-thumbs').find('.slick-slide').length, $('.js-main-slider').find('.slick-slide').length)
+	$('.js-posts-list .post').hoverIntent(updateNews);
+	function updateNews () {
+		var $el = $(this),
+			img = $el.data('img'),
+			header = $el.find('.js-post-header').text(),
+			updImg = $el.parents('.js-news-block').find('.js-news-upd-img img'),
+			updHeader = $el.parents('.js-news-block').find('.js-news-upd-header');
+		updImg.attr('src', img);
+		updHeader.text(header);
+	}
+
+	//tooltip
+	$('.tooltip').tooltipster({
+		arrow: false,
+		contentAsHTML: true,
+		interactive: true
+	});
+
+	$('.js-tooltip').tooltipster({
+		contentAsHTML: true,
+		interactive: true,
+		arrowColor: '#197fba',
+	});
 });
