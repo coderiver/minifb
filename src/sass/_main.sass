@@ -295,9 +295,17 @@
 		padding: 0 15px 15px
 		+r(767)
 			width: 100%
+		&.is-md
+			width: 33.33%
+			.news-item
+				&__img
+					margin-bottom: 15px
+					border-radius: 10px
+					overflow: hidden
 	&__footer
 		padding: 6px 0 0
 		text-align: right 
+		clear: both
 		&_mod
 			padding: 6px 15px 0 
 	&__headers
@@ -363,6 +371,8 @@
 			+bold
 			line-height: 1
 			margin: 0 10px 
+			+r(1219)
+				font-size: 3rem
 			+r(767)
 				font-size: 2rem
 				margin: 0 5px 
@@ -375,6 +385,8 @@
 			position: relative
 			padding: 12px 0 0 
 			+tdn
+			+r(1219)
+				padding: 4px 0 0 
 			+r(767)
 				font-size: 1.4rem
 				padding: 6px 0 0 
@@ -394,6 +406,8 @@
 				+bold
 				padding: 1px 0
 				text-transform: uppercase
+				+r(1219)
+					font-size: 3rem
 				+r(767)
 					font-size: 2rem
 					padding: 1px 0	
@@ -1980,7 +1994,7 @@
 	z-index: 5 
 	&__top
 		+clr
-		max-width: 700px
+		max-width: 90%
 		padding: 4px 10px 15px
 		margin: 0 auto 
 	&__name
@@ -1999,11 +2013,13 @@
 			display: block
 			overflow: hidden
 			color: white
-			font-size: 25px
+			font-size: 2.5rem
 			text-transform: uppercase
 			+bold
 			line-height: 1
 			padding: 17px 10px 0 
+			+r(1219)
+				font-size: 2rem
 	&__logo
 		height: 55px
 		width: 35px
@@ -2019,17 +2035,21 @@
 		overflow: hidden
 		padding: 8px 0 0 
 		span
-			font-size: 41px
+			font-size: 4.1rem
 			+bold
+			+r(1219)
+				font-size: 3rem
 		span, small
 			display: block
 			color: white 
 			line-height: 1
 		small
-			font-size: 15px
+			font-size: 1.5rem
+			+r(1219)
+				font-size: 1.3rem
 	&__container
 		padding: 0 10px 33px
-		max-width: 700px
+		max-width: 90%
 		margin: 0 auto 
 	&__row
 		margin: 0 -4px
@@ -2054,6 +2074,8 @@
 		width: 20%
 		+clr
 		padding: 5px 
+		+r(1219)
+			width: 33.33%
 		&-img
 			float: left
 			width: 38px
@@ -2069,6 +2091,8 @@
 				color: #fff
 				line-height: 1.1
 				display: block
+				+r(1219)
+					font-size: 1.4rem
 			span
 				+bold
 .match-item
@@ -2103,6 +2127,7 @@
 		line-height: 1
 		position: relative
 		width: 46px
+		margin: 4px 0 0 
 		&:before
 			@extend %icon
 			content: $icon-ball
@@ -2130,7 +2155,7 @@
 	position: relative
 	z-index: 5
 	padding: 18px 0 33px 
-	max-width: 750px
+	max-width: 90%
 	margin: 0 auto 
 	+clr
 	&__title
@@ -2139,8 +2164,12 @@
 			font-size: 4.1rem
 			+reg
 			margin-bottom: 12px
+			+r(1219)
+				font-size: 3rem
 		small
 			font-size: 1.5rem
+			+r(1219)
+				font-size: 1.3rem
 		span, small
 			display: block
 			color: white
@@ -2158,6 +2187,8 @@
 		line-height: 1
 		text-transform: uppercase
 		+bold
+		+r(1219)
+			font-size: 1.8rem
 	&__img
 		height: 175px
 		+vertical
@@ -2173,8 +2204,12 @@
 			font-size: 2rem
 			+bold
 			margin-bottom: 6px
+			+r(1219)
+				font-size: 1.8rem
 		small
 			font-size: 1.5rem
+			+r(1219)
+				font-size: 1.3rem
 		span, small
 			display: block
 			color: white
@@ -2188,6 +2223,8 @@
 		font-size: 15rem
 		line-height: 1
 		color: white 
+		+r(1219)
+			font-size: 10rem
 		b
 			+bold
 	&__time
@@ -2211,6 +2248,8 @@
 		right: 0
 		+ul
 		text-align: center
+		+r(767)
+			position: static
 		li
 			display: inline-block
 			vertical-align: top
@@ -2220,6 +2259,8 @@
 			padding: 7px 10px 8px
 			background-color: rgba(0, 0, 0, 0.26)
 			cursor: pointer
+			+r(767)
+				width: 100%
 			&:hover
 				background-color: rgba(0, 0, 0, 0.4)
 			&.is-active
@@ -2548,3 +2589,59 @@
 		display: block
 		padding: 0 0 14px 
 		
+.mc
+	&-page
+		padding-bottom: 20px
+	&-photo
+		h2
+			color: #fff 
+	&-slide
+		position: relative
+		&.slick-active
+			.mc-slide
+				&__text
+					visibility: visible
+					opacity: 1
+					transition: visibility 0.25s 0.4s, opacity 0.25s 0.4s
+		&__text
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			color: white
+			font-size: 1.8rem
+			line-height: 1.2
+			padding: 10px
+			background: rgba(black, 0.64) 
+			visibility: hidden
+			opacity: 0
+	&-slider
+		margin-bottom: 20px
+		.slick-prev, .slick-next
+			z-index: 10
+			top: 0
+			bottom: 0
+			margin: 0
+			height: 100%
+			width: 20%
+			text-align: center
+			&:before
+				font-size: 47px
+				line-height: 1
+				height: auto
+		.slick-prev
+			left: 0
+			background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%)
+		.slick-next
+			right: 0
+			background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%)
+	&-thumbs
+		margin-bottom: 30px
+		.slick-center
+			img
+				box-shadow: 0 0 0 3px #0072b6
+				border-radius: 10px
+		&__item
+			padding: 10px
+			img
+				cursor: pointer
