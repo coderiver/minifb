@@ -551,7 +551,8 @@ $(document).ready(function() {
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		infinite: false
+		infinite: false,
+		adaptiveHeight: true
 	});
 
 	$('.js-match-tab').click(function() {
@@ -584,6 +585,21 @@ $(document).ready(function() {
 	})
 	$('.js-main-slider-thumbs').slick({
 		asNavFor: '.js-main-slider',
+		variableWidth: true,
+		focusOnSelect: true,
+		arrows: false,
+		slidesToShow: 18,
+		centerMode: true,
+		infinite: true,
+	});	
+	$('.js-mc-slider').slick({
+		slidesToShow: 1,
+		centerMode: true,
+		asNavFor: '.js-mc-slider-thumbs',
+		centerPadding: '20%'
+	})
+	$('.js-mc-slider-thumbs').slick({
+		asNavFor: '.js-mc-slider',
 		variableWidth: true,
 		focusOnSelect: true,
 		arrows: false,
