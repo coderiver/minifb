@@ -325,8 +325,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .leagues__list .menuFlexPopup li:before { display: none; }
 .leagues__list .menuFlexPopup li li { padding: 0; }
 .leagues__list .menuFlexPopup li li li { padding: 0; }
-.leagues__list .menuFlexPopup li { font-size: 1.7rem; line-height: 1.8; padding: 0 15px; cursor: pointer; }
-.leagues__list .menuFlexPopup li.is-active { display: none; }
+.leagues__list .menuFlexPopup li { font-size: 1.7rem; line-height: 1.8; padding: 0 15px; cursor: pointer; display: block; }
+.leagues__list .menuFlexPopup li a { display: block; }
 .leagues__btn { position: absolute; top: 14px; right: 22px; background: none; padding: 7px 0; width: 20px; text-align: center; }
 .leagues__btn:before, .leagues__btn:after, .leagues__btn span { border-radius: 50%; background: #fff; width: 4px; height: 4px; display: block; }
 .leagues__btn span { margin: 0 auto; }
@@ -345,6 +345,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .dropdown__list li:before { display: none; }
 .dropdown__list li li { padding: 0; }
 .dropdown__list li li li { padding: 0; }
+@media only screen and (max-width: 767px) { .dropdown__list { margin-left: 0; left: -20px; } }
 .dropdown__list li { font-size: 1.7rem; line-height: 1.8; padding: 0 15px; cursor: pointer; }
 .dropdown__list li.is-active { display: none; }
 
@@ -894,9 +895,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .scoreboard__filter:after { content: " "; display: table; clear: both; }
 .scoreboard__box { float: left; position: relative; }
 .scoreboard__box.is-pro { width: 41%; padding: 0 10px 10px 0; }
+@media only screen and (max-width: 767px) { .scoreboard__box.is-pro { width: 100%; } }
 .scoreboard__box.is-super { width: 33%; padding: 0 10px 10px 23px; }
+@media only screen and (max-width: 767px) { .scoreboard__box.is-super { width: 70%; } }
 .scoreboard__box.is-super i { position: absolute; top: 0; left: 0; }
 .scoreboard__leagues { width: 26%; float: right; margin: 2px 0 0; }
+@media only screen and (max-width: 767px) { .scoreboard__leagues { width: 30%; } }
 .scoreboard__leagues img { max-width: 100%; }
 
 .scoreboard-table { width: 100%; border-radius: 0 0 10px 10px; overflow: hidden; }

@@ -1042,8 +1042,11 @@ dd
 				line-height: 1.8
 				padding: 0 15px 
 				cursor: pointer
-				&.is-active
-					display: none
+				display: block
+				// &.is-active
+				// 	display: none
+				a
+					display: block
 	&__btn
 		position: absolute
 		top: 14px
@@ -1136,6 +1139,9 @@ dd
 		width: 190px
 		padding: 15px 0 
 		z-index: 200
+		+r(767)
+			margin-left: 0
+			left: -20px
 		li
 			font-size: 1.7rem
 			line-height: 1.8

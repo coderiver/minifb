@@ -2322,6 +2322,9 @@ $(document).ready(function() {
 	//mobile
 	$('.js-mobile-btn').click(function() {
 		$('.js-mobile').toggleClass('is-active');
+		if ($('.js-menu').hasClass('is-active')) {
+			$('.js-menu').removeClass('is-active');
+		};
 	});
 
 	//footer
