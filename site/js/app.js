@@ -2800,7 +2800,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 768,
 				settings: {
-					centerPadding: '10%'
+					centerPadding: false
 				}
 			}
 		]

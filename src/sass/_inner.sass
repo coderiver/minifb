@@ -288,6 +288,9 @@ $red: #e43b06
 		margin-left: -20px
 	.tabs
 		margin-bottom: 25px 
+		&-btn
+			&:before
+				display: none
 		&_sm
 			.tabs__list
 				li
@@ -542,16 +545,23 @@ $red: #e43b06
 	.tabs-btn
 		&.is-active
 			background: $purple 
-	
+			+r(767)
+				background: none 
+				color: $purple
+				&:before
+					color: $purple
 .text-tabs_sm
 	div
 		a
 			padding-top: 5px 
 			&.is-active
 				font-size: 3rem 
+				+r(767)
+					font-size: 2rem
 		&:before
 			font-size: 3rem 
-	
+			+r(767)
+				font-size: 2rem
 .album-thumbs
 	margin-top: 20px 
 	&__item	
@@ -686,3 +696,7 @@ $red: #e43b06
 .side-banner
 	+r(1219)
 		display: none
+.table-forecasts-wrapper
+	width: 100% 
+	+r(991)
+		overflow: auto

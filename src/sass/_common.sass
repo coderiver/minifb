@@ -693,6 +693,7 @@ dd
 	transition: background 0.25s
 	+r(767)
 		font-size: 2rem
+		width: 230px 
 	&_blue
 		background-color: #197fba
 	&:before
@@ -928,8 +929,11 @@ dd
 		text-decoration: none
 		padding: 0.850em 1.75em .6em 
 		border-radius: .5em
+		position: relative
 		+r(1219)
 			font-size: 1.5rem
+		+r(767)
+			padding: 0.6em .6em 0.5em
 		&.is-active
 			background-color: #f93526
 			color: #fff
@@ -939,6 +943,14 @@ dd
 			span
 				&:before
 					display: none
+			+r(767)
+				background: none
+				color: #d93723 
+				&:visited
+					color: #d93723 
+				&:before
+					color: red
+					transform: rotateX(-180deg)
 		&:visited
 			color: #197fba
 		&:visited, &:hover, &:focus, &:active
@@ -953,6 +965,19 @@ dd
 				left: 0
 				right: 0
 				border-bottom: 2px dotted #197fba
+		&:before
+			content: "\EA01"
+			@extend %icon
+			color: #197fba
+			display: none
+			position: absolute
+			font-size: .5em 
+			right: -1.4em
+			margin-top: .4em
+			transition: transform .6s
+			+r(767)
+				display: block
+	
 
 //leagues
 .leagues

@@ -211,7 +211,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .btn-big { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.8rem; text-transform: uppercase; line-height: 1; padding: 17px 33px 14px; background-color: #d9232a; border-radius: 9px; display: inline-block; vertical-align: top; color: #fff; text-decoration: none; position: relative; width: 280px; text-align: center; transition: background 0.25s; }
 .btn-big:hover, .btn-big:focus, .btn-big:visited, .btn-big:active { color: #fff; text-decoration: none; }
-@media only screen and (max-width: 767px) { .btn-big { font-size: 2rem; } }
+@media only screen and (max-width: 767px) { .btn-big { font-size: 2rem; width: 230px; } }
 .btn-big_blue { background-color: #197fba; }
 .btn-big:before { content: ""; position: absolute; top: 3px; right: 3px; bottom: 3px; left: 3px; border: 2px dotted #fff; border-radius: 9px; }
 .btn-big:disabled { background: gray; }
@@ -289,15 +289,21 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .tabs__list li li li { padding: 0; }
 .tabs__list li { display: inline-block; vertical-align: top; }
 @media only screen and (max-width: 767px) { .tabs__list li { display: block; } }
-.tabs-btn { display: inline-block; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #197fba; font-size: 2rem; text-transform: uppercase; line-height: 1; text-decoration: none; padding: 0.85em 1.75em 0.6em; border-radius: 0.5em; }
+.tabs-btn { display: inline-block; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #197fba; font-size: 2rem; text-transform: uppercase; line-height: 1; text-decoration: none; padding: 0.85em 1.75em 0.6em; border-radius: 0.5em; position: relative; }
 @media only screen and (max-width: 1219px) { .tabs-btn { font-size: 1.5rem; } }
+@media only screen and (max-width: 767px) { .tabs-btn { padding: 0.6em 0.6em 0.5em; } }
 .tabs-btn.is-active { background-color: #f93526; color: #fff; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 .tabs-btn.is-active:visited { color: #fff; }
 .tabs-btn.is-active span:before { display: none; }
+@media only screen and (max-width: 767px) { .tabs-btn.is-active { background: none; color: #d93723; }
+  .tabs-btn.is-active:visited { color: #d93723; }
+  .tabs-btn.is-active:before { color: red; -webkit-transform: rotateX(-180deg); transform: rotateX(-180deg); } }
 .tabs-btn:visited { color: #197fba; }
 .tabs-btn:visited, .tabs-btn:hover, .tabs-btn:focus, .tabs-btn:active { text-decoration: none; }
 .tabs-btn span { display: inline-block; position: relative; }
 .tabs-btn span:before { content: ""; position: absolute; top: 100%; left: 0; right: 0; border-bottom: 2px dotted #197fba; }
+.tabs-btn:before { content: ""; color: #197fba; display: none; position: absolute; font-size: 0.5em; right: -1.4em; margin-top: 0.4em; transition: -webkit-transform 0.6s; transition: transform 0.6s; }
+@media only screen and (max-width: 767px) { .tabs-btn:before { display: block; } }
 
 .leagues { background-color: #797979; }
 .leagues__inner { max-width: 1200px; margin: 0 auto; position: relative; padding: 0 50px 0 0; }
@@ -387,7 +393,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .icon-scoreboard-super { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -48px -241px; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.icon, [class^="icon-"], [class*=" icon-"], .slick-prev:before, .slick-next:before, .match-item__score:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.tabs-btn:before, .icon, [class^="icon-"], [class*=" icon-"], .slick-prev:before, .slick-next:before, .match-item__score:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
@@ -1023,7 +1029,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .v-item__info p { color: #fff; margin: 0; }
 
 .small-banner { padding: 0 0 20px; }
-@media only screen and (max-width: 991px) { .small-banner { display: none; } }
 .small-banner a { display: block; font-size: 0; }
 .small-banner a img { width: 100%; border-radius: 10px; }
 
@@ -1077,10 +1082,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .champ-item { width: 157px; height: 157px; padding: 10px; }
 @media only screen and (max-width: 991px) { .champ-item { width: 150px; height: 150px; } }
+@media only screen and (max-width: 767px) { .champ-item { width: 100px; height: 100px; } }
 .champ-item a { border: 3px solid transparent; border-radius: 10px; display: block; width: 90%; height: 90%; text-align: center; font-size: 0; background: #fff; transition: border-color 0.25s; }
 .champ-item a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .champ-item a:hover, .champ-item a.is-active { border-color: #197fba; }
 .champ-item a img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%; }
+@media only screen and (max-width: 767px) { .champ-item a img { max-width: 80%; max-height: 80%; } }
 
 .row_banners { position: relative; }
 
@@ -1492,6 +1499,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-partner a img { max-width: 100%; }
 
 .page-title__text div { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #333; font-size: 2rem; line-height: 1; padding: 3px 0; }
+@media only screen and (max-width: 767px) { .page-title__text div { font-size: 1.5rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+  .page-title__text div a { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; } }
 .page-title__text div b { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 .page-title__text div a { color: #197fba; }
 
@@ -1513,28 +1522,27 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-gols__top { *zoom: 1; max-width: 90%; padding: 4px 10px 15px; margin: 0 auto; }
 .match-gols__top:after { content: " "; display: table; clear: both; }
 .match-gols__name { width: 40%; }
-@media only screen and (max-width: 767px) { .match-gols__name { width: 100%; } }
+@media only screen and (max-width: 767px) { .match-gols__name { width: 30%; } }
 .match-gols__name.is-left { float: left; text-align: left; }
-@media only screen and (max-width: 767px) { .match-gols__name.is-left { float: none; text-align: left; clear: both; } }
-.match-gols__name.is-left .match-gols__logo { float: left; }
+@media only screen and (max-width: 767px) { .match-gols__name.is-left { text-align: left; } }
 .match-gols__name.is-right { float: right; text-align: right; }
-@media only screen and (max-width: 767px) { .match-gols__name.is-right { float: none; text-align: left; clear: both; } }
-.match-gols__name.is-right .match-gols__logo { float: right; }
-@media only screen and (max-width: 767px) { .match-gols__name.is-right .match-gols__logo { float: left; } }
+@media only screen and (max-width: 767px) { .match-gols__name.is-right { text-align: center; } }
 .match-gols__name span { display: block; overflow: hidden; color: white; font-size: 2.5rem; text-transform: uppercase; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; line-height: 1; padding: 17px 10px 0; }
 @media only screen and (max-width: 1219px) { .match-gols__name span { font-size: 2rem; } }
+@media only screen and (max-width: 767px) { .match-gols__name span { font-size: 1.1rem; text-align: center; padding: 4px 0 0; } }
 .match-gols__logo { height: 55px; width: 35px; text-align: center; font-size: 0; }
 .match-gols__logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .match-gols__logo img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%; }
+@media only screen and (max-width: 767px) { .match-gols__logo { margin: 0 auto; } }
 .match-gols__score { text-align: center; width: 20%; overflow: hidden; padding: 8px 0 0; }
-@media only screen and (max-width: 767px) { .match-gols__score { width: 100%; clear: both; } }
+@media only screen and (max-width: 767px) { .match-gols__score { width: 40%; padding: 16px 0 0; } }
 .match-gols__score span { font-size: 4.1rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 @media only screen and (max-width: 1219px) { .match-gols__score span { font-size: 3rem; } }
 .match-gols__score span, .match-gols__score small { display: block; color: white; line-height: 1; }
 .match-gols__score small { font-size: 1.5rem; }
 @media only screen and (max-width: 1219px) { .match-gols__score small { font-size: 1.3rem; } }
 .match-gols__container { padding: 0 10px 33px; max-width: 90%; margin: 0 auto; }
-@media only screen and (max-width: 767px) { .match-gols__container { width: 100%; } }
+@media only screen and (max-width: 767px) { .match-gols__container { width: 100%; padding: 0 5px 33px; } }
 .match-gols__row { margin: 0 -4px; *zoom: 1; }
 .match-gols__row:after { content: " "; display: table; clear: both; }
 .match-gols__col { width: 50%; padding: 0 4px; float: left; }
@@ -1546,10 +1554,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 767px) { .match-gols__col-in { min-height: 0; } }
 .match-gols__bottom { padding: 0 15px; *zoom: 1; }
 .match-gols__bottom:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 767px) { .match-gols__bottom { padding-bottom: 15px; } }
 .match-gols__user { float: left; width: 20%; *zoom: 1; padding: 5px; }
 .match-gols__user:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1219px) { .match-gols__user { width: 33.33%; } }
-@media only screen and (max-width: 767px) { .match-gols__user { width: 100%; } }
+@media only screen and (max-width: 767px) { .match-gols__user { width: 50%; } }
+@media only screen and (max-width: 500px) { .match-gols__user { width: 100%; } }
 .match-gols__user-img { float: left; width: 38px; height: 49px; margin: 0 7px 0 0; }
 .match-gols__user-img img { width: 100%; height: 100%; }
 .match-gols__user-text { overflow: hidden; }
@@ -1593,7 +1603,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-info__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-width: 767px) { .match-info__img { height: 100px; } }
 .match-info__img img { max-width: 100%; max-height: 100%; display: inline-block; vertical-align: middle; }
-@media only screen and (max-width: 767px) { .match-info__img img { max-width: 88px; margin: 0 auto; } }
 .match-info__text { max-width: 160px; margin: 0 auto; }
 .match-info__text span { font-size: 2rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; margin-bottom: 6px; }
 @media only screen and (max-width: 1219px) { .match-info__text span { font-size: 1.8rem; } }
@@ -1601,7 +1610,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 1219px) { .match-info__text small { font-size: 1.3rem; } }
 .match-info__text span, .match-info__text small { display: block; color: white; line-height: 1.2; }
 .match-info__score { overflow: hidden; width: 50%; text-align: center; padding: 40px 0 20px; }
-@media only screen and (max-width: 767px) { .match-info__score { width: 40%; } }
+@media only screen and (max-width: 767px) { .match-info__score { width: 40%; padding: 30px 0 20px; } }
 .match-info__numbers { font-size: 15rem; line-height: 1; color: white; }
 @media only screen and (max-width: 1219px) { .match-info__numbers { font-size: 7rem; } }
 @media only screen and (max-width: 767px) { .match-info__numbers { font-size: 4.1rem; } }
@@ -1685,56 +1694,73 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 767px) { .match-tabs .tabs__list li { display: block; } }
 .match-tabs .tabs__list li a { padding: 0.85em 0.8em 0.8em; font-size: 1.6rem; }
 @media only screen and (max-width: 1219px) { .match-tabs .tabs__list li a { font-size: 1.5rem; } }
+@media only screen and (max-width: 767px) { .match-tabs .tabs__list li a { font-size: 2rem; padding: 0.6em 0.5em 0.4em; } }
 .match-tabs__top { text-align: center; padding: 0 0 20px; }
 .match-tabs__top h3 { margin: 0; }
+@media only screen and (max-width: 767px) { .match-tabs__top { text-align: left; }
+  .match-tabs__top h3 { font-size: 2.5rem; } }
 .match-tabs__sub-title { font-size: 1.8rem; line-height: 1.3; padding: 4px 0 0; }
 .match-tabs__section { display: none; }
 .match-tabs__section.is-active { display: block; }
+.match-tabs__logo-m { display: none; width: 50px; height: 70px; clear: both; }
+.match-tabs__logo-m img { max-width: 100%; max-height: 100%; }
+.match-tabs__logo-m:first-child { margin-top: 20px; }
+@media only screen and (max-width: 767px) { .match-tabs__logo-m { display: block; } }
 
 .match-statistic__row { *zoom: 1; }
 .match-statistic__row:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 767px) { .match-statistic__row { margin-bottom: 20px; } }
+@media only screen and (max-width: 767px) { .match-statistic__row { margin-bottom: 20px; padding-left: 33%; } }
 .match-statistic__team { float: left; width: 50%; position: relative; padding: 25px 0 33px; }
-@media only screen and (max-width: 767px) { .match-statistic__team { width: 100%; padding: 25px 0 10px; } }
+@media only screen and (max-width: 767px) { .match-statistic__team { width: 50%; padding: 10px 0 10px; } }
 .match-statistic__team.is-left { padding-left: 55px; text-align: left; }
 .match-statistic__team.is-left .match-statistic__logo { left: 0; }
+@media only screen and (max-width: 767px) { .match-statistic__team.is-left { padding-left: 0; } }
 .match-statistic__team.is-right { padding-right: 55px; text-align: right; }
-@media only screen and (max-width: 767px) { .match-statistic__team.is-right { padding-left: 55px; padding-right: 0; text-align: left; } }
+@media only screen and (max-width: 767px) { .match-statistic__team.is-right { padding-left: 0; padding-right: 0; text-align: left; } }
 .match-statistic__team.is-right .match-statistic__logo { right: 0; }
 @media only screen and (max-width: 767px) { .match-statistic__team.is-right .match-statistic__logo { right: auto; left: 0; } }
 .match-statistic__logo { position: absolute; top: 0; height: 70px; width: 50px; text-align: center; font-size: 0; }
 .match-statistic__logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .match-statistic__logo img { max-width: 100%; max-height: 100%; display: inline-block; vertical-align: middle; }
+@media only screen and (max-width: 767px) { .match-statistic__logo { position: static; margin: 0 auto; height: 40px; width: 30px; } }
 .match-statistic__name, .match-statistic__label { color: #333; line-height: 1; }
+@media only screen and (max-width: 767px) { .match-statistic__name, .match-statistic__label { display: none; } }
 .match-statistic__name { font-size: 3rem; margin-bottom: 14px; }
 @media only screen and (max-width: 1219px) { .match-statistic__name { font-size: 2.4rem; } }
 .match-statistic__label { font-size: 1.5rem; margin-bottom: 10px; }
 .match-statistic__results { font-size: 0; margin: 0 -2px; }
+@media only screen and (max-width: 767px) { .match-statistic__results { display: none; } }
 .match-statistic__results .is-circle { display: inline-block; vertical-align: top; width: 16px; height: 16px; margin: 0 2px; border-radius: 50%; }
 .match-statistic__results .is-circle.is-green { background-color: #87d50b; }
 .match-statistic__results .is-circle.is-yellow { background-color: #f5d000; }
 .match-statistic__results .is-circle.is-red { background-color: #e43b06; }
 
 .match-container { padding: 0 0 20px; }
+@media only screen and (max-width: 767px) { .match-container { padding: 0; } }
 
 .match-row { margin: 0 -7px 50px; *zoom: 1; position: relative; }
 .match-row:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 767px) { .match-row { margin: 0 -7px 25px; } }
+@media only screen and (max-width: 767px) { .match-row { margin: 0 0px 25px; } }
 .match-row.is-blue .match-col__range i { background-color: #197fba; }
 .match-row.is-red .match-col__range i { background-color: #e43b06; }
 .match-row.is-yellow .match-col__range i { background-color: #f5d000; }
 .match-row.is-green .match-col__range i { background-color: #87d50b; }
-.match-row__label { position: absolute; top: 0; left: 50%; margin-left: -100px; width: 200px; text-align: center; }
 .match-row__label, .match-row .match-col span { color: #333; font-size: 2rem; line-height: 1; text-transform: uppercase; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.match-row__label { position: absolute; top: 0; left: 50%; margin-left: -100px; width: 200px; text-align: center; }
+@media only screen and (max-width: 767px) { .match-row__label { position: static; margin-left: 0; text-align: left; float: left; width: 33%; font-size: 1.5rem; font-family: "PFDinDisplayPro Light", Arial, sans-serif; } }
 
 .match-col { float: left; width: 50%; padding: 0 7px; }
 .match-col.is-left .match-col__range i { float: right; }
 .match-col.is-left span { text-align: left; }
+@media only screen and (max-width: 767px) { .match-col.is-left span { text-align: center; } }
 .match-col.is-right .match-col__range i { float: left; }
 .match-col.is-right span { text-align: right; }
+@media only screen and (max-width: 767px) { .match-col.is-right span { text-align: center; } }
 .match-col__range { height: 11px; background-color: #d6d6d6; border-radius: 10px; overflow: hidden; }
 .match-col__range i { display: block; height: 11px; border-radius: 10px; }
 .match-col span { display: block; padding: 0 0 14px; }
+@media only screen and (max-width: 767px) { .match-col__range { display: none; } }
+@media only screen and (max-width: 767px) { .match-col { width: 33%; } }
 
 .mc-page { padding-bottom: 20px; }
 .mc-photo h2 { color: #fff; }
@@ -1753,15 +1779,21 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .mc-thumbs__item { padding: 10px; }
 .mc-thumbs__item img { cursor: pointer; }
 
+.match-tabs__gols-row { *zoom: 1; }
+.match-tabs__gols-row:after { content: " "; display: table; clear: both; }
 .match-tabs__gols-col { width: 50%; padding: 0 7px 20px; float: left; }
-@media only screen and (max-width: 1219px) { .match-tabs__gols-col { width: 100%; } }
-@media only screen and (max-width: 991px) { .match-tabs__gols-col { width: 50%; } }
 @media only screen and (max-width: 767px) { .match-tabs__gols-col { width: 100%; } }
-.match-tabs__gols-team { float: left; width: 50%; position: relative; padding: 25px 0 33px; }
-.match-tabs__gols-team.is-left { padding-left: 55px; text-align: left; }
+.match-tabs__gols-team { float: left; width: 100%; position: relative; padding: 25px 0 33px; }
+@media only screen and (max-width: 767px) { .match-tabs__gols-team { padding-bottom: 0; } }
+.match-tabs__gols-team.is-left { text-align: left; }
 .match-tabs__gols-team.is-left .match-tabs__gols-logo { left: 0; }
-.match-tabs__gols-team.is-right { padding-right: 55px; text-align: right; }
+.match-tabs__gols-team.is-left .match-tabs__gols-name { padding-left: 55px; }
+.match-tabs__gols-team.is-right { text-align: right; }
 .match-tabs__gols-team.is-right .match-tabs__gols-logo { right: 0; }
+.match-tabs__gols-team.is-right .match-tabs__gols-name { padding-right: 55px; }
+@media only screen and (max-width: 767px) { .match-tabs__gols-team.is-right { padding-left: 0; text-align: left; }
+  .match-tabs__gols-team.is-right .match-tabs__gols-logo { left: 0; }
+  .match-tabs__gols-team.is-right .match-tabs__gols-name { padding-right: 0; padding-left: 55px; } }
 .match-tabs__gols-logo { position: absolute; top: 0; height: 70px; width: 50px; text-align: center; font-size: 0; }
 .match-tabs__gols-logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .match-tabs__gols-logo img { max-width: 100%; max-height: 100%; display: inline-block; vertical-align: middle; }
@@ -1774,9 +1806,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-tabs__gols-top { background: #f3f3f3; text-align: center; padding: 5px 0; }
 .match-tabs__gols-top h3 { margin: 0; }
 
-.match-table-wrap { width: 100%; }
+.match-table-wrap { width: 100%; overflow: auto; }
+@media only screen and (max-width: 767px) { .match-table-wrap { padding-bottom: 10px; } }
 
-.match-table { width: 100%; }
+.match-table { width: 100%; min-width: 300px; }
 .match-table th, .match-table td { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; padding: 10px; color: #333; vertical-align: middle; line-height: 1; font-size: 0; text-align: left; }
 .match-table th b, .match-table td b { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.8rem; }
 .match-table tr:nth-child(odd) td { background: #f3f3f3; }
@@ -1921,6 +1954,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .block.statistics .player-box { margin-left: -20px; }
 .block.statistics .tabs { margin-bottom: 25px; }
+.block.statistics .tabs-btn:before { display: none; }
 @media only screen and (max-width: 767px) { .block.statistics .tabs_sm .tabs__list li { display: inline-block; } }
 .block.statistics .tabs_sm .tabs__list li:last-child a { margin-right: 0; }
 
@@ -2013,10 +2047,14 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .league-page_women .page-nav li.is-active a { background: #b71a4f; }
 .league-page_women .tabs-btn.is-active { background: #b71a4f; }
+@media only screen and (max-width: 767px) { .league-page_women .tabs-btn.is-active { background: none; color: #b71a4f; }
+  .league-page_women .tabs-btn.is-active:before { color: #b71a4f; } }
 
 .text-tabs_sm div a { padding-top: 5px; }
 .text-tabs_sm div a.is-active { font-size: 3rem; }
+@media only screen and (max-width: 767px) { .text-tabs_sm div a.is-active { font-size: 2rem; } }
 .text-tabs_sm div:before { font-size: 3rem; }
+@media only screen and (max-width: 767px) { .text-tabs_sm div:before { font-size: 2rem; } }
 
 .album-thumbs { margin-top: 20px; }
 .album-thumbs__item { margin: 0 10px; border-radius: 10px; cursor: pointer; }
@@ -2063,6 +2101,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .tooltip-table td.is-result span.is-green { color: #87d50b; }
 
 @media only screen and (max-width: 1219px) { .side-banner { display: none; } }
+
+.table-forecasts-wrapper { width: 100%; }
+@media only screen and (max-width: 991px) { .table-forecasts-wrapper { overflow: auto; } }
 
 
 
