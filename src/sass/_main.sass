@@ -313,6 +313,8 @@
 			width: 100%
 		&.is-md
 			width: 33.33%
+			+r(767)
+				width: 100% 
 			.news-item
 				&__img
 					margin-bottom: 15px
@@ -2280,12 +2282,12 @@
 	&__team
 		width: 25%
 		text-align: center
-		+r(767)
-			width: 50%
 		&.is-left
 			float: left
 		&.is-right
 			float: right
+		+r(767)
+			width: 30% 
 	&__name
 		color: white
 		font-size: 2.5rem
@@ -2295,7 +2297,8 @@
 		+r(1219)
 			font-size: 1.8rem
 		+r(767)
-			font-size: 1.6rem			
+			font-size: 1.3rem	
+			margin: 0 -10px 		
 	&__img
 		height: 175px
 		+vertical
@@ -2305,7 +2308,10 @@
 			max-width: 100%
 			max-height: 100%
 			display: inline-block
-			vertical-align: middle 
+			vertical-align: middle
+			+r(767)
+				max-width: 88px
+				margin: 0 auto 
 	&__text
 		max-width: 160px
 		margin: 0 auto 
@@ -2329,13 +2335,15 @@
 		text-align: center
 		padding: 40px 0 20px 
 		+r(767)
-			width: 100%
+			width: 40% 
 	&__numbers
 		font-size: 15rem
 		line-height: 1
 		color: white 
 		+r(1219)
 			font-size: 7rem
+		+r(767)
+			font-size: 4.1rem 
 		b
 			+bold
 	&__time
@@ -2344,6 +2352,8 @@
 			font-size: 3rem
 			line-height: 1.2
 			display: block
+			+r(767)
+				font-size: 1.3rem 
 		small
 			+bold
 
