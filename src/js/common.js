@@ -574,10 +574,12 @@ $(document).ready(function() {
 	function updateNews () {
 		var $el = $(this),
 			img = $el.data('img'),
+			link = $el.attr('href');
 			header = $el.find('.js-post-header').text(),
 			updImg = $el.parents('.js-news-block').find('.js-news-upd-img img'),
 			updHeader = $el.parents('.js-news-block').find('.js-news-upd-header');
 		updImg.attr('src', img);
+		updHeader.attr('href', link);
 		updHeader.text(header);
 	}
 
