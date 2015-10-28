@@ -731,14 +731,14 @@
 		width: 150px
 		height: 150px
 	+r(767)
-		width: 100px
-		height: 100px  
+		width: 95px
+		height: 95px  
 	a
 		border: 3px solid transparent
 		border-radius: 10px
 		display: block
-		width: 90%
-		height: 90%
+		width: 100%
+		height: 100%
 		+vertical
 		background: #fff
 		transition: border-color 0.25s
@@ -1862,33 +1862,15 @@
 				line-height: 1
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
-		&__list
-			+ul
+		select
 			position: absolute
-			display: none
+			top: 0
 			left: 0
+			bottom: 0
 			right: 0
-			top: 100%
-			z-index: 100
-			margin-top: -2px
-			border: 2px solid #fff
-			border-top: none 
-			max-height: 200px
-			overflow-x: hidden
-			overflow-y: auto
-			background: #020d1a	
-			border-radius: 0 0 10px 10px
-			a
-				padding: 0 13px 
-				cursor: pointer
-				line-height: 1.75			
-				+bold
-				font-size: 1.4rem	
-				color: #fff
-				display: block
-				&:hover
-					background-color: #fff
-					color: #020d1a 
+			width: 100%
+			height: 100%
+			opacity: 0
 
 .page-title_museum
 	position: relative
@@ -2937,6 +2919,8 @@
 		margin-bottom: 14px
 		color: #333
 		line-height: 1 
+		+r(767)
+			font-size: 2.4rem
 	.table-wrap
 		overflow: auto
 	.table-forecasts

@@ -2638,92 +2638,27 @@ $(document).ready(function() {
 		$('.js-museum-gallery').slick('slickNext');
 	});
 
-	$('.js-museum-select').each(function() {
+	$('.js-museum-select-list').each(function() {
 		
-		var select = $(this),
-			selectText = $(this).find('.js-museum-select-text'),
-			selectList = $(this).find('.js-museum-select-list'),
-			selectLink = $(this).find('.js-museum-select-list a'),
-			selectSeason = $(this).find('.js-mob-season'),
-			selectFilter = $(this).find('.js-mob-filter');
+		var btns = $('.js-museum-btn');
 
-		selectText.click(function() {
-			if ($(this).parents('.js-museum-select').hasClass('is-active')) {
-				$('.js-museum-select-list').slideUp('fast');
-				$('.js-museum-select').removeClass('is-active');
-			}
-			else {
-				$('.js-museum-select-list').slideUp('fast');
-				$('.js-museum-select').removeClass('is-active');
-				selectList.slideDown('fast');
-				select.addClass('is-active');
-			}			
-			return false;
-		});	
+		$(this).on('change', function() {
 
-		selectLink.click(function() {
+			var btn = $(this).val();
 
-			select.removeClass('is-active');
-			selectList.slideUp('fast');
-			selectText.text($(this).text());
+			$(this).parents('.js-museum-select').find('.js-museum-select-text').text($(this).find('option:selected').text())
 
-			if ($(this).hasClass('js-mob-season')) {
-				var index = $(this).data('index');
+			if ($(this).hasClass('js-mob-filter')) {
+				btns.removeClass('is-active');
+				$('.js-museum-btn[data-index=' + btn + ']').addClass('is-active');
+				$('.js-museum-btn[data-index=' + btn + ']').trigger('click')
+			};
+			if ($(this).hasClass('js-season')) {
+				var index = $(this).val();
 
 				$('.js-museum-for').slick('goTo', index - 1);
 				$('.js-museum-nav').slick('goTo', index - 1);
 			};
-
-			if ($(this).hasClass('js-mob-filter')) {
-				var btn = $(this).data('filter'),
-					btns = $('.js-museum-btn'),
-					mobBtns = $('.js-museum-btn'),
-					items = $('.js-museum-block'),
-					currItem = $('.js-museum-block[data-block=' + btn + ']');
-
-				btns.removeClass('is-active');
-				mobBtns.removeClass('is-active');
-				$('.js-museum-btn[data-filter=' + btn + ']').addClass('is-active');
-				$(this).addClass('is-active');
-				items.addClass('is-disabled');
-				currItem.removeClass('is-disabled');
-
-				$('.js-museum-tab').each(function() {
-					if ($(this).hasClass('is-slider')) {
-						$('.js-museum-tab').removeClass('is-active');
-						$(this).addClass('is-active');					
-					};
-				});	
-				$('.museum__select.is-season').removeClass('is-hidden');	
-
-				if ($(this).hasClass('js-museum-all')) {
-					if ($(this).hasClass('is-all')) {
-						items.removeClass('is-disabled');
-						$('.js-museum-btn').each(function() {
-							if ($(this).hasClass('is-all')) {
-								$(this).addClass('is-active');
-							};
-						});					
-					}
-					else {	
-						$('.js-museum-tab').each(function() {
-							if ($(this).hasClass('is-all')) {
-								$('.js-museum-tab').removeClass('is-active');
-								$('.js-museum-btn.museum-link_show').addClass('is-active');
-								$(this).addClass('is-active');					
-							};
-						});		
-						$('.museum__select.is-season').addClass('is-hidden');	
-					}			
-				};
-			};
-
-			return false;
-		});
-
-		$('body').click(function() {
-			selectList.slideUp('fast');
-			select.removeClass('is-active');
 		});
 
 	});
