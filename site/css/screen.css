@@ -1082,8 +1082,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .champ-item { width: 157px; height: 157px; padding: 10px; }
 @media only screen and (max-width: 991px) { .champ-item { width: 150px; height: 150px; } }
-@media only screen and (max-width: 767px) { .champ-item { width: 100px; height: 100px; } }
-.champ-item a { border: 3px solid transparent; border-radius: 10px; display: block; width: 90%; height: 90%; text-align: center; font-size: 0; background: #fff; transition: border-color 0.25s; }
+@media only screen and (max-width: 767px) { .champ-item { width: 95px; height: 95px; } }
+.champ-item a { border: 3px solid transparent; border-radius: 10px; display: block; width: 100%; height: 100%; text-align: center; font-size: 0; background: #fff; transition: border-color 0.25s; }
 .champ-item a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .champ-item a:hover, .champ-item a.is-active { border-color: #197fba; }
 .champ-item a img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%; }
@@ -1447,13 +1447,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .museum-select.is-active .museum-select__list { border-radius: 0 0 10px 10px; }
 .museum-select__text { position: relative; display: block; padding: 6px 30px 5px 13px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 29px; border: 2px solid #fff; border-radius: 10px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #fff; }
 .museum-select__text:after { content: ""; position: absolute; top: 9px; right: 8px; font-size: 0.9rem; color: #fff; z-index: 10; font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-.museum-select__list { line-height: 1; margin: 0; font-size: 0; position: absolute; display: none; left: 0; right: 0; top: 100%; z-index: 100; margin-top: -2px; border: 2px solid #fff; border-top: none; max-height: 200px; overflow-x: hidden; overflow-y: auto; background: #020d1a; border-radius: 0 0 10px 10px; }
-.museum-select__list li { padding: 0; }
-.museum-select__list li:before { display: none; }
-.museum-select__list li li { padding: 0; }
-.museum-select__list li li li { padding: 0; }
-.museum-select__list a { padding: 0 13px; cursor: pointer; line-height: 1.75; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.4rem; color: #fff; display: block; }
-.museum-select__list a:hover { background-color: #fff; color: #020d1a; }
+.museum-select select { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; opacity: 0; }
 
 .page-title_museum { position: relative; padding: 20px 100px 20px 20px; }
 @media only screen and (max-width: 991px) { .page-title_museum { padding: 20px; } }
@@ -1798,6 +1792,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-tabs__gols-logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .match-tabs__gols-logo img { max-width: 100%; max-height: 100%; display: inline-block; vertical-align: middle; }
 .match-tabs__gols-name { font-size: 3rem; margin-bottom: 14px; color: #333; line-height: 1; }
+@media only screen and (max-width: 767px) { .match-tabs__gols-name { font-size: 2.4rem; } }
 .match-tabs__gols .table-wrap { overflow: auto; }
 .match-tabs__gols .table-forecasts { margin: 0; min-width: 360px; }
 .match-tabs__gols-title { margin: 0 0 15px; position: relative; text-align: center; clear: both; }

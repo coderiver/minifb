@@ -31,60 +31,49 @@
 						<div class="museum-filter__title">Музей АМФР</div>
 						<div class="museum-filter__label">Награды и кубки:</div>
 						<ul class="museum-filter__list">
-							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active js-museum-tab-slider is-all"><span>Все</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international"><span>Международные</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian"><span>Внутрироссийские</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active js-museum-tab-slider is-all" data-index="1"><span>Все</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international" data-index="2"><span>Международные</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian" data-index="3"><span>Внутрироссийские</span></a></li>
 						</ul>
-						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all"><i class="icon-show"></i><span>Показать все сразу</span></a>
+						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all" data-index="4"><i class="icon-show"></i><span>Показать все сразу</span></a>
 						<div class="museum__select is-filter">
 							<div class="museum-select js-museum-select is-filter">
 								<div class="museum-select__text js-museum-select-text">Все</div>
-								<ul class="museum-select__list js-museum-select-list">
-									<li><a href="#" class="js-mob-filter js-museum-all is-all">Все</a></li>
-									<li><a href="#" class="js-mob-filter" data-filter="international">Международные</a></li>
-									<li><a href="#" class="js-mob-filter" data-filter="russian">Внутрироссийские</a></li>
-									<li><a href="#" class="js-mob-filter js-museum-all">Показать все сразу</a></li>
-								</ul>
+								<select class="js-museum-select-list js-mob-filter">
+									<option value="1">Все</option>
+									<option value="2">Международные</option>
+									<option value="3">Внутрироссийские</option>
+									<option value="4">Показать все сразу</option>
+								</select>
 							</div>
 						</div>
 						<div class="museum__select is-season">							
 							<div class="museum-select js-museum-select is-season">
-								<div class="museum-select__text js-museum-select-text">Сезон 2005-2006</div>
-								<ul class="museum-select__list js-museum-select-list">
-									<li>
-										<a href="#" class="js-mob-season" data-index="1">Сезон 2005-2006</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="2">Сезон 2006-2007</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="3">Сезон 2007-2008</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="4">Сезон 2008-2009</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="5">Сезон 2009-2010</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="6">Сезон 2010-2011</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="7">Сезон 2011-2012</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="8">Сезон 2012-2013</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="9">Сезон 2013-2014</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="10">Сезон 2014-2015</a>
-									</li>
-									<li>
-										<a href="#" class="js-mob-season" data-index="11">Сезон 2015-2016</a>
-									</li>
-								</ul>
+								<div class="museum-select__text js-museum-select-text">Сезон 2005-2006</div>								
+								<select class="js-museum-select-list  js-season">
+									<option value="1">Сезон 2005-2006</option>
+									<option value="2">Сезон 2006-2007</option>
+									<option value="3">Сезон 2007-2008</option>
+									<option value="4">Сезон 2008-2009</option>
+									<option value="5">Сезон 2009-2010</option>
+									<option value="6">Сезон 2010-2011</option>
+									<option value="7">Сезон 2011-2012</option>
+									<option value="8">Сезон 2012-2013</option>
+									<option value="9">Сезон 2013-2014</option>
+									<option value="10">Сезон 2014-2015</option>
+									<option value="11">Сезон 2015-2016</option>
+									<option value="12">Сезон 2005-2006</option>
+									<option value="13">Сезон 2006-2007</option>
+									<option value="14">Сезон 2007-2008</option>
+									<option value="15">Сезон 2008-2009</option>
+									<option value="16">Сезон 2009-2010</option>
+									<option value="17">Сезон 2010-2011</option>
+									<option value="18">Сезон 2011-2012</option>
+									<option value="19">Сезон 2012-2013</option>
+									<option value="20">Сезон 2013-2014</option>
+									<option value="21">Сезон 2014-2015</option>
+									<option value="22">Сезон 2015-2016</option>
+								</select>
 							</div>
 						</div>
 					</div>
