@@ -3,6 +3,7 @@ $purple: #b71a4f
 $yellow: #f5d000
 $red: #e43b06
 
+
 .row.no-padding
 	&.no-padding
 		// margin-left: 0
@@ -233,7 +234,9 @@ $red: #e43b06
 		color: #fff 
 		+bold
 		// +tr(opacity .2s)
-		&:hover
+		&:visited
+			color: #fff
+		&:hover, &:focus
 			// opacity: .8
 			color: #fff
 			background: rgba(0, 0, 0, .8) 
@@ -700,3 +703,17 @@ $red: #e43b06
 	width: 100% 
 	+r(991)
 		overflow: auto
+		
+.tabs-block-m
+	display: block
+	+r(767)
+		display: none
+		h2
+			display: none
+		&.is-active
+			display: block
+.text-tabs_m
+	display: none
+	+r(767)
+		display: block
+		margin-bottom: 20px 
