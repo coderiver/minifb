@@ -59,7 +59,13 @@ $(document).ready(function() {
 		return false;
 		
 	});
-
+	$('select').on('change', function () {
+		var val = $(this).find('option:selected').val();
+		if($(window).width() < 768) {
+			$(this).siblings(".js-select-text").text(val);
+		}
+	});
+	
 	//menu
 	$('.js-menu-link').on('click', function() {
 
