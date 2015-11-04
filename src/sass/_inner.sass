@@ -166,21 +166,24 @@ $red: #e43b06
 			margin-top: 12px 
 			+r(767)
 				margin-top: 4px
-.posts-list
-	&.is-left
-		// margin-left: -10px 
-		+r(991)
-			margin-left: 0
-	&.is-right
-		// margin-right: -10px 
-		+r(991)
-			margin-right: 0
 	
 .post
 	display: block
 	padding: 8px 14px
 	+clr
 	transition: background .25s
+	+r(1219)
+		&:last-child
+			display: none
+	+r(991)
+		display: none
+		width: 50%
+		float: left
+	+r(767)
+		width: 100%
+	&:nth-child(1), &:nth-child(2)
+		+r(991)
+			display: block
 	&:hover
 		background: #e5e5e5 
 	&__media 
@@ -190,6 +193,8 @@ $red: #e43b06
 		font-size: 0
 		line-height: 0
 		margin: 6px 10px 6px 0 
+		+r(1219)
+			margin: 4px 10px 4px 0 
 		img
 			max-width: 100%
 			height: auto 
@@ -207,12 +212,15 @@ $red: #e43b06
 		+light
 		color: #848484
 		strong
-			+bold
+			+med
 			color: #000
 			font-size: 1.3rem 
 .rating
 	position: relative
-	+r(767)
+	margin: 14px 0 0 
+	+r(1219)
+		margin: 12px 0 0 
+	+r(991)
 		display: none
 	&__img
 		line-height: 0
@@ -286,6 +294,13 @@ $red: #e43b06
 	&.w740
 		width: 100%
 		min-width: 740px 
+		+r(991)
+			min-width: 680px
+		
+		&> tbody 
+			td.is-name
+				+r(991)
+					width: 220px
 .block.statistics
 	.player-box
 		margin-left: -20px
@@ -337,15 +352,14 @@ $red: #e43b06
 		margin-top: 11px 
 		p
 			display: inline-block
-			margin-right: 25px
+			margin: 0 25px 0 0
 			position: relative
 			font-size: 6rem 
 			line-height: 1 
 			color: #fff
-			margin-bottom: 0
 			+bold
 			&:last-child
-				margin-left: 0
+				margin-right: 0
 			sup
 				font-size: 0.2em
 				top: 1em 
@@ -353,8 +367,11 @@ $red: #e43b06
 				vertical-align: top
 				padding-right: 5px 
 				display: inline-block
+			+r(991)
+				font-size: 4.5rem
 			+r(767)
 				font-size: 4rem 
+				margin: 0 10px 0 0 
 .block_dark
 	h2
 		color: #fff	
@@ -378,9 +395,14 @@ $red: #e43b06
 		.select
 			margin-bottom: 10px 
 .table-rates
-	margin: 21px 0 
+	margin: 2px 0 0 
+	table-layout: fixed
 	td
-		font-size: 1.4em 
+		font-size: 1.4rem 
+		&:first-child
+			width: 20px
+		&:last-child
+			width: 40px
 		&.is-image
 			width: 25px 
 			padding-right: 5px 
@@ -388,6 +410,13 @@ $red: #e43b06
 				width: auto
 				max-width: 100%
 				height: auto
+		div
+			width: 100%
+			white-space: nowrap
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			padding: 0 10px 0 0 
 .side-academy
 	&.w100
 		max-width: 380px
@@ -403,13 +432,16 @@ $red: #e43b06
 	width: 100% 
 	margin-left: -10px 
 	+r(991)
-		min-width: 360px 
+		min-width: 100% 
 	+r(767)
 		margin-left: 0 
+		min-width: 380px
 	th
 		font-size: 1.5rem 
 		+reg
 		padding: 0 0 11px
+		+r(991)
+			font-size: 1.3rem
 		&.is-place
 			padding: 0 10px 
 	tr
@@ -423,6 +455,10 @@ $red: #e43b06
 		&.is-number
 			width: 55px
 			padding-left: 10px 
+		a
+			color: #197fba
+			&:hover
+				text-decoration: underline
 	tbody
 		tr
 			&:nth-child(odd)
@@ -438,6 +474,8 @@ $red: #e43b06
 			color: #707070
 			font-size: 1.4rem 
 			display: block
+			+r(991)
+				font-size: 1.3rem
 		img
 			width: 25px
 			height: 25px
@@ -449,14 +487,11 @@ $red: #e43b06
 	overflow: hidden
 	position: relative
 	line-height: 0 
-	max-width: 380px 
-	height: 240px 
-	background: url(../img/banner-project.jpg) no-repeat
-	background-size: cover
+	width: 100%
+	position: relative 
 	+r(767)
 		margin-bottom: 20px 
 	img
-		max-width: 100% 
 		width: 100%
 		height: auto
 	&__text
@@ -468,6 +503,8 @@ $red: #e43b06
 		line-height: 1
 		+bold
 		font-size: 2.5rem 
+		+r(767)
+			font-size: 2rem
 		&-top
 			+thin
 			margin-bottom: 10px 
@@ -701,7 +738,7 @@ $red: #e43b06
 		display: none
 .table-forecasts-wrapper
 	width: 100% 
-	+r(991)
+	+r(767)
 		overflow: auto
 		
 .tabs-block-m

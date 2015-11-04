@@ -553,14 +553,18 @@
 		visibility: hidden
 		+wo
 		transition: opacity 0.25s, visibility 0.25s
+		.btn-submit
+			position: absolute
+			top: 1px
+			right: 1px
 	&__input
 		// border: 2px solid #fff
 		color: #333			
 		border-radius: 10px
-		height: 33px
+		height: 32px
 		+light
 		font-size: 1.4rem
-		padding: 0 13px 
+		padding: 0 80px 0 13px 
 		width: 100%
 		display: block 
 		background: #fff
@@ -726,6 +730,10 @@
 			img
 				+r(1219)
 					width: 100%
+	&__section
+		display: none
+		&.is-active
+			display: block
 
 .league
 	&__title

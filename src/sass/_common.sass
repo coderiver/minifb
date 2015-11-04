@@ -84,8 +84,15 @@ body
 	font-size: 10px
 	line-height: 1.4
 	min-width: 320px
+	&.is-hidden
+		overflow: hidden
 
 
+.is-clear
+	clear: both
+.slick-slider
+	.is-clear
+		clear: none
 // reset
 h1, h2, h3, h4, h5, h6, th, strong, b, em, i, input, textarea, label
 	font-style: normal
@@ -109,15 +116,15 @@ h1
 	+r(1219)
 		font-size: 4rem
 	+r(991)
-		font-size: 3.5em
+		font-size: 3.5rem
 	+r(767)
-		font-size: 2.5em 
+		font-size: 2.5rem 
 	small
 		font-size: 2rem
 		color: #333  
 		+r(767)
 			font-size: 1.4rem
-	
+			
 h2
 	font-size: 4.1rem
 	+r(1219)
@@ -128,7 +135,9 @@ h2
 		font-size: 2rem 
 	small
 		font-size: 2rem
-		color: #333  
+		color: #333
+		+reg
+		text-transform: none
 		+r(767)
 			font-size: 1.4rem
 	
@@ -691,7 +700,7 @@ dd
 	width: 280px
 	text-align: center
 	transition: background 0.25s
-	+r(767)
+	+r(1219)
 		font-size: 2rem
 		width: 230px 
 	&_blue
@@ -858,9 +867,21 @@ dd
 				padding: 0 0 0 8px 			
 			&.is-name
 				width: 290px
-				+bold
 				img
-					margin: 0 5px 0 0 
+					margin: 6px 5px 0 0 
+					float: left
+				a, span
+					color: #333
+					text-decoration: none
+					display: block
+					overflow: hidden
+					white-space: nowrap
+					-ms-text-overflow: ellipsis
+					text-overflow: ellipsis
+					max-width: 220px
+				a
+					&:hover
+						text-decoration: underline
 			&.is-numbers
 				width: 45px
 				padding: 0 10px 
@@ -1159,14 +1180,13 @@ dd
 		border-radius: 10px
 		position: absolute
 		top: 100%
-		left: 50%
-		margin: 10px 0 0 -95px
+		left: -20px
+		margin: 10px 0 0
 		width: 190px
 		padding: 15px 0 
 		z-index: 200
 		+r(767)
-			margin-left: 0
-			left: -20px
+			left: -10px
 		li
 			font-size: 1.7rem
 			line-height: 1.8

@@ -493,16 +493,854 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-12 hidden-xs">
-					<div class="match">
+					<div class="match js-tabs">
 						<div class="match__top">
 							<div class="match__title">Матч-Центр</div>
 							<ul class="match__filter">
-								<li><a href="#">Прошедшие</a></li>
-								<li><a href="#" class="is-active">Сегодня</a></li>
-								<li><a href="#">Будущие</a></li>
+								<li><a href="#" class="js-tabs-link" data-btn="past">Прошедшие</a></li>
+								<li><a href="#" class="js-tabs-link is-active" data-btn="today">Сегодня</a></li>
+								<li><a href="#" class="js-tabs-link" data-btn="future">Будущие</a></li>
 							</ul>
 						</div>
-						<div class="match__section">
+						<div class="match__section js-tabs-block" data-block="past">
+							<div class="match-league">
+								<div class="match-league__title is-super">Суперлига <span>6-й тур</span><i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>									
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-major">Высшая лига<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-russia">Кубок России<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-women">Женская лига<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-partner">
+									<a href="#"><img src="img/academservice.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<div class="match__section is-active js-tabs-block" data-block="today">
+							<div class="match-league">
+								<div class="match-league__title is-super">Суперлига <span>6-й тур</span><i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>									
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-major">Высшая лига<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-russia">Кубок России<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-league__title is-women">Женская лига<i class="icon-date"></i></div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен</span>
+										<div class="league-item__control">
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-winner is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/yamal-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Ямал</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-winner">2</span>
+											<span>-</span>
+											<span class="is-loser">1</span>
+										</div>
+										<div class="league-item__team is-loser is-right">
+											<div class="league-item__logo">
+												<img src="img/tumen-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Тюмень</div>
+										</div>
+									</div>
+								</div>
+								<div class="league-item">
+									<div class="league-item__top">
+										<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+										<div class="league-item__control">
+											<a href="#" class="is-t">
+												<i class="icon-t"></i>
+											</a>
+											<a href="#" class="is-play">
+												<i class="icon-lil-play"></i>
+											</a>
+										</div>	
+									</div>
+									<div class="league-item__body">
+										<div class="league-item__team is-loser is-left">	
+										
+										<div class="league-item__logo">
+											<img src="img/nickel-logo.png" alt="">
+										</div>			
+											<div class="league-item__name">Норильский никель</div>
+										</div>
+										<div class="league-item__score">
+											<span class="is-loser">1</span>
+											<span>-</span>
+											<span class="is-winner">2</span>
+										</div>
+										<div class="league-item__team is-winner is-right">
+											<div class="league-item__logo">
+												<img src="img/ng-logo.png" alt="">
+											</div>
+											<div class="league-item__name">Новая генерация</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="match-league">
+								<div class="match-partner">
+									<a href="#"><img src="img/academservice.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<div class="match__section js-tabs-block" data-block="future">
 							<div class="match-league">
 								<div class="match-league__title is-super">Суперлига <span>6-й тур</span><i class="icon-date"></i></div>
 								<div class="league-item">
@@ -1167,9 +2005,9 @@
 								<div class="match-range__goal is-bottom js-tooltip" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>" style="left: 83%;">
 									<i class="icon-football"></i>
 								</div>
-								<div class="match-range__card is-yellow is-bottom" style="left: 39%;"></div>
-								<div class="match-range__card is-yellow is-top" style="left: 92%;"></div>
-								<div class="match-range__card is-red is-bottom" style="left: 67%;"></div>
+								<div class="match-range__card is-yellow is-bottom js-tooltip" style="left: 39%;" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>"></div>
+								<div class="match-range__card is-yellow is-top js-tooltip" style="left: 92%;" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>"></div>
+								<div class="match-range__card is-red is-bottom js-tooltip" style="left: 67%;" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>"></div>
 							</div>
 						</div>
 						<div class="match-scale__team is-second">
@@ -1200,7 +2038,7 @@
 								<div class="match-range__goal is-bottom js-tooltip" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>" style="left: 71%;">
 									<i class="icon-football"></i>
 								</div>
-								<div class="match-range__card is-yellow is-top" style="left: 66%;"></div>
+								<div class="match-range__card is-yellow is-top js-tooltip" style="left: 66%;" title="<div class='match-tooltip'><time>16'</time><span><b>0-2</b> Иван Чишкала (12)</span><img src='img/match-small-ava.png' alt=''></div>"></div>
 							</div>
 						</div>
 					</div>	
@@ -1212,345 +2050,6 @@
 							<li><a href="#" class="tabs-btn js-tabs-link" data-btn="history"><span>История личных встреч</span></a></li>
 						</ul>
 						<div class="match-tabs__section js-tabs-block is-active" data-block="protocol">
-							<div class="match-tabs__top">
-								<h3>Состав команд</h3>
-							</div>
-							<div class="match-tabs__gols-row">
-								<div class="match-tabs__gols-col">
-									<div class="match-tabs__gols-team is-left">
-										<div class="match-tabs__gols-logo">
-											<img src="img/logo-dinamo-med.png" alt="">
-										</div>
-										<div class="match-tabs__gols-name">Динамо</div>
-										<div class="match-table-wrap">
-											<table class="match-table match-table_mod">
-												<thead>
-													<tr>
-														<th><b>№</b></th>
-														<th><b>Игрок</b></th>
-														<th><b>Счет</b></th>
-														<th><b>Время (мин)</b></th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div class="match-tabs__gols-col">
-									<div class="match-tabs__gols-team is-right">	
-										<div class="match-tabs__gols-logo">
-											<img src="img/logo-gasprom-med.png" alt="">
-										</div>
-										<div class="match-tabs__gols-name">Динамо</div>
-										<div class="match-table-wrap">
-											<table class="match-table match-table_mod">
-												<thead>
-													<tr>
-														<th><b>№</b></th>
-														<th><b>Игрок</b></th>
-														<th><b>Счет</b></th>
-														<th><b>Время (мин)</b></th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr>
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-													<tr class="is-bg">
-														<td><span>1</span></td>
-														<td>
-															<img src="img/match-small-ava.png" alt="">
-															<span>Купатадзе Звиад</span>
-														</td>
-														<td><span>0 - 1</span></td>
-														<td><span>14</span></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="match-tabs__section js-tabs-block" data-block="members">
 							<div class="match-tabs__gols">								
 								<div class="match-tabs__gols-top">
 									<h3>ГОЛЫ</h3>
@@ -1902,6 +2401,345 @@
 								</div>
 							</div>
 						</div>
+						<div class="match-tabs__section js-tabs-block" data-block="members">
+							<div class="match-tabs__top">
+								<h3>Состав команд</h3>
+							</div>
+							<div class="match-tabs__gols-row">
+								<div class="match-tabs__gols-col">
+									<div class="match-tabs__gols-team is-left">
+										<div class="match-tabs__gols-logo">
+											<img src="img/logo-dinamo-med.png" alt="">
+										</div>
+										<div class="match-tabs__gols-name">Динамо</div>
+										<div class="match-table-wrap">
+											<table class="match-table match-table_mod">
+												<thead>
+													<tr>
+														<th><b>№</b></th>
+														<th><b>Игрок</b></th>
+														<th><b>Счет</b></th>
+														<th><b>Время (мин)</b></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="match-tabs__gols-col">
+									<div class="match-tabs__gols-team is-right">	
+										<div class="match-tabs__gols-logo">
+											<img src="img/logo-gasprom-med.png" alt="">
+										</div>
+										<div class="match-tabs__gols-name">Динамо</div>
+										<div class="match-table-wrap">
+											<table class="match-table match-table_mod">
+												<thead>
+													<tr>
+														<th><b>№</b></th>
+														<th><b>Игрок</b></th>
+														<th><b>Счет</b></th>
+														<th><b>Время (мин)</b></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr>
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+													<tr class="is-bg">
+														<td><span>1</span></td>
+														<td>
+															<img src="img/match-small-ava.png" alt="">
+															<span>Купатадзе Звиад</span>
+														</td>
+														<td><span>0 - 1</span></td>
+														<td><span>14</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="match-tabs__section js-tabs-block" data-block="statistic">
 							<div class="match-tabs__top">
 								<h3>Сравнение команд</h3>
@@ -1916,7 +2754,10 @@
 										<div class="match-statistic__name">Динамо</div>
 										<div class="match-statistic__label">История игр</div>
 										<div class="match-statistic__results">
-											<i class="is-circle is-green"></i>
+											<i class="is-circle is-green js-tooltip" title='
+											<div class="tooltip-compare">
+												
+											</div>'></i>
 											<i class="is-circle is-yellow"></i>
 											<i class="is-circle is-red"></i>
 											<i class="is-circle is-green"></i>
@@ -2643,7 +3484,7 @@
 			<div class="col-xs-12">
 				<div class="footer__bottom">
 					<div class="footer__copy">© 1990–2015 Ассоциация мини-футбола России</div>
-					<div class="footer__rfs">Российский футбольный союз</div>
+					<a href="#" class="footer__rfs">Российский футбольный союз</a>
 					<ul class="footer__social">
 						<li><a href="#" class="icon-twitter"></a></li>
 						<li><a href="#" class="icon-facebook"></a></li>

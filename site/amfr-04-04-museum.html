@@ -36,9 +36,23 @@
 			</div>	
 			<div class="header-sponsors">
 				<div class="header-sponsors__title">Официальные спонсоры</div>
-				<a href="#" class="header-sponsors__logo">
-					<img src="img/sponsor.jpg" alt="">
-				</a>
+				<div class="header-sponsors__slider js-header-sponsors">
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+				</div>
 			</div>	
 			<div class="header__right">
 				<div class="header__login">
@@ -117,14 +131,14 @@
 			</div>
 		</div>
 		<div class="mc js-mc">
-			<div class="mc__container">
+			<div class="mc__container js-tabs">
 				<div class="mc__row">
 					<div class="mc__top">
 						<div class="mc__title">Матч-Центр</div>
 						<ul class="mc__filter">
-							<li><a href="#" class="is-active">Прошедшие</a></li>
-							<li><a href="#">Сегодня</a></li>
-							<li><a href="#">Будущие</a></li>
+							<li><a href="#" class="js-tabs-link is-active" data-btn="past">Прошедшие</a></li>
+							<li><a href="#" class="js-tabs-link" data-btn="today">Сегодня</a></li>
+							<li><a href="#" class="js-tabs-link" data-btn="future">Будущие</a></li>
 						</ul>
 						<div class="mc__right">
 							<button class="button-white">SMS</button>
@@ -132,354 +146,1060 @@
 						</div>
 					</div>
 				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+				<div class="mc-section is-active js-tabs-block" data-block="past">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-major">Высшая лига</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
-									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
-									</div>
-									<div class="league-item__name">Новая генерация</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-russia">Кубок России</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mc__col">					
-					<div class="league">
-						<div class="league__title is-women">Женская лига</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
-									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
-									</div>
-									<div class="league-item__name">Новая генерация</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
+					</div>
 				</div>
-				<div class="mc__row">
-					<div class="mc__partner">
-						<a href="#"><img src="img/academservice.png" alt=""></a>
+				<div class="mc-section js-tabs-block" data-block="today">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="mc-section js-tabs-block" data-block="future">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -499,6 +1219,7 @@
 						<i class="btn-search icon-search js-search-btn"></i>
 						<div class="search__block">
 							<input type="text" class="search__input">
+							<button class="btn-submit">Найти</button>
 						</div>
 					</div>				
 				</div>
@@ -888,7 +1609,11 @@
 							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international" data-index="2"><span>Международные</span></a></li>
 							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian" data-index="3"><span>Внутрироссийские</span></a></li>
 						</ul>
-						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all" data-index="4"><i class="icon-show"></i><span>Показать все сразу</span></a>
+						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all" data-index="4">
+							<i class="icon-show"></i>
+							<span class="is-visible">Показать все сразу</span>
+							<span class="is-hidden">Показать по годам</span>
+						</a>
 						<div class="museum__select is-filter">
 							<div class="museum-select js-museum-select is-filter">
 								<div class="museum-select__text js-museum-select-text">Все</div>
@@ -3519,7 +4244,7 @@
 			<div class="col-xs-12">
 				<div class="footer__bottom">
 					<div class="footer__copy">© 1990–2015 Ассоциация мини-футбола России</div>
-					<div class="footer__rfs">Российский футбольный союз</div>
+					<a href="#" class="footer__rfs">Российский футбольный союз</a>
 					<ul class="footer__social">
 						<li><a href="#" class="icon-twitter"></a></li>
 						<li><a href="#" class="icon-facebook"></a></li>

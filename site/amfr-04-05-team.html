@@ -36,9 +36,23 @@
 			</div>	
 			<div class="header-sponsors">
 				<div class="header-sponsors__title">Официальные спонсоры</div>
-				<a href="#" class="header-sponsors__logo">
-					<img src="img/sponsor.jpg" alt="">
-				</a>
+				<div class="header-sponsors__slider js-header-sponsors">
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="header-sponsors__logo">
+							<img src="img/sponsor.jpg" alt="">
+						</a>
+					</div>
+				</div>
 			</div>	
 			<div class="header__right">
 				<div class="header__login">
@@ -117,14 +131,14 @@
 			</div>
 		</div>
 		<div class="mc js-mc">
-			<div class="mc__container">
+			<div class="mc__container js-tabs">
 				<div class="mc__row">
 					<div class="mc__top">
 						<div class="mc__title">Матч-Центр</div>
 						<ul class="mc__filter">
-							<li><a href="#" class="is-active">Прошедшие</a></li>
-							<li><a href="#">Сегодня</a></li>
-							<li><a href="#">Будущие</a></li>
+							<li><a href="#" class="js-tabs-link is-active" data-btn="past">Прошедшие</a></li>
+							<li><a href="#" class="js-tabs-link" data-btn="today">Сегодня</a></li>
+							<li><a href="#" class="js-tabs-link" data-btn="future">Будущие</a></li>
 						</ul>
 						<div class="mc__right">
 							<button class="button-white">SMS</button>
@@ -132,354 +146,1060 @@
 						</div>
 					</div>
 				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+				<div class="mc-section is-active js-tabs-block" data-block="past">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-major">Высшая лига</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
-									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
-									</div>
-									<div class="league-item__name">Новая генерация</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="mc__col">
-					<div class="league">
-						<div class="league__title is-russia">Кубок России</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
 								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
 									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mc__col">					
-					<div class="league">
-						<div class="league__title is-women">Женская лига</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
 									</div>
-									<div class="league-item__name">Новая генерация</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-winner is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/yamal-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Ямал</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-winner">2</span>
-									<span>-</span>
-									<span class="is-loser">1</span>
-								</div>
-								<div class="league-item__team is-loser is-right">
-									<div class="league-item__logo">
-										<img src="img/tumen-logo.png" alt="">
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
 									</div>
-									<div class="league-item__name">Тюмень</div>
-								</div>
-							</div>
-						</div>
-						<div class="league-item">
-							<div class="league-item__top">
-								<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
-							</div>
-							<div class="league-item__body">
-								<div class="league-item__team is-loser is-left">	
-								
-								<div class="league-item__logo">
-									<img src="img/nickel-logo.png" alt="">
-								</div>			
-									<div class="league-item__name">Норильский никель</div>
-								</div>
-								<div class="league-item__score">
-									<span class="is-loser">1</span>
-									<span>-</span>
-									<span class="is-winner">2</span>
-								</div>
-								<div class="league-item__team is-winner is-right">
-									<div class="league-item__logo">
-										<img src="img/ng-logo.png" alt="">
-									</div>
-									<div class="league-item__name">Новая генерация</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
+					</div>
 				</div>
-				<div class="mc__row">
-					<div class="mc__partner">
-						<a href="#"><img src="img/academservice.png" alt=""></a>
+				<div class="mc-section js-tabs-block" data-block="today">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="mc-section js-tabs-block" data-block="future">
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-super">Суперлига <span>6-й тур</span></div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-major">Высшая лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">
+						<div class="league">
+							<div class="league__title is-russia">Кубок России</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__col">					
+						<div class="league">
+							<div class="league__title is-women">Женская лига</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-winner is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/yamal-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Ямал</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-winner">2</span>
+										<span>-</span>
+										<span class="is-loser">1</span>
+									</div>
+									<div class="league-item__team is-loser is-right">
+										<div class="league-item__logo">
+											<img src="img/tumen-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Тюмень</div>
+									</div>
+								</div>
+							</div>
+							<div class="league-item">
+								<div class="league-item__top">
+									<span>17 марта 2015, 17:00 | Окончен (пенальти, 5:6)</span>
+								</div>
+								<div class="league-item__body">
+									<div class="league-item__team is-loser is-left">	
+									
+									<div class="league-item__logo">
+										<img src="img/nickel-logo.png" alt="">
+									</div>			
+										<div class="league-item__name">Норильский никель</div>
+									</div>
+									<div class="league-item__score">
+										<span class="is-loser">1</span>
+										<span>-</span>
+										<span class="is-winner">2</span>
+									</div>
+									<div class="league-item__team is-winner is-right">
+										<div class="league-item__logo">
+											<img src="img/ng-logo.png" alt="">
+										</div>
+										<div class="league-item__name">Новая генерация</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mc__row">
+						<div class="mc__partner">
+							<a href="#"><img src="img/academservice.png" alt=""></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -499,6 +1219,7 @@
 						<i class="btn-search icon-search js-search-btn"></i>
 						<div class="search__block">
 							<input type="text" class="search__input">
+							<button class="btn-submit">Найти</button>
 						</div>
 					</div>				
 				</div>
@@ -863,12 +1584,12 @@
 	<section class="main__inner team-page">
 		<div class="container">
 			<div class="row top-banner top-banner_team">
-				<div class="col-md-4 col-xs-12">
+				<div class="col-md-3 col-xs-12">
 					<a href="#" class="top-banner__img">
 						<img src="img/banner-gas.png" alt="">
 					</a>
 				</div>
-				<div class="col-md-8 col-xs-12">
+				<div class="col-md-9 col-xs-12">
 					<div class="top-banner__box">
 						<h3><b>Встреча команды с болельщиками</b> состоится в ДС «Юбилейный» г. Югорск <b>15 января 2016</b></h3>
 						<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Подробнее</a>
@@ -939,7 +1660,7 @@
 									</ul>
 								</div>
 								<div class="box__container js-tabs-block" data-block="all">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -951,7 +1672,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -963,7 +1684,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -975,7 +1696,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -987,7 +1708,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -999,7 +1720,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1013,7 +1734,7 @@
 									</div>
 								</div>			
 								<div class="box__container js-tabs-block is-active" data-block="boss">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1025,7 +1746,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1037,7 +1758,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1049,7 +1770,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1061,7 +1782,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1073,7 +1794,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1087,7 +1808,7 @@
 									</div>
 								</div>			
 								<div class="box__container js-tabs-block" data-block="coach">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1099,7 +1820,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1111,7 +1832,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1123,7 +1844,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1135,7 +1856,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1147,7 +1868,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1161,7 +1882,7 @@
 									</div>
 								</div>			
 								<div class="box__container js-tabs-block" data-block="staff">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1173,7 +1894,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1185,7 +1906,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1197,7 +1918,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1209,7 +1930,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1221,7 +1942,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box.png" alt="">
@@ -1266,7 +1987,7 @@
 									</ul>
 								</div>
 								<div class="box__container box__container-players js-tabs-block is-active" data-block="all">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1285,7 +2006,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1304,7 +2025,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1323,7 +2044,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1342,7 +2063,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1361,7 +2082,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1380,7 +2101,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1399,7 +2120,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1418,7 +2139,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1437,7 +2158,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1456,7 +2177,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1475,7 +2196,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1494,7 +2215,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1515,7 +2236,7 @@
 									</div>
 								</div>
 								<div class="box__container box__container-players js-tabs-block" data-block="attack">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1534,7 +2255,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1553,7 +2274,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1572,7 +2293,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1591,7 +2312,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1610,7 +2331,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1629,7 +2350,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1648,7 +2369,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1667,7 +2388,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1686,7 +2407,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1705,7 +2426,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1724,7 +2445,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1743,7 +2464,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1764,7 +2485,7 @@
 									</div>
 								</div>
 								<div class="box__container box__container-players js-tabs-block" data-block="def">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1783,7 +2504,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1802,7 +2523,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1821,7 +2542,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1840,7 +2561,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1859,7 +2580,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1878,7 +2599,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1897,7 +2618,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1916,7 +2637,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1935,7 +2656,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1954,7 +2675,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1973,7 +2694,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -1992,7 +2713,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2013,7 +2734,7 @@
 									</div>
 								</div>
 								<div class="box__container box__container-players js-tabs-block" data-block="keepers">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2032,7 +2753,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2051,7 +2772,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2070,7 +2791,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2089,7 +2810,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2108,7 +2829,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2127,7 +2848,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2146,7 +2867,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2165,7 +2886,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2184,7 +2905,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2203,7 +2924,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2222,7 +2943,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2241,7 +2962,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2262,7 +2983,7 @@
 									</div>
 								</div>
 								<div class="box__container box__container-players js-tabs-block" data-block="random">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2281,7 +3002,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2300,7 +3021,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2319,7 +3040,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2338,7 +3059,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2357,7 +3078,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2376,7 +3097,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2395,7 +3116,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2414,7 +3135,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2433,7 +3154,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2452,7 +3173,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2471,7 +3192,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2490,7 +3211,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2519,7 +3240,7 @@
 									<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Перейи в галерею</a>	
 								</div>
 								<div class="box__video main-slider js-block-slider">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2531,7 +3252,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2543,7 +3264,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2555,7 +3276,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2567,7 +3288,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2579,7 +3300,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
 											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
 												<img src="img/v-item.png" alt="">
@@ -2597,7 +3318,7 @@
 						<div class="col-xs-12">
 							<div class="box js-tabs">
 								<div class="box__top">
-									<h2>Игроки <small>по состоянию на 23.06.2015</small></h2>
+									<h2>Лидеры сезона</small></h2>
 									<div class="select js-select">
 										<span class="select__text js-select-text">Сезон 2014/2015</span>
 										<ul class="select__list js-select-list">
@@ -2621,7 +3342,7 @@
 									</ul>
 								</div>
 								<div class="box__container box__container-players js-tabs-block is-active" data-block="goal">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2639,7 +3360,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2657,7 +3378,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2677,7 +3398,7 @@
 									</div>
 								</div>
 								<div class="box__container box__container-players js-tabs-block" data-block="war">
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2695,7 +3416,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2713,7 +3434,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box__col">
+									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
 											<a href="#" class="user-box__img">
 												<img src="img/user-box2.png" alt="">
@@ -2751,18 +3472,18 @@
 								</div>
 								<div>
 									<p><b>САЙТ</b></p>
-									<p>mfkgazprom-ugra.ru</p>
+									<p><a href="#">mfkgazprom-ugra.ru</a></p>
 								</div>
 								<div>
 									<p><b>EMAIL</b></p>
-									<p>info@mfkgazprom-ugra.ru</p>
+									<p><a href="#">info@mfkgazprom-ugra.ru</a></p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 col-sm-6 col-xs-12">
+						<div class="col-lg-12 col-sm-6 col-xs-12 pull-right">
 							<div class="academy-side">
-								<a href="#" class="button-blue">Все новости</a>
-								<h4>Новости Академии</h4>
+								<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Все новости</a>
+								<h4>Новости клуба</h4>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
@@ -2830,7 +3551,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 col-sm-6 col-xs-12">
+						<div class="col-lg-12 col-sm-6 col-xs-12 pull-right">
 							<div class="side-progress">
 								<h4>Достижения</h4>
 								<div class="side-progress__item">
@@ -2880,6 +3601,7 @@
 								<span>Полный рейтинг клубов (PDF, 652КБ)</span>
 							</a>
 							<div class="side-academy">
+								<img src="img/side-academy.png" alt="">
 								<ul>
 									<li><a href="#">Тренерское мастерство</a></li>
 									<li><a href="#">Судейство</a></li>
@@ -2891,6 +3613,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-xs-12">
 					<!-- begin partners  -->
@@ -2901,103 +3624,67 @@
 							</div>
 						</div>
 						<div class="col-xs-12">
-							<div class="row">
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-select.png" alt=""></a>
-									</div>
+							<div class="partner-items">								
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-select.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-tmk.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-tmk.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-knauf.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-knauf.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-rsport.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-rsport.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-chempionat.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-chempionat.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-sportbox.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-sportbox.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-academservice.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-academservice.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-tarkett.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-tarkett.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-2k.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-2k.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-mayak.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-mayak.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-russia.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-russia.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-express.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-express.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-corp.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-corp.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-umbro.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-umbro.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-adidas.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-adidas.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-vob.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-vob.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-ssport.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-ssport.png" alt=""></a>
 								</div>
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="partner-item">
-										<a href="#"><img src="img/partner-sport.png" alt=""></a>
-									</div>
+								<div class="partner-item">
+									<a href="#"><img src="img/partner-sport.png" alt=""></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- end partners -->
 				</div>				
-			</div>
+			</div>	
 		</div>
 	</section>
 	<!-- end main__inner -->
@@ -3071,7 +3758,7 @@
 			<div class="col-xs-12">
 				<div class="footer__bottom">
 					<div class="footer__copy">© 1990–2015 Ассоциация мини-футбола России</div>
-					<div class="footer__rfs">Российский футбольный союз</div>
+					<a href="#" class="footer__rfs">Российский футбольный союз</a>
 					<ul class="footer__social">
 						<li><a href="#" class="icon-twitter"></a></li>
 						<li><a href="#" class="icon-facebook"></a></li>

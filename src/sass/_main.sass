@@ -145,6 +145,9 @@
 			.scoreboard__head
 				background: none
 				padding: 14px 20px 0
+				+r(767)
+					padding-left: 10px
+					padding-right: 10px
 			.scoreboard__title
 				font-size: 2rem
 				i
@@ -157,6 +160,9 @@
 	&__head
 		padding: 6px 20px
 		background-color: rgba(#001616, 0.7)
+		+r(767)
+			padding-left: 10px
+			padding-right: 10px
 		&.is-last
 			border-radius: 0 0 10px 10px
 		&.is-first
@@ -181,17 +187,26 @@
 	&__filter
 		padding: 3px 20px 6px
 		+clr
+		+r(767)
+			padding-left: 10px
+			padding-right: 10px
 	&__box
 		float: left
 		position: relative
 		&.is-pro
 			width: 41%
 			padding: 0 10px 10px 0
+			+r(1219)
+				width: auto
+				padding-right: 20px
 			+r(767)
 				width: 100%
 		&.is-super
 			width: 33%
 			padding: 0 10px 10px 23px
+			+r(1219)
+				width: auto
+				padding-right: 20px
 			+r(767)
 				width: 70%
 			i
@@ -203,8 +218,12 @@
 		width: 26%
 		float: right
 		margin: 2px 0 0 
+		+r(1219)
+			float: left
+			width: auto
 		+r(767)
 			width: 30%
+			float: right
 		img
 			max-width: 100%
 .scoreboard-table
@@ -215,6 +234,8 @@
 		&.is-name
 			width: 46%
 			padding: 2px 0 0 20px 
+			+r(767)
+				padding: 2px 0 0 10px 
 		&.is-game
 			width: 13%
 			padding: 2px 0 0 10px
@@ -258,6 +279,7 @@
 	border-radius: 10px
 	padding: 20px 
 	margin-bottom: 20px
+	font-size: 0
 	&_dark
 		background: #333 
 	&__top
@@ -307,7 +329,8 @@
 		padding: 0 15px 
 	&__box
 		width: 25%
-		float: left
+		display: inline-block
+		vertical-align: top
 		padding: 0 15px 15px
 		+r(767)
 			width: 100%
@@ -511,6 +534,8 @@
 	padding: 2px 5px 1px
 	background-color: #e1e1e1
 	border-radius: 7px
+	&:hover, &:focus, &:active, &:visited
+		color: #010101
 	 
 .event-item
 	&__img
@@ -551,6 +576,15 @@
 	&_dark
 		h2, p
 			color: #333 
+	&_video
+		h2
+			+r(767)
+				float: left
+				margin: 0
+				padding: 5px 0 
+		.btn-next
+			+r(767)
+				float: right
 
 .v-item
 	padding: 0 0 30px
@@ -616,13 +650,20 @@
 	margin-bottom: 20px
 	position: relative
 	z-index: 15
-	.heading
-		padding: 20px 5px 25px 
+	font-size: 0
+.partner-items
+	padding: 10px 0 
 .partner-item
-	background: #fff
 	text-align: center
 	font-size: 0
-	padding: 0 5px 20px 
+	padding: 10px 15px 
+	width: 16.66%
+	display: inline-block
+	vertical-align: top
+	+r(991)
+		width: 25%
+	+r(767)
+		width: 50%
 	a
 		display: block
 		img
@@ -684,6 +725,7 @@
 		position: relative
 		z-index: 15 
 		text-align: center
+		+clr
 	&__title
 		color: #333
 		font-size: 3.7rem
@@ -704,24 +746,38 @@
 			vertical-align: top
 			padding: 10px 
 	&__bottom
-		text-align: right
+		+clr
+		float: right
+		width: 50%
 		padding: 0 10px 
 		font-size: 0
 		+r(991)
 			text-align: center
+			width: 100%
 		.link-dotted
 			margin: 25px 0 0 25px 
+			+r(1219)
+				margin: 18px 0 0 20px 
 			+r(991)
 				margin-left: 0
 		.btn-next
-			margin: 22px 0 0 95px 
-			+r(991)
-				margin-left: 0
-	&__box
-		display: inline-block
-		vertical-align: top
+			margin: 22px 0 0 0
+			+r(1219)
+				margin: 13px 0 0 0 
+	&__left
+		float: left
+	&__big-btn
+		margin-left: -140px
+		+r(1219)
+			margin-left: -115px
+		+r(991)
+			margin: 0
+	&__right
+		float: right
+	&__left, &__right
 		+r(991)
 			display: block
+			float: none 
 
 .champ-item
 	width: 157px
@@ -820,10 +876,30 @@
 	background-color: white
 	border-radius: 10px
 	padding: 21px 10px 21px 15px 
-	min-height: 805px
 	margin-bottom: 26px
-	&_small
-		min-height: 685px 
+	position: relative
+	&.is-left
+		&:before
+			left: 100%
+			margin: 0 0 0 20px 
+	&.is-right
+		&:before
+			right: 100%
+			margin: 0 20px 0 0 
+	&:before
+		position: absolute
+		top: 0
+		bottom: 0
+		background-color: white
+		border-radius: 10px
+		content: "" 
+		width: 100%
+		z-index: 1
+		+r(991)
+			display: none
+	&__inner
+		position: relative
+		z-index: 2
 	h5
 		font-size: 1.8rem
 		+bold
@@ -891,7 +967,7 @@
 	background-color: white
 	border-radius: 10px
 	margin-bottom: 20px
-	.button-blue
+	.button-blue, .btn-next_blue
 		float: right
 		margin: 11px 0 10px 10px
 		+r(1219)
@@ -951,7 +1027,7 @@
 		right: -90px
 		top: 0
 		+s(academy-title)
-		+r(992)
+		+r(991)
 			display: none
 	h1, .page-nav
 		position: relative
@@ -979,6 +1055,9 @@
 		float: left
 		margin: 0 20px 20px 0
 		font-size: 0
+		&:hover
+			span
+				text-decoration: underline
 		+r(767)
 			float: none
 			display: block
@@ -989,7 +1068,7 @@
 			color: #197fba
 			font-size: 15px
 			line-height: 1
-			+tdn
+			text-decoration: none
 	&__info
 		overflow: hidden
 		font-size: 0
@@ -1097,6 +1176,8 @@
 			+r(767)
 				float: none
 				margin: 10px 0
+	.user-box
+		padding: 10px 0 
 
 .user-box
 	+clr
@@ -1140,6 +1221,7 @@
 			display: block
 
 .media-item
+	padding: 10px 0 
 	&__img
 		display: block
 		position: relative
@@ -1169,6 +1251,10 @@
 	p
 		line-height: 1.2
 		margin: 0
+		a
+			color: #333
+			&:hover
+				text-decoration: underline
 
 .side-statistic
 	background-color: #333
@@ -1230,14 +1316,18 @@
 
 .side-academy
 	text-align: center
-	background: url(../img/side-academy.png) no-repeat
-	+cover
-	max-width: 280px
-	height: 240px
-	padding: 185px 0 0 
+	font-size: 0
 	border-radius: 10px
 	margin-bottom: 20px
+	position: relative
+	img
+		width: 100%
+		border-radius: 10px
 	ul
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 10%
 		+ul
 		li
 			display: inline-block
@@ -1256,6 +1346,9 @@
 				color: #555
 				&:hover
 					text-decoration: underline
+	&_large
+		ul
+			bottom: 4%
 					
 .link-pdf
 	position: relative
@@ -1324,7 +1417,7 @@
 				display: inline-block
 				vertical-align: top
 				padding: 6px 15px 0
-				+r(992)
+				+r(991)
 					padding: 6px 30px 0 0 
 	&-link
 		font-size: 1.7rem
@@ -1350,6 +1443,11 @@
 			margin: 6px 0 0
 			float: right
 			padding: 0 0 0 16px 
+			&.is-active
+				.is-visible
+					display: none
+				.is-hidden
+					display: block
 			.icon-show
 				position: absolute
 				top: 3px
@@ -1357,12 +1455,16 @@
 				font-size: 11px
 				color: #54c39e 
 				transition: color 0.25s
+			.is-visible
+				display: block
+			.is-hidden
+				display: none
 	&-seasons
 		position: relative
 		padding: 30px 0 23px 
 		+clr
 		z-index: 5
-		+r(1100)
+		+r(767)
 			visibility: hidden
 			opacity: 0
 			position: absolute
@@ -1376,33 +1478,79 @@
 			right: 0
 			height: 4px
 			background: url(../img/season-line.png) no-repeat center center
+		&-wrap
+			position: relative
+			overflow: hidden
+			&:before, &:after
+				content: "" 
+				position: absolute
+				top: 0
+				bottom: 0
+				box-shadow: 0px 0px 60px 90px rgba(2, 13, 26, 0.8)
+				z-index: 20
+			&:before
+				left: -20px
+			&:after
+				right: -20px
 	&-season
 		float: left
 		text-align: center
 		position: relative
-		padding: 30px 0 20px
+		padding: 40px 0 20px
 		cursor: pointer
+		z-index: 5
 		&.slick-center
+			// padding: 35px 0 20px
+			z-index: 4
+			&:before
+				visibility: visible
+				opacity: 1
 			small
 				opacity: 1
 				visibility: visible
 			span
-				font-size: 33px
+				font-size: 3.3rem
 				+bold
 				color: #fff 
 				border: none
+				+r(991)
+					font-size: 2.2rem
+		&:before, &:after
+			content: ""
+			position: absolute
+			left: 50%
+		&:before
+			background: url(../img/season-bg.png) no-repeat
+			+cover
+			width: 209px 
+			height: 190px
+			bottom: 15px
+			visibility: hidden
+			opacity: 0
+			margin-left: -105px
+		&:after
+			bottom: 6px
+			margin-left: -1px
+			width: 1px
+			height: 11px
+			background-color: #b7b7b7
+		small, span
+			position: relative
+			z-index: 2
 		small
 			position: absolute
 			top: 0
 			left: 0
 			right: 0
 			color: white
-			font-size: 20px
+			font-size: 2rem
 			+bold
 			visibility: hidden
 			opacity: 0
 			+wo
 			transition: opacity 0.2s, visibility 0.2s
+			+r(991)
+				font-size: 1.8rem
 		span
 			display: inline-block
 			color: #378876
@@ -1410,6 +1558,8 @@
 			line-height: 2rem
 			transition: color 0.2s	
 			border-bottom: 1px dotted #378876
+			+r(991)
+				font-size: 1.8rem
 	&-container
 		max-width: 1620px
 		padding: 0 10px 
@@ -1591,6 +1741,11 @@
 				bottom: 20px
 	&-bottom
 		clear: both
+		&__btn
+			+r(767)
+				display: none
+			&.is-hidden
+				display: none
 	&-text
 		+clr
 		max-width: 1200px
@@ -1689,7 +1844,7 @@
 		overflow: auto
 		background: rgba(#020d1a, 0.9)
 		z-index: 3000 
-		padding: 20px 
+		padding: 10px
 		visibility: hidden
 		opacity: 0
 		transition: opacity 0.25s, visibility 0.25s
@@ -1708,24 +1863,41 @@
 		.icon-close, .icon-arr-left, .icon-arr-right
 			cursor: pointer
 			z-index: 20
+			color: #fff
 		.icon-arr-left, .icon-arr-right
 			font-size: 21px
-			color: #fff
 			top: 264px
 			position: absolute
 		.icon-arr-left 
 			left: 42px
+			+r(767)
+				left: 10px
 		.icon-arr-right
 			right: 26px
+			+r(767)
+				right: 10px
+		.icon-close
+			font-size: 21px
+			position: absolute
+			top: 23px
+			right: 18px
+			+r(767)
+				top: 10px
+				right: 10px
+				font-size: 14px
 	&-gallery
 		padding: 0 80px 
 		text-align: left
+		+r(767)
+			padding: 0 30px 
 		&__cup
 			position: relative
 			width: 33.33%			
 			height: 325px
 			padding: 0 10px 
 			float: left
+			+r(767)
+				display: none
 			&:before
 				content: ""
 				position: absolute
@@ -1760,27 +1932,38 @@
 		&__slide
 			padding: 0 10px 48px
 			+clr
+			+r(767)
+				padding: 0 0 20px 
 		&__info
 			width: 66.67%
 			float: left
 			padding: 65px 10px 0 
+			+r(767)
+				width: 100%
+				float: none
+				padding: 20px 5px 0 
 		&__title
 			color: white
 			+med
 			font-size: 2.7rem
 			line-height: 1
 			margin-bottom: 25px
+			+r(767)
+				font-size: 2rem 
 		&__logo
 			float: left
 			margin: 0 20px 0 0 
 			width: 87px
 			font-size: 0
+			+r(767)
+				width: 60px
 			img
 				width: 100%
 		&__team
 			overflow: hidden
 			padding-bottom: 15px
 			&-in
+				overflow: hidden
 				span, a
 					font-size: 1.3rem
 					line-height: 1
@@ -1790,15 +1973,21 @@
 					padding: 5px 0 
 				a
 					color: #197fba
+					&:hover
+						text-decoration: underline
 		p
 			color: #fff
 			line-height: 1.5
 			font-size: 1.6rem
 			margin-bottom: 30px
+			+r(767)
+				font-size: 1.4rem 
+				line-height: 1.3
 		&__img
 			background: black
 			border-radius: 10px
 			max-width: 100% 
+			margin: 0 auto 
 	&__select
 		display: none
 		clear: both
@@ -1808,7 +1997,7 @@
 				display: block
 		&.is-season
 			padding: 19px 0 30px
-			+r(1100)
+			+r(767)
 				display: block
 		&.is-hidden
 			display: none
@@ -1888,6 +2077,10 @@
 .match
 	background-color: #434343
 	margin-bottom: 20px
+	&__section
+		display: none
+		&.is-active
+			display: block
 	&__top
 		padding: 20px 10px 25px 17px 
 	&__title
@@ -2011,6 +2204,8 @@
 				+bold
 			a
 				color: #197fba
+				&:hover
+					text-decoration: underline
 
 .match-topper
 	padding: 20px 0 0 
@@ -2031,6 +2226,10 @@
 	+cover
 	position: relative
 	padding: 0 0 43px 
+	height: 446px
+	overflow: hidden
+	+r(1219)
+		height: auto
 	+r(767)
 		padding: 0 
 	&:before
@@ -2044,7 +2243,7 @@
 	&__video
 		width: 100%
 		height: 0
-		padding: 0 0 52% 
+		padding: 0 0 51.668% 
 		z-index: 5
 		position: relative 
 		iframe
@@ -2066,17 +2265,21 @@
 	&__name
 		width: 40%
 		+r(767)
-			width: 30%
+			width: 38%
 		&.is-left
 			float: left
 			text-align: left
 			+r(767)
 				text-align: left
+			.match-gols__logo
+				float: left
 		&.is-right
 			float: right
 			text-align: right
 			+r(767)
 				text-align: center
+			.match-gols__logo
+				float: right
 		span
 			display: block
 			overflow: hidden
@@ -2090,8 +2293,7 @@
 				font-size: 2rem
 			+r(767)
 				font-size: 1.1rem 
-				text-align: center
-				padding: 4px 0 0 
+				padding: 25px 5px 0 
 	&__logo
 		height: 55px
 		width: 35px
@@ -2110,7 +2312,7 @@
 		overflow: hidden
 		padding: 8px 0 0 
 		+r(767)
-			width: 40%
+			width: 24%
 			padding: 16px 0 0 
 		span
 			font-size: 4.1rem
@@ -2277,7 +2479,7 @@
 			color: white
 			line-height: 1
 	&__team
-		width: 25%
+		width: 27.5%
 		text-align: center
 		&.is-left
 			float: left
@@ -2328,7 +2530,7 @@
 			line-height: 1.2
 	&__score
 		overflow: hidden
-		width: 50%
+		width: 45%
 		text-align: center
 		padding: 40px 0 20px 
 		+r(767)
@@ -2542,7 +2744,11 @@
 	border-radius: 7px
 	padding: 0 45px 0 0
 	position: relative
-	+clr		
+	+clr	
+	white-space: nowrap
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis	
 	img
 		position: absolute
 		top: 5px
@@ -2555,16 +2761,15 @@
 		color: white
 		+reg
 		line-height: 1
+		display: inline-block
+		vertical-align: top
 	time
-		float: left
 		text-transform: uppercase
 		text-align: center
 		width: 38px
 		border-right: 1px solid rgba(black, 0.36) 
 		margin-right: 10px
 	span
-		display: block
-		overflow: hidden
 		b
 			+bold
 
@@ -2574,10 +2779,14 @@
 	padding: 0 20px 20px
 	margin-bottom: 20px
 	.tabs__list
-		margin: 0 -10px 
-		text-align: center
+		text-align: justify
+		font-size: 0.1px 
 		+r(1219)
 			text-align: left
+		&:after
+			display: inline-block
+			content: "" 
+			width: 100%
 		li
 			+r(1219)
 				display: block
@@ -2949,6 +3158,7 @@
 		background: #f3f3f3
 		text-align: center 
 		padding: 5px 0
+		margin-bottom: 20px
 		h3
 			margin: 0
 			

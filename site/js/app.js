@@ -2195,6 +2195,17 @@ $(document).ready(function() {
 	// 	 scrollFixedElements()
 	// });
 
+	$('.js-header-sponsors').slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		arrows: false,
+		dots: false,
+		swipe: false
+	});
+
 	$('.js-dropdown-btn').click(function() {
 		$('.js-dropdown').slideToggle('fast');
 		$(this).toggleClass('is-active');
@@ -2309,6 +2320,11 @@ $(document).ready(function() {
 	$('.js-mc-btn').on('click', function() {
 		$('.js-mc').toggleClass('is-active');
 		$(this).toggleClass('is-active');
+		if ($(window).scrollTop() > $('.header__top').outerHeight()) {
+			$("html, body").animate({
+					scrollTop: $('.js-mc').offset().top
+			}, '500', 'swing');
+		};
 		return false;
 	});
 	$('.js-mc').each(function() {
@@ -2445,15 +2461,16 @@ $(document).ready(function() {
 	}
 	$('.js-players-slider').slick({
 		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToScroll: 1,
 		nextArrow: $('.js-players-slider-next'),
 		prevArrow: $('.js-players-slider-prev'),
+		infinite: false,
 		responsive: [
 			{
 				breakpoint: 991,
 				settings: {
 					slidesToScroll: 2,
-					slidesToShow: 2
+					slidesToShow: 1
 				}
 			},{
 				breakpoint: 767,
@@ -2573,7 +2590,8 @@ $(document).ready(function() {
 		$('.js-museum-tab').each(function() {
 			if ($(this).hasClass('is-slider')) {
 				$('.js-museum-tab').removeClass('is-active');
-				$(this).addClass('is-active');					
+				$(this).addClass('is-active');	
+				$('.museum-bottom__btn').removeClass('is-hidden');					
 			};
 		});	
 
@@ -2581,7 +2599,7 @@ $(document).ready(function() {
 
 		if ($(this).hasClass('js-museum-all')) {
 			if ($(this).hasClass('is-all')) {
-				items.removeClass('is-disabled');	
+				items.removeClass('is-disabled');		
 			}
 			else {
 				$('.js-museum-tab').each(function() {
@@ -2590,7 +2608,8 @@ $(document).ready(function() {
 						$(this).addClass('is-active');					
 					};
 				});
-				$('.museum__select.is-season').addClass('is-hidden');			
+				$('.museum__select.is-season').addClass('is-hidden');	
+				$('.museum-bottom__btn').addClass('is-hidden');		
 			}				
 		};
 
@@ -2610,6 +2629,7 @@ $(document).ready(function() {
 		if (!$(this).hasClass('is-disabled')) {		
 			$('.js-museum-popup').addClass('is-active');
 			var index = $(this).data('index');
+			$('body').addClass('is-hidden');
 			$('.js-museum-gallery').slick('goTo', index - 1);
 		};
 
@@ -2617,11 +2637,13 @@ $(document).ready(function() {
 	});
 	$('.js-museum-close').click(function() {
 		$('.js-museum-popup').removeClass('is-active');
+		$('body').removeClass('is-hidden');
 		return false;
 	});
 	$('.js-museum-popup').each(function() {
 		$('body').click(function() {
 			$('.js-museum-popup').removeClass('is-active');
+			$(this).removeClass('is-hidden');
 		});
 		$(this).find('.museum-popup__inner').click(function(event) {
 			event.stopPropagation();
