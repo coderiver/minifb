@@ -29,6 +29,12 @@ $(document).ready(function() {
 	$('.js-dropdown-btn').click(function() {
 		$('.js-dropdown').slideToggle('fast');
 		$(this).toggleClass('is-active');
+		$('.js-mc').removeClass('is-active');
+		$('.js-menu').removeClass('is-active');
+		$('.js-mobile').removeClass('is-active');
+		$('.js-menu-link').removeClass('is-active');
+		$('.js-mc-btn').removeClass('is-active');
+		return false;
 	});
 
 	//select
@@ -86,6 +92,12 @@ $(document).ready(function() {
 			currItem = $('.js-menu-block[data-mblock=' + btn + ']'),
 			menu = $('.js-menu').addClass('is-active');
 
+		$('.js-dropdown').slideUp('fast');
+		$('.js-dropdown-btn').removeClass('is-active');
+		$('.js-mc').removeClass('is-active');
+		$('.js-mc-btn').removeClass('is-active');
+		$('.js-menu-link').removeClass('is-active');
+
 		if ($(this).hasClass('is-active')) {
 			btns.removeClass('is-active');
 			menu.removeClass('is-active');
@@ -93,7 +105,7 @@ $(document).ready(function() {
 		}
 		else {
 			btns.removeClass('is-active');
-			$(this).addClass('is-active');
+			$('.js-menu-link[data-mlink="' + btn + '"]').addClass('is-active');
 			menu.addClass('is-active');
 			items.removeClass('is-active');
 			currItem.addClass('is-active');
@@ -140,6 +152,11 @@ $(document).ready(function() {
 	$('.js-mc-btn').on('click', function() {
 		$('.js-mc').toggleClass('is-active');
 		$(this).toggleClass('is-active');
+		$('.js-dropdown').slideUp('fast');
+		$('.js-dropdown-btn').removeClass('is-active');
+		$('.js-menu').removeClass('is-active');
+		$('.js-mobile').removeClass('is-active');
+		$('.js-menu-link').removeClass('is-active');
 		if ($(window).scrollTop() > $('.header__top').outerHeight()) {
 			$("html, body").animate({
 					scrollTop: $('.js-mc').offset().top
@@ -164,9 +181,24 @@ $(document).ready(function() {
 	//mobile
 	$('.js-mobile-btn').click(function() {
 		$('.js-mobile').toggleClass('is-active');
-		if ($('.js-menu').hasClass('is-active')) {
+
+		$('.js-dropdown').slideUp('fast');
+		$('.js-dropdown-btn').removeClass('is-active');
+		$('.js-mc').removeClass('is-active');
+		$('.js-mc-btn').removeClass('is-active');
+
+		if (!$('.js-mobile').hasClass('is-active')) {
+			if ($('.js-menu-link').hasClass('is-active')) {
+				$('.js-menu').removeClass('is-active');		
+				$('.js-menu-block').removeClass('is-active');		
+				$('.js-menu-link').removeClass('is-active');		
+				$('.js-mobile').removeClass('is-active');				
+			};
 			$('.js-menu').removeClass('is-active');
-		};
+		}
+		else {
+			$('.js-menu').addClass('is-active');
+		}
 	});
 
 	//footer
@@ -200,7 +232,7 @@ $(document).ready(function() {
 			currItem = $(this).parents('.js-tabs').find('.js-tabs-block[data-block=' + btn + ']');
 
 		btns.removeClass('is-active');
-		$(this).addClass('is-active');
+		$(this).parents('.js-tabs').find('.js-tabs-link[data-btn=' + btn + ']').addClass('is-active');
 		items.removeClass('is-active');
 		currItem.addClass('is-active');
 
@@ -236,7 +268,7 @@ $(document).ready(function() {
 					dots: true,
 					responsive: [
 						{
-							breakpoint: 767,
+							breakpoint: 768,
 							settings: {
 								slidesToShow: 1,
 								slidesToScroll: 1
@@ -287,13 +319,13 @@ $(document).ready(function() {
 		infinite: false,
 		responsive: [
 			{
-				breakpoint: 991,
+				breakpoint: 992,
 				settings: {
 					slidesToScroll: 2,
-					slidesToShow: 1
+					slidesToShow: 2
 				}
 			},{
-				breakpoint: 767,
+				breakpoint: 768,
 				settings: {
 					slidesToScroll: 1,
 					slidesToShow: 1
@@ -359,6 +391,34 @@ $(document).ready(function() {
 
 
 	$('.js-leagues-list').menuFlex();
+
+	$('.js-leagues-open').click(function() {
+		if ($(this).hasClass('is-open')) {
+			$(this).removeClass('is-open');
+			$(this).siblings('.js-leagues-drop').slideUp('fast');
+		}
+		else {
+			$('.js-leagues-drop').slideUp('fast');
+			$('.js-leagues-open').removeClass('is-open');
+			$(this).addClass('is-open');
+			$(this).siblings('.js-leagues-drop').slideDown('fast');
+		}
+		return false;
+	});
+
+	$('.js-leagues-drop').each(function() {
+		$('body').click(function() {
+			$('.js-leagues-drop').slideUp('fast');
+			$('.js-leagues-open').removeClass('is-open');
+		});
+		$(this).click(function(event) {
+			event.stopPropagation();
+		});
+		$('.menuFlexBtn').click(function() {
+			$('.js-leagues-drop').slideUp('fast');
+			$('.js-leagues-open').removeClass('is-open');
+		});
+	});
 
 	//search
 	$('.js-search').each(function() {
@@ -622,5 +682,30 @@ $(document).ready(function() {
 		contentAsHTML: true,
 		interactive: true,
 		arrowColor: '#197fba',
+	});
+
+	function matchSlides() {
+		$('.js-match-slides').css('min-height', $('.js-match-slides.match-gols').outerHeight())
+	}
+
+	$(window).resize(function() {
+		matchSlides();
+	});
+	$(window).load(function() {
+		matchSlides();
+	});
+
+	$('.js-page-open').click(function() {
+		$(this).siblings('.js-page-drop').toggleClass('is-active');
+		return false;
+	});
+
+	$('.js-page-drop').each(function() {
+		$('body').click(function() {
+			$('.js-page-drop').removeClass('is-active');
+		});
+		$(this).click(function(event) {
+			event.stopPropagation();
+		});
 	});
 });

@@ -90,11 +90,14 @@
 		&.is-active
 			background: #f1f1f1  
 			border-radius: 8px 8px 0 0
+			i
+				transform: rotateX(180deg)
 		i
 			font-size: 0.7rem
 			position: absolute
 			top: 19px
 			right: 15px
+			transition: transform 0.2s
 	&__login
 		padding: 9px 0 
 		float: left
@@ -205,6 +208,7 @@
 				margin: 12px 0 0 10px
 				+r(767)
 					display: inline-block
+					margin-top: 7px
 		ul
 			+ul
 			+r(767)
@@ -267,19 +271,23 @@
 	background-color: #d9232a
 	padding: 0 7px 
 	position: fixed
-	top: 0
-	left: 0
 	-webkit-transform-origin: top left
 	-moz-transform-origin: top left
 	-ms-transform-origin: top left
 	-o-transform-origin: top left
 	transform-origin: top left
 	z-index: 1001 
+	top: 0
+	left: 0
 	+r(1400)
 		+rotate(-90)
 		top: 118px	
 	+r(767)
 		display: none
+	&.is-active
+		left: 330px
+		+r(1400)
+			left: 0
 	&:before
 		content: "" 
 		position: absolute
@@ -349,10 +357,14 @@
 		margin: 0 auto
 		+r(767)
 			display: none
+			min-height: 50px
+			margin-bottom: -50px
 		&.is-active
 			display: block
 	&__list
 		+ul
+		+r(767)
+			display: none
 		li
 			display: inline-block
 			vertical-align: top
@@ -619,45 +631,54 @@
 
 .mc
 	background: #434343 
-	display: none
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	z-index: 1002
+	max-width: 330px
+	overflow: auto
+	transform: translateX(-100%)
+	min-width: 320px 
+	display: block
 	+r(1219)
-		position: fixed
-		top: 0
-		bottom: 0
-		left: 0
-		z-index: 300 
-		max-width: 330px
-		overflow: auto
-		transform: translateX(-100%)
-		display: block
-		min-width: 320px 
+		max-width: 100%
+		min-width: 100%
+		transform: translateX(0)
+		position: relative
+		display: none
 	&.is-active
-		display: block
+		transform: translateX(0)
 		+r(1219)
-			transform: translateX(0)
+			display: block
+		+r(767)
+			display: none
 	&__container
 		max-width: 1200px
 		width: 100%
 		margin: 0 auto 
 	&__row
-		width: 100%
-		clear: both
-		padding: 0 10px
-		+r(1219)
-			padding: 0 0 20px
-	&__col
-		width: 25%
-		float: left	 		
-		padding: 20px 10px 10px 
+		padding: 0 0 20px
 		+r(1219)
 			width: 100%
-			padding: 0 0 10px 	
+			clear: both
+			padding: 0 10px
+	&__col
+		width: 100%
+		padding: 0 0 10px 
+		+r(1219)	
+			width: 25%
+			display: inline-block
+			vertical-align: top 		
+			padding: 20px 10px 10px 
+		+r(991)
+			width: 50%
 	&__top
 		position: relative
 		+clr
-		padding: 4px 0 0 
+		padding: 20px 10px 0 15px
 		+r(1219)
-			padding: 20px 10px 0 15px
+			padding: 4px 0 0 
 	&__title
 		+bold
 		color: white
@@ -665,31 +686,30 @@
 		line-height: 1
 		text-transform: uppercase
 		margin-right: 35px
-		float: left
 		padding: 2px 0 0 
 		+r(1219)
-			float: none
+			float: left
 	&__filter
 		+ul
-		float: left
-		padding: 8px 0 0 
+		float: none
+		padding: 25px 0 0 
+		font-size: 0.1px
+		text-align: justify
 		+r(1219)
-			float: none
-			font-size: 0.1px
-			text-align: justify
-			padding: 25px 0 0 
+			float: left
+			padding: 8px 0 0 
 		&:after
 			content: "" 
 			width: 100%
-			display: none
+			display: inline-block
 			+r(1219)
-				display: inline-block
+				display: none
 		li
 			display: inline-block
 			vertical-align: top
-			padding: 0 14px 
+			padding: 0 
 			+r(1219)
-				padding: 0 
+				padding: 0 14px 
 			a
 				+light
 				color: white
@@ -698,16 +718,18 @@
 				display: inline-block
 				border-bottom: 1px dotted white 
 				+tdn
+				&:hover
+					border: none
 				&.is-active
 					border: none
 					+bold
 	&__right
 		position: absolute
-		top: 4px
-		right: 0
+		top: 20px
+		right: 10px
 		+r(1219)
-			top: 20px
-			right: 10px
+			top: 4px
+			right: 0
 	.icon-close
 		font-size: 2.1rem
 		color: #fff
@@ -716,22 +738,24 @@
 		vertical-align: top
 		cursor: pointer
 	&__partner		
-		border-top: 2px dashed rgba(#fff, 0.3) 
 		font-size: 0
-		padding: 17px 0 
+		padding: 0 10px
+		border: none 
 		+r(1219)
-			padding: 0 10px
-			border: none 
+			border-top: 2px dashed rgba(#fff, 0.3) 
+			padding: 17px 0 
 		a
-			display: inline-block
-			vertical-align: top 
+			display: block
 			+r(1219)
-				display: block
+				display: inline-block
+				vertical-align: top 
 			img
+				width: 100%
 				+r(1219)
-					width: 100%
-	&__section
+					width: auto
+	&-section
 		display: none
+		font-size: 0
 		&.is-active
 			display: block
 
@@ -767,23 +791,28 @@
 			&:before
 				+s(league-women)
 		span
-			float: right
+			float: none
 			+r(1219)
-				float: none
+				float: right
 
 .league-item
 	background: #fff 
 	padding: 8px 5px 7px
 	border-radius: 10px
-	margin-bottom: 10px
+	margin: 0 10px 10px 
 	+r(1219)
-		margin: 0 10px 10px 
+		margin: 0 0 10px
 	&__top
 		margin-bottom: 4px
 		span
 			color: #333
 			font-size: 1.3rem
 			line-height: 1
+			display: block
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			white-space: nowrap
 	&__body
 		display: table
 		width: 100%
@@ -849,3 +878,53 @@
 		+bold
 		font-size: 1.4rem
 		line-height: 0.9
+
+.mobile-menu-link
+	+bold
+	color: white
+	font-size: 2rem
+	line-height: 1.5
+	text-transform: uppercase
+	transition: color 0.25s
+	position: relative
+	display: none
+	margin: 0 50px 0 10px 
+	+r(767)
+		display: block
+	&:visited
+		color: #fff 	
+	&:hover, &.is-active
+		text-decoration: none
+		color: #ff3636
+	&:focus, &:active
+		text-decoration: none
+	&.is-drop
+		padding: 11px 0 9px 0
+		span
+			display: inline-block
+			position: relative
+			padding-right: 20px
+	.icon-arr-bottom
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -5px
+		font-size: 0.9rem
+	&.is-school, &.is-academy
+		padding: 11px 0 9px 25px
+		i
+			position: absolute
+			top: 50%
+			left: 0
+			margin-top: -10px
+	&.is-school
+		i
+			+s(mini-school)
+	&.is-academy
+		i
+			+s(mini-academy)
+
+.match-center-mc, .match-center-btn
+	display: none
+	+r(991)
+		display: block

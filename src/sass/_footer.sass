@@ -1,8 +1,13 @@
 .footer
 	background-color: #333
 	padding: 45px 0 20px 
+	height: 394px
+	+r(1219)
+		height: auto
 	+r(767)
 		padding: 30px 0 20px 
+	&_mod
+		padding: 15px 0 20px 
 	h4
 		color: #fff
 		padding: 0 27px 0 0
@@ -147,3 +152,27 @@
 			border-color: #fff
 			background: none
 			color: #fff			
+
+.bc
+	font-size: 0
+	+ul
+	li
+		display: inline-block
+		vertical-align: top
+		color: #fefefe
+		font-size: 14px
+		line-height: 30px
+		+light
+		&:last-child
+			&:after
+				display: none
+		&:after
+			content: ">" 
+		a, &:after
+			display: inline-block
+			vertical-align: top
+		&:after
+			margin: 0 6px 
+		a
+			color: #fefefe
+			

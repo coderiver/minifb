@@ -1224,6 +1224,7 @@
 					</div>				
 				</div>
 				<div class="menu-dropdown js-menu">
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="pro"><span><i class="icon-arr-bottom"></i>ПРОФЕССИОНАЛЫ</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="pro">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">За рубежом</a></li>
@@ -1307,6 +1308,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="amateur"><span><i class="icon-arr-bottom"></i>Любители</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="amateur">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">2За рубежом</a></li>
@@ -1390,6 +1392,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="team"><span><i class="icon-arr-bottom"></i>Сборные</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="team">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">3За рубежом</a></li>
@@ -1473,6 +1476,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="projects"><span><i class="icon-arr-bottom"></i>Наши проекты</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="projects">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">4За рубежом</a></li>
@@ -1556,6 +1560,8 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-school"><i></i>Мини-футбол в школу</a>
+					<a href="#" class="mobile-menu-link is-academy"><i></i>Академия</a>
 				</div>
 			</div>
 		</div>
@@ -1569,9 +1575,24 @@
 					<li><a href="#">Кубок УЕФА</a></li>
 					<li><a href="#">ЧЕ 2016</a></li>
 					<li><a href="#">Кубок Ерёменко</a></li>
-					<li><a href="#">Женская лига</a></li>
+					<li><a href="#" class="js-leagues-open">Женская лига<i class="icon-arr-bottom"></i></a>
+						<ul class="leagues__drop js-leagues-drop">
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+						</ul>
+					</li>
 					<li><a href="#">Дубли</a></li>
-					<li><a href="#">Юношеская лига</a></li>
+					<li><a href="#" class="js-leagues-open">Юношеская лига<i class="icon-arr-bottom"></i></a>
+						<ul class="leagues__drop js-leagues-drop">
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+						</ul>
+					</li>
 				</ul>
 				<!-- <button class="leagues__btn js-leagues-btn"><span></span></button> -->
 			</div>
@@ -1579,7 +1600,26 @@
 		<!-- end leagues -->
 	</header>
 	<!-- end header -->
-
+	<div class="teams-list">
+		<div class="teams-list__inner">
+			<ul>
+				<li><a href="#"><img src="img/team-1.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-2.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-3.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-4.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-5.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-6.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-7.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-8.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-9.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-10.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-11.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-12.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-13.png" alt=""></a></li>
+				<li><a href="#"><img src="img/team-14.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
 	<!-- begin main__inner  -->
 	<section class="main__inner team-page">
 		<div class="container">
@@ -1626,7 +1666,46 @@
 							<img src="img/t-shirt.png" alt="" class="page-box__shirt">
 							<img src="img/team-photo.png" alt="" class="page-box__photo">
 							<div class="page-box__btns">
-								<a href="#" class="btn-mail"><i class="icon-mail"></i>Следить за клубом</a>
+								<div class="page-box__dropdown js-page">
+									<a href="#" class="btn-mail js-page-open"><i class="icon-mail"></i>Следить за клубом</a>
+									<div class="page-dropdown js-page-drop">
+										<ul>
+											<li>
+												<label class="form-checkbox">
+													<input type="checkbox">
+													<span>Новости</span>
+												</label>
+											</li>
+											<li>
+												<label class="form-checkbox">
+													<input type="checkbox">
+													<span>События</span>
+												</label>
+											</li>
+											<li>
+												<label class="form-checkbox">
+													<input type="checkbox">
+													<span>Матчи</span>
+												</label>
+											</li>
+											<li>
+												<label class="form-checkbox">
+													<input type="checkbox">
+													<span>Фото и видео</span>
+												</label>
+											</li>
+										</ul>
+										<div class="page-dropdown__field">
+											<label>
+												<span class="file__label">Ваш email</span>
+												<input type="text" class="input">
+											</label>
+										</div>
+										<div class="page-dropdown__field">
+											<button class="btn-submit">Подписаться</button>
+										</div>
+									</div>
+								</div>
 								<a href="#" class="btn-attr"><i class="icon-external"></i>Атрибутика клуба</a>
 							</div>
 						</div>
@@ -1659,6 +1738,7 @@
 										<li><a href="#" class="tabs-btn js-tabs-link" data-btn="staff"><span>ПЕРСОНАЛ</span></a></li>
 									</ul>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="all"><span>ВСЕ</span></a>
 								<div class="box__container js-tabs-block" data-block="all">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -1732,7 +1812,8 @@
 											</div>
 										</div>
 									</div>
-								</div>			
+								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link is-active" data-btn="boss"><span>руководство</span></a>
 								<div class="box__container js-tabs-block is-active" data-block="boss">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -1806,7 +1887,8 @@
 											</div>
 										</div>
 									</div>
-								</div>			
+								</div>	
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="coach"><span>ТРЕНЕРЫ</span></a>		
 								<div class="box__container js-tabs-block" data-block="coach">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -1880,7 +1962,8 @@
 											</div>
 										</div>
 									</div>
-								</div>			
+								</div>		
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="staff"><span>ПЕРСОНАЛ</span></a>	
 								<div class="box__container js-tabs-block" data-block="staff">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -1986,6 +2069,7 @@
 										<li><a href="#" class="tabs-btn js-tabs-link" data-btn="random"><span>Универсалы</span></a></li>
 									</ul>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link is-active" data-btn="all"><span>ВСЕ</span></a>
 								<div class="box__container box__container-players js-tabs-block is-active" data-block="all">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -2235,6 +2319,7 @@
 										</div>
 									</div>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="attack"><span>Нападающие</span></a>
 								<div class="box__container box__container-players js-tabs-block" data-block="attack">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -2484,6 +2569,7 @@
 										</div>
 									</div>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="def"><span>Защитники</span></a>
 								<div class="box__container box__container-players js-tabs-block" data-block="def">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -2733,6 +2819,7 @@
 										</div>
 									</div>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="keepers"><span>Вратари</span></a>
 								<div class="box__container box__container-players js-tabs-block" data-block="keepers">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -2982,6 +3069,7 @@
 										</div>
 									</div>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="random"><span>Универсалы</span></a>
 								<div class="box__container box__container-players js-tabs-block" data-block="random">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -3290,7 +3378,7 @@
 									</div>
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="media-item">
-											<a class="media-item__img fancybox.iframe js-fancybox-video" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+											<a class="media-item__img" href="#">
 												<img src="img/v-item.png" alt="">
 												<span class="btn-play"><i class="icon-gallery"></i></span>
 											</a>
@@ -3341,6 +3429,7 @@
 										<li><a href="#" class="tabs-btn js-tabs-link" data-btn="war"><span>предупреждения</span></a></li>
 									</ul>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link is-active" data-btn="goal"><span>голы</span></a>
 								<div class="box__container box__container-players js-tabs-block is-active" data-block="goal">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -3397,6 +3486,7 @@
 										</div>
 									</div>
 								</div>
+								<a href="#" class="mobile-tab-btn js-tabs-link" data-btn="war"><span>предупреждения</span></a>
 								<div class="box__container box__container-players js-tabs-block" data-block="war">
 									<div class="col-md-4 col-sm-6 col-xs-12">
 										<div class="user-box">
@@ -3488,25 +3578,25 @@
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-side__bottom">
 									<h4>Подписаться  на новости Академии</h4>
@@ -3592,6 +3682,46 @@
 								</div>
 								<div class="side-progress__btns">
 									<a href="#" class="btn-next btn-next_blue"><i class="icon-arr-right"></i>Подробнее о достижениях</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 col-sm-6 col-xs-12">
+							<div class="side-statistic">
+								<h2>РЕЙТИНГ АМФР</h2>
+								<div class="select select_white js-select">
+									<span class="select__text js-select-text">Сезон 2014/2015</span>
+									<ul class="select__list js-select-list">
+										<li data-val="Сезон 2014/2015">Сезон 2014/2015</li>
+										<li data-val="Сезон 2014/2015">Сезон 2014/2015</li>
+										<li data-val="Сезон 2014/2015">Сезон 2014/2015</li>
+										<li data-val="Сезон 2014/2015">Сезон 2014/2015</li>
+									</ul>
+									<select>
+										<option value="Сезон 2014/2015">Сезон 2014/2015</option>
+										<option value="Сезон 2014/2015">Сезон 2014/2015</option>
+										<option value="Сезон 2014/2015">Сезон 2014/2015</option>
+										<option value="Сезон 2014/2015">Сезон 2014/2015</option>
+									</select>
+								</div>	
+								<ul class="side-statistic__list">
+									<li class="side-statistic__head">
+										<span>Критерий</span>
+										<strong>Баллы</strong>
+									</li>
+									<li><span>ИГР В СУПЕРЛИГЕ</span><b>126</b></li>
+									<li><span>ПОБЕД</span><b>62</b></li>
+									<li><span>НИЧЬИХ</span><b>36</b></li>
+									<li><span>ПОРАЖЕНИЙ</span><b>29</b></li>
+									<li><span>ЗАБИТЫХ МЯЧЕЙ</span><b>412</b></li>
+									<li><span>ПРОПУЩЕННЫХ МЯЧЕЙ</span><b>230</b></li>
+									<li><span>СУХИХ МАТЧЕЙ</span><b>18</b></li>
+									<li class="side-statistic__result">
+										<span>ИТОГО</span>
+										<b>317,1</b>
+									</li>
+								</ul>
+								<div class="side-statistic__btn">
+									<a href="#" class="btn-next btn-next_white"><i class="icon-arr-right"></i>Полная статистика</a>
 								</div>
 							</div>
 						</div>
@@ -3693,8 +3823,18 @@
 <!-- end main -->
 
 <!-- begin footer  -->
-<footer class="footer">
+<footer class="footer footer_mod">
 	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="bc">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Суперлига</a></li>
+					<li><a href="#">МФК Газпром-Югра</a></li>
+					<li><a href="#">Состав</a></li>
+				</ul>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
 				<h4 class="js-footer-open">АМФР<i class="icon-arr-bottom"></i></h4>

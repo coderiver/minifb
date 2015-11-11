@@ -1224,6 +1224,7 @@
 					</div>				
 				</div>
 				<div class="menu-dropdown js-menu">
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="pro"><span><i class="icon-arr-bottom"></i>ПРОФЕССИОНАЛЫ</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="pro">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">За рубежом</a></li>
@@ -1307,6 +1308,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="amateur"><span><i class="icon-arr-bottom"></i>Любители</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="amateur">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">2За рубежом</a></li>
@@ -1390,6 +1392,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="team"><span><i class="icon-arr-bottom"></i>Сборные</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="team">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">3За рубежом</a></li>
@@ -1473,6 +1476,7 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-drop js-menu-link" data-mlink="projects"><span><i class="icon-arr-bottom"></i>Наши проекты</span></a>
 					<div class="menu-dropdown__section js-menu-block" data-mblock="projects">
 						<ul class="menu-dropdown__list">
 							<li><a href="#">4За рубежом</a></li>
@@ -1556,6 +1560,8 @@
 							</div>
 						</div>
 					</div>
+					<a href="#" class="mobile-menu-link is-school"><i></i>Мини-футбол в школу</a>
+					<a href="#" class="mobile-menu-link is-academy"><i></i>Академия</a>
 				</div>
 			</div>
 		</div>
@@ -1569,9 +1575,24 @@
 					<li><a href="#">Кубок УЕФА</a></li>
 					<li><a href="#">ЧЕ 2016</a></li>
 					<li><a href="#">Кубок Ерёменко</a></li>
-					<li><a href="#">Женская лига</a></li>
+					<li><a href="#" class="js-leagues-open">Женская лига<i class="icon-arr-bottom"></i></a>
+						<ul class="leagues__drop js-leagues-drop">
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+						</ul>
+					</li>
 					<li><a href="#">Дубли</a></li>
-					<li><a href="#">Юношеская лига</a></li>
+					<li><a href="#" class="js-leagues-open">Юношеская лига<i class="icon-arr-bottom"></i></a>
+						<ul class="leagues__drop js-leagues-drop">
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+							<li><a href="#">Lorem ipsum.</a></li>
+						</ul>
+					</li>
 				</ul>
 				<!-- <button class="leagues__btn js-leagues-btn"><span></span></button> -->
 			</div>
@@ -1667,7 +1688,7 @@
 													<p><b>Тел.: 495 926-13-16</b></p>
 													<p><b>Email: coach@amfr.ru</b></p>
 												</div>
-												<h5>Прошли обучение 43 тренера</h5>
+												<h5 class="contact-info__last">Прошли обучение 43 тренера</h5>
 											</div>
 										</div>
 									</div>		
@@ -1710,7 +1731,7 @@
 													<p><b>Тел.: 495 926-13-16</b></p>
 													<p><b>Email: referee@amfr.ru</b></p>
 												</div>
-												<h5>Прошли обучение 70 менеджеров</h5>
+												<h5 class="contact-info__last">Прошли обучение 70 менеджеров</h5>
 											</div>
 										</div>
 									</div>			
@@ -1756,7 +1777,7 @@
 													<p><b>Тел.: 495 926-13-16</b></p>
 													<p><b>Email: coach@amfr.ru</b></p>
 												</div>
-												<h5>Прошли обучение 25 судей</h5>
+												<h5 class="contact-info__last">Прошли обучение 25 судей</h5>
 											</div>
 										</div>
 									</div>		
@@ -1789,7 +1810,7 @@
 													<p><b>Тел.: 495 926-13-16</b></p>
 													<p><b>Email: referee@amfr.ru</b></p>
 												</div>
-												<h5>Прошли обучение 39 врачей</h5>
+												<h5 class="contact-info__last">Прошли обучение 39 врачей</h5>
 											</div>
 										</div>
 									</div>			
@@ -1802,7 +1823,11 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="request">
-								<button class="request__btn">Подать заявку<i class="icon-arr-bottom"></i></button>
+								<button class="request__btn js-leagues-open">Подать заявку<i class="icon-arr-bottom"></i></button>
+								<ul class="request__dropdown js-leagues-drop">
+									<li><a href="#">на участие в семинаре</a></li>
+									<li><a href="#">на проведение семинара</a></li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-lg-12 col-sm-6 col-xs-12">
@@ -1810,24 +1835,24 @@
 								<a href="#" class="button-blue">Расписание</a>
 								<h4>Ближайшие семинары</h4>
 								<div class="seminar">
-									<div><a href="#">07-09.10.2015</a></div>
-									<div><b>Судейский семинар</b></div>
+									<div><b>07-09.10.2015</b></div>
+									<div><a href="#">Судейский семинар</a></div>
 								</div>
 								<div class="seminar">
-									<div><a href="#">07-09.10.2015</a></div>
-									<div><b>Судейский семинар</b></div>
+									<div><b>07-09.10.2015</b></div>
+									<div><a href="#">Судейский семинар</a></div>
 								</div>
 								<div class="seminar">
-									<div><a href="#">07-09.10.2015</a></div>
-									<div><b>Судейский семинар</b></div>
+									<div><b>07-09.10.2015</b></div>
+									<div><a href="#">Судейский семинар</a></div>
 								</div>
 								<div class="seminar">
-									<div><a href="#">07-09.10.2015</a></div>
-									<div><b>Судейский семинар</b></div>
+									<div><b>07-09.10.2015</b></div>
+									<div><a href="#">Судейский семинар</a></div>
 								</div>
 								<div class="seminar">
-									<div><a href="#">07-09.10.2015</a></div>
-									<div><b>Судейский семинар</b></div>
+									<div><b>07-09.10.2015</b></div>
+									<div><a href="#">Судейский семинар</a></div>
 								</div>
 							</div>							
 						</div>
@@ -1839,25 +1864,25 @@
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-news">
 									<a href="#" class="academy-news__img">
 										<img src="img/academy-news.png" alt="">
 									</a>
-									<div class="academy-news__text"><a href="#">10.03.2015</a> Суперлига. Место и время начала матчей 22 тура</div>
+									<div class="academy-news__text"><a href="#"><time>10.03.2015</time> <span>Суперлига. Место и время начала матчей 22 тура</span></a></div>
 								</div>
 								<div class="academy-side__bottom">
 									<h4>Подписаться  на новости Академии</h4>
@@ -1895,8 +1920,18 @@
 <!-- end main -->
 
 <!-- begin footer  -->
-<footer class="footer">
+<footer class="footer footer_mod">
 	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="bc">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Суперлига</a></li>
+					<li><a href="#">МФК Газпром-Югра</a></li>
+					<li><a href="#">Состав</a></li>
+				</ul>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
 				<h4 class="js-footer-open">АМФР<i class="icon-arr-bottom"></i></h4>

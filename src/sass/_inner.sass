@@ -154,6 +154,7 @@ $red: #e43b06
 			a
 				background: #f93526
 				color: #fff 
+				+tdn
 
 .tabs__list_nopad
 	padding: 0
@@ -590,6 +591,13 @@ $red: #e43b06
 				color: $purple
 				&:before
 					color: $purple
+	.mobile-tab-btn
+		&.is-active
+			color: $purple
+			span
+				border-color: $purple
+				&:before
+					color: $purple 
 .text-tabs_sm
 	div
 		a
