@@ -318,9 +318,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .mobile-tab-btn { font-size: 0; padding: 0.6em 0.6em 0.5em 0; font-size: 2rem; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #197fba; text-transform: uppercase; line-height: 1; text-decoration: none; display: none; }
 .mobile-tab-btn:hover, .mobile-tab-btn:focus, .mobile-tab-btn:visited, .mobile-tab-btn:active { text-decoration: none; }
 @media only screen and (max-width: 767px) { .mobile-tab-btn { display: block; } }
-.mobile-tab-btn.is-active { color: #d93723; }
-.mobile-tab-btn.is-active span { border-color: #d93723; }
-.mobile-tab-btn.is-active span:before { color: #d93723; -webkit-transform: rotateX(-180deg); transform: rotateX(-180deg); }
+.mobile-tab-btn.is-active.is-mobile { color: #d93723; }
+.mobile-tab-btn.is-active.is-mobile span { border-color: #d93723; }
+.mobile-tab-btn.is-active.is-mobile span:before { color: #d93723; -webkit-transform: rotateX(-180deg); transform: rotateX(-180deg); }
 .mobile-tab-btn span { display: inline-block; vertical-align: top; position: relative; border-bottom: 2px dotted #197fba; }
 .mobile-tab-btn span:before { content: ""; color: #197fba; position: absolute; font-size: 0.5em; right: -2.4em; margin-top: 0.4em; transition: -webkit-transform 0.6s; transition: transform 0.6s; }
 
@@ -1313,6 +1313,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .box__container { *zoom: 1; margin: 0 -10px; display: none; }
 .box__container:after { content: " "; display: table; clear: both; }
 .box__container.is-active { display: block; }
+@media only screen and (max-width: 767px) { .box__container.is-active { display: none; } }
+@media only screen and (max-width: 767px) { .box__container.is-active.is-mobile { display: block; } }
 .box__container-players .box__col { padding: 20px 10px; }
 .box__col { float: left; width: 33.33%; padding: 10px; }
 @media only screen and (max-width: 991px) { .box__col { width: 50%; } }
@@ -1662,9 +1664,11 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 767px) { .match-slide { padding: 0; } }
 .match-slide:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.65); }
 .match-slide__video { width: 100%; height: 0; padding: 0 0 51.668%; z-index: 5; position: relative; }
+@media only screen and (max-width: 767px) { .match-slide__video { display: none; } }
 .match-slide__video iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 
 .match-gols { position: relative; z-index: 5; }
+@media only screen and (max-width: 767px) { .match-gols { display: none; } }
 .match-gols__top { *zoom: 1; max-width: 90%; padding: 4px 10px 15px; margin: 0 auto; }
 .match-gols__top:after { content: " "; display: table; clear: both; }
 .match-gols__name { width: 40%; }
@@ -1851,6 +1855,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .match-tabs__sub-title { font-size: 1.8rem; line-height: 1.3; padding: 4px 0 0; }
 .match-tabs__section { display: none; }
 .match-tabs__section.is-active { display: block; }
+@media only screen and (max-width: 767px) { .match-tabs__section.is-active { display: none; } }
+@media only screen and (max-width: 767px) { .match-tabs__section.is-active.is-mobile { display: block; } }
 .match-tabs__logo-m { display: none; width: 50px; height: 70px; clear: both; }
 .match-tabs__logo-m img { max-width: 100%; max-height: 100%; }
 .match-tabs__logo-m:first-child { margin-top: 20px; }
@@ -2083,8 +2089,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .post__header { font-size: 1.2rem; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #848484; }
 .post__header strong { font-family: "PFDinDisplayPro Medium", Arial, sans-serif; color: #000; font-size: 1.3rem; }
 
-.rating { position: relative; margin: 14px 0 0; }
-@media only screen and (max-width: 1219px) { .rating { margin: 12px 0 0; } }
+.rating { position: relative; }
 @media only screen and (max-width: 991px) { .rating { display: none; } }
 .rating__img { line-height: 0; max-height: 404px; text-align: center; overflow: hidden; }
 .rating__img img { width: 100%; height: auto; }
@@ -2105,6 +2110,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .tabs-main { display: none; }
 .tabs-main.is-active { display: block; }
+@media only screen and (max-width: 767px) { .tabs-main.is-active { display: none; } }
+@media only screen and (max-width: 767px) { .tabs-main.is-active.is-mobile { display: block; } }
 
 .tabs_white .tabs-btn span { color: #fff; text-transform: none; }
 .tabs_white .tabs-btn span:before { border-color: #fff; }
@@ -2222,9 +2229,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .league-page_women .tabs-btn.is-active { background: #b71a4f; }
 @media only screen and (max-width: 767px) { .league-page_women .tabs-btn.is-active { background: none; color: #b71a4f; }
   .league-page_women .tabs-btn.is-active:before { color: #b71a4f; } }
-.league-page_women .mobile-tab-btn.is-active { color: #b71a4f; }
-.league-page_women .mobile-tab-btn.is-active span { border-color: #b71a4f; }
-.league-page_women .mobile-tab-btn.is-active span:before { color: #b71a4f; }
+.league-page_women .mobile-tab-btn.is-active.is-mobile { color: #b71a4f; }
+.league-page_women .mobile-tab-btn.is-active.is-mobile span { border-color: #b71a4f; }
+.league-page_women .mobile-tab-btn.is-active.is-mobile span:before { color: #b71a4f; }
 
 .text-tabs_sm div a { padding-top: 5px; }
 .text-tabs_sm div a.is-active { font-size: 3rem; }

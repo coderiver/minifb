@@ -1181,6 +1181,11 @@
 		display: none
 		&.is-active
 			display: block
+			+r(767)
+				display: none
+			&.is-mobile
+				+r(767)
+					display: block
 		&-players
 			.box__col
 				padding: 20px 10px 
@@ -2302,6 +2307,8 @@
 		padding: 0 0 51.668% 
 		z-index: 5
 		position: relative 
+		+r(767)
+			display: none
 		iframe
 			width: 100%
 			height: 100%
@@ -2313,6 +2320,8 @@
 .match-gols
 	position: relative
 	z-index: 5 
+	+r(767)
+		display: none
 	&__top
 		+clr
 		max-width: 90%
@@ -2877,6 +2886,11 @@
 		display: none
 		&.is-active
 			display: block
+			+r(767)
+				display: none
+			&.is-mobile
+				+r(767)
+					display: block
 	&__logo-m
 		display: none
 		width: 50px

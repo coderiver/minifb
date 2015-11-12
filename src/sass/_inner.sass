@@ -218,9 +218,6 @@ $red: #e43b06
 			font-size: 1.3rem 
 .rating
 	position: relative
-	margin: 14px 0 0 
-	+r(1219)
-		margin: 12px 0 0 
 	+r(991)
 		display: none
 	&__img
@@ -276,6 +273,11 @@ $red: #e43b06
 	display: none
 	&.is-active
 		display: block
+		+r(767)
+			display: none
+		&.is-mobile
+			+r(767)
+				display: block
 .tabs_white
 	.tabs-btn
 		span
@@ -593,11 +595,12 @@ $red: #e43b06
 					color: $purple
 	.mobile-tab-btn
 		&.is-active
-			color: $purple
-			span
-				border-color: $purple
-				&:before
-					color: $purple 
+			&.is-mobile
+				color: $purple
+				span
+					border-color: $purple
+					&:before
+						color: $purple 
 .text-tabs_sm
 	div
 		a

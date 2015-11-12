@@ -1017,12 +1017,13 @@ dd
 	+r(767)
 		display: block
 	&.is-active
-		color: #d93723 
-		span
-			border-color: #d93723
-			&:before
-				color: #d93723
-				transform: rotateX(-180deg)
+		&.is-mobile
+			color: #d93723 
+			span
+				border-color: #d93723
+				&:before
+					color: #d93723
+					transform: rotateX(-180deg)
 	span
 		display: inline-block
 		vertical-align: top
