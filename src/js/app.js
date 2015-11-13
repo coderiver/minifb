@@ -5,5 +5,6 @@
 //= lib/flexmenu.js
 //= lib/jquery.tooltipster.min.js
 //= lib/hoverIntent.js
+//= lib/jquery.mCustomScrollbar.concat.min.js
 //= common.js
 

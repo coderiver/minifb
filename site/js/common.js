@@ -523,22 +523,84 @@ $(document).ready(function() {
 
 	//museum
 
-	$('.js-museum-for').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.js-museum-nav'
-	});
+	// $('.js-museum-for').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	fade: true,
+	// 	asNavFor: '.js-museum-nav'
+	// });
 	$('.js-museum-nav').slick({
 		slidesToShow: 11,
 		slidesToScroll: 1,
-		asNavFor: '.js-museum-for',
 		dots: false,
 		centerMode: true,
 		arrows: false,
 		focusOnSelect: true,
 		centerPadding: '0'
+	});
+
+	$('.museum-season').click(function() {
+
+		var el = $(this).data('slick-index');
+
+		console.log(el, $('.museum-season').length - $('.js-museum-nav').find('.slick-cloned').length);
+
+		if (el == $('.museum-season').length - $('.js-museum-nav').find('.slick-cloned').length) {
+			$('.js-museum-for').mCustomScrollbar('scrollTo', 'left', {
+				scrollInertia: 1000,
+			});
+		}
+		else {
+			var sectionLeft = $('.js-museum-section').eq(el).position().left;
+			$('.js-museum-for').mCustomScrollbar('scrollTo', sectionLeft, {
+				scrollInertia: 1000,
+			});
+		}
+	});
+	
+	function museumScroll() {
+		$('.js-museum-for').mCustomScrollbar({
+			axis:"x",
+			scrollbarPosition: "inside",
+			scrollInertia: 1000,
+			contentTouchScroll: true,
+			documentTouchScroll: true,
+			autoHideScrollbar: true,
+			callbacks:{
+				whileScrolling:function(){ 
+					var mscLeft = this.mcs.leftPct
+
+					// console.log(mscLeft);
+
+					$('.js-museum-section').each(function() {
+
+						var index = $(this).index();
+
+						console.log(
+							mscLeft + 'left', 
+							Math.round(($(this).position().left/($('.mCSB_container').outerWidth()/100) - $(this).outerWidth()/($('.mCSB_container').outerWidth()/100))) + 'el'
+							// $(this).position().left/($('.mCSB_container').outerWidth()/100) + 'el left %', 
+							// $(this).outerWidth()/($('.mCSB_container').outerWidth()/100) + 'width %'
+						)
+
+						if (mscLeft == Math.round($(this).position().left/($('.mCSB_container').outerWidth()/100) - $(this).outerWidth()/($('.mCSB_container').outerWidth()/100))) {
+							var index = $(this).index();
+							$('.js-museum-nav').slick('goTo', index);
+							$('.js-museum-section').removeClass('is-active');
+							$(this).addClass('is-active');
+						};
+					});
+				}
+			}
+		});
+	}
+
+	$(window).load(function() {
+		museumScroll();
+	});
+	$(window).resize(function() {
+		$('.js-museum-for').mCustomScrollbar("update");
 	});
 
 	//filter

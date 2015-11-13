@@ -1446,59 +1446,56 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .museum-link_show .icon-show { position: absolute; top: 3px; left: 0; font-size: 11px; color: #54c39e; transition: color 0.25s; }
 .museum-link_show .is-visible { display: block; }
 .museum-link_show .is-hidden { display: none; }
-.museum-seasons { position: relative; padding: 30px 0 23px; *zoom: 1; z-index: 5; }
+.museum-seasons { position: relative; *zoom: 1; z-index: 5; max-width: 1200px; margin: 0 auto; }
 .museum-seasons:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 767px) { .museum-seasons { visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; } }
-.museum-seasons:before { content: ""; position: absolute; bottom: 20px; left: 0; right: 0; height: 4px; background: url(../img/season-line.png) no-repeat center center; }
 .museum-seasons-wrap { position: relative; overflow: hidden; }
 .museum-seasons-wrap:before, .museum-seasons-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; box-shadow: 0px 0px 60px 90px rgba(2, 13, 26, 0.8); z-index: 20; }
 .museum-seasons-wrap:before { left: -20px; }
 .museum-seasons-wrap:after { right: -20px; }
-.museum-season { float: left; text-align: center; position: relative; padding: 40px 0 20px; cursor: pointer; z-index: 5; }
-.museum-season.slick-center { z-index: 4; }
-.museum-season.slick-center:before { visibility: visible; opacity: 1; }
-.museum-season.slick-center small { opacity: 1; visibility: visible; }
-.museum-season.slick-center span { font-size: 3.3rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #fff; border: none; }
-@media only screen and (max-width: 991px) { .museum-season.slick-center span { font-size: 2.2rem; } }
+.museum-season { float: left; text-align: center; position: relative; padding: 70px 0 43px; cursor: pointer; z-index: 5; width: 100%; }
+.museum-season.slick-current { z-index: 4; }
+.museum-season.slick-current:before { visibility: visible; opacity: 1; }
+.museum-season.slick-current small { opacity: 1; visibility: visible; }
+.museum-season.slick-current span { font-size: 3.3rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #fff; border: none; }
+@media only screen and (max-width: 991px) { .museum-season.slick-current span { font-size: 2.2rem; } }
 .museum-season:before, .museum-season:after { content: ""; position: absolute; left: 50%; }
-.museum-season:before { background: url(../img/season-bg.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; width: 209px; height: 190px; bottom: 15px; visibility: hidden; opacity: 0; margin-left: -105px; }
-.museum-season:after { bottom: 6px; margin-left: -1px; width: 1px; height: 11px; background-color: #b7b7b7; }
+.museum-season:before { background: url(../img/season-bg.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; width: 209px; height: 190px; bottom: 38px; visibility: hidden; opacity: 0; margin-left: -105px; }
+.museum-season:after { bottom: 26px; margin-left: -1px; width: 1px; height: 11px; background-color: #b7b7b7; }
 .museum-season small, .museum-season span { position: relative; z-index: 2; }
-.museum-season small { position: absolute; top: 0; left: 0; right: 0; color: white; font-size: 2rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; visibility: hidden; opacity: 0; will-change: opacity; transition: opacity 0.2s, visibility 0.2s; }
+.museum-season small { position: absolute; top: 30px; left: 0; right: 0; color: white; font-size: 2rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; visibility: hidden; opacity: 0; will-change: opacity; transition: opacity 0.2s, visibility 0.2s; }
 @media only screen and (max-width: 991px) { .museum-season small { font-size: 1.8rem; } }
 .museum-season span { display: inline-block; color: #378876; font-size: 2rem; line-height: 2rem; transition: color 0.2s; border-bottom: 1px dotted #378876; }
 @media only screen and (max-width: 991px) { .museum-season span { font-size: 1.8rem; } }
 .museum-container { max-width: 1620px; padding: 0 10px; margin: 0 auto; position: relative; }
-@media only screen and (max-width: 1400px) { .museum-container { max-width: 1200px; } }
-@media only screen and (max-width: 991px) { .museum-container { max-width: 700px; } }
-@media only screen and (max-width: 767px) { .museum-container { max-width: 400px; } }
-.museum-row { *zoom: 1; margin-bottom: -45px; position: absolute; top: 0; left: 10px; right: 10%; visibility: hidden; opacity: 0; }
+.museum-container:before { content: ""; position: absolute; top: 114px; left: 0; right: 0; height: 4px; background: url(../img/season-line.png) no-repeat center center; background-size: contain; }
+@media only screen and (max-width: 767px) { .museum-container:before { display: none; } }
+.museum-row { *zoom: 1; position: absolute; top: 0; left: 10px; right: 10%; visibility: hidden; opacity: 0; white-space: nowrap; font-size: 0; }
 .museum-row:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1400px) { .museum-row { margin: 0; } }
 .museum-row.is-active { position: static; opacity: 1; visibility: visible; }
-.museum-slide { padding: 0 0 70px; }
-.museum-photo { padding: 28px 20px 0 0; font-size: 0; width: 37.5%; position: relative; float: left; }
-@media only screen and (max-width: 1400px) { .museum-photo { width: 50%; } }
-@media only screen and (max-width: 1100px) { .museum-photo { display: none; } }
+.museum-slide { padding: 0 0 26px; *zoom: 1; display: inline-block; vertical-align: top; width: 1620px; }
+.museum-slide:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 767px) { .museum-slide { width: 820px; padding: 0 0 60px; } }
+.museum-photo { padding: 28px 20px 0 0; font-size: 0; width: 37.5%; position: relative; float: left; white-space: normal; }
+@media only screen and (max-width: 767px) { .museum-photo { display: none; } }
 .museum-photo img { width: 100%; }
 .museum-photo__text { position: absolute; bottom: 0; left: 0; right: 20px; background: rgba(0, 0, 0, 0.8); padding: 15px 30px 20px; }
 .museum-photo time, .museum-photo span, .museum-photo p { color: #fff; }
 .museum-photo p { margin: 0; max-width: 500px; padding: 3px 0 0; }
 .museum-photo span { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.8rem; }
 .museum-photo time { font-size: 1.5rem; padding: 0 4px 0 0; }
+.museum-cups-section { display: inline-block; vertical-align: top; width: 1013px; }
+@media only screen and (max-width: 767px) { .museum-cups-section { width: 820px; } }
+.museum-cups-section .museum-cups__small { width: 42%; }
+@media only screen and (max-width: 767px) { .museum-cups-section .museum-cups__small { width: 36%; } }
+.museum-cups-section .museum-cups__big { width: 58%; }
+@media only screen and (max-width: 767px) { .museum-cups-section .museum-cups__big { width: 64%; } }
 .museum-cups__small { float: left; width: 21%; }
-@media only screen and (max-width: 1400px) { .museum-cups__small { width: 100%; clear: both; } }
-@media only screen and (max-width: 1100px) { .museum-cups__small { clear: none; width: 36%; } }
-@media only screen and (max-width: 991px) { .museum-cups__small { width: 100%; } }
-@media only screen and (max-width: 1400px) { .museum-cups__small .museum-cup_small { width: 25%; } }
-@media only screen and (max-width: 1100px) { .museum-cups__small .museum-cup_small { width: 50%; } }
-@media only screen and (max-width: 991px) { .museum-cups__small .museum-cup_small { width: 25%; } }
+@media only screen and (max-width: 767px) { .museum-cups__small { width: 36%; } }
 @media only screen and (max-width: 767px) { .museum-cups__small .museum-cup_small { width: 50%; } }
 .museum-cups__big { float: right; width: 41.5%; }
-@media only screen and (max-width: 1400px) { .museum-cups__big { width: 50%; } }
-@media only screen and (max-width: 1100px) { .museum-cups__big { width: 64%; } }
-@media only screen and (max-width: 991px) { .museum-cups__big { width: 100%; } }
-@media only screen and (max-width: 767px) { .museum-cups__big { display: none; } }
+@media only screen and (max-width: 767px) { .museum-cups__big { width: 64%; } }
 .museum-cup { text-align: center; position: relative; font-size: 0; float: left; transition: opacity 0.25s; cursor: pointer; }
 .museum-cup:hover:after { visibility: visible; opacity: 1; }
 .museum-cup:hover:before { visibility: hidden; opacity: 0; }

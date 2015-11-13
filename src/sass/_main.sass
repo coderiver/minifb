@@ -1532,23 +1532,25 @@
 				display: none
 	&-seasons
 		position: relative
-		padding: 30px 0 23px 
+		// padding: 30px 0 23px 
 		+clr
 		z-index: 5
+		max-width: 1200px
+		margin: 0 auto 
 		+r(767)
 			visibility: hidden
 			opacity: 0
 			position: absolute
 			top: 0
 			left: 0
-		&:before
-			content: "" 
-			position: absolute
-			bottom: 20px
-			left: 0
-			right: 0
-			height: 4px
-			background: url(../img/season-line.png) no-repeat center center
+		// &:before
+		// 	content: "" 
+		// 	position: absolute
+		// 	bottom: 20px
+		// 	left: 0
+		// 	right: 0
+		// 	height: 4px
+		// 	background: url(../img/season-line.png) no-repeat center center
 		&-wrap
 			position: relative
 			overflow: hidden
@@ -1567,10 +1569,11 @@
 		float: left
 		text-align: center
 		position: relative
-		padding: 40px 0 20px
+		padding: 70px 0 43px
 		cursor: pointer
 		z-index: 5
-		&.slick-center
+		width: 100%
+		&.slick-current
 			// padding: 35px 0 20px
 			z-index: 4
 			&:before
@@ -1595,12 +1598,12 @@
 			+cover
 			width: 209px 
 			height: 190px
-			bottom: 15px
+			bottom: 38px
 			visibility: hidden
 			opacity: 0
 			margin-left: -105px
 		&:after
-			bottom: 6px
+			bottom: 26px
 			margin-left: -1px
 			width: 1px
 			height: 11px
@@ -1610,7 +1613,7 @@
 			z-index: 2
 		small
 			position: absolute
-			top: 0
+			top: 30px
 			left: 0
 			right: 0
 			color: white
@@ -1636,21 +1639,35 @@
 		padding: 0 10px 
 		margin: 0 auto
 		position: relative
-		+r(1400)
-			max-width: 1200px
-		+r(991)
-			max-width: 700px
-		+r(767)
-			max-width: 400px
+		// +r(1400)
+		// 	max-width: 1200px
+		// +r(991)
+		// 	max-width: 700px
+		// +r(767)
+		// 	max-width: 400px
+		&:before
+			content: "" 
+			position: absolute
+			top: 114px
+			left: 0
+			right: 0
+			height: 4px
+			background: url(../img/season-line.png) no-repeat center center
+			-webkit-background-size: contain 
+			-o-background-size: contain 
+			background-size: contain 
+			+r(767)
+				display: none
 	&-row
 		+clr
-		margin-bottom: -45px
 		position: absolute
 		top: 0
 		left: 10px
 		right: 10%
 		visibility: hidden
 		opacity: 0
+		white-space: nowrap
+		font-size: 0
 		+r(1400)
 			margin: 0
 		&.is-active
@@ -1658,16 +1675,31 @@
 			opacity: 1
 			visibility: visible
 	&-slide
-		padding: 0 0 70px 
+		padding: 0 0 26px 
+		+clr
+		// max-width: 1620px
+		display: inline-block
+		vertical-align: top
+		width: 1620px
+		// +r(1400)
+		// 	max-width: 1200px
+		// +r(991)
+		// 	max-width: 700px 
+		+r(767)
+			width: 820px 
+			padding: 0 0 60px 
 	&-photo
 		padding: 28px 20px 0 0
 		font-size: 0
 		width: 37.5%
 		position: relative
 		float: left
-		+r(1400)
-			width: 50%
-		+r(1100)
+		// +r(1400)
+		// 	width: 50%
+		// +r(1100)
+		// 	display: none
+		white-space: normal
+		+r(767)
 			display: none
 		img
 			width: 100%
@@ -1690,39 +1722,58 @@
 		time
 			font-size: 1.5rem
 			padding: 0 4px 0 0 
+	&-cups-section
+		display: inline-block
+		vertical-align: top
+		width: 1013px
+		+r(767)
+			width: 820px 
+		.museum-cups
+			&__small
+				width: 42%
+				+r(767)
+					width: 36%
+			&__big
+				width: 58%
+				+r(767)
+					width: 64%
 	&-cups
 		&__small
 			float: left
 			width: 21%
-			+r(1400)
-				width: 100%
-				clear: both
-			+r(1100)
-				clear: none
+			// +r(1400)
+			// 	width: 100%
+			// 	clear: both
+			// +r(1100)
+			// 	clear: none
+			// 	width: 36%
+			// +r(991)
+			// 	width: 100%
+			+r(767)
 				width: 36%
-			+r(991)
-				width: 100%
 			.museum-cup
 				&_small
-					+r(1400)
-						width: 25%
-					+r(1100)
-						width: 50%
-					+r(991)
-						width: 25%
+					// +r(1400)
+					// 	width: 25%
+					// +r(1100)
+					// 	width: 50%
+					// +r(991)
+					// 	width: 25%
 					+r(767)
 						width: 50%
 		&__big
 			float: right
 			width: 41.5%
-			+r(1400)
-				width: 50%
-			+r(1100)
-				width: 64%
-			+r(991)
-				width: 100%
+			// +r(1400)
+			// 	width: 50%
+			// +r(1100)
+			// 	width: 64%
+			// +r(991)
+			// 	width: 100%
+			// +r(767)
+			// 	display: none
 			+r(767)
-				display: none
+				width: 64%
 	&-cup
 		text-align: center
 		position: relative
