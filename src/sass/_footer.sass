@@ -16,6 +16,9 @@
 		margin: 15px 0 0 
 		+r(767)
 			cursor: pointer
+		&.is-active
+			i
+				transform: rotateX(180deg)
 		i
 			position: absolute
 			top: 50%
@@ -23,6 +26,7 @@
 			margin-top: -5px
 			font-size: 0.9rem
 			display: none
+			transition: transform 0.2s 
 			+r(767)
 				display: block
 	a

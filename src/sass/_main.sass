@@ -288,6 +288,9 @@
 	&__top
 		+clr
 		margin-bottom: 20px
+		&-mod
+			+r(767)
+				margin-bottom: 0
 	.text-tabs
 		float: left
 	.button-blue
@@ -576,6 +579,10 @@
 		padding: 2px 0 0 
 	.btn-next
 		margin: 4px 0 0 35px
+		+r(1219)
+			margin: 0 0 0 35px
+		+r(991)
+			margin: -4px 0 0 35px 
 		+r(767)
 			margin: 0 0 0 
 	&_dark
@@ -992,13 +999,13 @@
 				text-decoration: underline
 
 .academy-side
-	padding: 17px 17px 15px 20px 
+	padding: 17px 20px 15px 20px 
 	background-color: white
 	border-radius: 10px
 	margin-bottom: 20px
 	.button-blue, .btn-next_blue
 		float: right
-		margin: 11px 0 10px 10px
+		margin: 4px 0 10px 10px
 		+r(1219)
 			margin: 0 0 10px 10px  
 	h4
@@ -1105,7 +1112,7 @@
 			line-height: 1
 			text-decoration: none
 	&__info
-		padding: 0 0 0 180px 
+		padding: 0 0 10px 180px 
 		font-size: 0
 		+r(767)
 			padding: 0 10px 
@@ -1157,7 +1164,7 @@
 		.btn-mail, .btn-attr
 			margin: 0 0 5px 
 			+r(991)
-				margin: 0 10px 0 0
+				margin: 0 0 10px
 			+r(767)
 				margin: 0 0 10px 
 	.page-nav
@@ -1222,6 +1229,9 @@
 		margin: 0 0 0 -10px 
 		li
 			padding: 0 10px 
+		&-team
+			li
+				padding: 0 15px 
 
 .user-box
 	+clr

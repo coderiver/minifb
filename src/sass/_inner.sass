@@ -164,7 +164,7 @@ $red: #e43b06
 			float: left
 		.btn-next
 			float: right
-			margin-top: 12px 
+			margin-top: 11px 
 			+r(767)
 				margin-top: 4px
 	
@@ -218,6 +218,7 @@ $red: #e43b06
 			font-size: 1.3rem 
 .rating
 	position: relative
+	+cover
 	+r(991)
 		display: none
 	&__img
@@ -267,8 +268,10 @@ $red: #e43b06
 	.page-nav
 		font-size: 1.5rem
 		float: right 
+		margin: -3px 0 0 
 		+r(767)
 			float: none
+			margin: 0
 .tabs-main
 	display: none
 	&.is-active
@@ -431,9 +434,7 @@ $red: #e43b06
 		+r(767)
 			width: 100% 
 .table-forecasts
-	min-width: 380px
 	width: 100% 
-	margin-left: -10px 
 	+r(991)
 		min-width: 100% 
 	+r(767)
@@ -497,6 +498,7 @@ $red: #e43b06
 	img
 		width: 100%
 		height: auto
+		border-radius: 10px
 	&__text
 		position: absolute
 		bottom: 30px
@@ -524,6 +526,7 @@ $red: #e43b06
 			margin-bottom: 0
 		h2, .select
 			display: inline-block
+			vertical-align: top
 			+r(767)
 				display: block
 		h2 +.select
@@ -534,8 +537,14 @@ $red: #e43b06
 		.select
 			width: 370px 
 			max-width: initial
+			margin: 3px 0 0 
+			+r(1219)
+				margin: 1px 0 0
+			+r(991)
+				margin: -2px 0 0 
 			+r(767)
 				width: 100% 
+				margin: 10px 0 0 
 	.fotorama
 		&__nav
 			margin-top: 20px 
@@ -579,6 +588,8 @@ $red: #e43b06
 				display: inline-block
 .block_sm
 	padding: 10px 
+	.btn-next
+		margin-right: 10px
 .league-page_women
 	.page-nav
 		li

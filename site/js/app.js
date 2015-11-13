@@ -2447,6 +2447,7 @@ $(document).ready(function() {
 	//footer
 	$('.js-footer-open').click(function() {
 		$(this).parent().find('.js-footer-list').toggleClass('is-active');
+		$(this).toggleClass('is-active');
 	});
 
 	//accordion
@@ -2888,14 +2889,27 @@ $(document).ready(function() {
 	});	
 
 	$('.js-posts-list .post').hoverIntent(updateNews);
+
+	$(window).resize(function() {
+		newsImg();
+	});
+
+	$(window).load(function() {
+		newsImg();
+	});
+
+	function newsImg() {
+		$('.js-news-upd').css('min-height', $('.js-posts-list').outerHeight());
+	}
+
 	function updateNews () {
 		var $el = $(this),
 			img = $el.data('img'),
 			link = $el.attr('href');
 			header = $el.find('.js-post-header').text(),
-			updImg = $el.parents('.js-news-block').find('.js-news-upd-img img'),
+			updImg = $('.js-news-upd'),
 			updHeader = $el.parents('.js-news-block').find('.js-news-upd-header');
-		updImg.attr('src', img);
+		updImg.attr('style', 'background-image: url(' + img + ');' + 'min-height: ' + $('.js-posts-list').outerHeight() + 'px;');
 		updHeader.attr('href', link);
 		updHeader.text(header);
 	}
