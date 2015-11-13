@@ -290,7 +290,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .pages__list li { display: inline-block; vertical-align: middle; padding: 0 12px; }
 .pages__list li a { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1.9; display: inline-block; }
 
-.tabs_md .tabs-btn { padding: 0.85em 0.8em 0.6em; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
+.tabs_md .tabs-btn { padding: 0.8em 0.8em 0.65em; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
 .tabs__list { line-height: 1; margin: 0; font-size: 0; padding: 20px 0; }
 .tabs__list li { padding: 0; }
 .tabs__list li:before { display: none; }
