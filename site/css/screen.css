@@ -290,7 +290,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .pages__list li { display: inline-block; vertical-align: middle; padding: 0 12px; }
 .pages__list li a { font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #197fba; font-size: 1.4rem; line-height: 1.9; display: inline-block; }
 
-.tabs_md .tabs-btn { padding: 0.8em 0.8em 0.65em; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; }
+.tabs_md .tabs-btn { padding: 0.9em 0.8em 0.75em; }
 .tabs__list { line-height: 1; margin: 0; font-size: 0; padding: 20px 0; }
 .tabs__list li { padding: 0; }
 .tabs__list li:before { display: none; }
@@ -299,7 +299,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 767px) { .tabs__list { display: none; } }
 .tabs__list li { display: inline-block; vertical-align: top; }
 @media only screen and (max-width: 767px) { .tabs__list li { display: block; } }
-.tabs-btn { display: inline-block; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #197fba; font-size: 2rem; text-transform: uppercase; line-height: 1; text-decoration: none; padding: 0.8em 1.75em 0.65em; border-radius: 0.5em; position: relative; }
+.tabs-btn { display: inline-block; font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: #197fba; font-size: 2rem; text-transform: uppercase; line-height: 1; text-decoration: none; padding: 0.9em 1.75em 0.75em; border-radius: 0.5em; position: relative; }
 @media only screen and (max-width: 1219px) { .tabs-btn { font-size: 1.5rem; } }
 @media only screen and (max-width: 767px) { .tabs-btn { padding: 0.6em 0.6em 0.5em; } }
 .tabs-btn.is-active { background-color: #f93526; color: #fff; }
@@ -1449,8 +1449,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .museum-seasons { position: relative; *zoom: 1; z-index: 5; max-width: 1200px; margin: 0 auto; }
 .museum-seasons:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 767px) { .museum-seasons { visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; } }
-.museum-seasons-wrap { position: relative; overflow: hidden; }
-.museum-seasons-wrap:before, .museum-seasons-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; box-shadow: 0px 0px 60px 90px rgba(2, 13, 26, 0.8); z-index: 20; }
+.museum-seasons:before { content: ""; position: absolute; bottom: 20px; left: 0; right: 0; height: 4px; background: url(../img/season-line.png) no-repeat center center; background-size: contain; }
+.museum-seasons-wrap { position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto; }
+.museum-seasons-wrap:before, .museum-seasons-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; box-shadow: 0px 0px 60px 90px rgba(2, 13, 26, 0.8); z-index: 20; width: 20px; }
 .museum-seasons-wrap:before { left: -20px; }
 .museum-seasons-wrap:after { right: -20px; }
 .museum-season { float: left; text-align: center; position: relative; padding: 70px 0 43px; cursor: pointer; z-index: 5; width: 100%; }
@@ -1468,8 +1469,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .museum-season span { display: inline-block; color: #378876; font-size: 2rem; line-height: 2rem; transition: color 0.2s; border-bottom: 1px dotted #378876; }
 @media only screen and (max-width: 991px) { .museum-season span { font-size: 1.8rem; } }
 .museum-container { max-width: 1620px; padding: 0 10px; margin: 0 auto; position: relative; }
-.museum-container:before { content: ""; position: absolute; top: 114px; left: 0; right: 0; height: 4px; background: url(../img/season-line.png) no-repeat center center; background-size: contain; }
-@media only screen and (max-width: 767px) { .museum-container:before { display: none; } }
 .museum-row { *zoom: 1; position: absolute; top: 0; left: 10px; right: 10%; visibility: hidden; opacity: 0; white-space: nowrap; font-size: 0; }
 .museum-row:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1400px) { .museum-row { margin: 0; } }
@@ -2076,14 +2075,14 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .block__top .btn-next { float: right; margin-top: 11px; }
 @media only screen and (max-width: 767px) { .block__top .btn-next { margin-top: 4px; } }
 
-.post { display: block; padding: 8px 14px; *zoom: 1; transition: background 0.25s; }
+.post { display: block; padding: 10px 14px; *zoom: 1; transition: background 0.25s; }
 .post:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1219px) { .post:last-child { display: none; } }
 @media only screen and (max-width: 991px) { .post { display: none; width: 50%; float: left; } }
 @media only screen and (max-width: 767px) { .post { width: 100%; } }
 @media only screen and (max-width: 991px) { .post:nth-child(1), .post:nth-child(2) { display: block; } }
 .post:hover { background: #e5e5e5; }
-.post__media { float: left; width: 76px; height: 76px; font-size: 0; line-height: 0; margin: 6px 10px 6px 0; }
+.post__media { float: left; width: 76px; height: 76px; font-size: 0; line-height: 0; margin: 4px 10px 4px 0; }
 @media only screen and (max-width: 1219px) { .post__media { margin: 4px 10px 4px 0; } }
 .post__media img { max-width: 100%; height: auto; }
 .post__info { overflow: hidden; }
@@ -2107,7 +2106,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-sort { *zoom: 1; margin-top: 20px; }
 .table-sort:after { content: " "; display: table; clear: both; }
 .table-sort .select { margin-bottom: 20px; }
-.table-sort .page-nav { font-size: 1.5rem; float: right; margin: -3px 0 0; }
+.table-sort .page-nav { font-size: 1.5rem; float: right; margin: -2px 0 0; }
 @media only screen and (max-width: 767px) { .table-sort .page-nav { float: none; margin: 0; } }
 
 .tabs-main { display: none; }

@@ -1627,9 +1627,9 @@
 						<div class="museum-filter__title">Музей АМФР</div>
 						<div class="museum-filter__label">Награды и кубки:</div>
 						<ul class="museum-filter__list">
-							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active js-museum-tab-slider is-all" data-index="1"><span>Все</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international" data-index="2"><span>Международные</span></a></li>
-							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian" data-index="3"><span>Внутрироссийские</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-all is-active js-museum-tab-slider is-all" data-index="1"><span class="is-visible">Все</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="international" data-index="2"><span class="is-visible">Международные</span></a></li>
+							<li><a href="#" class="museum-link js-museum-btn js-museum-tab-slider" data-filter="russian" data-index="3"><span class="is-visible">Внутрироссийские</span></a></li>
 						</ul>
 						<a href="#" class="museum-link museum-link_show js-museum-btn js-museum-all" data-index="4">
 							<i class="icon-show"></i>
@@ -1651,6 +1651,7 @@
 							<div class="museum-select js-museum-select is-season">
 								<div class="museum-select__text js-museum-select-text">Сезон 2005-2006</div>								
 								<select class="js-museum-select-list  js-season">
+									<option value="0">Сезон 2005-2006</option>
 									<option value="1">Сезон 2005-2006</option>
 									<option value="2">Сезон 2006-2007</option>
 									<option value="3">Сезон 2007-2008</option>
@@ -1665,14 +1666,6 @@
 									<option value="12">Сезон 2005-2006</option>
 									<option value="13">Сезон 2006-2007</option>
 									<option value="14">Сезон 2007-2008</option>
-									<option value="15">Сезон 2008-2009</option>
-									<option value="16">Сезон 2009-2010</option>
-									<option value="17">Сезон 2010-2011</option>
-									<option value="18">Сезон 2011-2012</option>
-									<option value="19">Сезон 2012-2013</option>
-									<option value="20">Сезон 2013-2014</option>
-									<option value="21">Сезон 2014-2015</option>
-									<option value="22">Сезон 2015-2016</option>
 								</select>
 							</div>
 						</div>
@@ -1682,70 +1675,72 @@
 		</div>
 		<div class="museum-container">
 			<div class="museum-row js-museum-tab is-slider is-active">
-				<div class="museum-seasons js-museum-nav">
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>99-00</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>00-01</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>01-02</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>02-03</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>03-04</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>04-05</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>05-06</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>06-07</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>07-08</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>08-09</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>09-10</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>09-10</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>09-10</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>09-10</span>
-					</div>
-					<div class="museum-season">
-						<small>Сезон</small>
-						<span>09-10</span>
+				<div class="museum-seasons-wrap">					
+					<div class="museum-seasons js-museum-nav">
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>99-00</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>00-01</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>01-02</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>02-03</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>03-04</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>04-05</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>05-06</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>06-07</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>07-08</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>08-09</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>09-10</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>09-10</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>09-10</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>09-10</span>
+						</div>
+						<div class="museum-season">
+							<small>Сезон</small>
+							<span>09-10</span>
+						</div>
 					</div>
 				</div>
 				<div class="js-museum-for">
-					<div class="museum-slide js-museum-section">
+					<div class="museum-slide js-museum-section" data-index="0">
 						<div class="museum-photo">
 							<img src="img/museum-photo.jpg" alt="">
 							<div class="museum-photo__text">
@@ -1843,7 +1838,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="1">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -1933,7 +1928,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="2">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2023,7 +2018,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="3">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2113,7 +2108,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="4">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2203,7 +2198,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="5">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2293,7 +2288,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="6">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2383,7 +2378,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="7">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2473,7 +2468,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="8">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2563,7 +2558,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="9">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2653,7 +2648,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="10">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2743,7 +2738,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="11">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2833,7 +2828,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="12">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -2923,7 +2918,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="13">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
@@ -3013,7 +3008,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="museum-cups-section js-museum-section">
+					<div class="museum-cups-section js-museum-section" data-index="14">
 						<div class="museum-cups__big">
 							<div class="museum-cup museum-cup_big js-museum-block" data-block="international" data-index="9">
 								<div class="museum-cup__inner">
