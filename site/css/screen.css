@@ -1472,6 +1472,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .museum-row { *zoom: 1; position: absolute; top: 0; left: 10px; right: 10%; visibility: hidden; opacity: 0; white-space: nowrap; font-size: 0; }
 .museum-row:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1400px) { .museum-row { margin: 0; } }
+@media only screen and (max-width: 767px) { .museum-row { visibility: visible; opacity: 1; position: static; } }
 .museum-row.is-active { position: static; opacity: 1; visibility: visible; }
 .museum-slide { padding: 0 0 26px; *zoom: 1; display: inline-block; vertical-align: top; width: 1620px; }
 .museum-slide:after { content: " "; display: table; clear: both; }
@@ -1530,6 +1531,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 991px) { .museum-all { max-width: 600px; } }
 @media only screen and (max-width: 767px) { .museum-all { max-width: 400px; } }
 .museum-all.is-active { position: static; opacity: 1; visibility: visible; }
+@media only screen and (max-width: 767px) { .museum-all.is-active { position: absolute; opacity: 0; visibility: hidden; } }
 .museum-all__title { color: white; font-size: 2rem; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; position: relative; z-index: 5; padding: 38px 0 0; }
 .museum-all__row { padding: 0 0 50px; position: relative; }
 .museum-all__row.is-first:before { display: none; }
