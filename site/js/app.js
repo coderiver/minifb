@@ -2768,6 +2768,7 @@ $(document).ready(function() {
 					scrollInertia: 1000,
 					callbacks: false,
 				});
+				var index = $(this).val();
 				$('.js-museum-nav').slick('goTo', index - 1);
 			};
 		});
@@ -2804,7 +2805,6 @@ $(document).ready(function() {
 							$('.js-museum-nav').slick('goTo', index);
 							$('.js-museum-section').removeClass('is-active');
 							$(this).addClass('is-active');
-							// console.log(mscLeft + ' scroll', Math.round($(this).position().left/containerWidth) + ' Item', index + ' index', $('.js-museum-select.is-season').find('option').eq(index).text());
 							$('.js-museum-select.is-season').find('.js-museum-select-text').text($('.js-museum-select.is-season').find('option').eq(index).text());
 						};
 					});

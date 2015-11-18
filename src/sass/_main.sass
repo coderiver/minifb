@@ -1645,29 +1645,9 @@
 		padding: 0 10px 
 		margin: 0 auto
 		position: relative
-		// +r(1400)
-		// 	max-width: 1200px
-		// +r(991)
-		// 	max-width: 700px
-		// +r(767)
-		// 	max-width: 400px
-		// &:before
-		// 	content: "" 
-		// 	position: absolute
-		// 	top: 114px
-		// 	left: 0
-		// 	right: 0
-		// 	height: 4px
-		// 	background: url(../img/season-line.png) no-repeat center center
-		// 	-webkit-background-size: contain 
-		// 	-o-background-size: contain 
-		// 	background-size: contain 
-		// 	+r(767)
-		// 		display: none
 		.mCSB_scrollTools.mCSB_scrollTools_horizontal
 			bottom: 20px
 	&-row
-		+clr
 		position: absolute
 		top: 0
 		left: 10px
@@ -1679,37 +1659,46 @@
 		+r(1400)
 			margin: 0
 		+r(767)
-			visibility: visible
+			position: relative
 			opacity: 1
-			position: static
+			visibility: visible
+			top: auto
+			right: auto
+			left: auto
+			bottom: auto
 		&.is-active
-			position: static
+			position: relative
 			opacity: 1
 			visibility: visible
+			top: auto
+			right: auto
+			left: auto
+			bottom: auto
+		&:before, &:after
+			position: absolute
+			top: 137px
+			bottom: 40px
+			content: "" 
+			width: 10%
+			display: block
+			z-index: 200
+		&:before
+			left: 0
+		&:after
+			right: 0
 	&-slide
 		padding: 0 0 26px 
 		+clr
-		// max-width: 1620px
 		display: inline-block
 		vertical-align: top
-		width: 1620px
-		// +r(1400)
-		// 	max-width: 1200px
-		// +r(991)
-		// 	max-width: 700px 
 		+r(767)
-			width: 820px 
 			padding: 0 0 60px 
 	&-photo
 		padding: 28px 20px 0 0
 		font-size: 0
-		width: 37.5%
+		width: 607px
 		position: relative
 		float: left
-		// +r(1400)
-		// 	width: 50%
-		// +r(1100)
-		// 	display: none
 		white-space: normal
 		+r(767)
 			display: none
@@ -1737,55 +1726,13 @@
 	&-cups-section
 		display: inline-block
 		vertical-align: top
-		width: 1013px
-		+r(767)
-			width: 820px 
-		.museum-cups
-			&__small
-				width: 42%
-				+r(767)
-					width: 36%
-			&__big
-				width: 58%
-				+r(767)
-					width: 64%
 	&-cups
 		&__small
 			float: left
-			width: 21%
-			// +r(1400)
-			// 	width: 100%
-			// 	clear: both
-			// +r(1100)
-			// 	clear: none
-			// 	width: 36%
-			// +r(991)
-			// 	width: 100%
-			+r(767)
-				width: 36%
-			.museum-cup
-				&_small
-					// +r(1400)
-					// 	width: 25%
-					// +r(1100)
-					// 	width: 50%
-					// +r(991)
-					// 	width: 25%
-					+r(767)
-						width: 50%
+			width: 340px
 		&__big
 			float: right
-			width: 41.5%
-			// +r(1400)
-			// 	width: 50%
-			// +r(1100)
-			// 	width: 64%
-			// +r(991)
-			// 	width: 100%
-			// +r(767)
-			// 	display: none
-			+r(767)
-				width: 64%
+			width: 640px
 	&-cup
 		text-align: center
 		position: relative
