@@ -2790,11 +2790,16 @@ $(document).ready(function() {
 					var mscLeft = this.mcs.leftPct;
 
 					var cur = scrollItems.map(function(){
-							if ($(this).offset().left < mscLeft) 
-								return this;
+							if ($(this).offset().left < mscLeft) return this;
 						});
 
-					cur = cur[cur.length-1];
+
+					if (cur.length == 0) {
+						cur = scrollItems[0]
+					}
+					else {
+						cur = cur[cur.length-1];
+					};
 
 					// console.log(cur.index());
 
