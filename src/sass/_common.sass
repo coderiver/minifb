@@ -1272,3 +1272,19 @@ dd
 	line-height: 1
 	border-bottom: 1px dotted #197fba
 	+tdn
+
+.accordion
+	&__body
+		display: none
+	&.is-open
+		.accordion__body
+			display: block
+.fix-menu 
+	position: relative
+	z-index: 100 
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		

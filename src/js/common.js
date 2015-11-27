@@ -147,68 +147,106 @@ $(document).ready(function() {
 		}
 	});
 	
-	//menu
-	$('.js-menu-link').on('click', function() {
-
-		var btn = $(this).data('mlink'),
-			btns = $('.js-menu-link'),
-			items = $('.js-menu-block'),
-			currItem = $('.js-menu-block[data-mblock=' + btn + ']'),
-			menu = $('.js-menu').addClass('is-active');
-
-		$('.js-dropdown').slideUp('fast');
-		$('.js-dropdown-btn').removeClass('is-active');
-		$('.js-mc').removeClass('is-active');
-		$('.js-mc-btn').removeClass('is-active');
-
-		if ($(this).hasClass('is-active')) {
-			btns.removeClass('is-active');
-			menu.removeClass('is-active');
-			items.removeClass('is-active');
-		}
-		else {
-			btns.removeClass('is-active');
-			$('.js-menu-link[data-mlink="' + btn + '"]').addClass('is-active');
-			menu.addClass('is-active');
-			items.removeClass('is-active');
-			currItem.addClass('is-active');
-		}
-
-
-		return false;
-	});	
-
 	//fixed menu
-	function scrollMenu() {
-
-		var fixedHeight = $('.js-menu-inner').outerHeight(),
+	(function(){
+		var fixedHeight = 0,
 			navTop = $('.js-menu-wrap').offset().top;
-
-		if ($(window).width() > 767) {
-			$('.js-menu-wrap').css('min-height', fixedHeight);
-			if ($(window).scrollTop() >= navTop) {
-				$('.js-menu-fixed').addClass('is-fixed');
+			setTimeout(function(){
+				setFixedHeight();
+				navTop = $('.js-menu-wrap').offset().top;
+			}, 300)
+		function setFixedHeight() {
+				fixedHeight = $('.js-menu-inner').outerHeight();
+				$('.js-menu-wrap').css('min-height', fixedHeight);
+				// console.log('min-heigh: '+ fixedHeight);
+		}
+		function scrollMenu() {
+			if ($(window).width() > 767) {
+				if ($(window).scrollTop() >= navTop) {
+					$('.js-menu-wrap').css('min-height', fixedHeight);
+					$('.js-menu-fixed').addClass('is-fixed');
+				}
+				else {
+					$('.js-menu-fixed').removeClass('is-fixed');
+				};
 			}
 			else {
+				$('.js-menu-wrap').css('min-height', 1);
 				$('.js-menu-fixed').removeClass('is-fixed');
 			};
 		}
-		else {
-			$('.js-menu-wrap').css('min-height', 1);
-			$('.js-menu-fixed').removeClass('is-fixed');
-		};
+		// open mc
+		$('.js-open-mc').on('click', function() {
 
-	}
+			if($(document).scrollTop() < navTop) {
+				$('.js-match-center').toggle().toggleClass('is-active');
+				$(this).toggleClass('is-active');
+				setFixedHeight();
+			}
+			else if($(document).scrollTop() > navTop && $('.js-match-center').hasClass('is-active')) {
+				$('.js-match-center').toggle().toggleClass('is-active');
+				$(this).toggleClass('is-active');
+				setFixedHeight();
+			}
+			else {
+				$('body').animate({
+					scrollTop: 0
+				}, 300);
+				$(this).toggleClass('is-active');
 
-	$(window).scroll(function() {
-		scrollMenu();
-	});
-	$(window).load(function() {
-		scrollMenu();
-	});
-	$(window).resize(function() {
-		scrollMenu();
-	});
+				setTimeout(function() {
+					$('.js-match-center').toggle().toggleClass('is-active');
+					setFixedHeight();
+				},400);
+				
+			}
+			
+		});
+
+		$(window).scroll(function() {
+			scrollMenu();
+		});
+		$(window).on('load', function() {
+			scrollMenu();
+		});
+		$(window).resize(function() {
+			scrollMenu();
+		});
+		// menu
+		$('.js-menu-link').on('click', function() {
+
+			var btn = $(this).data('mlink'),
+				btns = $('.js-menu-link'),
+				items = $('.js-menu-block'),
+				currItem = $('.js-menu-block[data-mblock=' + btn + ']'),
+				menu = $('.js-menu').addClass('is-active');
+
+			$('.js-dropdown').slideUp('fast');
+			$('.js-dropdown-btn').removeClass('is-active');
+			$('.js-mc').removeClass('is-active');
+			$('.js-mc-btn').removeClass('is-active');
+
+			if ($(this).hasClass('is-active')) {
+				btns.removeClass('is-active');
+				menu.removeClass('is-active');
+				items.removeClass('is-active');
+				fixedHeight = 1;
+			}
+			else {
+				btns.removeClass('is-active');
+				$('.js-menu-link[data-mlink="' + btn + '"]').addClass('is-active');
+				menu.addClass('is-active');
+				items.removeClass('is-active');
+				currItem.addClass('is-active');
+
+			}
+			if(($(document).scrollTop() < navTop)) {
+				setFixedHeight();
+			}
+			return false;
+		});	
+		
+	})();
 
 	//match centre
 
@@ -285,6 +323,14 @@ $(document).ready(function() {
 			return false;
 		});
 
+	});
+
+	$('.js-accord-title').click(function() {
+		var $accord 	= $(this).parents('.js-accord'),
+			$accordBody = $accord.find('.js-accord-body');
+		$(this).toggleClass('is-active');
+		$accordBody.stop().toggle();
+		return false;
 	});
 
 	//tabs
@@ -834,4 +880,6 @@ $(document).ready(function() {
 			event.stopPropagation();
 		});
 	});
+
 });
+

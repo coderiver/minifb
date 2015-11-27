@@ -382,6 +382,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .link-dotted { display: inline-block; color: #197fba; font-size: 1.7rem; line-height: 1; border-bottom: 1px dotted #197fba; text-decoration: none; }
 .link-dotted:hover, .link-dotted:focus, .link-dotted:visited, .link-dotted:active { text-decoration: none; }
 
+.accordion__body { display: none; }
+.accordion.is-open .accordion__body { display: block; }
+
+.fix-menu { position: relative; z-index: 100; }
+.fix-menu.is-fixed { position: fixed; top: 0; left: 0; right: 0; }
+
 .icon-academy-title { width: 233px; height: 237px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
 .icon-codedby { width: 47px; height: 5px; background-image: url("../img/icons.png"); background-position: -124px -241px; }
@@ -417,7 +423,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .icon-scoreboard-super { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -48px -241px; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.tabs-btn:before, .mobile-tab-btn span:before, .icon, [class^="icon-"], [class*=" icon-"], .slick-prev:before, .slick-next:before, .match-item__score:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.tabs-btn:before, .mobile-tab-btn span:before, .icon, [class^="icon-"], [class*=" icon-"], .slick-prev:before, .slick-next:before, .league__titletext:after, .mc-nav__title:after, .match-item__score:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
@@ -738,10 +744,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 @media only screen and (max-width: 1219px) { .mc.is-active { display: block; } }
 @media only screen and (max-width: 767px) { .mc.is-active { display: none; } }
 .mc__container { max-width: 1200px; width: 100%; margin: 0 auto; }
-@media only screen and (max-width: 1219px) { .mc__row { clear: both; padding: 0 10px; } }
-@media only screen and (max-width: 1219px) { .mc__col { display: inline-block; vertical-align: top; padding: 20px 10px 10px; } }
-@media only screen and (max-width: 991px) { .mc__col { width: 50%; } }
-.mc__top { position: relative; *zoom: 1; padding: 20px 10px 0 15px; }
+.mc__top { position: relative; *zoom: 1; padding: 20px 0 0; }
 .mc__top:after { content: " "; display: table; clear: both; }
 .mc__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.5rem; line-height: 1; text-transform: uppercase; margin-right: 35px; padding: 2px 0 0; }
 @media only screen and (max-width: 1219px) { .mc__title { float: left; } }
@@ -759,7 +762,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .mc__right { position: absolute; top: 20px; right: 10px; }
 @media only screen and (max-width: 1219px) { .mc__right { top: 4px; right: 0; } }
 .mc .icon-close { font-size: 2.1rem; color: #fff; margin: 4px 0 0 19px; display: inline-block; vertical-align: top; cursor: pointer; }
-.mc__partner { font-size: 0; padding: 0 10px; border-top: 2px dashed rgba(255, 255, 255, 0.3); padding: 17px 0; }
+.mc__partner { font-size: 0; padding: 0 10px; border-top: 2px dashed rgba(255, 255, 255, 0.3); padding: 17px 0 11px; }
 .mc__partner a { display: block; }
 .mc__partner a img { width: 100%; }
 .mc-section { display: none; font-size: 0; }
@@ -767,7 +770,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .league__title { color: white; font-size: 2rem; line-height: 1.7; position: relative; *zoom: 1; padding: 10px 25px 8px 46px; }
 .league__title:after { content: " "; display: table; clear: both; }
-.league__title:before { content: ""; position: absolute; top: 50%; left: 10px; margin-top: -16px; }
+.league__title:before { content: ""; position: absolute; top: 10px; left: 10px; }
 .league__title.is-super { background-color: #c3241c; }
 .league__title.is-super:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -76px; }
 .league__title.is-major { background-color: #b1894d; }
@@ -776,7 +779,15 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .league__title.is-russia:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -111px; }
 .league__title.is-women { background-color: #d96180; }
 .league__title.is-women:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -41px; }
-.league__title span { float: right; }
+.league__title > span { float: right; }
+@media only screen and (max-width: 767px) { .league__title > span { float: none; display: inline-block; } }
+.league__title > span i { margin-right: 10px; position: relative; top: 3px; }
+.league__titletext { display: inline-block; cursor: pointer; margin-right: 10px; }
+@media only screen and (max-width: 767px) { .league__titletext { display: inline; } }
+.league__titletext span { display: inline-block; vertical-align: middle; }
+.league__titletext:after { content: ""; display: inline-block; vertical-align: middle; font-size: 10px; margin: -5px 0 0 10px; -webkit-transform: rotateX(0); transform: rotateX(0); transition: -webkit-transform 250ms; transition: transform 250ms; }
+.league__titletext.is-active:after { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+.league .accordion { margin-bottom: 10px; }
 
 .match-center-mc { display: none; }
 
@@ -815,6 +826,15 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .match-center-btn { display: none; }
 @media only screen and (max-width: 991px) { .match-center-btn { display: block; } }
+
+.mc-nav { background: #e4e4e4; }
+.mc-nav__in { padding: 17px 10px 10px; max-width: 1200px; margin: 0 auto; position: relative; }
+.mc-nav__title { color: #d9232a; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; text-align: center; font-size: 0; font-size: 18px; line-height: 1; margin-right: 20px; display: inline-block; vertical-align: middle; cursor: pointer; }
+.mc-nav__title:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.mc-nav__title:after { content: ""; display: inline-block; vertical-align: middle; font-size: 8px; margin-top: -4px; margin-left: 7px; -webkit-transform: rotateX(0); transform: rotateX(0); transition: -webkit-transform 250ms; transition: transform 250ms; }
+.mc-nav__title.is-active:after { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+.mc-nav__text { display: inline-block; vertical-align: middle; font-size: 15px; font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
+.mc-nav__text span { color: #197fba; }
 
 .footer { background-color: #333; padding: 45px 0 20px; height: 394px; }
 @media only screen and (max-width: 1219px) { .footer { height: auto; } }

@@ -645,27 +645,11 @@
 	&__container
 		max-width: 1200px
 		width: 100%
-		margin: 0 auto 
-	&__row
-		// padding: 0 0 20px
-		+r(1219)
-			// width: 100%
-			clear: both
-			padding: 0 10px
-	&__col
-		// width: 25%
-		// padding: 0 0 10px 
-		+r(1219)	
-			// width: 25%
-			display: inline-block
-			vertical-align: top 		
-			padding: 20px 10px 10px 
-		+r(991)
-			width: 50%
+		margin: 0 auto
 	&__top
 		position: relative
 		+clr
-		padding: 20px 10px 0 15px
+		padding: 20px 0 0
 	&__title
 		+bold
 		color: white
@@ -718,7 +702,7 @@
 		font-size: 0
 		padding: 0 10px
 		border-top: 2px dashed rgba(#fff, 0.3) 
-		padding: 17px 0 
+		padding: 17px 0 11px
 		a
 			display: block
 			img
@@ -736,13 +720,12 @@
 		line-height: 1.7
 		position: relative
 		+clr
-		padding: 10px 25px 8px 46px 
+		padding: 10px 25px 8px 46px
 		&:before
 			content: "" 
 			position: absolute
-			top: 50%
+			top: 10px
 			left: 10px
-			margin-top: -16px
 		&.is-super
 			background-color: #c3241c
 			&:before
@@ -759,8 +742,38 @@
 			background-color: #d96180
 			&:before
 				+s(league-women)
-		span
+		& > span
 			float: right
+			+r(767)
+				float: none
+				display: inline-block
+			i
+				margin-right: 10px
+				position: relative
+				top: 3px  
+	&__titletext
+		display: inline-block
+		cursor: pointer
+		margin-right: 10px 
+		+r(767)
+			display: inline
+		span
+			display: inline-block
+			vertical-align: middle
+		&:after
+			content: $icon-arr-bottom
+			@extend %icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 10px 
+			margin: -5px 0 0 10px 
+			transform: rotateX(0)
+			transition: transform 250ms 
+		&.is-active
+			&:after
+				transform: rotateX(180deg)
+	.accordion
+		margin-bottom: 10px 
 .match-center-mc
 	display: none
 .league-item
@@ -894,3 +907,41 @@
 	display: none
 	+r(991)
 		display: block
+		
+.mc-nav
+	background: #e4e4e4 
+	&__in	
+		padding: 17px 10px 10px
+		max-width: 1200px
+		margin: 0 auto
+		position: relative
+	&__title
+		color: #d9232a
+		+bold
+		+vertical
+		font-size: 18px 
+		line-height: 1
+		margin-right: 20px 
+		display: inline-block
+		vertical-align: middle
+		cursor: pointer
+		&:after
+			content: $icon-arr-bottom
+			@extend %icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 8px 
+			margin-top: -4px 
+			margin-left: 7px 
+			transform: rotateX(0)
+			transition: transform 250ms 
+		&.is-active
+			&:after
+				transform: rotateX(180deg)
+	&__text
+		display: inline-block
+		vertical-align: middle
+		font-size: 15px
+		+light 
+		span
+			color: #197fba
