@@ -380,19 +380,6 @@ $red: #e43b06
 .block_dark
 	h2
 		color: #fff	
-.select
-	&.w100
-		max-width: 100%
-	&_gray
-		.select
-			&__text
-				color: #fff
-				border-color: #fff 
-				&:after
-					color: #fff  
-			&__list
-				border-color: #fff
-				color: #fff  
 .block
 	&_dark
 		table
@@ -611,6 +598,181 @@ $red: #e43b06
 					border-color: $purple
 					&:before
 						color: $purple 
+.statistic-page
+	background: #5d9cc4 
+	position: relative
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(90%, rgb(93,156,196)), color-stop(100%, rgb(93,156,196)))
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	.top-banner__img
+		position: absolute
+		top: -44px
+		left: 34px  
+		img
+			max-width: initial
+.stats 
+	&__info
+		+clr
+		padding: 0 20px 20px
+		+r(991)
+			margin-top: 20px 
+			padding: 0 14px 20px 
+	&__data
+		+clr
+	&__league
+		float: right
+		+r(767)
+			display: block
+			float: none
+	&__season
+		display: inline-block
+		float: left
+		+r(767)
+			margin-bottom: 10px 
+			display: block
+			float: none
+			
+	&__img
+		margin-top: 20px 
+		img
+			max-width: 100%
+			height: auto
+	&__legend
+		margin: 0 -15px 20px
+		display: inline-block 
+		font-size: 15px 
+		div
+			display: inline-block
+			padding: 0 15px 
+			i, span
+				display: inline-block
+				vertical-align: middle
+			i
+				width: 17px
+				height: 17px
+				margin-right: 10px 
+	&__line
+		clear: both
+	.post 
+		+r(991)
+			display: block
+		+r(767)
+			width: 100% 
+	&-header
+		.meta
+			p
+				margin-bottom: 10px
+	&-players
+		margin: 0 -13px -20px
+		+clr 
+		.player-card
+			width: 20%
+			float: left 
+			padding: 0 13px 
+			margin-bottom: 20px 
+			+r(1219)
+				width: 25% 
+			+r(767)
+				width: 50%
+.player-card
+	&__img
+		overflow: hidden
+		padding-bottom: 107%
+		text-align: center
+		height: 0 
+		position: relative
+		img
+			max-width: 100% 
+	&__num
+		position: absolute
+		left: 7px
+		bottom: 7px
+		font-size: 45px
+		+bold
+		line-height: 1
+		padding: 5px 10px 0 
+		background: #f93526
+		color: #fff
+		border-radius: 8px  
+		+r(1219)
+			font-size: 32px  
+	&__info
+		margin-top: 8px 
+		min-height: 80px 
+	&__name
+		overflow: hidden
+		font-size: 20px
+		+bold
+		text-transform: uppercase
+		line-height: 1.1
+		word-wrap: break-word
+		+r(1219)
+			font-size: 14px 
+		span
+			font-size: 13px
+			color: #2188b8
+			display: block
+			text-transform: none
+		
+	&__team
+		float: left
+		margin-right: 10px 
+		width: 30px 
+		img
+			max-width: 100% 
+	&__statsfield
+		// display: block
+		display: table
+		margin: 5px 0
+		width: 100%
+		table-layout: fixed 
+		+clr 
+		&>div
+			display: table-cell
+			vertical-align: middle
+			&:first-child
+				width: 20%
+				padding-right: 10px  
+				font-size: 0
+				line-height: 0
+				text-align: center
+			&:last-child
+				width: 80% 
+		label
+			text-align: center
+	&__statsrange
+		border-radius: 5px
+		height: 11px 
+		background: #d6d6d6
+		position: relative
+		i
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			border-radius: inherit
+			width: 80%
+			text-align: center
+			color: #fff 
+			display: inline-block
+			line-height: 1
+			padding-top: 1px  
+			&.is-blue
+				background: #76bedf
+			&.is-green
+				background: #87d50b
+			&.is-yellow
+				background: #f5d000
+			&.is-red
+				background: #e43b06
+
+.posts-list 
+	.btn-next
+		margin-left: 14px 
+		margin: 15px 0 0 14px 
 .text-tabs_sm
 	div
 		a

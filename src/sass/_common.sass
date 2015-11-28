@@ -47,6 +47,7 @@
 // p
 // 	+jpg(bla)
 
+
 //fonts
 +font("PFDinDisplayPro Thin", pfdindisplaypro-thin)
 +font("PFDinDisplayPro Light", pfdindisplaypro-light)
@@ -124,6 +125,8 @@ h1
 		color: #333  
 		+r(767)
 			font-size: 1.4rem
+	& + .meta
+		margin-top: -15px 
 			
 h2
 	font-size: 4.1rem
@@ -320,6 +323,10 @@ dd
 				right: 0 
 	&_btn
 		padding: 23px 0 10px 
+	label
+		p
+			margin-bottom: 5px
+			font-weight: bold 
 .input
 	border: 2px solid #3b3b3b
 	border-radius: 10px
@@ -409,6 +416,8 @@ dd
 	font-size: 1.4rem
 	max-width: 167px
 	user-select: none
+	&.w100
+		max-width: 100%
 	&.is-active
 		.select
 			&__text
@@ -457,6 +466,7 @@ dd
 			line-height: 1
 			-webkit-font-smoothing: antialiased
 			-moz-osx-font-smoothing: grayscale
+			
 	&__list
 		+ul
 		position: absolute
@@ -492,6 +502,29 @@ dd
 			&__list
 				border-color: #fff
 				color: #fff  
+
+	&_gray
+		.select
+			&__text
+				color: #fff
+				border-color: #fff 
+				&:after
+					color: #fff  
+			&__list
+				border-color: #fff
+				color: #fff  
+	&_blue
+		.select
+			&__text
+				color: #197fba
+				border-color: #197fba 
+				&:after
+					color: #197fba  
+			&__list
+				border-color: #197fba
+				color: #197fba 
+				li
+					color: #197fba 
 
 //checkbox and radio
 .form-checkbox
@@ -732,6 +765,7 @@ dd
 		background: #333 
 		
 .btn-next
+	background: transparent 
 	display: inline-block
 	vertical-align: top
 	line-height: 1
@@ -757,6 +791,8 @@ dd
 		color: #fff
 		border-color: #fff
 		background-color: rgba(255, 255, 255, 0.25)
+		&.no-bg
+			background: none 
 		&:visited
 			color: #fff
 		&:hover, &:active

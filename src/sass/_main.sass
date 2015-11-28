@@ -404,7 +404,63 @@
 			transition: background 0.25s
 			&:hover
 				background: darken(#d7d7d7, 10%)
-			
+.text-select
+	div
+		display: inline-block
+		vertical-align: top
+		&:first-child
+			&:before
+				display: none
+		&:before
+			content: "/"
+			display: inline-block
+			vertical-align: top
+			color: #333
+			font-size: 20px
+			+bold
+			line-height: 1
+			margin: 0 8px 0 10px
+			+r(767)
+				font-size: 14px 
+		span
+			font-size: 20px
+			color: #333
+			// color: #197fba
+			display: inline-block
+			vertical-align: top
+			line-height: 1
+			position: relative
+			font-weight: bold 
+			+tdn
+			+r(767)
+				font-size: 1.4rem
+	.select
+		&__text
+			color: #197fba
+			border: none
+			padding: 0 30px 3px 2px
+			height: auto 
+			+light
+			font-weight: lighter 
+			&:before
+				content: "" 
+				position: absolute
+				bottom: 4px
+				left: 0
+				right: 30px
+				border-bottom: 1px dotted #197fba
+			&:after
+				color: #197fba
+				top: 5px 
+				font-size: 7px 
+				+r(767)
+					top: 3px 
+		&__list
+			border-color: #197fba  
+			border-top: 2px solid #197fba
+		&.is-active
+			.select__list
+				border-radius: 10px
 .text-tabs
 	font-size: 0
 	&.table-none
