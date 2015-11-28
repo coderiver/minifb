@@ -622,13 +622,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .header-contacts .button-blue:hover { background: #197fba; }
 .header-contacts div { margin-bottom: 3px; }
 
-.btn-match { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.4rem; text-transform: uppercase; line-height: 2.25; background-color: #d9232a; padding: 0 7px; position: fixed; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; z-index: 1001; top: 0; left: 0; }
-@media only screen and (max-width: 1400px) { .btn-match { -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); top: 118px; } }
-@media only screen and (max-width: 767px) { .btn-match { display: none; } }
-.btn-match.is-active { left: 330px; }
-@media only screen and (max-width: 1400px) { .btn-match.is-active { left: 0; } }
-.btn-match:before { content: ""; position: absolute; top: 0; left: 2px; right: 2px; bottom: 2px; border: 1px dotted white; border-top: none; }
-
 .logo-img { width: 52px; float: left; margin: 0 24px 8px 14px; font-size: 0; }
 @media only screen and (max-width: 991px) { .logo-img { margin: 0 14px 8px 0; } }
 .logo-img img { width: 100%; }
@@ -748,13 +741,14 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .mc__top:after { content: " "; display: table; clear: both; }
 .mc__title { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 2.5rem; line-height: 1; text-transform: uppercase; margin-right: 35px; padding: 2px 0 0; }
 @media only screen and (max-width: 1219px) { .mc__title { float: left; } }
-.mc__filter { line-height: 1; margin: 0; font-size: 0; padding: 0 0 20px; font-size: 0.1px; }
+.mc__filter { line-height: 1; margin: 0; font-size: 0; padding: 0 0 20px; font-size: 0.1px; margin: 0 -14px -10px -14px; }
 .mc__filter li { padding: 0; }
 .mc__filter li:before { display: none; }
 .mc__filter li li { padding: 0; }
 .mc__filter li li li { padding: 0; }
-.mc__filter li { display: inline-block; vertical-align: top; padding: 0 14px; }
-.mc__filter li:first-child { padding-left: 0; }
+@media only screen and (max-width: 767px) { .mc__filter { margin-left: -9px; margin-right: -9px; } }
+.mc__filter li { display: inline-block; vertical-align: top; padding: 0 14px; margin-bottom: 10px; }
+@media only screen and (max-width: 767px) { .mc__filter li { padding: 0 9px; } }
 .mc__filter li a { font-family: "PFDinDisplayPro Light", Arial, sans-serif; color: white; font-size: 2rem; position: relative; display: inline-block; border-bottom: 1px dotted white; text-decoration: none; }
 .mc__filter li a:hover, .mc__filter li a:focus, .mc__filter li a:visited, .mc__filter li a:active { text-decoration: none; }
 .mc__filter li a:hover { color: #d93723; border-color: #d93723; }

@@ -262,41 +262,41 @@
 				background: #197fba 
 		div
 			margin-bottom: 3px
-.btn-match
-	+bold
-	color: white
-	font-size: 1.4rem
-	text-transform: uppercase
-	line-height: 2.25
-	background-color: #d9232a
-	padding: 0 7px 
-	position: fixed
-	-webkit-transform-origin: top left
-	-moz-transform-origin: top left
-	-ms-transform-origin: top left
-	-o-transform-origin: top left
-	transform-origin: top left
-	z-index: 1001 
-	top: 0
-	left: 0
-	+r(1400)
-		+rotate(-90)
-		top: 118px	
-	+r(767)
-		display: none
-	&.is-active
-		left: 330px
-		+r(1400)
-			left: 0
-	&:before
-		content: "" 
-		position: absolute
-		top: 0
-		left: 2px
-		right: 2px
-		bottom: 2px
-		border: 1px dotted white
-		border-top: none
+// .btn-match
+// 	+bold
+// 	color: white
+// 	font-size: 1.4rem
+// 	text-transform: uppercase
+// 	line-height: 2.25
+// 	background-color: #d9232a
+// 	padding: 0 7px 
+// 	position: fixed
+// 	-webkit-transform-origin: top left
+// 	-moz-transform-origin: top left
+// 	-ms-transform-origin: top left
+// 	-o-transform-origin: top left
+// 	transform-origin: top left
+// 	z-index: 1001 
+// 	top: 0
+// 	left: 0
+// 	+r(1400)
+// 		+rotate(-90)
+// 		top: 118px	
+// 	+r(767)
+// 		display: none
+// 	&.is-active
+// 		left: 330px
+// 		+r(1400)
+// 			left: 0
+// 	&:before
+// 		content: "" 
+// 		position: absolute
+// 		top: 0
+// 		left: 2px
+// 		right: 2px
+// 		bottom: 2px
+// 		border: 1px dotted white
+// 		border-top: none
 		
 .logo
 	&-img
@@ -664,12 +664,17 @@
 		+ul
 		padding: 0 0 20px
 		font-size: 0.1px
+		margin: 0 -14px -10px -14px
+		+r(767)
+			margin-left: -9px
+			margin-right: -9px  
 		li
 			display: inline-block
 			vertical-align: top
 			padding: 0 14px 
-			&:first-child
-				padding-left: 0
+			margin-bottom: 10px 
+			+r(767)
+				padding: 0 9px 
 			a
 				+light
 				color: white
