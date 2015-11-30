@@ -2382,6 +2382,12 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .text-tabs_m { display: none; }
 @media only screen and (max-width: 767px) { .text-tabs_m { display: block; margin-bottom: 20px; } }
 
+.stats-player-table table td:first-child, .stats-player-table table th:first-child { padding-left: 10px; }
+.stats-player-table table td { vertical-align: middle; }
+.stats-player-table table td b { font-weight: bold; }
+.stats-player-table table td.is-man img { width: 40px; height: auto; margin: 6px 5px 6px 0; display: inline-block; vertical-align: middle; }
+.stats-player-table table td.is-man span { display: inline-block; vertical-align: middle; font-weight: bold; }
+
 
 
 /*# sourceMappingURL=screen.css.map */
