@@ -306,6 +306,9 @@ $red: #e43b06
 			td.is-name
 				+r(991)
 					width: 220px
+	&.w900
+		width: 100%
+		min-width: 900px 
 .block.statistics
 	.player-box
 		margin-left: -20px
@@ -959,7 +962,6 @@ $red: #e43b06
 		
 .stats-players-table
 	table
-		tr
 		td, th
 			&:first-child
 				padding-left: 10px 
@@ -1041,12 +1043,80 @@ $red: #e43b06
 		left: 0
 		
 .table-results
+	table-layout: fixed 
+	td, th
+		&:first-child
+			padding-left: 17px 
+	thead
+		th
+			font-size: 18px 
+	tbody
+		tr
+			padding: 8px 0 
+			height: 60px 
+		td
+			vertical-align: middle
+			line-height: 1
+			font-size: 15px 
+			&.is-date
+				min-width: 100px 
+				position: relative
+				width: 280px 
+				padding-right: 91px 
+				+r(1221)
+					padding-right: 45px 
+				.for-time
+					position: absolute
+					display: inline-block
+					right: 62px 
+					top: 50%
+					margin-top: -11px
+					line-height: 0
+					+r(1221)
+						right: 20px 
+			&.is-live
+				width: percentage(200px/1140px)
+				a
+					display: block
+					& + a
+						margin-top: 7px 
+					&:hover
+						i.icon-translation
+							+s(active_tr7)
+						i.icon-play-sm
+							+s(active_play)
+
+				i
+					position: relative
+					top: 2px
+					margin-right: 5px  
+					
+			&.is-inf
+				width: percentage(400px/1140px)
+				min-width: 350px
+				padding-right: 7%
+				  
+				+r(991)
+					padding-right: 4% 
+			&.is-place
+				min-width: 200px 
+				strong
+					margin-bottom: 5px 
+					display: inline-block
 	.league-item
 		background: none
 		margin: 0
 		border-radius: 0
+		padding-left: 0
+		padding-right: 0 
 		&__body
 			display: block
 		&__name
 			font-size: 18px 
+		&__team
+			&.is-left
+				padding-right: 37px
+			&.is-right
+				padding-left: 37px  
+			
 				

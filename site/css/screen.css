@@ -270,6 +270,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .main-table { width: 755px; }
 .main-table th, .main-table td, .main-table tr, .main-table thead, .main-table tbody { border: none; }
+.main-table strong { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
 .main-table thead th { font-family: "PFDinDisplayPro Medium", Arial, sans-serif; color: #333; font-size: 1.4rem; line-height: 2.2; }
 .main-table thead th.is-name { width: 320px; padding: 0 25px; }
 .main-table thead th.is-numbers { width: 45px; padding: 0 10px; }
@@ -413,9 +414,15 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon-academy-title { width: 233px; height: 237px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
-.icon-codedby { width: 47px; height: 5px; background-image: url("../img/icons.png"); background-position: -147px -241px; }
+.icon-active_play { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -17px; }
 
-.icon-coderiver { width: 49px; height: 5px; background-image: url("../img/icons.png"); background-position: -94px -241px; }
+.icon-active_tr7 { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -77px; }
+
+.icon-calendar { width: 22px; height: 22px; background-image: url("../img/icons.png"); background-position: 0px -241px; }
+
+.icon-codedby { width: 47px; height: 5px; background-image: url("../img/icons.png"); background-position: -173px -241px; }
+
+.icon-coderiver { width: 49px; height: 5px; background-image: url("../img/icons.png"); background-position: -120px -241px; }
 
 .icon-field { width: 21px; height: 13px; background-image: url("../img/icons.png"); background-position: -273px 0px; }
 
@@ -423,11 +430,11 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon-footer-rfs { width: 32px; height: 37px; background-image: url("../img/icons.png"); background-position: -237px 0px; }
 
-.icon-i-arr-bottom-active { width: 13px; height: 8px; background-image: url("../img/icons.png"); background-position: -273px -98px; }
+.icon-i-arr-bottom-active { width: 13px; height: 8px; background-image: url("../img/icons.png"); background-position: -273px -178px; }
 
-.icon-i-arr-bottom { width: 13px; height: 8px; background-image: url("../img/icons.png"); background-position: -273px -86px; }
+.icon-i-arr-bottom { width: 13px; height: 8px; background-image: url("../img/icons.png"); background-position: -273px -166px; }
 
-.icon-i-menu-bottom { width: 16px; height: 10px; background-image: url("../img/icons.png"); background-position: -273px -72px; }
+.icon-i-menu-bottom { width: 16px; height: 10px; background-image: url("../img/icons.png"); background-position: -273px -152px; }
 
 .icon-i-search-btn { width: 21px; height: 21px; background-image: url("../img/icons.png"); background-position: -237px -216px; }
 
@@ -439,19 +446,23 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .icon-league-women { width: 31px; height: 31px; background-image: url("../img/icons.png"); background-position: -237px -41px; }
 
-.icon-menu-bottom-active { width: 16px; height: 10px; background-image: url("../img/icons.png"); background-position: -273px -58px; }
+.icon-menu-bottom-active { width: 16px; height: 10px; background-image: url("../img/icons.png"); background-position: -273px -138px; }
 
-.icon-mini-academy { width: 20px; height: 20px; background-image: url("../img/icons.png"); background-position: 0px -241px; }
+.icon-mini-academy { width: 20px; height: 20px; background-image: url("../img/icons.png"); background-position: -26px -241px; }
 
-.icon-mini-school { width: 20px; height: 20px; background-image: url("../img/icons.png"); background-position: -24px -241px; }
+.icon-mini-school { width: 20px; height: 20px; background-image: url("../img/icons.png"); background-position: -50px -241px; }
 
-.icon-red-card { width: 13px; height: 17px; background-image: url("../img/icons.png"); background-position: -273px -17px; }
+.icon-play-sm { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -37px; }
 
-.icon-scoreboard-super { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -71px -241px; }
+.icon-red-card { width: 13px; height: 17px; background-image: url("../img/icons.png"); background-position: -273px -97px; }
 
-.icon-stats-ball { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -48px -241px; }
+.icon-scoreboard-super { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -97px -241px; }
 
-.icon-yellow-card { width: 13px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -38px; }
+.icon-stats-ball { width: 19px; height: 19px; background-image: url("../img/icons.png"); background-position: -74px -241px; }
+
+.icon-translation { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -57px; }
+
+.icon-yellow-card { width: 13px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -118px; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .tabs-btn:before, .mobile-tab-btn span:before, .icon, [class^="icon-"], [class*=" icon-"], .slick-prev:before, .slick-next:before, .league__titletext:after, .mc-nav__title:after, .match-item__score:before { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -688,8 +699,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .menu__list a .icon-arr-bottom { position: absolute; top: 50%; right: 0; margin-top: -4px; font-size: 0.9rem; }
 .menu__list a.is-school, .menu__list a.is-academy { padding: 11px 0 9px 25px; }
 .menu__list a.is-school i, .menu__list a.is-academy i { position: absolute; top: 50%; left: 0; margin-top: -10px; }
-.menu__list a.is-school i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -24px -241px; }
-.menu__list a.is-academy i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: 0px -241px; }
+.menu__list a.is-school i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -50px -241px; }
+.menu__list a.is-academy i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -26px -241px; }
 .menu-dropdown { background: #333333; display: none; }
 .menu-dropdown.is-active { display: block; }
 .menu-dropdown__section { max-width: 1200px; margin: 0 auto; padding: 24px 0 20px; *zoom: 1; display: none; }
@@ -846,8 +857,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .mobile-menu-link .icon-arr-bottom { position: absolute; top: 50%; right: 0; margin-top: -5px; font-size: 0.9rem; }
 .mobile-menu-link.is-school, .mobile-menu-link.is-academy { padding: 11px 0 9px 25px; }
 .mobile-menu-link.is-school i, .mobile-menu-link.is-academy i { position: absolute; top: 50%; left: 0; margin-top: -10px; }
-.mobile-menu-link.is-school i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -24px -241px; }
-.mobile-menu-link.is-academy i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: 0px -241px; }
+.mobile-menu-link.is-school i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -50px -241px; }
+.mobile-menu-link.is-academy i { background-image: url("../img/icons.png"); width: 20px; height: 20px; background-position: -26px -241px; }
 
 .match-center-btn { display: none; }
 @media only screen and (max-width: 991px) { .match-center-btn { display: block; } }
@@ -2168,6 +2179,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .main-table.w740 { width: 100%; min-width: 740px; }
 @media only screen and (max-width: 991px) { .main-table.w740 { min-width: 680px; } }
 @media only screen and (max-width: 991px) { .main-table.w740 > tbody td.is-name { width: 220px; } }
+.main-table.w900 { width: 100%; min-width: 900px; }
 
 .block.statistics .player-box { margin-left: -20px; }
 .block.statistics .tabs { margin-bottom: 25px; }
@@ -2434,9 +2446,30 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .seasons-slider .slick-next, .tours-slider .slick-next { right: 0; }
 .seasons-slider .slick-prev, .tours-slider .slick-prev { left: 0; }
 
-.table-results .league-item { background: none; margin: 0; border-radius: 0; }
+.table-results { table-layout: fixed; }
+.table-results td:first-child, .table-results th:first-child { padding-left: 17px; }
+.table-results thead th { font-size: 18px; }
+.table-results tbody tr { padding: 8px 0; height: 60px; }
+.table-results tbody td { vertical-align: middle; line-height: 1; font-size: 15px; }
+.table-results tbody td.is-date { min-width: 100px; position: relative; width: 280px; padding-right: 91px; }
+@media only screen and (max-width: 1221px) { .table-results tbody td.is-date { padding-right: 45px; } }
+.table-results tbody td.is-date .for-time { position: absolute; display: inline-block; right: 62px; top: 50%; margin-top: -11px; line-height: 0; }
+@media only screen and (max-width: 1221px) { .table-results tbody td.is-date .for-time { right: 20px; } }
+.table-results tbody td.is-live { width: 17.54386%; }
+.table-results tbody td.is-live a { display: block; }
+.table-results tbody td.is-live a + a { margin-top: 7px; }
+.table-results tbody td.is-live a:hover i.icon-translation { background-image: url("../img/icons.png"); width: 16px; height: 16px; background-position: -273px -77px; }
+.table-results tbody td.is-live a:hover i.icon-play-sm { background-image: url("../img/icons.png"); width: 16px; height: 16px; background-position: -273px -17px; }
+.table-results tbody td.is-live i { position: relative; top: 2px; margin-right: 5px; }
+.table-results tbody td.is-inf { width: 35.08772%; min-width: 350px; padding-right: 7%; }
+@media only screen and (max-width: 991px) { .table-results tbody td.is-inf { padding-right: 4%; } }
+.table-results tbody td.is-place { min-width: 200px; }
+.table-results tbody td.is-place strong { margin-bottom: 5px; display: inline-block; }
+.table-results .league-item { background: none; margin: 0; border-radius: 0; padding-left: 0; padding-right: 0; }
 .table-results .league-item__body { display: block; }
 .table-results .league-item__name { font-size: 18px; }
+.table-results .league-item__team.is-left { padding-right: 37px; }
+.table-results .league-item__team.is-right { padding-left: 37px; }
 
 
 

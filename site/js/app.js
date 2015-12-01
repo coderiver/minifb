@@ -2333,7 +2333,7 @@ $(document).ready(function() {
 	});
 	
 	//fixed header
-	(function(){
+	function fixHead(){
 		var fixedHeight = 0,
 			navTop = $('.js-menu-wrap').offset().top;
 		setTimeout(function() {
@@ -2439,8 +2439,8 @@ $(document).ready(function() {
 			setFixedHeight();
 			return false;
 		});
-	})();
-
+	};
+	fixHead();
 	//match centre
 
 	$('.js-mc-btn').on('click', function() {
