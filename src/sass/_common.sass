@@ -1324,3 +1324,51 @@ dd
 		left: 0
 		right: 0
 		
+.switcher
+	user-select: none
+	label
+		cursor: pointer
+	div
+		display: inline-block
+		transition: color 250ms, font 250ms
+		font-size: 15px 
+		vertical-align: middle
+	&__one
+		color: #2188b8
+		+bold
+	&__two
+		color: #000
+	span
+		display: inline-block
+		position: relative
+		width: 28px 
+		height: 14px
+		background: #2188b8
+		border-radius: 10px
+		vertical-align: middle
+		margin: 0 5px 
+		&:after
+			content: ''
+			position: absolute
+			border-radius: 10px
+			width: 10px
+			height: 10px
+			background: #fff
+			left: 2px
+			top: 2px   
+			transition: left 250ms
+	input[type="checkbox"]
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		&:checked
+			& ~ span
+				&:after
+					left: 16px
+			& ~ .switcher__one
+				color: #000 
+				+light
+			& ~ .switcher__two
+				color: #2188b8 
+				+bold
+

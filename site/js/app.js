@@ -3066,4 +3066,31 @@ $(document).ready(function() {
 		});
 	});
 
+
+	// switcher
+	$('.js-switcher input[type="checkbox"]').on('change', function() {
+		var $blocks = $('.' + $(this).parents('.js-switcher').data('blocks'));
+		$blocks.toggleClass('is-active');
+	});
+
+	// js-seasons-slider
+	$('.js-seasons-slider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		infinite: false
+	});
+	$('.js-tours-slider').slick({
+		slidesToShow: 11,
+		slidesToScroll: 1,
+		infinite: false
+	});
+
+	$('.js-choose-link').on('click', function() {
+		var links = $(this).parents('.js-choose').find('.js-choose-link');
+
+		links.removeClass('is-active');
+		$(this).addClass('is-active');
+
+		return false;
+	});
 });

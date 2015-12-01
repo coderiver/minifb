@@ -601,12 +601,8 @@ $red: #e43b06
 .statistic-page
 	background: #5d9cc4 
 	position: relative
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(90%, rgb(93,156,196)), color-stop(100%, rgb(93,156,196)))
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
-	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
-	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
-	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgb(93,156,196) 90%, rgb(93,156,196) 100%)
+	background: linear-gradient(to left, #99b8bb 0%, #cbdddf 50%, #8bacaf 100%)
+	
 	.top-banner__img
 		position: absolute
 		top: -44px
@@ -656,6 +652,22 @@ $red: #e43b06
 				margin-right: 10px 
 	&__line
 		clear: both
+	&__linetop
+		+clr
+		h2
+			float: left
+			+r(797)
+				float: none
+		.switcher
+			float: right
+			padding-top: 15px 
+			+r(991)
+				padding-top: 9px 
+			+r(767)
+				float: none
+				padding-top: 0
+		+r(767)
+			margin-bottom: 20px 
 	.post 
 		+r(991)
 			display: block
@@ -668,6 +680,7 @@ $red: #e43b06
 	&-players
 		margin: 0 -13px -20px
 		+clr 
+		display: none
 		.player-card
 			width: 20%
 			float: left 
@@ -677,6 +690,12 @@ $red: #e43b06
 				width: 25% 
 			+r(767)
 				width: 50%
+		&.is-active
+			display: block
+	&-players-table
+		display: none
+		&.is-active
+			display: block
 .player-card
 	&__img
 		overflow: hidden
@@ -938,7 +957,7 @@ $red: #e43b06
 		display: block
 		margin-bottom: 20px 
 		
-.stats-player-table
+.stats-players-table
 	table
 		tr
 		td, th
@@ -959,5 +978,75 @@ $red: #e43b06
 					display: inline-block
 					vertical-align: middle
 					font-weight: bold
-					
-			
+	
+
+.statistic-box
+	background: #1e76bd url(../img/statick-bg.png) center no-repeat
+	background-size: cover
+	h2
+		color: #fff
+		
+.seasons-slider
+	& + .tours-slider
+		margin-top: 20px 
+	&__item
+		text-align: center
+		height: 80px
+		+vertical 
+		a
+			color: #fff
+			display: inline-block
+			min-height: 40px 
+			+vertical
+			font-size: 30px
+			line-height: 1
+			vertical-align: middle
+			+a
+			span
+				border-bottom: 2px dotted 
+			&.is-active
+				+bold
+				span
+					border: none
+.tours-slider
+	padding: 0 30px 
+	&__item
+		a
+			+a
+			display: inline-block
+			padding: 7px 0
+			line-height: 1
+			text-align: center
+			width: 80px
+			font-size: 18px
+			border-radius: 5px
+			background: rgba(#fff, .5)
+			color: #000
+			+bold
+			&.is-active
+				background: #fff 
+
+.seasons-slider,
+.tours-slider
+	.slick-next,
+	.slick-prev
+		height: auto
+		z-index: 2 
+		margin-top: -10px 
+		&:before
+			font-size: 20px 
+	.slick-next
+		right: 0
+	.slick-prev
+		left: 0
+		
+.table-results
+	.league-item
+		background: none
+		margin: 0
+		border-radius: 0
+		&__body
+			display: block
+		&__name
+			font-size: 18px 
+				
