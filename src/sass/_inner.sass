@@ -989,23 +989,27 @@ $red: #e43b06
 		color: #fff
 		
 .seasons-slider
+	padding: 0 30px 
 	& + .tours-slider
 		margin-top: 20px 
 	&__item
 		text-align: center
 		height: 80px
+		// padding: 0 30px 
+		+r(767)
+			height: 50px 
 		+vertical 
 		a
 			color: #fff
 			display: inline-block
-			min-height: 40px 
-			+vertical
-			font-size: 30px
-			line-height: 1
 			vertical-align: middle
+			line-height: 1
 			+a
 			span
+				font-size: 30px
 				border-bottom: 2px dotted 
+				+r(767)
+					font-size: 18px 
 			&.is-active
 				+bold
 				span
@@ -1013,6 +1017,7 @@ $red: #e43b06
 .tours-slider
 	padding: 0 30px 
 	&__item
+		text-align: center
 		a
 			+a
 			display: inline-block
@@ -1025,6 +1030,8 @@ $red: #e43b06
 			background: rgba(#fff, .5)
 			color: #000
 			+bold
+			+r(767)
+				font-size: 14px 
 			&.is-active
 				background: #fff 
 
@@ -1037,6 +1044,8 @@ $red: #e43b06
 		margin-top: -10px 
 		&:before
 			font-size: 20px 
+			+r(767)
+				font-size: 14px 
 	.slick-next
 		right: 0
 	.slick-prev
@@ -1119,4 +1128,37 @@ $red: #e43b06
 			&.is-right
 				padding-left: 37px  
 			
-				
+.stats-data
+	+clr
+	margin-bottom: -20px 
+	&__bl
+		width: 14.285% 
+		width: calc(100%/7)
+		float: left
+		+r(991)
+			width: 25% 
+		+r(767)
+			width: 50% 
+	&__text
+		+bold
+		font-size: 40px 
+		color: #000
+		text-align: center
+		padding: 0 5px 
+		margin-bottom: 20px 
+		+r(767)
+			font-size: 24px 
+	&__header
+		font-size: 18px
+		// margin-bottom: 13px 
+		min-height: 50px 
+		+r(767)
+			font-size: 15px 
+			min-height: 30px 
+	.is-yellow
+		color: #ffc205
+	.is-red
+		color: #ed1c24
+	.is-green
+		color: $green
+	

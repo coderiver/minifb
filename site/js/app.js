@@ -3077,12 +3077,65 @@ $(document).ready(function() {
 	$('.js-seasons-slider').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		infinite: false
+		infinite: false,
+		responsive: [
+		    {
+		      breakpoint: 1221,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 5
+		      }
+		    },
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		]
 	});
 	$('.js-tours-slider').slick({
 		slidesToShow: 11,
 		slidesToScroll: 1,
-		infinite: false
+		infinite: false,
+		responsive: [
+		    {
+		      breakpoint: 1221,
+		      settings: {
+		        slidesToShow: 9,
+		        slidesToScroll: 5
+		      }
+		    },
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 6,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 400,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    }
+		]
 	});
 
 	$('.js-choose-link').on('click', function() {
