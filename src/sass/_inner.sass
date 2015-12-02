@@ -149,6 +149,10 @@ $red: #e43b06
 			border-radius: 10px 
 			&:hover
 				text-decoration: underline
+			i
+				margin: 0 7px 0 0  
+				position: relative
+				top: 2px 
 		&.is-active
 			a
 				background: #f93526
@@ -389,6 +393,52 @@ $red: #e43b06
 			color: #fff
 		.select
 			margin-bottom: 10px 
+			
+.sidebar-promo
+	background: #257cc1 url(../img/blue-bg.png) center no-repeat
+	background-size: cover 
+	color: #fff
+	font-size: 18px 
+	padding-left: 15px
+	padding-right: 15px 
+	h1
+		color: #fff 
+	&__header
+		font-size: 30px 
+		margin-bottom: 10px
+	&__list
+		+ul
+		font-size: 30px 
+		line-height: 1
+		color: #fff
+		margin-bottom: 20px 
+		li
+			position: relative
+			z-index: 1
+			& + li
+				margin-top: 20px 
+			&:before
+				content: ''
+				+s(check_big)
+				position: absolute
+				display: inline-block
+				border-radius: 0
+				background-color: transparent
+				z-index: -1
+				opacity: .3
+				top: -10px
+				left: -25px    
+		strong
+			+bold
+	&__btn
+		margin-bottom: 10px 
+		.btn-reg
+			width: 100%
+	p
+		color: #fff
+
+
+		
 .table-rates
 	margin: 2px 0 0 
 	table-layout: fixed
@@ -559,6 +609,10 @@ $red: #e43b06
 		margin-right: -10px 
 	&.is-right
 		margin-left: -10px
+.row_bear
+	.side-banner
+		margin-left: -92px 
+		margin-top: 70px 
 
 .tabs
 	&__list
@@ -1176,4 +1230,17 @@ $red: #e43b06
 		color: #ed1c24
 	.is-green
 		color: $green
+
+
+.bear-page
+	background: #5caee5 
+	position: relative
+	background:  linear-gradient(to left, #53a7e7 0%, #a7e6f3 50%, #53a7e7 100%)
 	
+	.top-banner__img
+		position: absolute
+		top: -84px
+		left: 23%  
+		img
+			max-width: auto	
+

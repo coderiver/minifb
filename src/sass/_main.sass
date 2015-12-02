@@ -288,6 +288,25 @@
 	&__top
 		+clr
 		margin-bottom: 20px
+		&mod
+			+clr
+			h2
+				float: left
+				margin: 0 0 5px 
+				+r(767)
+					float: none
+			.select
+				float: right
+				margin: 12px 0 0 10px 
+				+r(767)
+					float: none
+					margin: 10px 0
+			.btn-next
+				float: right
+				margin: 5px 0 0 10px 
+				+r(767)
+					float: none
+					margin: 10px 0
 		&-mod
 			+r(767)
 				margin-bottom: 0
@@ -302,10 +321,7 @@
 			display: none
 	&__body
 		+clr
-	&__section
-		margin: 0 -15px
-		+clr
-		position: relative
+
 	&__body, &__events
 		position: absolute
 		top: 0
@@ -352,6 +368,19 @@
 					margin-bottom: 15px
 					border-radius: 10px
 					overflow: hidden
+	&__section
+		margin: 0 -15px
+		+clr
+		position: relative
+		&_big
+			.block__box
+				width: 33.3%
+				width: calc(100%/3) 
+				.news-item
+					&__img
+						margin-bottom: 15px
+						border-radius: 10px
+						overflow: hidden 
 	&__footer
 		padding: 6px 0 0
 		text-align: right 
