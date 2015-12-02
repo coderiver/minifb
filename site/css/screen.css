@@ -431,6 +431,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-team tbody td.is-player .table-team-photo { width: 30px; height: 30px; border-radius: 50%; overflow: hidden; position: absolute; left: -40px; top: 50%; margin-top: -15px; }
 .table-team tbody td.is-player .table-team-photo img { max-width: 100%; height: auto; }
 
+.calendar-header h2 { color: #fff; }
+
 .icon-academy-title { width: 233px; height: 237px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
 .icon-active_play { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -273px -57px; }
@@ -2451,6 +2453,14 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .statistic-box { background: #1e76bd url(../img/statick-bg.png) center no-repeat; background-size: cover; }
 .statistic-box h2 { color: #fff; }
+.statistic-box__top { *zoom: 1; }
+.statistic-box__top:after { content: " "; display: table; clear: both; }
+.statistic-box__top h2 { float: left; }
+@media only screen and (max-width: 767px) { .statistic-box__top h2 { float: none; } }
+.statistic-box__top .select { float: right; padding-top: 8px; }
+@media only screen and (max-width: 1221px) { .statistic-box__top .select { padding-top: 3px; } }
+@media only screen and (max-width: 991px) { .statistic-box__top .select { padding-top: 0; } }
+@media only screen and (max-width: 767px) { .statistic-box__top .select { float: none; } }
 
 .seasons-slider { padding: 0 30px; }
 .seasons-slider + .tours-slider { margin-top: 20px; }

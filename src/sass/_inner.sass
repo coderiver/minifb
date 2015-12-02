@@ -987,6 +987,21 @@ $red: #e43b06
 	background-size: cover
 	h2
 		color: #fff
+	&__top
+		+clr
+		h2
+			float: left
+			+r(767)
+				float: none
+		.select
+			float: right
+			padding-top: 8px 
+			+r(1221)
+				padding-top: 3px 
+			+r(991)
+				padding-top: 0
+			+r(767)
+				float: none
 		
 .seasons-slider
 	padding: 0 30px 
