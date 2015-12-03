@@ -1247,6 +1247,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .heading_dark h2, .heading_dark p { color: #333; }
 @media only screen and (max-width: 767px) { .heading_video h2 { float: left; margin: 0; padding: 5px 0; } }
 @media only screen and (max-width: 767px) { .heading_video .btn-next { float: right; } }
+.heading_justify h2 { float: left; }
+.heading_justify .btn-next { float: right; }
 
 .v-item { padding: 0 0 30px; }
 .v-item__img { display: block; position: relative; font-size: 0; }
@@ -2322,6 +2324,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-rates td div { width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; padding: 0 10px 0 0; }
 
 .side-academy.w100 { max-width: 380px; background-size: cover; background: url(../img/banner-academy.png) no-repeat 50% 50%; }
+.side-academy_md ul { bottom: 1%; padding: 0 10%; }
+.side-academy_md ul a { font-size: 11px; }
 
 .block__box_50 { width: 50%; }
 @media only screen and (max-width: 767px) { .block__box_50 { width: 100%; } }
@@ -2351,6 +2355,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .banner-project__text { position: absolute; bottom: 30px; width: 60%; padding: 0 0 0 15px; color: #fff; line-height: 1; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 2.5rem; }
 @media only screen and (max-width: 767px) { .banner-project__text { font-size: 2rem; } }
 .banner-project__text-top { font-family: "PFDinDisplayPro Thin", Arial, sans-serif; margin-bottom: 10px; }
+.banner-project_md .banner-project__text { bottom: 15px; font-size: 18px; width: 59%; }
 
 .album { background: #fff; }
 .album__wrap-top { height: 113px; display: table; width: 100%; }
@@ -2606,6 +2611,8 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .bear-page { background: #5caee5; position: relative; background: linear-gradient(to left, #53a7e7 0%, #a7e6f3 50%, #53a7e7 100%); }
 .bear-page .top-banner__img { position: absolute; top: -84px; left: 23%; }
 .bear-page .top-banner__img img { max-width: auto; }
+
+.block-partners { background: #fff; padding-top: 75px; margin-top: -75px; }
 
 
 
