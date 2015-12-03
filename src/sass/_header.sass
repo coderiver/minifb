@@ -747,8 +747,15 @@
 			background-color: #d96180
 			&:before
 				+s(league-women)
-		& > span
+		& > a
 			float: right
+			display: block
+			+a
+			color: #fff
+			&:active, &:hover, 
+			&:focus
+				color: #fff
+				text-decoration: underline
 			+r(767)
 				float: none
 				display: inline-block
@@ -762,7 +769,7 @@
 		margin-right: 10px 
 		+r(767)
 			display: inline
-		span
+		a
 			display: inline-block
 			vertical-align: middle
 		&:after
@@ -781,6 +788,8 @@
 		margin-bottom: 10px 
 .match-center-mc
 	display: none
+	&.is-active
+		display: block
 .league-item
 	background: #fff 
 	padding: 8px 5px 7px

@@ -881,17 +881,20 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .league__title.is-russia:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -157px; }
 .league__title.is-women { background-color: #d96180; }
 .league__title.is-women:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -192px; }
-.league__title > span { float: right; }
-@media only screen and (max-width: 767px) { .league__title > span { float: none; display: inline-block; } }
-.league__title > span i { margin-right: 10px; position: relative; top: 3px; }
+.league__title > a { float: right; display: block; text-decoration: none; color: #fff; }
+.league__title > a:active, .league__title > a:hover, .league__title > a:focus { text-decoration: none; }
+.league__title > a:active, .league__title > a:hover, .league__title > a:focus { color: #fff; text-decoration: underline; }
+@media only screen and (max-width: 767px) { .league__title > a { float: none; display: inline-block; } }
+.league__title > a i { margin-right: 10px; position: relative; top: 3px; }
 .league__titletext { display: inline-block; cursor: pointer; margin-right: 10px; }
 @media only screen and (max-width: 767px) { .league__titletext { display: inline; } }
-.league__titletext span { display: inline-block; vertical-align: middle; }
+.league__titletext a { display: inline-block; vertical-align: middle; }
 .league__titletext:after { content: ""; display: inline-block; vertical-align: middle; font-size: 10px; margin: -5px 0 0 10px; -webkit-transform: rotateX(0); transform: rotateX(0); transition: -webkit-transform 250ms; transition: transform 250ms; }
 .league__titletext.is-active:after { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
 .league .accordion { margin-bottom: 10px; }
 
 .match-center-mc { display: none; }
+.match-center-mc.is-active { display: block; }
 
 .league-item { background: #fff; padding: 8px 5px 7px; border-radius: 10px; margin: 17px 0; }
 .league-item__top { margin-bottom: 4px; }
