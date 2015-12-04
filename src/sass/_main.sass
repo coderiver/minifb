@@ -362,25 +362,20 @@
 		&.is-md
 			width: 33.33%
 			+r(767)
-				width: 100% 
-			.news-item
-				&__img
-					margin-bottom: 15px
-					border-radius: 10px
-					overflow: hidden
+				width: 100%
+		&_org
+			width: 33.3% 			 
+			width: calc(100%/3)
+			padding-left: 7px 
+			padding-right: 7px 
+			+r(1221)
+				width: 50% 	
+						 
 	&__section
 		margin: 0 -15px
 		+clr
 		position: relative
-		&_big
-			.block__box
-				width: 33.3%
-				width: calc(100%/3) 
-				.news-item
-					&__img
-						margin-bottom: 15px
-						border-radius: 10px
-						overflow: hidden 
+				
 	&__footer
 		padding: 6px 0 0
 		text-align: right 
@@ -570,6 +565,10 @@
 		margin-bottom: 7px
 		img
 			width: 100%
+		&.is-round
+			margin-bottom: 15px
+			border-radius: 10px
+			overflow: hidden 
 	&__sticker
 		position: absolute
 		bottom: 0
@@ -710,11 +709,21 @@
 			color: #fff
 			font-size: 1.5rem
 			line-height: 1.2
+			&.is-gray
+				color: #555555
+			&.is-sm
+				font-size: 12px 
+				margin-left: 5px 
+				& + .tag
+					margin-top: 0 
 		.tag
 			margin: 2px 0 0 
 		p
 			color: #fff
 			margin: 0 
+	&__link
+		display: block
+		font-size: 15px 
 			
 .small-banner
 	padding: 0 0 20px
@@ -1286,6 +1295,11 @@
 		&-players
 			.box__col
 				padding: 20px 10px 
+	&__row
+		+clr
+		margin: 0 -10px
+		&_md
+			margin: 0 -20px 
 	&__col
 		float: left
 		width: 33.33%
