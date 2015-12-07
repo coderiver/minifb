@@ -476,6 +476,8 @@ $red: #e43b06
 		ul
 			bottom: 1%
 			padding: 0 10% 
+			+r(1221)
+				padding: 0
 			a
 				font-size: 11px 
 .block__box
@@ -1260,10 +1262,13 @@ $red: #e43b06
 			max-width: auto	
 
 .block-partners
+	position: relative
 	background: #fff
-	padding-top: 75px
-	margin-top: -75px   
-
+	&__inner
+		z-index: 15
+		position: relative 
+		// background: #fff
+		padding-top: 75px
 	
 .org
 	margin-bottom: 15px 
@@ -1284,21 +1289,39 @@ $red: #e43b06
 		a
 			font-size: 15px 
 	&__info
-		margin-top: 20px 
+		margin-top: 15px 
 		p
 			margin-bottom: 0
-			
+.box_finals
+	position: relative
+	overflow: hidden
+	padding: 20px 15px 30px 			
+	&:after
+		content: ''
+		width: 565px 
+		height: 235px 
+		background: url(../img/banner-main-rotate.png) no-repeat center bottom
+		position: absolute
+		bottom: -92px
+		left: -216px
+		+r(767)
+			left: -160px 
 .finals
-	background: url(../img/) 
+	position: relative
+	z-index: 2 
 	&__filter
-		margin: 0 -10px
+		margin: 0 -5px
 		.select
 			&__text
 				padding-left: 10px 
 	&__body
-		margin: 20px -10px -15px
+		margin: 20px 0 -15px
 		.top-place
 			margin-bottom: 15px 
+	&__footer
+		+clr
+		.btn-next
+			float: right
 
 .top-place
 	&__main
@@ -1308,6 +1331,7 @@ $red: #e43b06
 		overflow: hidden
 		a
 			font-size: 20px
+			margin-bottom: 5px 
 		p
 			font-size: 15px 
 
