@@ -484,6 +484,28 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .social-banner { margin-bottom: 20px; }
 .social-banner > img { width: 100%; }
 
+.simple-list { line-height: 1; margin: 0; font-size: 0; }
+.simple-list li { padding: 0; }
+.simple-list li:before { display: none; }
+.simple-list li li { padding: 0; }
+.simple-list li li li { padding: 0; }
+.simple-list li { margin-bottom: 10px; }
+.simple-list li p { margin-bottom: 0; }
+
+.social-list { line-height: 1; margin: 0; font-size: 0; }
+.social-list li { padding: 0; }
+.social-list li:before { display: none; }
+.social-list li li { padding: 0; }
+.social-list li li li { padding: 0; }
+.social-list li { display: inline-block; vertical-align: middle; }
+.social-list a { color: #d0d1d3; transition: color 0.25s; margin-right: 15px; color: #b6b7ba; }
+.social-list a:hover, .social-list a:visited, .social-list a:focus, .social-list a:active { text-decoration: none; color: #b6b7ba; }
+.social-list a.icon-twitter { font-size: 1.9rem; }
+.social-list a.icon-facebook { font-size: 1.8rem; }
+.social-list a.icon-google { font-size: 1.9rem; }
+.social-list a.icon-youtube { font-size: 2rem; }
+.social-list a.icon-photos { font-size: 1.9rem; }
+
 .icon-academy-title { width: 233px; height: 237px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
 .icon-active_play { width: 16px; height: 16px; background-image: url("../img/icons.png"); background-position: -299px 0px; }
@@ -2682,6 +2704,33 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .top-place__info { overflow: hidden; }
 .top-place__info a { font-size: 20px; margin-bottom: 5px; }
 .top-place__info p { font-size: 15px; }
+
+.player-info { margin-bottom: 30px; *zoom: 1; }
+.player-info:after { content: " "; display: table; clear: both; }
+.player-info__imgs { margin: 0 -10px -20px; font-size: 0; }
+.player-info__img { display: inline-block; line-height: 0; padding: 0 10px; margin-bottom: 20px; }
+
+.player-about__number { font-size: 30px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; margin-bottom: 20px; }
+.player-about__number span { padding: 3px 0 0; display: inline-block; vertical-align: middle; }
+.player-about__country { display: inline-block; margin-right: 3px; vertical-align: middle; width: 30px; height: 30px; text-align: center; overflow: hidden; border-radius: 50%; font-size: 0; }
+.player-about__main { margin-bottom: 30px; }
+.player-about__footer p { margin-bottom: 15px; }
+
+.player-stats__selects { font-size: 0; margin: 0 -10px 20px; }
+.player-stats__selects .select { display: inline-block; padding: 0 10px; min-width: 175px; }
+.player-stats .statistic-box { padding-left: 10px; padding-right: 10px; }
+
+.stats-info { font-size: 0; margin: 0 -20px; }
+.stats-info__list { line-height: 1; margin: 0; font-size: 0; width: 33.33%; width: calc(100%/3); display: inline-block; vertical-align: top; padding: 0 20px; }
+.stats-info__list li { padding: 0; }
+.stats-info__list li:before { display: none; }
+.stats-info__list li li { padding: 0; }
+.stats-info__list li li li { padding: 0; }
+.stats-info__list li { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: #fff; *zoom: 1; font-size: 13px; border-radius: 20px; padding: 7px 10px 6px; }
+.stats-info__list li:after { content: " "; display: table; clear: both; }
+.stats-info__list li:nth-child(odd) { background: rgba(2, 53, 132, 0.4); }
+.stats-info__name { float: left; text-transform: uppercase; padding-top: 3px; }
+.stats-info__value { float: right; }
 
 
 

@@ -1583,4 +1583,32 @@ dd
 	margin-bottom: 20px 
 	& > img
 		width: 100% 
-		 
+.simple-list
+	+ul
+	li
+		margin-bottom: 10px 
+		p
+			margin-bottom: 0
+.social-list
+	+ul
+	li
+		display: inline-block
+		vertical-align: middle
+	a
+		color: #d0d1d3
+		transition: color 0.25s
+		margin-right: 15px
+		color: darken(#d0d1d3, 10%) 
+		&:hover, &:visited, &:focus, &:active
+			text-decoration: none
+			color: darken(#d0d1d3, 10%) 				
+		&.icon-twitter
+			font-size: 1.9rem
+		&.icon-facebook
+			font-size: 1.8rem
+		&.icon-google
+			font-size: 1.9rem
+		&.icon-youtube
+			font-size: 2rem
+		&.icon-photos
+			font-size: 1.9rem

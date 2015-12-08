@@ -1336,4 +1336,80 @@ $red: #e43b06
 			font-size: 15px 
 
 
+.player-info
+	margin-bottom: 30px 
+	+clr
+	&__imgs
+		margin: 0 -10px -20px
+		font-size: 0
+	&__img
+		display: inline-block
+		line-height: 0
+		padding: 0 10px 
+		margin-bottom: 20px 
+	&__text
 
+
+.player-about
+	&__number
+		font-size: 30px
+		+bold 
+		margin-bottom: 20px
+		span
+			padding: 3px 0 0 
+			display: inline-block
+			vertical-align: middle
+	&__country
+		display: inline-block
+		margin-right: 3px
+		vertical-align: middle
+		width: 30px
+		height: 30px   
+		text-align: center
+		overflow: hidden
+		border-radius: 50%
+		font-size: 0
+	&__main
+		margin-bottom: 30px 
+	&__footer
+		p
+			margin-bottom: 15px
+			
+.player-stats
+	&__selects
+		font-size: 0
+		margin: 0 -10px 20px
+		.select
+			display: inline-block
+			padding: 0 10px 
+			min-width: 175px 
+	.statistic-box
+		padding-left: 10px 
+		padding-right: 10px 
+
+.stats-info
+	font-size: 0
+	margin: 0 -20px 
+	&__list
+		+ul
+		width: 33.33%
+		width: calc(100%/3)
+		display: inline-block
+		vertical-align: top
+		padding: 0 20px 
+		li
+			+bold
+			color: #fff
+			+clr
+			font-size: 13px 
+			border-radius: 20px
+			padding: 7px 10px 6px 
+		
+			&:nth-child(odd)
+				background: rgba(#023584, .4) 
+	&__name
+		float: left
+		text-transform: uppercase
+		padding-top: 3px 
+	&__value
+		float: right
