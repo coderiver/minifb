@@ -84,6 +84,13 @@
 				border-radius: 10px 0 0 10px
 			&:last-child
 				border-radius: 0 10px 10px 0
+				
+%tbody-offset
+	&:before
+		content: '-'
+		display: block
+		line-height: 1em 
+		color: transparent				
 html, body
 	height: 100%
 html
@@ -984,16 +991,26 @@ dd
 						background-color: #f5d000
 					&.is-red
 						background-color: #e43b06
-						
 
 .table-player
+	min-width: 740px 
 	thead
 		th
 			+bold
 			font-size: 18px
-			&.is-match
-				text-align: center
+			vertical-align: middle
+			text-align: center
+			line-height: 1
+			&:first-child
+				text-align: left
+	td,
+	th
+		&:first-child
+			padding-left: 10px 
+		&:last-child
+			padding-right: 10px		
 	tbody
+		@extend %tbody-offset
 		tr
 			height: 40px
 			@extend %rows-color
@@ -1001,11 +1018,11 @@ dd
 			font-size: 14px
 			vertical-align: middle
 			&:first-child
-				padding-left: 10px 
-			&:last-child
-				padding-right: 10px
+				width: 160px 
 			&.is-result
 				+bold
+				width: 75px 
+				text-align: center
 			&.is-goal
 				font-size: 12px
 				width: 65px
@@ -1016,11 +1033,11 @@ dd
 				width: 65px
 				text-align: center 
 			&.is-card
-				width: 30px
+				width: 55px
 				text-align: center
 				+bold  
 			&.is-match
-				max-width: 320px 
+				width: 300px 
 				.league-item
 					background: none 
 					margin: 0
@@ -1471,11 +1488,7 @@ dd
 			+r(767)
 				font-size: 15px 
 	tbody
-		&:before
-			content: '-'
-			display: block
-			line-height: 1em 
-			color: transparent
+		@extend %tbody-offset
 		tr
 			height: 35px 
 			&:nth-child(8n-4),
@@ -1671,3 +1684,19 @@ dd
 			font-size: 2rem
 		&.icon-photos
 			font-size: 1.9rem
+	
+.fall-card	
+	width: 21px
+	height: 28px
+	display: inline-block
+	vertical-align: top
+	font-size: 1.4rem
+	font-style: normal
+	+reg
+	color: #333
+	line-height: 28px
+	text-align: center	
+	&.is-red
+		background-image: linear-gradient(-36deg, #9a190f 0%, #da3f28 100%)
+	&.is-yellow
+		background-image: linear-gradient(-36deg, #f0b923 0%, #ffd200 100%)

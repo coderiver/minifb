@@ -32,6 +32,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .table-player tbody tr:nth-child(odd) td:first-child { border-radius: 10px 0 0 10px; }
 .table-player tbody tr:nth-child(odd) td:last-child { border-radius: 0 10px 10px 0; }
 
+.table-player tbody:before, .table-team tbody:before { content: "-"; display: block; line-height: 1em; color: transparent; }
+
 html, body { height: 100%; }
 
 html { font-size: 10px; }
@@ -305,18 +307,20 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .main-table > tbody td.is-last i.is-yellow { background-color: #f5d000; }
 .main-table > tbody td.is-last i.is-red { background-color: #e43b06; }
 
-.table-player thead th { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 18px; }
-.table-player thead th.is-match { text-align: center; }
+.table-player { min-width: 740px; }
+.table-player thead th { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 18px; vertical-align: middle; text-align: center; line-height: 1; }
+.table-player thead th:first-child { text-align: left; }
+.table-player td:first-child, .table-player th:first-child { padding-left: 10px; }
+.table-player td:last-child, .table-player th:last-child { padding-right: 10px; }
 .table-player tbody tr { height: 40px; }
 .table-player tbody td { font-size: 14px; vertical-align: middle; }
-.table-player tbody td:first-child { padding-left: 10px; }
-.table-player tbody td:last-child { padding-right: 10px; }
-.table-player tbody td.is-result { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.table-player tbody td:first-child { width: 160px; }
+.table-player tbody td.is-result { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; width: 75px; text-align: center; }
 .table-player tbody td.is-goal { font-size: 12px; width: 65px; text-align: center; }
 .table-player tbody td.is-goal strong { font-size: 14px; }
 .table-player tbody td.is-played { width: 65px; text-align: center; }
-.table-player tbody td.is-card { width: 30px; text-align: center; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
-.table-player tbody td.is-match { max-width: 320px; }
+.table-player tbody td.is-card { width: 55px; text-align: center; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+.table-player tbody td.is-match { width: 300px; }
 .table-player tbody td.is-match .league-item { background: none; margin: 0; }
 .table-player tbody td.is-match .league-item__score { width: auto; }
 .table-player tbody td.is-match .league-item__score span { font-size: 15px; color: #337ab7; }
@@ -445,7 +449,6 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-team td:first-child, .table-team th:first-child { padding-left: 10px; }
 .table-team thead th { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 18px; vertical-align: middle; margin-bottom: 20px; }
 @media only screen and (max-width: 767px) { .table-team thead th { font-size: 15px; } }
-.table-team tbody:before { content: "-"; display: block; line-height: 1em; color: transparent; }
 .table-team tbody tr { height: 35px; }
 .table-team tbody tr:nth-child(8n-4) td, .table-team tbody tr:nth-child(8n-5) td, .table-team tbody tr:nth-child(8n-6) td, .table-team tbody tr:nth-child(8n-7) td { background: #f3f3f3; }
 .table-team tbody tr:nth-child(8n-4) td:first-child { border-radius: 0 0 0 10px; }
@@ -527,6 +530,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .social-list a.icon-google { font-size: 1.9rem; }
 .social-list a.icon-youtube { font-size: 2rem; }
 .social-list a.icon-photos { font-size: 1.9rem; }
+
+.fall-card { width: 21px; height: 28px; display: inline-block; vertical-align: top; font-size: 1.4rem; font-style: normal; font-family: "PFDinDisplayPro Regular", Arial, sans-serif; color: #333; line-height: 28px; text-align: center; }
+.fall-card.is-red { background-image: linear-gradient(-36deg, #9a190f 0%, #da3f28 100%); }
+.fall-card.is-yellow { background-image: linear-gradient(-36deg, #f0b923 0%, #ffd200 100%); }
 
 .icon-academy-title { width: 233px; height: 237px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
 
