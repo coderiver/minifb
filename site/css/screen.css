@@ -2718,7 +2718,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 
 .player-stats__selects { font-size: 0; margin: 0 -10px 20px; }
 .player-stats__selects .select { display: inline-block; padding: 0 10px; min-width: 175px; }
-.player-stats .statistic-box { padding-left: 10px; padding-right: 10px; }
+.player-stats .statistic-box { padding-left: 10px; padding-right: 10px; background-image: url(../img/statick-bg_2.png); }
 
 .stats-info { font-size: 0; margin: 0 -20px; }
 .stats-info__list { line-height: 1; margin: 0; font-size: 0; width: 33.33%; width: calc(100%/3); display: inline-block; vertical-align: top; padding: 0 20px; }
