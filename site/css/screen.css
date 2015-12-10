@@ -28,11 +28,11 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "PFDinDisplayPro Medium"; src: url("fonts/pfdindisplaypro-med.eot"); src: url("fonts/pfdindisplaypro-med.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-med.woff2") format("woff2"), url("fonts/pfdindisplaypro-med.woff") format("woff"), url("fonts/pfdindisplaypro-med.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Bold"; src: url("fonts/pfdindisplaypro-bold.eot"); src: url("fonts/pfdindisplaypro-bold.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-bold.woff2") format("woff2"), url("fonts/pfdindisplaypro-bold.woff") format("woff"), url("fonts/pfdindisplaypro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "PFDinDisplayPro Bold Italic"; src: url("fonts/pfdindisplaypro-boldital.eot"); src: url("fonts/pfdindisplaypro-boldital.eot?#iefix") format("embedded-opentype"), url("fonts/pfdindisplaypro-boldital.woff2") format("woff2"), url("fonts/pfdindisplaypro-boldital.woff") format("woff"), url("fonts/pfdindisplaypro-boldital.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.table-player tbody tr:nth-child(odd) td { background-color: #f3f3f3; }
-.table-player tbody tr:nth-child(odd) td:first-child { border-radius: 10px 0 0 10px; }
-.table-player tbody tr:nth-child(odd) td:last-child { border-radius: 0 10px 10px 0; }
+.table-player tbody tr:nth-child(odd) td, .table-simple tbody tr:nth-child(odd) td { background-color: #f3f3f3; }
+.table-player tbody tr:nth-child(odd) td:first-child, .table-simple tbody tr:nth-child(odd) td:first-child { border-radius: 10px 0 0 10px; }
+.table-player tbody tr:nth-child(odd) td:last-child, .table-simple tbody tr:nth-child(odd) td:last-child { border-radius: 0 10px 10px 0; }
 
-.table-player tbody:before, .table-team tbody:before { content: "-"; display: block; line-height: 1em; color: transparent; }
+.table-player tbody:before, .table-simple tbody:before, .table-team tbody:before { content: "-"; display: block; line-height: 1em; color: transparent; }
 
 html, body { height: 100%; }
 
@@ -326,6 +326,13 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-player tbody td.is-match .league-item__score span { font-size: 15px; color: #337ab7; }
 .table-player tbody td.is-match .league-item__team { width: 45%; }
 .table-player tbody td strong { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; }
+
+.table-simple { width: 100%; font-size: 14px; }
+.table-simple td:first-child, .table-simple th:first-child { padding-left: 10px; }
+.table-simple td:last-child, .table-simple th:last-child { padding-right: 10px; }
+.table-simple thead th { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 18px; }
+.table-simple tbody tr td { padding: 4px 0 5px; }
+.table-simple tbody tr td.is-name { width: 300px; }
 
 .pages__list { line-height: 1; margin: 0; font-size: 0; padding: 10px 0; }
 .pages__list li { padding: 0; }

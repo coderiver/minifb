@@ -1051,7 +1051,28 @@ dd
 
 			strong
 				+bold
-	 
+.table-simple
+	width: 100% 
+	font-size: 14px
+	td,
+	th
+		&:first-child
+			padding-left: 10px 
+		&:last-child
+			padding-right: 10px	
+	thead
+		th
+			+bold
+			font-size: 18px
+
+	tbody
+		@extend  %tbody-offset
+		tr
+			@extend %rows-color	
+			td
+				padding: 4px 0 5px 
+				&.is-name
+					width: 300px 
 //pages
 .pages
 	&__list
