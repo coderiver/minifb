@@ -333,6 +333,9 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .table-simple thead th { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 18px; }
 .table-simple tbody tr td { padding: 4px 0 5px; }
 .table-simple tbody tr td.is-name { width: 300px; }
+.table-simple tbody tr td.is-name-sm { width: 250px; }
+.table-simple tbody tr td.is-number { width: 100px; }
+.table-simple tbody tr td.is-pos { width: 150px; }
 
 .pages__list { line-height: 1; margin: 0; font-size: 0; padding: 10px 0; }
 .pages__list li { padding: 0; }
