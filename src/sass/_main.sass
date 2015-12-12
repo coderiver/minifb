@@ -762,6 +762,10 @@
 	position: relative
 	z-index: 15
 	font-size: 0
+	&_pb
+		padding-bottom: 30px 
+		+r(767)
+			padding-bottom: 0
 .partner-items
 	padding: 10px 0 
 .partner-item
@@ -771,6 +775,8 @@
 	width: 16.66%
 	display: inline-block
 	vertical-align: top
+	&_md
+		width: 20% 
 	+r(991)
 		width: 25%
 	+r(767)
@@ -1392,6 +1398,11 @@
 				padding: 0 15px 
 	&_border
 		box-shadow: inset 0 0 0 3px #197fba
+	&.is-blue
+		background: #1b76bb 
+	&__more
+		text-align: center
+		margin-top: 20px 
 
 .user-box
 	+clr
@@ -1475,10 +1486,15 @@
 	border-radius: 10px
 	padding: 20px
 	margin-bottom: 20px 
-	h2, &__list
+	h2, h3, &__list
 		color: #fff
 	.select
 		margin-bottom: 20px
+	&_mod
+		.side-statistic__list
+			span
+				width: 197px
+				 
 	&__list
 		+ul
 		color: white

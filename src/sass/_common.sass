@@ -693,7 +693,14 @@ dd
 	&:hover, &:active
 		background-color: #197fba
 		color: #fff 
-		
+.button-more
+	i
+		position: relative
+		top: 2px 
+		transition-delay: 70ms
+	&:hover
+		.icon-more
+			background-position: -299px -185px	
 .button-white
 	display: inline-block
 	vertical-align: top
@@ -1053,6 +1060,7 @@ dd
 				+bold
 .table-simple
 	width: 100% 
+	min-width: 600px 
 	font-size: 14px
 	td,
 	th
@@ -1073,12 +1081,18 @@ dd
 				padding: 4px 0 5px 
 				&.is-name
 					width: 300px 
-					&-sm
+					+r(991)
 						width: 250px 
 				&.is-number
 					width: 100px
-				&.is-pos
-					width: 150px 
+				&:nth-child(3)
+					width: 158px 
+				&:nth-child(4)
+					width: 150px
+				&:last-child
+					+r(991)
+						width: 150px  
+				
 //pages
 .pages
 	&__list

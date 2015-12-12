@@ -1339,12 +1339,22 @@ $red: #e43b06
 	&__imgs
 		margin: 0 -10px -20px
 		font-size: 0
+		.slick-dots
+			button
+				background: #333
 	&__img
 		display: inline-block
 		line-height: 0
 		padding: 0 10px 
 		margin-bottom: 20px 
+		img
+			max-width: 100%
+		+r(767)
+			img
+				margin: 0 auto 
 	&__text
+		+r(767)
+			margin-top: 20px 
 
 
 .player-about
@@ -1380,6 +1390,7 @@ $red: #e43b06
 			display: inline-block
 			padding: 0 10px 
 			min-width: 175px 
+			margin-bottom: 20px 
 	.statistic-box
 		padding-left: 10px 
 		padding-right: 10px
@@ -1395,6 +1406,8 @@ $red: #e43b06
 		display: inline-block
 		vertical-align: top
 		padding: 0 20px 
+		+r(767)
+			width: 100% 
 		li
 			+bold
 			color: #fff
@@ -1411,3 +1424,13 @@ $red: #e43b06
 		padding-top: 3px 
 	&__value
 		float: right
+
+.penalty
+	h3, dt, dd
+		color: #fff
+	h3
+		line-height: 1 
+	dt
+		margin-bottom: 10px 
+	dd
+		margin-bottom: 20px 
