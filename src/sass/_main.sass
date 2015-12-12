@@ -1036,6 +1036,7 @@
 			&.is-active 
 				a
 					background-color: #f1cb22
+					+bold
 					
 .text
 	h4, p
@@ -1122,18 +1123,17 @@
 
 .request
 	max-width: 280px
-	margin: 0 auto 20px 
 	position: relative
 	&__btn
 		color: white
 		font-size: 1.8rem
 		line-height: 1
 		+bold
-		background-color: #197fba
+		background-color: #353130
 		border-radius: 10px
 		text-align: center
 		width: 100%
-		padding: 9px 10px 
+		padding: 9px 40px 
 		i
 			font-size: 9px
 			vertical-align: top
@@ -1220,14 +1220,14 @@
 					text-decoration: underline
 
 .page-title_academy
-	overflow: hidden
 	position: relative
 	&:before
 		content: ""
 		position: absolute
-		right: -90px
-		top: 0
-		+s(academy-title)
+		right: 20px
+		top: 50%
+		margin-top: -52px 
+		+s(academy-title-sm)
 		+r(991)
 			display: none
 	h1, .page-nav
