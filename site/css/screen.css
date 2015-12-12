@@ -261,9 +261,10 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .btn-next_white:hover, .btn-next_white:active { background-color: #fff; color: #197fba; }
 .btn-next i { font-size: 15px; position: absolute; top: 50%; margin-top: -8px; right: 11px; }
 
-.btn-submit { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.5rem; line-height: 1; background-color: #197fba; border-radius: 10px; padding: 8px 16px 7px; transition: color 0.25s, background 0.25s, border-color 0.25s; cursor: pointer; }
-.btn-submit:focus, .btn-submit:visited, .btn-submit:hover, .btn-submit:active { text-decoration: none; }
-.btn-submit:hover { background-color: #0b5884; }
+.btn-submit, .btn-fill { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; color: white; font-size: 1.5rem; line-height: 1; background-color: #197fba; border-radius: 10px; padding: 8px 16px 7px; transition: color 0.25s, background 0.25s, border-color 0.25s; cursor: pointer; }
+.btn-submit:focus, .btn-fill:focus, .btn-submit:visited, .btn-fill:visited, .btn-submit:hover, .btn-fill:hover, .btn-submit:active, .btn-fill:active { text-decoration: none; }
+.btn-submit:hover, .btn-fill:hover { background-color: #0b5884; color: #fff; }
+.btn-submit:focus, .btn-fill:focus, .btn-submit:active, .btn-fill:active { color: #fff; }
 
 .btn-mail, .btn-attr { display: inline-block; vertical-align: top; line-height: 1; border: 2px solid #333; border-radius: 10px; padding: 6px 29px 5px 7px; font-family: "PFDinDisplayPro Bold", Arial, sans-serif; font-size: 1.5rem; position: relative; text-decoration: none; transition: color 0.25s, background 0.25s, border-color 0.25s; cursor: pointer; text-decoration: none; min-width: 170px; color: #197fba; border-color: #197fba; }
 .btn-mail:hover, .btn-mail:focus, .btn-mail:visited, .btn-mail:active, .btn-attr:hover, .btn-attr:focus, .btn-attr:visited, .btn-attr:active { text-decoration: none; }
@@ -1240,6 +1241,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .block__section:after { content: " "; display: table; clear: both; }
 .block__footer { padding: 6px 0 0; text-align: right; clear: both; }
 .block__footer_mod { padding: 6px 15px 0; }
+.block__footer_mt { margin-top: 15px; }
 .block__headers { *zoom: 1; margin: 0 -15px; display: none; }
 .block__headers:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1219px) { .block__headers { display: block; } }
@@ -1600,7 +1602,7 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .box.is-blue { background: #1b76bb; }
 .box__more { text-align: center; margin-top: 20px; }
 
-.user-box { *zoom: 1; }
+.user-box { *zoom: 1; margin-bottom: 20px; }
 .user-box:after { content: " "; display: table; clear: both; }
 .user-box__img { float: left; width: 115px; margin: 0 8px 0 0; font-size: 0; }
 .user-box__img img { width: 100%; }
@@ -2797,6 +2799,37 @@ dd { font-family: "PFDinDisplayPro Light", Arial, sans-serif; }
 .penalty h3 { line-height: 1; }
 .penalty dt { margin-bottom: 10px; }
 .penalty dd { margin-bottom: 20px; }
+
+.media-wrap { position: relative; }
+
+.news-wrap { margin: 0 -15px; }
+
+.next-games { margin-bottom: 20px; }
+
+.next-game { margin-bottom: 20px; }
+.next-game__title { color: white; font-size: 2rem; line-height: 1; min-height: 52px; position: relative; *zoom: 1; padding: 10px 13px 8px 46px; border-radius: 10px; }
+.next-game__title:after { content: " "; display: table; clear: both; }
+.next-game__title:before { content: ""; position: absolute; top: 10px; left: 10px; }
+.next-game__title.is-super { background-color: #c3241c; }
+.next-game__title.is-super:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -87px; }
+.next-game__title.is-major { background-color: #b1894d; }
+.next-game__title.is-major:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -122px; }
+.next-game__title.is-russia { background-color: #006f61; }
+.next-game__title.is-russia:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -157px; }
+.next-game__title.is-women { background-color: #d96180; }
+.next-game__title.is-women:before { background-image: url("../img/icons.png"); width: 31px; height: 31px; background-position: -237px -192px; }
+.next-game__title span { display: inline-block; vertical-align: middle; }
+.next-game__top { margin-bottom: 10px; }
+.next-game__top span { color: #333; font-size: 1.3rem; line-height: 1; display: block; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
+.next-game__main { margin-top: 10px; border-radius: 10px; background: #fff; padding: 10px; }
+.next-game__team { font-size: 14px; position: relative; margin-bottom: 7px; }
+.next-game__name, .next-game__logo { display: inline-block; vertical-align: middle; }
+.next-game__logo { position: absolute; left: 0; top: 50%; margin-top: -13px; height: 26px; width: 26px; text-align: center; font-size: 0; }
+.next-game__logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.next-game__logo img { max-width: 100%; display: inline-block; vertical-align: middle; }
+.next-game__name { font-family: "PFDinDisplayPro Bold", Arial, sans-serif; padding-right: 15px; padding-left: 30px; line-height: 1; }
+
+.link-back { margin-bottom: 20px; }
 
 
 

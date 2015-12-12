@@ -833,7 +833,7 @@ dd
 		margin-top: -8px
 		right: 11px
 
-.btn-submit
+%blue-fill-btn
 	+bold
 	color: white
 	font-size: 1.5rem
@@ -847,7 +847,14 @@ dd
 		text-decoration: none
 	&:hover
 		background-color: #0b5884
-	
+		color: #fff
+	&:focus, &:active
+		color: #fff
+.btn-submit
+	@extend %blue-fill-btn
+.btn-fill
+	@extend %blue-fill-btn
+		
 .btn-mail, .btn-attr
 	display: inline-block
 	vertical-align: top

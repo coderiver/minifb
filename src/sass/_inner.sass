@@ -1434,3 +1434,90 @@ $red: #e43b06
 		margin-bottom: 10px 
 	dd
 		margin-bottom: 20px 
+
+.media-wrap
+	position: relative
+	
+.news-wrap
+	margin: 0 -15px
+.next-games
+	margin-bottom: 20px 
+.next-game
+	margin-bottom: 20px
+	&__title
+		color: white
+		font-size: 2rem
+		line-height: 1
+		min-height: 52px 
+		position: relative
+		+clr
+		padding: 10px 13px 8px 46px
+		border-radius: 10px 
+		&:before
+			content: "" 
+			position: absolute
+			top: 10px
+			left: 10px
+		&.is-super
+			background-color: #c3241c
+			&:before
+				+s(league-super)
+		&.is-major
+			background-color: #b1894d
+			&:before
+				+s(league-major)
+		&.is-russia
+			background-color: #006f61
+			&:before
+				+s(league-russia)
+		&.is-women
+			background-color: #d96180
+			&:before
+				+s(league-women)
+		span
+			display: inline-block
+			vertical-align: middle
+	&__top
+		margin-bottom: 10px
+		span
+			color: #333
+			font-size: 1.3rem
+			line-height: 1
+			display: block
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			white-space: nowrap
+	&__main
+		margin-top: 10px
+		border-radius: 10px
+		background: #fff
+		padding: 10px 
+	&__team
+		font-size: 14px
+		position: relative
+		margin-bottom: 7px
+	&__name,
+	&__logo
+		display: inline-block
+		vertical-align: middle
+	&__logo
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -13px  
+		height: 26px
+		width: 26px
+		+vertical
+		img
+			max-width: 100% 
+			display: inline-block
+			vertical-align: middle
+	&__name
+		+bold 
+		padding-right: 15px 
+		padding-left: 30px 
+		line-height: 1
+		
+.link-back
+	margin-bottom: 20px
