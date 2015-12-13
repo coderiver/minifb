@@ -107,10 +107,13 @@ $red: #e43b06
 		h1, .request
 			display: inline-block
 			vertical-align: top
+			
 		h1
 			margin-right: 25px 
 		.request
 			margin-top: 4px  
+			+r(991)
+				margin-bottom: 20px 
 	&_league
 		position: relative
 		padding: 20px 20px 10px 
@@ -1530,3 +1533,70 @@ $red: #e43b06
 		
 .link-back
 	margin-bottom: 20px
+.events
+	margin-bottom: 20px
+	&__btn
+		text-align: center
+.event
+	border-radius: 10px
+	overflow: hidden
+	background: #fff 
+	margin-bottom: 20px 
+	&__date, &__reg, &__info
+		display: table-cell
+		vertical-align: middle
+		+r(991)
+			display: block
+	&__date, &__reg
+		background: #f5f4f4 
+		text-align: center
+		padding: 10px 10px
+		height: 100% 
+	&__date
+		width: percentage(170/1180)
+		// vertical-align: middle
+		+r(991)
+			width: 100% 
+		h3
+			line-height: 1
+			margin-bottom: 10px 
+	&__info
+		width: percentage(730/1180)
+		padding: 20px 25px 
+		+r(991)
+			width: 100% 
+		p
+			margin-bottom: 15px 
+	&__reg
+		width: percentage(280/1180)
+		font-size: 20px
+		+r(991)
+			width: 100% 
+		.btn-fill
+			display: inline-block
+	&__regdate
+		font-size: 13px
+		margin-bottom: 20px 
+		strong
+			margin-top: 10px 
+			display: block
+			line-height: 1
+			+bold
+			font-size: 18px 
+	&__title
+		+bold
+		font-size: 20px 
+		margin-bottom: 15px 
+	&__meta
+		+litalic
+		font-size: 13px
+	&__small
+		font-size: 13px
+	&__city
+		font-size: 18px
+	&__footer
+		font-size: 15px
+	
+		
+
+	
