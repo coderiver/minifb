@@ -187,7 +187,7 @@ $(document).ready(function() {
 
 		fixedHeight = $('.js-menu-inner').outerHeight();
 		$('.js-menu-wrap').css('min-height', fixedHeight);
-		console.log('min-heigh: '+ fixedHeight);
+		// console.log('min-heigh: '+ fixedHeight);
 	}
 
 	//fixed header

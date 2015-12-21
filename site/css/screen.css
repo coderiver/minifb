@@ -1996,7 +1996,7 @@ dd {
 
 .fix-menu {
   position: relative;
-  z-index: 100;
+  z-index: 300;
 }
 .fix-menu.is-fixed {
   position: fixed;
