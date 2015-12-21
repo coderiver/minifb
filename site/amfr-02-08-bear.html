@@ -2651,10 +2651,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="simple-search">
-                                        <label class="simple-search__label"><i class="icon-search"></i> Найти участника</label>
+                                        <label for="search-man" class="simple-search__label"><i class="icon-search"></i> Найти участника</label>
                                         <div class="simple-search__body">
                                             <form action="#">
-                                                <input type="text" class="simple-search__input" placeholder="Фамилия, имя, отчество">
+                                                <input type="text" id="search-man" class="simple-search__input" placeholder="Фамилия, имя, отчество">
                                                 <button type="submit" class="btn-submit">Найти</button>
                                             </form>
                                         </div>
@@ -3423,10 +3423,12 @@
     						<li><a href="#" class="icon-photos"></a></li>
     					</ul>
     					<div class="footer-search">
-    						<div class="footer-search__label">Поиск</div>
+    						<div class="footer-search__label">
+    							<label for="search-input">Поиск</label>
+    						</div>
     						<div class="mini-form mini-form_white">
     							<form action="">
-    								<input type="text" class="mini-form__input">
+    								<input type="text" id="search-input" class="mini-form__input">
     								<button class="btn-submit">Найти</button>
     							</form>
     						</div>
@@ -3438,5 +3440,4 @@
     </footer>
     <!-- end footer -->
 </body>
-
 </html>

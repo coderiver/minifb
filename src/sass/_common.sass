@@ -126,7 +126,7 @@ h1, h2, h3, h4
 	text-transform: uppercase
 	margin-bottom: 15px
 	& + .meta
-		margin-top: -15px 
+		margin-top: -5px 
 	
 h1
 	font-size: 4.5rem
@@ -450,7 +450,8 @@ dd
 		+r(767)
 			visibility: visible
 			width: 100%
-			height: 100%  
+			height: 100% 
+			z-index: 10  
 	&__text
 		position: relative
 		display: block
@@ -463,6 +464,7 @@ dd
 		background-color: rgba(255, 255, 255, 0.25)
 		border: 2px solid #363636
 		border-radius: 10px
+		transition: border-radius 500ms
 		+bold	
 		color: #181818
 		&:after
@@ -496,7 +498,9 @@ dd
 		max-height: 200px
 		overflow-x: hidden
 		overflow-y: auto
-		background: #fff	
+		background: #fff
+		border-radius: 10px
+		transition: border-radius 500ms	
 		li
 			padding: 0 13px 
 			cursor: pointer
@@ -924,7 +928,8 @@ dd
 .table-wrapper
 	overflow: auto
 	width: 100%
-	padding: 0 0 25px 
+	padding: 0 0 10px 
+	margin-bottom: 20px 
 	.title
 		margin-bottom: 33px
 .main-table
@@ -1016,7 +1021,7 @@ dd
 						background-color: #e43b06
 
 .table-player
-	min-width: 740px 
+	min-width: 740px
 	thead
 		th
 			+bold

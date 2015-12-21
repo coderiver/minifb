@@ -13,6 +13,8 @@
 	&__inner
 		overflow: hidden
 		position: relative
+		padding: 20px 0 
+		
 		&.index-page
 			+g(#3375cc, #71aad5)
 .content
@@ -1227,7 +1229,9 @@
 		right: 20px
 		top: 50%
 		margin-top: -52px 
-		+s(academy-title-sm)
+		background: url(../img/academy-title-sm.png) center no-repeat 
+		width: 102px
+		height: 103px  
 		+r(991)
 			display: none
 	h1, .page-nav
@@ -1332,7 +1336,6 @@
 		clear: both
 		li
 			+r(767)
-				display: block
 				a
 					display: inline-block
 .box

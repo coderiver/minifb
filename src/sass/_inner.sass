@@ -1305,16 +1305,16 @@ $red: #e43b06
 	position: relative
 	overflow: hidden
 	padding: 20px 15px 30px 			
-	&:after
-		content: ''
-		width: 565px 
-		height: 235px 
-		background: url(../img/banner-main-rotate.png) no-repeat center bottom
-		position: absolute
-		bottom: -92px
-		left: -216px
-		+r(767)
-			left: -160px 
+	// &:after
+	// 	content: ''
+	// 	width: 565px 
+	// 	height: 235px 
+	// 	background: url(../img/banner-main-rotate.png) no-repeat center bottom
+	// 	position: absolute
+	// 	bottom: -92px
+	// 	left: -216px
+	// 	+r(767)
+	// 		left: -160px 
 .finals
 	position: relative
 	z-index: 2 
@@ -1403,6 +1403,12 @@ $red: #e43b06
 			padding: 0 10px 
 			min-width: 175px 
 			margin-bottom: 20px 
+			&__list
+				left: 10px
+				right: 10px
+			select
+				left: 10px
+				right: 10px 
 	.statistic-box
 		padding-left: 10px 
 		padding-right: 10px
