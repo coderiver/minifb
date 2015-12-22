@@ -116,7 +116,7 @@ $(document).ready(function() {
 		$('.js-menu-link').removeClass('is-active');
 		$('.js-mc-btn').removeClass('is-active');
 		setPos();
-		setFixedHeight()
+		if ($(window).width() > 767) {setFixedHeight()}
 		return false;
 	});
 	$('.js-dropdown').on('click', function(e) {
@@ -213,6 +213,7 @@ $(document).ready(function() {
 			// fixedHeight = 0;
 			$('.js-menu-link').removeClass('is-active');
 			$('.js-menu').removeClass('is-active');
+			$('.js-mobile').removeClass('is-active');
 			$('.js-menu-block').removeClass('is-active');
 			$('.js-dropdown').slideUp('fast');
 			$('.js-dropdown-btn').removeClass('is-active');
@@ -220,13 +221,14 @@ $(document).ready(function() {
 			if($(document).scrollTop() < navTop) {
 				$('.js-match-center').toggleClass('is-active');
 				$(this).toggleClass('is-active');
-				setFixedHeight();
+				if ($(window).width() > 767) {setFixedHeight()}
+				
 			}
 			else if($(document).scrollTop() > navTop && $('.js-match-center').hasClass('is-active')) {
 				// fixedHeight = 1;
 				$('.js-match-center').toggleClass('is-active');
 				$(this).toggleClass('is-active');
-				setFixedHeight();
+				if ($(window).width() > 767) {setFixedHeight()}
 			}
 			else {
 
@@ -259,6 +261,7 @@ $(document).ready(function() {
 		$('.js-menu-link').on('click', function(e) {
 			$('.js-open-mc').removeClass('is-active');
 			$('.js-match-center').removeClass('is-active');
+			$('.js-mobile').removeClass('is-active');
 
 			var btn = $(this).data('mlink'),
 				btns = $('.js-menu-link'),
@@ -285,9 +288,9 @@ $(document).ready(function() {
 				currItem.addClass('is-active');
 
 			}
-			// if(($(document).scrollTop() < navTop)) {
-				setFixedHeight();
-			// }
+			if(($(document).scrollTop() < navTop)) {
+				if ($(window).width() > 767) {setFixedHeight()}
+			}
 			return false;
 		});	
 		$('.js-accord-title').click(function() {
@@ -295,7 +298,7 @@ $(document).ready(function() {
 				$accordBody = $accord.find('.js-accord-body');
 			$(this).toggleClass('is-active');
 			$accordBody.stop().toggle();
-			if($(this).parents('.js-mc')) setFixedHeight(); return false;
+			if($(this).parents('.js-mc') && $(window).width() > 767) setFixedHeight(); return false;
 			return false;
 		});
 	};
@@ -417,7 +420,7 @@ $(document).ready(function() {
 		else {
 			items.removeClass('is-mobile');
 		}
-		if($(this).parents('.js-mc')) setFixedHeight(); return false;
+		if($(this).parents('.js-mc') && $(window).width() > 767) setFixedHeight(); return false;
 		return false;
 	});	
 	//index (news/photos) / video slider
