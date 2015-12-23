@@ -2139,6 +2139,15 @@ dd {
   max-width: 100%;
   height: auto;
 }
+.table-team tbody td.is-age {
+  width: 130px;
+}
+.table-team tbody td.is-sm {
+  width: 70px;
+}
+.table-team tbody td.is-xs {
+  width: 60px;
+}
 
 .calendar-header h2 {
   color: #fff;
@@ -10223,6 +10232,23 @@ dd {
 }
 .page-dropdown__field {
   padding: 0 0 10px;
+}
+@media only screen and (max-width: 991px) {
+  .page-dropdown__field {
+    width: 50%;
+  }
+  .page-dropdown__field label {
+    width: 100%;
+  }
+  .page-dropdown__field input, .page-dropdown__field button {
+    display: block;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-dropdown__field {
+    width: 100%;
+  }
 }
 .page-dropdown .btn-submit {
   width: 100%;
