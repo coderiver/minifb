@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     jade = require('gulp-rigger'),
     spritesmith = require('gulp.spritesmith'),
     browserSync = require("browser-sync"),
-    // mqpacker = require("css-mqpacker");
+    mqpacker = require("css-mqpacker"),
     iconfont = require("gulp-iconfont"),
     consolidate = require("gulp-consolidate"),
     rimraf = require('rimraf'),
@@ -41,15 +41,15 @@ var dest = {
 gulp.task('sass', function() {
 
     var processors = [
-        autoprefixer({browsers: ['last 4 versions'], cascade: false})
-        // mqpacker({
-        //     sort: function (a, b) {
-        //         a = a.replace(/\D/g,'');
-        //         b = b.replace(/\D/g,'');
-        //         return a-b;
-        //         // replace this with a-b for Mobile First approach
-        //     }
-        // })
+        autoprefixer({browsers: ['last 4 versions'], cascade: false}),
+        mqpacker({
+            sort: function (a, b) {
+                a = a.replace(/\D/g,'');
+                b = b.replace(/\D/g,'');
+                return a-b;
+                // replace this with a-b for Mobile First approach
+            }
+        })
     ];
 
     return sass('src/sass/*.sass', {
