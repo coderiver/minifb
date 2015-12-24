@@ -1237,16 +1237,21 @@ $red: #e43b06
 				padding-left: 37px  
 			
 .stats-data
-	+clr
+	// +clr
 	margin-bottom: -20px 
+	display: flex 
+	justify-content: space-between
+	+r(767)
+		display: block
+		+clr
 	&__bl
-		width: 14.285% 
-		width: calc(100%/7)
-		float: left
+		// width: 14.285% 
+		// width: calc(100%/7)
 		+r(991)
-			width: 25% 
+			// width: 25% 
 		+r(767)
-			width: 50% 
+			float: left
+			width: 50%
 	&__text
 		+bold
 		font-size: 40px 
@@ -1258,10 +1263,13 @@ $red: #e43b06
 			font-size: 24px 
 	&__header
 		font-size: 18px
-		// margin-bottom: 13px 
-		min-height: 50px 
-		+r(767)
+		margin: 7px 0 
+		+r(1219)
+			min-height: 50px 
+		+r(990)
 			font-size: 15px 
+			min-height: 45px 
+		+r(767)
 			min-height: 30px 
 	.is-yellow
 		color: #ffc205
@@ -1361,7 +1369,7 @@ $red: #e43b06
 	margin-bottom: 30px 
 	+clr
 	&__imgs
-		margin: 0 -10px -20px
+		margin: 0 -10px -10px
 		font-size: 0
 		.slick-dots
 			button
@@ -1373,7 +1381,9 @@ $red: #e43b06
 		margin-bottom: 20px 
 		img
 			max-width: 100%
-		+r(767)
+		+r(991)
+			width: 50% 
+			text-align: center
 			img
 				margin: 0 auto 
 	&__text
@@ -1448,12 +1458,21 @@ $red: #e43b06
 		
 			&:nth-child(odd)
 				background: rgba(#023584, .4) 
+		&:nth-child(even)
+			+r(767)
+				li
+					&:nth-child(even)
+						background: rgba(#023584, .4) 
+					&:nth-child(odd)
+						background: transparent
 	&__name
 		float: left
 		text-transform: uppercase
 		padding-top: 3px 
 	&__value
 		float: right
+		
+
 
 .penalty
 	h3, dt, dd
@@ -1616,5 +1635,25 @@ $red: #e43b06
 		font-size: 15px
 	
 		
+.stats-form
+	+r(991)
+		margin: 0 -10px 
+		.field
+			display: inline-block
+			vertical-align: bottom
+			width: 25%
+			padding: 10px 
+			&:last-child
+				text-align: center
+				.btn-next
+					margin-right: 0
+	+r(767)
+		margin: 0
+		.field
+			display: block
+			width: 100% 
+			padding: 10px 0
+			&:last-child
+				text-align: left
 
 	

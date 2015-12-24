@@ -625,6 +625,8 @@ dd {
 }
 .select.is-active .select__list {
   border-radius: 0 0 10px 10px;
+  visibility: visible;
+  opacity: 1;
 }
 .select select {
   opacity: 0;
@@ -654,7 +656,7 @@ dd {
   background-color: rgba(255, 255, 255, 0.25);
   border: 2px solid #363636;
   border-radius: 10px;
-  transition: border-radius 500ms;
+  transition: border-radius 300ms;
   font-family: "PFDinDisplayPro Bold", Arial, sans-serif;
   color: #181818;
 }
@@ -680,7 +682,8 @@ dd {
   margin: 0;
   font-size: 0;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   left: 0;
   right: 0;
   top: 100%;
@@ -692,8 +695,8 @@ dd {
   overflow-x: hidden;
   overflow-y: auto;
   background: #fff;
-  border-radius: 10px;
-  transition: border-radius 500ms;
+  border-radius: 0 0 10px 10px;
+  transition: all 300ms, border-radius 100ms;
 }
 .select__list li {
   padding: 0;
@@ -2436,11 +2439,37 @@ dd {
   color: #fff;
   background: #353130;
   background-image: repeating-linear-gradient(60deg, #000 2px, #444 4px, #000 7px);
-  font-size: 20px;
   line-height: 1;
   padding: 18px 10px 15px;
   border-radius: 10px;
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 0;
+}
+.link-black:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+@media only screen and (max-width: 1219px) {
+  .link-black {
+    height: 75px;
+    padding: 7px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .link-black {
+    height: auto;
+    padding: 18px 10px 15px;
+  }
+}
+.link-black span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 1.2;
 }
 .link-black:active, .link-black:hover, .link-black:focus {
   color: #fff;
@@ -6966,6 +6995,9 @@ dd {
 .box__more {
   text-align: center;
   margin-top: 20px;
+}
+.box_sm {
+  padding: 15px 15px;
 }
 
 .user-box {
@@ -12068,26 +12100,28 @@ dd {
 }
 
 .stats-data {
-  *zoom: 1;
   margin-bottom: -20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-.stats-data:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-.stats-data__bl {
-  width: 14.285%;
-  width: calc(100%/7);
-  float: left;
-}
-@media only screen and (max-width: 991px) {
-  .stats-data__bl {
-    width: 25%;
+@media only screen and (max-width: 767px) {
+  .stats-data {
+    display: block;
+    *zoom: 1;
+  }
+  .stats-data:after {
+    content: " ";
+    display: table;
+    clear: both;
   }
 }
 @media only screen and (max-width: 767px) {
   .stats-data__bl {
+    float: left;
     width: 50%;
   }
 }
@@ -12106,11 +12140,21 @@ dd {
 }
 .stats-data__header {
   font-size: 18px;
-  min-height: 50px;
+  margin: 7px 0;
+}
+@media only screen and (max-width: 1219px) {
+  .stats-data__header {
+    min-height: 50px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .stats-data__header {
+    font-size: 15px;
+    min-height: 45px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .stats-data__header {
-    font-size: 15px;
     min-height: 30px;
   }
 }
@@ -12238,7 +12282,7 @@ dd {
   clear: both;
 }
 .player-info__imgs {
-  margin: 0 -10px -20px;
+  margin: 0 -10px -10px;
   font-size: 0;
 }
 .player-info__imgs .slick-dots button {
@@ -12253,7 +12297,11 @@ dd {
 .player-info__img img {
   max-width: 100%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
+  .player-info__img {
+    width: 50%;
+    text-align: center;
+  }
   .player-info__img img {
     margin: 0 auto;
   }
@@ -12362,6 +12410,14 @@ dd {
 }
 .stats-info__list li:nth-child(odd) {
   background: rgba(2, 53, 132, 0.4);
+}
+@media only screen and (max-width: 767px) {
+  .stats-info__list:nth-child(even) li:nth-child(even) {
+    background: rgba(2, 53, 132, 0.4);
+  }
+  .stats-info__list:nth-child(even) li:nth-child(odd) {
+    background: transparent;
+  }
 }
 .stats-info__name {
   float: left;
@@ -12614,6 +12670,37 @@ dd {
 }
 .event__footer {
   font-size: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  .stats-form {
+    margin: 0 -10px;
+  }
+  .stats-form .field {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 25%;
+    padding: 10px;
+  }
+  .stats-form .field:last-child {
+    text-align: center;
+  }
+  .stats-form .field:last-child .btn-next {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .stats-form {
+    margin: 0;
+  }
+  .stats-form .field {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .stats-form .field:last-child {
+    text-align: left;
+  }
 }
 
 

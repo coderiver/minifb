@@ -441,6 +441,8 @@ dd
 					+rotate(-180)
 			&__list
 				border-radius: 0 0 10px 10px
+				visibility: visible
+				opacity: 1
 	select
 		opacity: 0
 		position: absolute
@@ -465,7 +467,7 @@ dd
 		background-color: rgba(255, 255, 255, 0.25)
 		border: 2px solid #363636
 		border-radius: 10px
-		transition: border-radius 500ms
+		transition: border-radius 300ms
 		+bold	
 		color: #181818
 		&:after
@@ -488,7 +490,9 @@ dd
 	&__list
 		+ul
 		position: absolute
-		display: none
+		// display: none
+		visibility: hidden
+		opacity: 0
 		left: 0
 		right: 0
 		top: 100%
@@ -500,8 +504,11 @@ dd
 		overflow-x: hidden
 		overflow-y: auto
 		background: #fff
-		border-radius: 10px
-		transition: border-radius 500ms	
+		border-radius: 0 0 10px 10px
+		transition: all 300ms, border-radius 100ms	
+		// &.is-active
+		// 	visibility: visible
+		// 	opacity: 1
 		li
 			padding: 0 13px 
 			cursor: pointer
@@ -1780,12 +1787,25 @@ dd
 	color: #fff
 	background: #353130
 	background-image: repeating-linear-gradient(60deg, #000 2px, #444 4px, #000 7px)
-	font-size: 20px
 	line-height: 1
 	padding: 18px 10px 15px
 	border-radius: 10px
 	margin-bottom: 20px 
+	+vertical
+	+r(1219)
+		height: 75px
+		padding: 7px  
+	+r(991)
+		height: auto
+		padding: 18px 10px 15px
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 20px
+		line-height: 1.2  
 	&:active,
 	&:hover, &:focus
 		color: #fff
 		text-decoration: underline
+	
+		
