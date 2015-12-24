@@ -172,7 +172,17 @@ $red: #e43b06
 				background: #f93526
 				color: #fff 
 				+tdn
-
+	&_mod
+		+r(991)
+			margin: 0 -15px 10px
+			text-align: justify
+			&:after
+				content: ""
+				width: 100%
+				height: 0
+				display: inline-block 
+		+r(767)
+			text-align: left
 .tabs__list_nopad
 	padding: 0
 .block
