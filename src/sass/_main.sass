@@ -729,6 +729,8 @@
 	&__link
 		display: block
 		font-size: 15px 
+		&:hover
+			text-decoration: underline
 			
 .small-banner
 	padding: 0 0 20px
@@ -3602,8 +3604,13 @@
 			max-height: 100%
 
 .page-box__dropdown
+	&wrap
+		display: block
 	position: relative
 	display: inline-block
+	.btn-attr
+		display: block
+		clear: both
 
 .page-dropdown
 	position: absolute

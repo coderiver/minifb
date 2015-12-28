@@ -72,44 +72,46 @@
 								<img src="img/t-shirt.png" alt="" class="page-box__shirt">
 								<img src="img/team-photo.png" alt="" class="page-box__photo">
 								<div class="page-box__btns">
-									<div class="page-box__dropdown js-page">
-										<a href="#" class="btn-mail js-page-open"><i class="icon-mail"></i>Следить за клубом</a>
-										<div class="page-dropdown js-page-drop">
-											<ul>
-												<li>
-													<label class="form-checkbox">
-														<input type="checkbox">
-														<span>Новости</span>
+									<div class="page-box__dropdownwrap">
+										<div class="page-box__dropdown js-page">
+											<a href="#" class="btn-mail js-page-open"><i class="icon-mail"></i>Следить за клубом</a>
+											<div class="page-dropdown js-page-drop">
+												<ul>
+													<li>
+														<label class="form-checkbox">
+															<input type="checkbox">
+															<span>Новости</span>
+														</label>
+													</li>
+													<li>
+														<label class="form-checkbox">
+															<input type="checkbox">
+															<span>События</span>
+														</label>
+													</li>
+													<li>
+														<label class="form-checkbox">
+															<input type="checkbox">
+															<span>Матчи</span>
+														</label>
+													</li>
+													<li>
+														<label class="form-checkbox">
+															<input type="checkbox">
+															<span>Фото и видео</span>
+														</label>
+													</li>
+												</ul>
+												<div class="page-dropdown__field">
+													<label>
+														<span class="file__label">Ваш email</span>
+														<input type="text" class="input">
 													</label>
-												</li>
-												<li>
-													<label class="form-checkbox">
-														<input type="checkbox">
-														<span>События</span>
-													</label>
-												</li>
-												<li>
-													<label class="form-checkbox">
-														<input type="checkbox">
-														<span>Матчи</span>
-													</label>
-												</li>
-												<li>
-													<label class="form-checkbox">
-														<input type="checkbox">
-														<span>Фото и видео</span>
-													</label>
-												</li>
-											</ul>
-											<div class="page-dropdown__field">
-												<label>
-													<span class="file__label">Ваш email</span>
-													<input type="text" class="input">
-												</label>
-											</div>
-											<div class="page-dropdown__field">
-												<button class="btn-submit">Подписаться</button>
-											</div>
+												</div>
+												<div class="page-dropdown__field">
+													<button class="btn-submit">Подписаться</button>
+												</div>
+													</div>
 										</div>
 									</div>
 									<a href="#" class="btn-attr"><i class="icon-external"></i>Атрибутика клуба</a>
@@ -180,22 +182,25 @@
 								<div class="player-stats">
 									<h3>Общая статистика игрока</h3>
 									<div class="player-stats__selects">
-										<div class="select js-select">
-											<span class="select__text js-select-text">Суперлига</span>
-											<ul class="select__list js-select-list">
-												<li data-val="Суперлига">Суперлига</li>
-												<li data-val="Суперлига">Суперлига</li>
-												<li data-val="Суперлига">Суперлига</li>
-												<li data-val="Суперлига">Суперлига</li>
-											</ul>
-											<select>
-												<option value="Суперлига">Суперлига</option>
-												<option value="Суперлига">Суперлига</option>
-												<option value="Суперлига">Суперлига</option>
-												<option value="Суперлига">Суперлига</option>
-											</select>
+										<div class="select-block">
+											<div class="select js-select">
+												<span class="select__text js-select-text">Суперлига</span>
+												<ul class="select__list js-select-list">
+													<li data-val="Суперлига">Суперлига</li>
+													<li data-val="Суперлига">Суперлига</li>
+													<li data-val="Суперлига">Суперлига</li>
+													<li data-val="Суперлига">Суперлига</li>
+												</ul>
+												<select>
+													<option value="Суперлига">Суперлига</option>
+													<option value="Суперлига">Суперлига</option>
+													<option value="Суперлига">Суперлига</option>
+													<option value="Суперлига">Суперлига</option>
+												</select>
+											</div>
 										</div>
-										<div class="select js-select">
+										<div class="select-block">
+											<div class="select js-select">
 											<span class="select__text js-select-text">Сезон 2014-2015</span>
 											<ul class="select__list js-select-list">
 												<li data-val="Сезон 2014-2015">Сезон 2014-2015</li>
@@ -209,8 +214,10 @@
 												<option value="2014-2015">2014-2015</option>
 												<option value="2014-2015">2014-2015</option>
 											</select>
+											</div>
 										</div>
-										<div class="select js-select">
+										<div class="select-block">
+											<div class="select js-select">
 											<span class="select__text js-select-text">Тур 26</span>
 											<ul class="select__list js-select-list">
 												<li data-val="Тур 26">Тур 26</li>
@@ -224,6 +231,7 @@
 												<option value="Тур 26">Тур 26</option>
 												<option value="Тур 26">Тур 26</option>
 											</select>
+											</div>
 										</div>
 									</div>
 									<!-- BEGIN stats-info  -->

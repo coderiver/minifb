@@ -1,4 +1,7 @@
 .header
+	+r(767)
+		display: flex
+		flex-direction: column
 	&__line
 		background: #e4e4e4 
 		+r(360)
@@ -10,12 +13,12 @@
 			position: relative
 		.nav-line
 			margin-bottom: 0
-			padding: 10px 0 
+			padding: 7px 0 
 			&__title
-				font-size: 15px 
+				font-size: 13px 
 				float: left
 			a
-				font-size: 15px
+				font-size: 13px
 			&__list
 				li
 					+r(767)
@@ -223,8 +226,7 @@
 			+r(991)
 				width: 66.67%
 			+r(767)
-				width: 100%
-				padding: 10px 10px 54px 
+				display: none
 		h4
 			margin: 0 0 5px
 			text-transform: none
@@ -292,6 +294,22 @@
 				background: #197fba 
 		div
 			margin-bottom: 3px
+	+r(767)
+		.header__line
+			order: 1
+		.header__top
+			order: 2
+		.header-dropdown
+			order: 4
+			&__inner
+				padding-bottom: 10px 
+			&.is-active
+				transform: translateY(0)
+				margin-bottom: 0
+		.menu-wrapper
+			order: 3
+		.leagues
+			order: 5
 // .btn-match
 // 	+bold
 // 	color: white
@@ -756,6 +774,7 @@
 		position: relative
 		+clr
 		padding: 10px 25px 8px 46px
+		border-radius: 10px
 		&:before
 			content: "" 
 			position: absolute
@@ -818,6 +837,10 @@
 		margin-bottom: 10px 
 .match-center-mc
 	display: none
+	max-height: 700px
+	max-height: 60vh  
+	.mCSB_inside>.mCSB_container
+		margin-right: 0
 	&.is-active
 		display: block
 .league-item
@@ -985,7 +1008,8 @@
 	&__text
 		display: inline-block
 		vertical-align: middle
-		font-size: 15px
+		font-size: 13px
 		+light 
-		span
-			color: #197fba
+		a
+			&:hover
+				text-decoration: underline

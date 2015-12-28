@@ -1084,6 +1084,10 @@ dd
 							color: #337ab7
 					&__team
 						width: 45% 
+						a
+							&:hover
+								.league-item__name
+									text-decoration: underline
 
 			strong
 				+bold
@@ -1112,6 +1116,9 @@ dd
 					width: 300px 
 					+r(991)
 						width: 250px 
+					a
+						&:hover
+							text-decoration: underline
 				&.is-number
 					width: 100px
 				&:nth-child(3)
@@ -1594,6 +1601,8 @@ dd
 					font-size: 18px
 					+r(767)
 						font-size: 15px 
+					&:hover
+						text-decoration: underline 
 				.table-team-photo
 					width: 30px
 					height: 30px
@@ -1608,10 +1617,16 @@ dd
 						height: auto 
 			&.is-age
 				width: 130px
+				+r(991)
+					width: auto
 			&.is-sm
 				width: 70px
+				+r(991)
+					width: auto
 			&.is-xs
-				width: 60px  
+				width: 60px 
+				+r(991)
+					width: auto 
 						
 .calendar-header
 	h2
@@ -1661,6 +1676,8 @@ dd
 			padding: 0 12px
 			+r(767)
 				padding: 0
+			&:hover
+				text-decoration: underline
 .row_bear
 	.simple-search
 		margin-top: 4px 
