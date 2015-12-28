@@ -494,6 +494,7 @@ $(document).ready(function() {
                     slidesToScroll: 2,
                     arrows: false,
                     dots: true,
+                    swipeToSlide: true,
                     responsive: [{
                         breakpoint: 768,
                         settings: {

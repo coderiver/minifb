@@ -3,7 +3,17 @@ $purple: #b71a4f
 $yellow: #f5d000
 $red: #e43b06
 
-
+.inline-wrap
+	font-size: 0
+	& > div
+		font-size: 15px
+		float: none
+		display: inline-block
+		vertical-align: top
+	&.main-slider
+		+r(991)
+			& > div
+				display: block
 .row.no-padding
 	&.no-padding
 		// margin-left: 0
@@ -1656,4 +1666,18 @@ $red: #e43b06
 			&:last-child
 				text-align: left
 
-	
+.press
+	font-size: 15px
+	margin-bottom: 20px 
+	p
+		margin-bottom: 5px 
+	time
+		font-size: 13px
+		color: #3e3e3e 
+
+.banner-wrap
+	margin-bottom: 20px
+	border-radius: 10px
+	overflow: hidden
+	& > a
+		font-size: 0
