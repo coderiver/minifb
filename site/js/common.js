@@ -107,6 +107,8 @@ $(document).ready(function() {
         $('.js-match-center').removeClass('is-active');
         $('.js-match-center').slideUp(100);
         $('.js-dropdown').slideToggle('fast');
+        $('.js-dropdown').toggleClass('is-active');
+
         $(this).toggleClass('is-active');
         $('.js-mc').removeClass('is-active');
         $('.js-mobile').removeClass('is-active');
@@ -198,6 +200,7 @@ $(document).ready(function() {
                 if ($(window).scrollTop() >= navTop && (!$('.js-menu-fixed').hasClass("is-fixed"))) {
                     $('.js-mobile').removeClass('is-active');
                     $('.js-dropdown').slideUp('fast');
+                    $('.js-dropdown').removeClass('is-active');
                     $('.js-dropdown-btn').removeClass('is-active');
                     $('.js-open-mc').removeClass('is-active');
                     $('.js-match-center').removeClass('is-active');
@@ -231,6 +234,7 @@ $(document).ready(function() {
             $('.js-menu-block').slideUp(100);
             $('.js-mobile').removeClass('is-active');
             $('.js-dropdown').slideUp('fast');
+            $('.js-dropdown').removeClass('is-active');
             $('.js-dropdown-btn').removeClass('is-active');
 
             if ($(document).scrollTop() < navTop) {
@@ -280,6 +284,7 @@ $(document).ready(function() {
             $('.js-match-center').slideUp(100);
             $('.js-mobile').removeClass('is-active');
             $('.js-dropdown').slideUp('fast');
+            $('.js-dropdown').removeClass('is-active');
             $('.js-dropdown-btn').removeClass('is-active');
             $('.js-mc').removeClass('is-active');
             $('.js-mc-btn').removeClass('is-active');
@@ -339,6 +344,7 @@ $(document).ready(function() {
         $('.js-mc').toggleClass('is-active');
         $(this).toggleClass('is-active');
         $('.js-dropdown').slideUp('fast');
+        $('.js-dropdown').removeClass('is-active');
         $('.js-dropdown-btn').removeClass('is-active');
         $('.js-menu').removeClass('is-active');
         $('.js-mobile').removeClass('is-active');
@@ -369,6 +375,7 @@ $(document).ready(function() {
         $('.js-mobile').toggleClass('is-active');
 
         $('.js-dropdown').slideUp('fast');
+        $('.js-dropdown').removeClass('is-active');
         $('.js-dropdown-btn').removeClass('is-active');
         $('.js-mc').removeClass('is-active');
         $('.js-mc-btn').removeClass('is-active');
