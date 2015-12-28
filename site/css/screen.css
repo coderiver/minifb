@@ -10288,10 +10288,8 @@ dd {
   display: inline-block;
   vertical-align: top;
 }
-@media only screen and (max-width: 991px) {
-  .inline-wrap.main-slider > div {
-    display: block;
-  }
+.inline-wrap.slick-slider > div {
+  display: block;
 }
 
 .row.no-padding.no-padding > div {

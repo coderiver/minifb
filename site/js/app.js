@@ -2672,8 +2672,9 @@ $(document).ready(function() {
             };
         };
 
-        if ($(window).width() < 991) {
+        if ($(window).width() <= 991) {
             if (!$('.js-video-slider, .js-org-slider').hasClass('slick-initialized')) {
+
                 $('.js-video-slider, .js-org-slider').slick({
                     slidesToShow: 2,
                     slidesToScroll: 2,
