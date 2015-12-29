@@ -2363,7 +2363,7 @@ $(document).ready(function() {
     }, 300)
 
     function setPos() {
-        // setFixedHeight();
+        setFixedHeight();
         navTop = $('.js-menu-wrap').offset().top;
     };
     setPos();
@@ -2389,9 +2389,9 @@ $(document).ready(function() {
                     $('.js-dropdown').slideUp('fast');
                     $('.js-dropdown').removeClass('is-active');
                     $('.js-dropdown-btn').removeClass('is-active');
-                    // $('.js-open-mc').removeClass('is-active');
-                    // $('.js-match-center').removeClass('is-active');
-                    // $('.js-match-center').slideUp(200);
+                    $('.js-open-mc').removeClass('is-active');
+                    $('.js-match-center').removeClass('is-active');
+                    $('.js-match-center').slideUp(200);
 
                     $('.js-menu-block').removeClass('is-active');
                     $('.js-menu-link').removeClass('is-active');
