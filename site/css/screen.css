@@ -951,7 +951,7 @@ dd {
   transition-delay: 70ms;
 }
 .button-more:hover .icon-more {
-  background-position: -299px -185px;
+  background-position: -41px -132px;
 }
 
 .button-white {
@@ -1880,7 +1880,7 @@ dd {
   top: 100%;
   left: 50%;
   width: 200px;
-  z-index: 700;
+  z-index: 7;
   background: #353535;
   border-radius: 10px;
   padding: 15px 0;
