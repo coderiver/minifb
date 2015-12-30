@@ -1,3 +1,11 @@
+.button-more
+	i
+		position: relative
+		top: 2px 
+		transition-delay: 70ms
+	&:hover
+		.icon-more
+			+s(more-a)
 .main
 	margin: 0 0 -394px
 	min-height: 100%
@@ -2413,42 +2421,6 @@
 					font-size: 16px
 					color: #2188b8 
 						
-	&-league
-		&__title
-			color: white
-			font-size: 2rem
-			line-height: 1.7
-			position: relative
-			+clr
-			padding: 10px 45px 8px 46px 
-			margin-bottom: 10px
-			&:before
-				content: "" 
-				position: absolute
-				top: 50%
-				left: 10px
-				margin-top: -16px
-			&.is-super
-				background-color: #c3241c
-				&:before
-					+s(league-super)
-			&.is-major
-				background-color: #b1894d
-				&:before
-					+s(league-major)
-			&.is-russia
-				background-color: #006f61
-				&:before
-					+s(league-russia)
-			&.is-women
-				background-color: #d96180
-				&:before
-					+s(league-women)
-			.icon-date
-				position: absolute
-				top: 17px
-				right: 10px
-				font-size: 21px
 	&-partner
 		padding: 0 10px
 		text-align: center

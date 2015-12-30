@@ -2369,7 +2369,7 @@ $(document).ready(function() {
     }, 300)
 
     function setPos() {
-        setFixedHeight();
+        // setFixedHeight();
         navTop = $('.js-menu-wrap').offset().top;
     };
     setPos();

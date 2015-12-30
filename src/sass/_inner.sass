@@ -1508,6 +1508,7 @@ $red: #e43b06
 	margin-bottom: 20px 
 .next-game
 	margin-bottom: 20px
+	
 	&__title
 		color: white
 		font-size: 2rem
@@ -1517,27 +1518,22 @@ $red: #e43b06
 		+clr
 		padding: 10px 13px 8px 46px
 		border-radius: 10px 
-		&:before
-			content: "" 
+		.league-logo
 			position: absolute
 			top: 10px
 			left: 10px
+			font-size: 0
+			max-width: 31px 
+			img
+				max-width: 100% 
 		&.is-super
 			background-color: #c3241c
-			&:before
-				+s(league-super)
 		&.is-major
 			background-color: #b1894d
-			&:before
-				+s(league-major)
 		&.is-russia
 			background-color: #006f61
-			&:before
-				+s(league-russia)
 		&.is-women
 			background-color: #d96180
-			&:before
-				+s(league-women)
 		span
 			display: inline-block
 			vertical-align: middle
