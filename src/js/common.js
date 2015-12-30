@@ -1061,5 +1061,4 @@ $(document).ready(function() {
             deltaFactor: 50 
         }
     });
-
 });

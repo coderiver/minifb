@@ -1,4 +1,5 @@
 //= lib/jquery.js
+//= lib/head.js
 //= lib/slick.min.js
 //= lib/bootstrap.min.js
 //= lib/jquery.fancybox.js

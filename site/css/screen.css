@@ -635,15 +635,6 @@ dd {
   visibility: hidden;
   left: 0;
 }
-@media only screen and (max-width: 767px) {
-  .select select {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    color: #000;
-  }
-}
 .select__text {
   position: relative;
   display: block;
@@ -757,6 +748,14 @@ dd {
 }
 .select_blue .select__list li {
   color: #197fba;
+}
+
+.mobile.no-desktop .select select {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: #000;
 }
 
 .form-checkbox {
