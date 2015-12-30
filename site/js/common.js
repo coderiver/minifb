@@ -1056,7 +1056,10 @@ $(document).ready(function() {
     $('.js-match-center').mCustomScrollbar({
         autoHideScrollbar: true,
         scrollInertia: 100,
-        mouseWheel:{ deltaFactor: 50 }
+        mouseWheel: { 
+            preventDefault: true,
+            deltaFactor: 50 
+        }
     });
 
 });
