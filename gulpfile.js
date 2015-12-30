@@ -32,7 +32,7 @@ var dest = {
     html : 'site',
     css  : 'site/css',
     js   : 'site/js',
-    img  : 'site/img'
+    img  : 'site/css/img'
 };
 
 
@@ -72,7 +72,7 @@ gulp.task('sprite', function() {
     .pipe(spritesmith({
         imgName: 'icons.png',
         cssName: '_sprite.sass',
-        imgPath: '../img/icons.png',
+        imgPath: 'img/icons.png',
         cssFormat: 'sass',
         padding: 4,
         // algorithm: 'top-down',
@@ -102,7 +102,7 @@ gulp.task('js', function () {
 
 gulp.task('copy', function() {
    gulp.src('src/img/*.*')
-   .pipe(gulp.dest('site/img/'));
+   .pipe(gulp.dest('site/css/img/'));
    gulp.src('src/fonts/*.*')
    .pipe(gulp.dest('site/css/fonts/'));
    gulp.src('src/video/*.*')
