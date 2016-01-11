@@ -30,9 +30,9 @@ var src = {
 var dest = {
     root : 'site',
     html : 'site',
-    css  : 'site/css',
+    css  : 'site',
     js   : 'site/js',
-    img  : 'site/css/img'
+    img  : 'site/img'
 };
 
 
@@ -61,7 +61,7 @@ gulp.task('sass', function() {
     })
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('site/css/'));
+    .pipe(gulp.dest('site/'));
 });
 
 
@@ -102,9 +102,9 @@ gulp.task('js', function () {
 
 gulp.task('copy', function() {
    gulp.src('src/img/*.*')
-   .pipe(gulp.dest('site/css/img/'));
+   .pipe(gulp.dest('site/img/'));
    gulp.src('src/fonts/*.*')
-   .pipe(gulp.dest('site/css/fonts/'));
+   .pipe(gulp.dest('site/fonts/'));
    gulp.src('src/video/*.*')
    .pipe(gulp.dest('site/video/'));
 });

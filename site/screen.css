@@ -5218,10 +5218,14 @@ dd {
     width: 70%;
   }
 }
-.scoreboard__box.is-super i {
+.scoreboard__box.is-super i, .scoreboard__box.is-super img {
   position: absolute;
   top: 0;
   left: 0;
+}
+.scoreboard__box.is-super img {
+  width: 19px;
+  height: 19px;
 }
 .scoreboard__leagues {
   width: 26%;
