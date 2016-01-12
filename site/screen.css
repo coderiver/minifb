@@ -8520,6 +8520,49 @@ dd {
   font-size: 16px;
   color: #2188b8;
 }
+.match-league__title {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.7;
+  position: relative;
+  *zoom: 1;
+  padding: 10px 45px 8px 46px;
+  margin-bottom: 10px;
+}
+.match-league__title:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.match-league__title .league-logo {
+  position: absolute;
+  left: 10px;
+}
+.match-league__title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -16px;
+}
+.match-league__title.is-super {
+  background-color: #c3241c;
+}
+.match-league__title.is-major {
+  background-color: #b1894d;
+}
+.match-league__title.is-russia {
+  background-color: #006f61;
+}
+.match-league__title.is-women {
+  background-color: #d96180;
+}
+.match-league__title .icon-date {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  font-size: 21px;
+}
 .match-partner {
   padding: 0 10px;
   text-align: center;
