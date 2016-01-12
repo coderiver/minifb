@@ -3025,6 +3025,9 @@ dd {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .header.no-mc {
+    display: block;
+  }
 }
 .header__line {
   background: #e4e4e4;
@@ -3610,6 +3613,10 @@ dd {
 .menu-wrapper {
   background-color: #333;
   min-height: 78px;
+}
+
+.header .menu-wrapper {
+  min-height: 1px;
 }
 
 .menu {

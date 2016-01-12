@@ -2,6 +2,8 @@
 	+r(767)
 		display: flex
 		flex-direction: column
+		&.no-mc
+			display: block
 	&__line
 		background: #e4e4e4 
 		+r(360)
@@ -310,6 +312,7 @@
 			order: 3
 		.leagues
 			order: 5
+		
 // .btn-match
 // 	+bold
 // 	color: white
@@ -384,6 +387,10 @@
 .menu-wrapper
 	background-color: #333
 	min-height: 78px 
+.header
+	&.no-mc
+	.menu-wrapper
+		min-height: 1px 
 
 .menu
 	position: relative

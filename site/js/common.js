@@ -667,6 +667,15 @@ $(document).ready(function() {
         });
     });
 
+    $('.js-match-center-cs').mCustomScrollbar({
+        autoHideScrollbar: true,
+        scrollInertia: 100,
+        mouseWheel: { 
+            preventDefault: true,
+            deltaFactor: 50
+        }
+    });
+
     //museum
 
     // $('.js-museum-for').slick({
@@ -737,36 +746,31 @@ $(document).ready(function() {
 
     function museumScroll() {
         var items = $('.js-museum-section'),
-            scrollItems = $('.js-museum-section').map(function() {
-                return $(this);
-            });
+            scrollItems  = $('.js-museum-section').map(function(){return $(this);});
         $('.js-museum-for').mCustomScrollbar({
-            axis: "x",
+            axis:"x",
             scrollbarPosition: "inside",
             scrollInertia: 1000,
             contentTouchScroll: true,
             documentTouchScroll: true,
             autoHideScrollbar: true,
-            callbacks: {
-                whileScrolling: function() {
+            callbacks:{
+                whileScrolling: function() { 
                     var mscLeft = this.mcs.leftPct;
 
-                    var cur = scrollItems.map(function() {
-                        if ($(this).offset().left < mscLeft) return this;
-                    });
-
+                    var cur = scrollItems.map(function(){
+                            if ($(this).offset().left < mscLeft) return this;
+                        });
 
                     if (cur.length == 0) {
                         cur = scrollItems[0]
-                    } else {
-                        cur = cur[cur.length - 1];
+                    }
+                    else {
+                        cur = cur[cur.length-1];
                     };
-
-                    // console.log(cur.index());
-
-                    var containerWidth = $('.mCSB_container').outerWidth() / 100;
-                    scrollItems.map(function() {
-                        if (mscLeft >= Math.round($(this).position().left / containerWidth)) {
+                    var containerWidth = $('.js-museum-for').find('.mCSB_container').outerWidth()/100;
+                    scrollItems.map(function(){
+                        if (mscLeft >= Math.round($(this).position().left/containerWidth)) {
                             var index = cur.index();
                             $('.js-museum-nav').slick('goTo', index);
                             $('.js-museum-section').removeClass('is-active');
@@ -1053,12 +1057,6 @@ $(document).ready(function() {
 
         return false;
     });
-    $('.js-match-center').mCustomScrollbar({
-        autoHideScrollbar: true,
-        scrollInertia: 100,
-        mouseWheel: { 
-            preventDefault: true,
-            deltaFactor: 50 
-        }
-    });
+
+
 });
