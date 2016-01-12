@@ -870,22 +870,24 @@
 		display: table-cell
 		vertical-align: middle
 		position: relative
-		&.is-left
-			// width: 108px
-			width: 40%
-			text-align: right
-			padding-right: 30px
-			.league-item
-				&__logo
-					right: 0
-		&.is-right
-			// width: 102px
-			width: 38%
-			text-align: left
-			padding-left: 30px
-			.league-item
-				&__logo
-					left: 0
+		width: 40%
+		&-inn
+			position: relative
+			&.is-left
+				// width: 108px
+				text-align: right
+				padding-right: 30px
+				.league-item
+					&__logo
+						right: 0
+			&.is-right
+				// width: 102px
+				// width: 38%
+				text-align: left
+				padding-left: 30px
+				.league-item
+					&__logo
+						left: 0
 		&.is-winner
 			.league-item
 				&__score, &__name

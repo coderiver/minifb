@@ -4356,21 +4356,23 @@ dd {
   display: table-cell;
   vertical-align: middle;
   position: relative;
-}
-.league-item__team.is-left {
   width: 40%;
+}
+.league-item__team-inn {
+  position: relative;
+}
+.league-item__team-inn.is-left {
   text-align: right;
   padding-right: 30px;
 }
-.league-item__team.is-left .league-item__logo {
+.league-item__team-inn.is-left .league-item__logo {
   right: 0;
 }
-.league-item__team.is-right {
-  width: 38%;
+.league-item__team-inn.is-right {
   text-align: left;
   padding-left: 30px;
 }
-.league-item__team.is-right .league-item__logo {
+.league-item__team-inn.is-right .league-item__logo {
   left: 0;
 }
 .league-item__team.is-winner .league-item__score, .league-item__team.is-winner .league-item__name {
@@ -11768,6 +11770,21 @@ dd {
   left: 0.8em;
 }
 
+.tooltip-table__cell {
+  position: relative;
+}
+.tooltip-table__cell.is-left .team-logo {
+  right: 0;
+}
+.tooltip-table__cell.is-left .team-name {
+  padding-right: 25px;
+}
+.tooltip-table__cell.is-right .team-logo {
+  left: 0;
+}
+.tooltip-table__cell.is-right .team-name {
+  padding-left: 25px;
+}
 .tooltip-table td {
   vertical-align: middle;
   color: #fff;
@@ -11795,18 +11812,6 @@ dd {
 }
 .tooltip-table td.is-team .team-logo img {
   max-width: 100%;
-}
-.tooltip-table td.is-team.is-left .team-logo {
-  right: 0;
-}
-.tooltip-table td.is-team.is-left .team-name {
-  padding-right: 25px;
-}
-.tooltip-table td.is-team.is-right .team-logo {
-  left: 0;
-}
-.tooltip-table td.is-team.is-right .team-name {
-  padding-left: 25px;
 }
 .tooltip-table td.is-result {
   width: 70px;

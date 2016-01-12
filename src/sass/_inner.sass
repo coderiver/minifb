@@ -998,6 +998,18 @@ $red: #e43b06
 				display: inline-block
 				left: .8em 
 .tooltip-table
+	&__cell
+		position: relative 
+		&.is-left
+			.team-logo
+				right: 0
+			.team-name
+				padding-right: 25px 
+		&.is-right
+			.team-logo
+				left: 0 
+			.team-name
+				padding-left: 25px 
 	td
 		vertical-align: middle
 		color: #fff
@@ -1018,16 +1030,7 @@ $red: #e43b06
 				text-align: center
 				img
 					max-width: 100% 
-			&.is-left
-				.team-logo
-					right: 0
-				.team-name
-					padding-right: 25px 
-			&.is-right
-				.team-logo
-					left: 0 
-				.team-name
-					padding-left: 25px 
+		
 		&.is-result
 			width: 70px 
 			text-align: center
