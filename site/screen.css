@@ -2840,6 +2840,10 @@ dd {
   content: "";
 }
 
+.icon-arr-up:before {
+  content: "";
+}
+
 .slick-slider {
   position: relative;
   display: block;
